@@ -269,7 +269,12 @@ Exercises
  
 
 
+
 8. Conclusion
 -------------------------------------------------------------------------------
 
 TODO
+
+TODO: Add todo keyword to gather all todos
+
+
