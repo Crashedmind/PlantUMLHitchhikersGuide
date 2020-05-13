@@ -1,0 +1,16 @@
+===============================================================================
+Principles
+===============================================================================
+
+
+.. _vision: https://www.scaledagileframework.com/vision/
+.. _PlantUML: https://www.plantuml.com/
+.. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
+
+
+
+
+==========
+
+#. Learn by Playing: All examples include a link to allow you to edit it easily - no setup required.
+#. Documentation-Of-Code Documentation-As-Code: documentation of the examples, and the example source live toegther in the same directory in Git. 

@@ -1,0 +1,1335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Create a Diagram of a Typical Network &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Create a Template from our Network Diagram" href="PassSpriteAsParameter.html" />
+    <link rel="prev" title="Principles" href="../principles.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../principles.html">Principles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create a Diagram of a Typical Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-network-diagram">Example Network Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#select-an-icon-library">1. Select an icon library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#view-all-the-icons-with-listsprites">2. View all the icons with listsprites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#source">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#play">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gather-the-icons-we-need">3. Gather the icons we need</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#decorate-the-icons">4. Decorate the Icons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-diagram-by-connecting-things-together">5. Create the diagram by connecting things together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#change-the-layout-to-vertical">6. Change the Layout to Vertical</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#change-the-layout-by-grouping-icons-together">7. Change the Layout by grouping icons together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">8. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter.html">Create a Template from our Network Diagram</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Create a Diagram of a Typical Network</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/templates/NetworkUsersMachines.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="create-a-diagram-of-a-typical-network">
+<h1>Create a Diagram of a Typical Network<a class="headerlink" href="#create-a-diagram-of-a-typical-network" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this section we’re going to create a full network diagram by walking through it step by step.</p>
+<p>Each step has</p>
+<ol class="arabic simple">
+<li><p>An objective - the step heading</p></li>
+<li><p>Source code for the diagram</p></li>
+<li><p>Play button where you can test the diagram and play with it.</p></li>
+<li><p>Exercise - where you can confirm your understanding by try things as you play.</p></li>
+</ol>
+</div>
+<div class="section" id="example-network-diagram">
+<h2>Example Network Diagram<a class="headerlink" href="#example-network-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id21">
+<p class="plantuml">
+<img src="../_images/plantuml-926083931d94f8568f7ab10c7406658c31bc2c78.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+together {
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+}
+
+' Devices
+together {
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+}
+
+
+' Network
+
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+Mary --&gt; pc: source code
+Mary --&gt; android: social media
+
+Bob --&gt; mac: financial info
+Bob --&gt; iphone: phone calls
+
+
+Ivan --&gt; server: configuration
+
+iphone --&gt; wifiAP
+android --&gt; wifiAP
+wifiAP --&gt; hub
+
+server --&gt; hub
+mac --&gt; hub
+pc --&gt; hub
+
+
+hub --&gt; firewall
+
+firewall --&gt; cloud
+
+&#64;enduml
+
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Here’s one we made earlier - and you can too</em></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here we have a typical network diagram:</p>
+<ol class="arabic simple">
+<li><p>Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.</p></li>
+<li><p>Bob is an Accountant in the Accounts team. He has Mac and an iPhone.</p></li>
+<li><p>They connect to the office server, and via a firewall to the Internet.</p></li>
+</ol>
+<p>There 3 types of element with different properties:</p>
+<ol class="arabic simple">
+<li><p>Users: Role, Name, Team</p></li>
+<li><p>Machines: Type, IP address, OS</p></li>
+<li><p>Network Equipment: Type, IP address, and e.g. product model and number</p></li>
+</ol>
+</div>
+<div class="section" id="select-an-icon-library">
+<h2>1. Select an icon library<a class="headerlink" href="#select-an-icon-library" title="Permalink to this headline">¶</a></h2>
+<p>The OpenSecurityArchitecture library has a nice set of users and network components so we’ll use that.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To see all stdlib icon libraries - do TBD</p>
+</div>
+</div>
+<div class="section" id="view-all-the-icons-with-listsprites">
+<h2>2. View all the icons with <a class="reference external" href="https://plantuml.com/#">listsprites</a><a class="headerlink" href="#view-all-the-icons-with-listsprites" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create a blank diagram that includes the icon files we’re interested in</p></li>
+<li><p>Add a “<a class="reference external" href="https://plantuml.com/#">listsprites</a>” statement</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://plantuml.com/#">listsprites</a> lists all the sprites in the files you include in your diagram source</p>
+</div>
+<div class="figure align-center" id="id22">
+<p class="plantuml">
+<img src="../_images/plantuml-cc8070e837c9c07dc9b5cf8c55a978419bef9c84.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+listsprites
+
+&#64;enduml
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Using listsprites to show all icons in a library</em></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="source">
+<h3>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+<span class="hll">listsprites
+</span>
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="play">
+<h3>Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="exercises">
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+<li><p>What happens if we don’t include any libraries?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="gather-the-icons-we-need">
+<h2>3. Gather the icons we need<a class="headerlink" href="#gather-the-icons-we-need" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create a diagram with the selected icons</p></li>
+<li><p>This allows us to see and review the icons first with the icon name</p></li>
+<li><p>It also confirms everything is working before we connect them together.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We’re using a Blue theme, so our icons appear blue by default. Yours may appear yellow.</p>
+</div>
+<div class="figure align-center" id="id23">
+<p class="plantuml">
+<img src="../_images/plantuml-2fdf274278a80b03358edf611a038c74e6cea03a.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+' Users
+osa_user_green_developer: &lt;$osa_user_green_developer&gt;
+osa_user_green_operations: &lt;$osa_user_green_operations&gt;
+osa_user_green_business_manager: &lt;$osa_user_green_business_manager&gt;
+
+' Devices
+osa_desktop: &lt;$osa_desktop&gt;
+osa_laptop: &lt;$osa_laptop&gt;
+osa_iPhone: &lt;$osa_iPhone&gt;
+osa_server: &lt;$osa_server&gt;
+
+' Network
+osa_device_wireless_router: &lt;$osa_device_wireless_router&gt;
+osa_hub: &lt;$osa_hub&gt;
+osa_firewall: &lt;$osa_firewall&gt;
+osa_osa_cloud: &lt;$osa_cloud&gt;
+
+&#64;enduml
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Select the subset of icons for our diagram</em></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id1">
+<h3>Source<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can’t have the icon on its own e.g. “&lt;$osa_user_green_developer&gt;” would not work</p>
+</div>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+&#39; Users
+osa_user_green_developer: &lt;$osa_user_green_developer&gt;
+osa_user_green_operations: &lt;$osa_user_green_operations&gt;
+osa_user_green_business_manager: &lt;$osa_user_green_business_manager&gt;
+
+&#39; Devices
+osa_desktop: &lt;$osa_desktop&gt;
+osa_laptop: &lt;$osa_laptop&gt;
+osa_iPhone: &lt;$osa_iPhone&gt;
+osa_server: &lt;$osa_server&gt;
+
+&#39; Network
+osa_device_wireless_router: &lt;$osa_device_wireless_router&gt;
+osa_hub: &lt;$osa_hub&gt;
+osa_firewall: &lt;$osa_firewall&gt;
+osa_osa_cloud: &lt;$osa_cloud&gt;
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id2">
+<h3>Play<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="id4">
+<h3>Exercises<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Change the server type to a different type of server</p></li>
+<li><p>Change the Operations user type to a different type of user</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="decorate-the-icons">
+<h2>4. Decorate the Icons<a class="headerlink" href="#decorate-the-icons" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>We use the default functions defined as part of stdlib that decorate our raw sprites</p></li>
+<li><p>This makes them much more visually appealing.</p></li>
+</ol>
+<div class="figure align-center" id="id24">
+<p class="plantuml">
+<img src="../_images/plantuml-79345a690fa23eaa488b9e3b7e912e310561003b.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+
+' Users
+osa_user_green_developer(osa_user_green_developer, &quot;label&quot;, &quot;tech&quot;)
+osa_user_green_operations(osa_user_green_operations, &quot;label&quot;, &quot;tech&quot;)
+osa_user_green_business_manager(osa_user_green_business_manager, &quot;label&quot;, &quot;tech&quot;)
+
+' Devices
+osa_desktop(osa_desktop, &quot;label&quot;, &quot;tech&quot;)
+osa_laptop(osa_laptop, &quot;label&quot;, &quot;tech&quot;)
+osa_iPhone(osa_iPhone, &quot;label&quot;, &quot;tech&quot;)
+osa_server(osa_server, &quot;label&quot;, &quot;tech&quot;)
+
+' Network
+osa_device_wireless_router(osa_device_wireless_router, &quot;label&quot;, &quot;tech&quot;)
+osa_hub(osa_hub, &quot;label&quot;, &quot;tech&quot;)
+osa_firewall(osa_firewall, &quot;label&quot;, &quot;tech&quot;)
+osa_cloud(osa_cloud, &quot;label&quot;, &quot;tech&quot;)
+
+
+&#64;enduml
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Decorate the icons for our diagram</em></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id5">
+<h3>Source<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+
+&#39; Users
+osa_user_green_developer(osa_user_green_developer, &quot;label&quot;, &quot;tech&quot;)
+osa_user_green_operations(osa_user_green_operations, &quot;label&quot;, &quot;tech&quot;)
+osa_user_green_business_manager(osa_user_green_business_manager, &quot;label&quot;, &quot;tech&quot;)
+
+&#39; Devices
+osa_desktop(osa_desktop, &quot;label&quot;, &quot;tech&quot;)
+osa_laptop(osa_laptop, &quot;label&quot;, &quot;tech&quot;)
+osa_iPhone(osa_iPhone, &quot;label&quot;, &quot;tech&quot;)
+osa_server(osa_server, &quot;label&quot;, &quot;tech&quot;)
+
+&#39; Network
+osa_device_wireless_router(osa_device_wireless_router, &quot;label&quot;, &quot;tech&quot;)
+osa_hub(osa_hub, &quot;label&quot;, &quot;tech&quot;)
+osa_firewall(osa_firewall, &quot;label&quot;, &quot;tech&quot;)
+osa_cloud(osa_cloud, &quot;label&quot;, &quot;tech&quot;)
+
+
+@enduml
+
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id6">
+<h3>Play<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="id8">
+<h3>Exercises<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>TBD</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="create-the-diagram-by-connecting-things-together">
+<h2>5. Create the diagram by connecting things together<a class="headerlink" href="#create-the-diagram-by-connecting-things-together" title="Permalink to this headline">¶</a></h2>
+<p>Now for the fun bit…</p>
+<ol class="arabic simple">
+<li><p>Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.</p></li>
+<li><p>Bob is an Accountant in the Accounts team. He has Mac and an iPhone.</p></li>
+<li><p>They connect to the office server, and via a firewall to the Internet.</p></li>
+</ol>
+<div class="figure align-center" id="id25">
+<p class="plantuml">
+<img src="../_images/plantuml-83c630b4df7732ac00e8c2952a8352eb06ab48de.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+
+' Devices
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+
+' Network
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+Mary -&gt; pc: source code
+Mary -&gt; android: social media
+
+Bob -&gt; mac: financial info
+Bob -&gt; iphone: phone calls
+
+Ivan -&gt; server: configuration
+
+iphone -&gt; wifiAP
+android -&gt; wifiAP
+
+wifiAP -&gt; hub
+server -&gt; hub
+mac -&gt; hub
+pc -&gt; hub
+
+hub -&gt; firewall
+
+firewall -&gt; cloud
+
+&#64;enduml
+
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Connect the icons</em></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id9">
+<h3>Source<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+&#39;. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+&#39;. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+&#39;. Ivan is an IT guy who looks after the server. 
+&#39;. They connect to the network hub, and via a firewall to the Internet.
+
+
+&#39; Users
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+
+&#39; Devices
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+
+&#39; Network
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+<span class="hll">Mary -&gt; pc: source code
+</span><span class="hll">Mary -&gt; android: social media
+</span><span class="hll">
+</span><span class="hll">Bob -&gt; mac: financial info
+</span><span class="hll">Bob -&gt; iphone: phone calls
+</span><span class="hll">
+</span><span class="hll">Ivan -&gt; server: configuration
+</span><span class="hll">
+</span><span class="hll">iphone -&gt; wifiAP
+</span><span class="hll">android -&gt; wifiAP
+</span><span class="hll">
+</span><span class="hll">wifiAP -&gt; hub
+</span><span class="hll">server -&gt; hub
+</span><span class="hll">mac -&gt; hub
+</span><span class="hll">pc -&gt; hub
+</span><span class="hll">
+</span><span class="hll">hub -&gt; firewall
+</span><span class="hll">
+</span><span class="hll">firewall -&gt; cloud
+</span>
+@enduml
+
+
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id10">
+<h3>Play<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="id12">
+<h3>Exercises<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Add some text to describe the connection from firewall to cloud</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="change-the-layout-to-vertical">
+<h2>6. Change the Layout to Vertical<a class="headerlink" href="#change-the-layout-to-vertical" title="Permalink to this headline">¶</a></h2>
+<p>We want the diagram to be vertical, with the cloud at the bottom and the users at the top.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We use “–&gt;” to connect the icons so they are arranged vertically</p>
+</div>
+<p>We can specify a connection direction as follows:</p>
+<table class="colwidths-given docutils align-default" id="id26">
+<caption><span class="caption-text">Tools Used</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>text</p></th>
+<th class="head"><p>Direction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-&gt;</p></td>
+<td><p>horizontal left to right</p></td>
+</tr>
+<tr class="row-odd"><td><p>–&gt;TODO</p></td>
+<td><p>vertical top to bottom</p></td>
+</tr>
+<tr class="row-even"><td><p>-up-&gt;</p></td>
+<td><p>vertical bottom to top</p></td>
+</tr>
+<tr class="row-odd"><td><p>-down-&gt;</p></td>
+<td><p>vertical top to bottom</p></td>
+</tr>
+<tr class="row-even"><td><p>-left-&gt;</p></td>
+<td><p>horizontal right to left</p></td>
+</tr>
+<tr class="row-odd"><td><p>-right-&gt;</p></td>
+<td><p>horizontal left to right</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-center" id="id27">
+<p class="plantuml">
+<img src="../_images/plantuml-2d4aec6e19cea95db86d4f109305162ab07ffe54.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+
+' Devices
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+
+' Network
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+Mary --&gt; pc: source code
+Mary --&gt; android: social media
+
+Bob --&gt; mac: financial info
+Bob --&gt; iphone: phone calls
+
+
+Ivan --&gt; server: configuration
+
+iphone --&gt; wifiAP
+android --&gt; wifiAP
+wifiAP --&gt; hub
+
+server --&gt; hub
+mac --&gt; hub
+pc --&gt; hub
+
+
+hub --&gt; firewall
+
+firewall --&gt; cloud
+
+&#64;enduml
+
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Use –&gt; to connect vertically</em></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id13">
+<h3>Source<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+&#39;. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+&#39;. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+&#39;. Ivan is an IT guy who looks after the server. 
+&#39;. They connect to the network hub, and via a firewall to the Internet.
+
+
+&#39; Users
+
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+
+&#39; Devices
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+
+&#39; Network
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+<span class="hll">Mary --&gt; pc: source code
+</span><span class="hll">Mary --&gt; android: social media
+</span><span class="hll">
+</span><span class="hll">Bob --&gt; mac: financial info
+</span><span class="hll">Bob --&gt; iphone: phone calls
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">Ivan --&gt; server: configuration
+</span><span class="hll">
+</span><span class="hll">iphone --&gt; wifiAP
+</span><span class="hll">android --&gt; wifiAP
+</span><span class="hll">wifiAP --&gt; hub
+</span><span class="hll">
+</span><span class="hll">server --&gt; hub
+</span><span class="hll">mac --&gt; hub
+</span><span class="hll">pc --&gt; hub
+</span><span class="hll">
+</span><span class="hll">
+</span><span class="hll">hub --&gt; firewall
+</span><span class="hll">
+</span><span class="hll">firewall --&gt; cloud
+</span>
+@enduml
+
+
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id14">
+<h3>Play<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="id16">
+<h3>Exercises<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Arrange the diagram vertically with cloud on top, users on bottom</p></li>
+<li><p>Arrange the diagram horizontally from left to right with users on left, cloud on right</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="change-the-layout-by-grouping-icons-together">
+<h2>7. Change the Layout by grouping icons together<a class="headerlink" href="#change-the-layout-by-grouping-icons-together" title="Permalink to this headline">¶</a></h2>
+<p>Here we use the <a class="reference external" href="https://forum.plantuml.net/4387/please-provide-together-keyword-group-diagram-nodes-together">together</a> keyword.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <a class="reference external" href="https://forum.plantuml.net/4387/please-provide-together-keyword-group-diagram-nodes-together">together</a> keyword allows you to specify what icons you want to group together.
+Like all layout options, minimize their use. See why in the Exercise for this section.</p>
+</div>
+<div class="figure align-center" id="id28">
+<p class="plantuml">
+<img src="../_images/plantuml-926083931d94f8568f7ab10c7406658c31bc2c78.png" alt="&#64;startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+'. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+'. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+'. Ivan is an IT guy who looks after the server. 
+'. They connect to the network hub, and via a firewall to the Internet.
+
+
+' Users
+together {
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+}
+
+' Devices
+together {
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+}
+
+
+' Network
+
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+Mary --&gt; pc: source code
+Mary --&gt; android: social media
+
+Bob --&gt; mac: financial info
+Bob --&gt; iphone: phone calls
+
+
+Ivan --&gt; server: configuration
+
+iphone --&gt; wifiAP
+android --&gt; wifiAP
+wifiAP --&gt; hub
+
+server --&gt; hub
+mac --&gt; hub
+pc --&gt; hub
+
+
+hub --&gt; firewall
+
+firewall --&gt; cloud
+
+&#64;enduml
+
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Use together keyword to group our icons</em></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id17">
+<h3>Source<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include ./osa/Common.puml
+!include ./osa/User/all.puml
+!include ./osa/Hardware/all.puml
+!include ./osa/Misc/all.puml
+!include ./osa/Server/all.puml
+!include ./osa/Site/all.puml
+
+&#39;. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+&#39;. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+&#39;. Ivan is an IT guy who looks after the server. 
+&#39;. They connect to the network hub, and via a firewall to the Internet.
+
+
+&#39; Users
+<span class="hll">together {
+</span>osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+}
+
+&#39; Devices
+<span class="hll">together {
+</span>osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+}
+
+
+<span class="hll">&#39; Network
+</span>
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+Mary --&gt; pc: source code
+Mary --&gt; android: social media
+
+Bob --&gt; mac: financial info
+Bob --&gt; iphone: phone calls
+
+
+Ivan --&gt; server: configuration
+
+iphone --&gt; wifiAP
+android --&gt; wifiAP
+wifiAP --&gt; hub
+
+server --&gt; hub
+mac --&gt; hub
+pc --&gt; hub
+
+
+hub --&gt; firewall
+
+firewall --&gt; cloud
+
+@enduml
+
+
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id18">
+<h3>Play<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/">Play with online diagram</a></p>
+</div>
+<div class="section" id="id20">
+<h3>Exercises<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>What happens if we put a “together” around the network elements too - line 33?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>8. Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PassSpriteAsParameter.html" class="btn btn-neutral float-right" title="Create a Template from our Network Diagram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../principles.html" class="btn btn-neutral float-left" title="Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

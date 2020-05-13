@@ -1,0 +1,26 @@
+Overview
+========
+
+.. _PlantUML: https://www.plantuml.com/
+
+PlantUML_ diagrams can be enriched with sprites (graphical elements).
+
+
+Here we are going to see how to use the following features by
+# Create template diagrams that are easy to change
+# Cresasfsfd XXX
+
+
+
+.. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
+
+PlantUMLPreProcessor_
+
+
+
+.. literalinclude:: ./PassSpriteAsParameter1.puml
+    :emphasize-lines: 1, 14-15, 19-21, 23
+    :linenos: 
+
+Passing a sprite as an argument to a Procedure
+-----------------------------------------------
