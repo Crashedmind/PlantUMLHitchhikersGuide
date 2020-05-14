@@ -29,6 +29,11 @@ Welcome to Playing with PlantUML!
    templates/NetworkUsersMachines
    templates/PassSpriteAsParameter
    
+.. toctree::
+   :maxdepth: 2
+   :caption: OtherFeatures
+      
+   todo   
    
 Index
 ==================
