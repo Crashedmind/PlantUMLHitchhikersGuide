@@ -78,7 +78,7 @@ Play
 |playbutton1| Press to play around with this diagram source online.
 
 .. |playbutton1| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 
@@ -120,7 +120,7 @@ Play
 |playbutton2| Press to play around with this diagram source online.
 
 .. |playbutton2| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 Explore
@@ -153,7 +153,7 @@ Play
 |playbutton3| Press to play around with this diagram source online.
 
 .. |playbutton3| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 Explore
@@ -193,7 +193,7 @@ Play
 |playbutton4| Press to play around with this diagram source online.
 
 .. |playbutton4| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 Explore
@@ -244,7 +244,7 @@ Play
 |playbutton5| Press to play around with this diagram source online.
 
 .. |playbutton5| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 Explore
@@ -283,7 +283,7 @@ Play
 |playbutton6| Press to play around with this diagram source online.
 
 .. |playbutton6| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 Explore
