@@ -21,6 +21,7 @@ Welcome to Playing with PlantUML!
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
    :caption: Introduction
 
    principles
@@ -30,6 +31,7 @@ Welcome to Playing with PlantUML!
    templates/PassSpriteAsParameter
    
 .. toctree::
+   :numbered:
    :maxdepth: 2
    :caption: OtherFeatures
       

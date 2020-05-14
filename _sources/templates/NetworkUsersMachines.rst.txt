@@ -61,7 +61,7 @@ The OpenSecurityArchitecture library has a nice set of users and network compone
     To see all stdlib icon libraries - do TBD
     
 
-2. View all the icons with listsprites_
+View all the icons with listsprites_
 -------------------------------------------------------------------------------
 
 #. Create a blank diagram that includes the icon files we're interested in
@@ -97,7 +97,7 @@ Explore
 #. What happens if we don't include any libraries?
  
 
-3. Gather the icons we need
+Gather the icons we need
 -------------------------------------------------------------------------------
 
 #. Create a diagram with the selected icons 
@@ -140,7 +140,7 @@ Explore
 
 
 
-4. Decorate the Icons
+Decorate the Icons
 -------------------------------------------------------------------------------
 
 #. We use the default functions defined as part of stdlib that decorate our raw sprites
@@ -175,7 +175,7 @@ Explore
 
 
 
-5. Create the diagram by connecting things together
+Create the diagram by connecting things together
 -------------------------------------------------------------------------------
 
 Now for the fun bit...
@@ -213,7 +213,7 @@ Explore
 
 
 
-6. Change the Layout to Vertical
+Change the Layout to Vertical
 -------------------------------------------------------------------------------
 
 We want the diagram to be vertical, with the cloud at the bottom and the users at the top.
@@ -265,7 +265,7 @@ Explore
 
 
 
-7. Change the Layout by grouping icons together_
+Change the Layout by grouping icons together_
 -------------------------------------------------------------------------------
 
 Here we use the together_ keyword.
@@ -303,7 +303,7 @@ Explore
 
 
 
-8. Conclusion
+Conclusion
 -------------------------------------------------------------------------------
 
 
