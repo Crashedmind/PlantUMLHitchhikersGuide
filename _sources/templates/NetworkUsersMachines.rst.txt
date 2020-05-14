@@ -75,7 +75,12 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton1| Press to play around with this diagram source online.
+
+.. |playbutton1| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
+
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,7 +117,11 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton2| Press to play around with this diagram source online.
+
+.. |playbutton2| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,7 +150,11 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton3| Press to play around with this diagram source online.
+
+.. |playbutton3| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -177,7 +190,11 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton4| Press to play around with this diagram source online.
+
+.. |playbutton4| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -224,7 +241,11 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton5| Press to play around with this diagram source online.
+
+.. |playbutton5| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -259,7 +280,11 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Play with online diagram <http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/>`_
+|playbutton6| Press to play around with this diagram source online.
+
+.. |playbutton6| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9IpCnBpYbDILMmoIzEjEFAoImkAIueoYn9vN98pKi1AW40/
+                :width: 40 px
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
