@@ -53,7 +53,7 @@ There 3 types of element with different properties:
 #. Machines: Type, IP address, OS 
 #. Network Equipment: Type, IP address, and e.g. product model and number
 
-1. Select an icon library
+Select an icon library
 -------------------------------------------------------------------------------
 The OpenSecurityArchitecture library has a nice set of users and network components so we'll use that.
 
