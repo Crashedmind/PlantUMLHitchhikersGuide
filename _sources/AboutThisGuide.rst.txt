@@ -17,8 +17,9 @@ About this Guide
 Goals
 ===============================================================================
 
-#. Create a user-focused guide for PlantUML that enables you, the user, to deliver maximum value with it.
+#. Create a user-focused guide for PlantUML that enables you, the user, to deliver maximum value with PlantUML.
 #. Create a guide that was better than anything that existed and that I, @crashedmind, would be happy with.
+#. Seed the community to 
 
 Guide Principles
 ===============================================================================

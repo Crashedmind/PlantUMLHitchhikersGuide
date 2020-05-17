@@ -1,0 +1,113 @@
+.. _c4-label:
+
+*******************************************************************************
+C4 Lightweight Software Architecture Description Method
+*******************************************************************************
+
+
+Introduction
+===============================================================================
+
+    *Big design up front is dumb, but doing no design up front is even
+    dumber.* Dave Thomas
+
+The `C4 Model <https://c4model.com/>`__ is a lightweight software
+architecture description method. It consists of a set of 4 diagrams that
+describe the **static** structure of a software system.
+
+Overall, it strives for clarity and communication of the story, and
+follows `Shneiderman's
+mantra <http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html>`__:
+
+    *Overview first, zoom and filter, then details-on-demand*
+
+It is not formal UML e.g. the UML actor stickman is deliberately not
+used as it causes confusion between a person or a system.
+
+.. figure:: ./c4.png
+    
+    The 4 C's
+
+
+.. csv-table:: 
+   :header: "The **4C's**"
+   :widths: 15, 30
+
+    "**Context**", "A high-level diagram that sets the scene; including key system dependencies and people (actors/roles/personas/etc). `Context diagrams <https://en.wikipedia.org/wiki/System_context_diagram>`__ are standard in software engineering (even if not used often)."
+    "**Container**", "A container diagram shows the high-level technology choices, how responsibilities are distributed across them and how the containers communicate."
+    "**Component**", "For each container, a component diagram lets you see the key logical components and their relationships. 4."
+    "**Classes (or Code)**", "This is optional and is the lowest level of detail."
+    
+
+CheatSheet
+===============================================================================
+
+The
+`CheatSheet <http://www.codingthearchitecture.com/2017/04/27/visualising_and_documenting_software_architecture_cheat_sheets.html>`__
+gives a good summary of the C4 model and diagrams.
+
+Video Presentation
+===============================================================================
+
+See `youtube video from NDC2017
+conference <https://www.youtube.com/watch?v=Ym9nhVZs89o>`__ by Simon
+Brown on C4 for visualisation.
+
+Related Methods
+===============================================================================
+
+There are a number of related models and templates:
+
+4+1 model
+-------------------------------------------------------------------------------
+
+C4 is inpsired by `the 4+1 model for software
+architecture <https://en.wikipedia.org/wiki/4%2B1_architectural_view_model>`__
+
+ARC42
+-------------------------------------------------------------------------------
+
+C4 can be combined with arc42 documentation template. The diagrams map
+as follows:
+
++---------------------------------+--------------------------+
+| Arc42                           | C4                       |
++=================================+==========================+
+| Context and Scope               | System Context diagram   |
++---------------------------------+--------------------------+
+| Building Block View (level 1)   | Container diagram        |
++---------------------------------+--------------------------+
+| Building Block View (level 2)   | Component diagram        |
++---------------------------------+--------------------------+
+| Building Block View (level 3)   | Class diagram            |
++---------------------------------+--------------------------+
+
+Data-flow diagrams
+-------------------------------------------------------------------------------
+
+`Data-flow diagrams
+(DFD) <https://en.wikipedia.org/wiki/Data-flow_diagram>`__ (to desribe
+data **activity**) use a similar hierachical approach starting with the
+contextual DFD0. They use a multi-level numbering scheme - DFD0: 1 -
+DFD1: 1.1., 1.2, - DFD2: 1.1.1, 1.1.2,
+
+Books
+-------------------------------------------------------------------------------
+
+These books, written by [@simonbrown](https://twitter.com/simonbrown),
+are available to buy from
+https://leanpub.com/visualising-software-architecture.
+
+
+.. |Book1| image:: ./swarchv1.png
+
+.. |Book2| image:: ./swarchv2.png
+
+
+|Book1|  |Book2|  
+
+
+.. |`Software Architecture for Developers: Volume 1 - Technical leadership and the balance with Agility <https://leanpub.com/b/software-architecture>`__| image:: swarchv1.png
+.. |`Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture <https://leanpub.com/visualising-software-architecture>`__| image:: swarchv2.png
+
+

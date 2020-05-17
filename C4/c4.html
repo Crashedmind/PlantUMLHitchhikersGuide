@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
+  <title>1. C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -37,7 +37,9 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Journey to Documentation as Code" href="../DocumentationAsCode/JourneyDocumentationASCode.html" />
+    <link rel="prev" title="2. Generate diagrams from PlantUML source files using AWS Lambda" href="../GenerateDiagrams/GenerateDiagramsLambda.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,11 +93,12 @@
 </ul>
 <p class="caption"><span class="caption-text">Stdlib</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">5. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4Stdlib.html">5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -103,8 +106,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cheatsheet">1.2. CheatSheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#video-presentation">1.3. Video Presentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related-methods">1.4. Related Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#model">1.4.1. 4+1 model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arc42">1.4.2. ARC42</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-flow-diagrams">1.4.3. Data-flow diagrams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#books">1.4.4. Books</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
@@ -155,13 +170,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>C4 Lightweight Software Architecture Description Method</li>
+      <li>1. C4 Lightweight Software Architecture Description Method</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/C4/C4.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/C4/c4.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,10 +190,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="c4-lightweight-software-architecture-description-method">
-<h1>C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
-<blockquote id="c4-label">
-<div><p>“Big design up front is dumb, but doing no design up front is even
-dumber.” Dave Thomas</p>
+<span id="c4-label"></span><h1>1. C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>1.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><em>Big design up front is dumb, but doing no design up front is even
+dumber.</em> Dave Thomas</p>
 </div></blockquote>
 <p>The <a class="reference external" href="https://c4model.com/">C4 Model</a> is a lightweight software
 architecture description method. It consists of a set of 4 diagrams that
@@ -191,37 +208,58 @@ mantra</a>:</p>
 </div></blockquote>
 <p>It is not formal UML e.g. the UML actor stickman is deliberately not
 used as it causes confusion between a person or a system.</p>
-<div class="figure align-default">
-<img alt="C4" src="../_images/c4.png" />
+<div class="figure align-default" id="id1">
+<img alt="../_images/c4.png" src="../_images/c4.png" />
+<p class="caption"><span class="caption-text">The 4 C’s</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>The <strong>4C’s</strong> are:</p>
-<p><strong>Context</strong>: A high-level diagram that sets the scene; including key system dependencies and people (actors/roles/personas/etc). <a class="reference external" href="https://en.wikipedia.org/wiki/System_context_diagram">Context diagrams</a> are standard in software engineering (even if not used often).</p>
-<p><strong>Container</strong>: A container diagram shows the high-level technology choices, how responsibilities are distributed across them and how the containers communicate. 3.</p>
-<p><strong>Component</strong>: For each container, a
-component diagram lets you see the key logical components and their relationships. 4.</p>
-<p><strong>Classes (or Code)</strong>: This is optional and is the lowest level of detail.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>The <strong>4C’s</strong></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Context</strong></p></td>
+<td><p>A high-level diagram that sets the scene; including key system dependencies and people (actors/roles/personas/etc). <a class="reference external" href="https://en.wikipedia.org/wiki/System_context_diagram">Context diagrams</a> are standard in software engineering (even if not used often).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Container</strong></p></td>
+<td><p>A container diagram shows the high-level technology choices, how responsibilities are distributed across them and how the containers communicate.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Component</strong></p></td>
+<td><p>For each container, a component diagram lets you see the key logical components and their relationships. 4.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Classes (or Code)</strong></p></td>
+<td><p>This is optional and is the lowest level of detail.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="cheatsheet">
-<h2>CheatSheet<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. CheatSheet<a class="headerlink" href="#cheatsheet" title="Permalink to this headline">¶</a></h2>
 <p>The
 <a class="reference external" href="http://www.codingthearchitecture.com/2017/04/27/visualising_and_documenting_software_architecture_cheat_sheets.html">CheatSheet</a>
 gives a good summary of the C4 model and diagrams.</p>
 </div>
 <div class="section" id="video-presentation">
-<h2>Video Presentation<a class="headerlink" href="#video-presentation" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Video Presentation<a class="headerlink" href="#video-presentation" title="Permalink to this headline">¶</a></h2>
 <p>See <a class="reference external" href="https://www.youtube.com/watch?v=Ym9nhVZs89o">youtube video from NDC2017
 conference</a> by Simon
 Brown on C4 for visualisation.</p>
 </div>
 <div class="section" id="related-methods">
-<h2>Related Methods<a class="headerlink" href="#related-methods" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Related Methods<a class="headerlink" href="#related-methods" title="Permalink to this headline">¶</a></h2>
 <p>There are a number of related models and templates:</p>
 <div class="section" id="model">
-<h3>4+1 model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1. 4+1 model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <p>C4 is inpsired by <a class="reference external" href="https://en.wikipedia.org/wiki/4%2B1_architectural_view_model">the 4+1 model for software
 architecture</a></p>
 </div>
 <div class="section" id="arc42">
-<h3>ARC42<a class="headerlink" href="#arc42" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.2. ARC42<a class="headerlink" href="#arc42" title="Permalink to this headline">¶</a></h3>
 <p>C4 can be combined with arc42 documentation template. The diagrams map
 as follows:</p>
 <table class="docutils align-default">
@@ -251,41 +289,19 @@ as follows:</p>
 </table>
 </div>
 <div class="section" id="data-flow-diagrams">
-<h3>Data-flow diagrams<a class="headerlink" href="#data-flow-diagrams" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.3. Data-flow diagrams<a class="headerlink" href="#data-flow-diagrams" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Data-flow_diagram">Data-flow diagrams
 (DFD)</a> (to desribe
 data <strong>activity</strong>) use a similar hierachical approach starting with the
 contextual DFD0. They use a multi-level numbering scheme - DFD0: 1 -
 DFD1: 1.1., 1.2, - DFD2: 1.1.1, 1.1.2,</p>
 </div>
-</div>
 <div class="section" id="books">
-<h2>Books<a class="headerlink" href="#books" title="Permalink to this headline">¶</a></h2>
+<h3>1.4.4. Books<a class="headerlink" href="#books" title="Permalink to this headline">¶</a></h3>
 <p>These books, written by [&#64;simonbrown](<a class="reference external" href="https://twitter.com/simonbrown">https://twitter.com/simonbrown</a>),
 are available to buy from
 <a class="reference external" href="https://leanpub.com/visualising-software-architecture">https://leanpub.com/visualising-software-architecture</a>.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 55%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Cover</p></th>
-<th class="head"><p>Title</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a href="#id2"><span class="problematic" id="id3">|`Software Architecture for Developers: Volume 1 - Technical leadership and the balance with Agility &lt;https://leanpub.com/b/software-architecture&gt;`__|</span></a></p></td>
-<td><p>Software Architecture for Developers: Volume 1 - Technical leadership and the balance with Agility</p></td>
-</tr>
-<tr class="row-odd"><td><p><a href="#id4"><span class="problematic" id="id5">|`Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture &lt;https://leanpub.com/visualising-software-architecture&gt;`__|</span></a></p></td>
-<td><p>Software Architecture for Developers - Volume 2 - Visualise, document and explore your software architecture. (As at 2019-6-15 this book is 80% complete LAST UPDATED ON 2019-03-05). C4 is covered in this book.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>fix book cover titles</p>
+<p><img alt="Book1" src="../_images/swarchv1.png" />  <img alt="Book2" src="../_images/swarchv2.png" /></p>
 </div>
 </div>
 </div>
@@ -295,6 +311,15 @@ are available to buy from
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../DocumentationAsCode/JourneyDocumentationASCode.html" class="btn btn-neutral float-right" title="2. Journey to Documentation as Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../GenerateDiagrams/GenerateDiagramsLambda.html" class="btn btn-neutral float-left" title="2. Generate diagrams from PlantUML source files using AWS Lambda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -92,11 +92,12 @@
 </ul>
 <p class="caption"><span class="caption-text">Stdlib</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">4. Using Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">5. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -105,7 +106,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="C4/C4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
@@ -188,22 +189,61 @@
 <p class="admonition-title">Todo</p>
 <p>add ref to under the hood chapter</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id1"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 54.)</p>
+<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id1"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 55.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>add follow on details here</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id2"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 59.)</p>
+<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id2"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 60.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>add page and ref to Journey to documentation as code as annex</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id3"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 63.)</p>
+<p class="todo-source">(The <a class="reference internal" href="AboutThisGuide.html#id3"><em>original entry</em></a> is located in /home/documentation/docs/AboutThisGuide.rst, line 64.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
-<p>fix book cover titles</p>
+<p>for some reason this diagram did not render to png - so include the png for now…</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="_images/plantuml-6dec8d6f56288d43906e8a05efd543faafc36b90.png" alt="&#64;startuml
+
+'!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+!include &lt;c4/C4_Component.puml&gt;  
+
+
+LAYOUT_WITH_LEGEND()
+
+
+title Component diagram for Internet Banking System - API Application
+
+Container(spa, &quot;Single Page Application&quot;, &quot;javascript and angular&quot;, &quot;Provides all the internet banking functionality to customers via their web browser.&quot;)
+Container(ma, &quot;Mobile App&quot;, &quot;Xamarin&quot;, &quot;Provides a limited subset ot the internet banking functionality to customers via their mobile mobile device.&quot;)
+ContainerDb(db, &quot;Database&quot;, &quot;Relational Database Schema&quot;, &quot;Stores user registration information, hashed authentication credentials, access logs, etc.&quot;)
+System_Ext(mbs, &quot;Mainframe Banking System&quot;, &quot;Stores all of the core banking information about customers, accounts, transactions, etc.&quot;)
+
+Container_Boundary(api, &quot;API Application&quot;) {
+    Component(sign, &quot;Sign In Controller&quot;, &quot;MVC Rest Controlle&quot;, &quot;Allows users to sign in to the internet banking system&quot;)
+    Component(accounts, &quot;Accounts Summary Controller&quot;, &quot;MVC Rest Controlle&quot;, &quot;Provides customers with a summory of their bank accounts&quot;)
+    Component(security, &quot;Security Component&quot;, &quot;Spring Bean&quot;, &quot;Provides functionality related to singing in, changing passwords, etc.&quot;)
+    Component(mbsfacade, &quot;Mainframe Banking System Facade&quot;, &quot;Spring Bean&quot;, &quot;A facade onto the mainframe banking system.&quot;)
+
+    Rel(sign, security, &quot;Uses&quot;)
+    Rel(accounts, mbsfacade, &quot;Uses&quot;)
+    Rel(security, db, &quot;Read &amp; write to&quot;, &quot;JDBC&quot;)
+    Rel(mbsfacade, mbs, &quot;Uses&quot;, &quot;XML/HTTPS&quot;)
+}
+
+Rel(spa, sign, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
+Rel(spa, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
+
+Rel(ma, sign, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
+Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
+&#64;enduml
+"/>
+</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="C4/C4.html#id1"><em>original entry</em></a> is located in /home/documentation/docs/C4/C4.rst, line 106.)</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="C4/C4Stdlib.html#id1"><em>original entry</em></a> is located in /home/documentation/docs/C4/C4Stdlib.rst, line 63.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>section on add some color to icons by user, machine, network
@@ -225,6 +265,21 @@ add a boundary</p>
 <p>autogenerate online code links via script doing searchNreplace with plantuml PTE output</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#id17"><em>original entry</em></a> is located in /home/documentation/docs/NetworkUsersMachines/NetworkUsersMachines.rst, line 305.)</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>add info on a standard way to create sprites</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#id2"><em>original entry</em></a> is located in /home/documentation/docs/PlantUMLSpriteLibraries/plantuml_sprites.rst, line 182.)</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>add info on what osa icons look like</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#id3"><em>original entry</em></a> is located in /home/documentation/docs/PlantUMLSpriteLibraries/plantuml_sprites.rst, line 201.)</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
+<p>fix svg link</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#id4"><em>original entry</em></a> is located in /home/documentation/docs/PlantUMLSpriteLibraries/plantuml_sprites.rst, line 215.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
 <p>sequence diagrams to sprites to standard sprite libraries to a universal sprite library</p>

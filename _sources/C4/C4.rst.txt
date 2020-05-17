@@ -2,6 +2,7 @@
 C4 Lightweight Software Architecture Description Method
 *******************************************************************************
 
+.. _c4-label:
 
 
 

@@ -198,10 +198,13 @@ Imagine
    :numbered:   
    :caption: Stdlib
 
-   NetworkUsersMachines/NetworkUsersMachines
+   PlantUMLSpriteLibraries/plantuml_sprites
    PlantUMLSpriteLibraries/PlantUMLSprites
+   NetworkUsersMachines/NetworkUsersMachines
    PassSpriteAsParameter/PassSpriteAsParameter
+   
    C4/C4Stdlib
+   
 
    Stdlib/ContributingToStdlib
 
@@ -225,7 +228,7 @@ Imagine
    :numbered:
    :caption: Annex
    
-   C4/C4
+   C4/c4
    DocumentationAsCode/JourneyDocumentationASCode
 
 .. toctree::

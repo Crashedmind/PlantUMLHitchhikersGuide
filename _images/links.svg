@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="271px" preserveAspectRatio="none" style="width:414px;height:271px;" version="1.1" viewBox="0 0 414 271" width="414px" zoomAndPan="magnify"><defs><filter height="300%" id="fl502714tvy16" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><line style="stroke: #2980B9; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="145" x2="145" y1="86.2969" y2="184.5625"/><line style="stroke: #2980B9; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="292.5" x2="292.5" y1="86.2969" y2="184.5625"/><a href="http://plantuml.com/sequence-diagram" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/sequence-diagram" xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="128" y="82.9951">Bob</text><ellipse cx="145" cy="13" fill="#BDE3FF" filter="url(#fl502714tvy16)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M145,21 L145,48 M132,29 L158,29 M145,48 L132,63 M145,48 L158,63 " fill="none" filter="url(#fl502714tvy16)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="128" y="196.5576">Bob</text><ellipse cx="145" cy="209.8594" fill="#BDE3FF" filter="url(#fl502714tvy16)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M145,217.8594 L145,244.8594 M132,225.8594 L158,225.8594 M145,244.8594 L132,259.8594 M145,244.8594 L158,259.8594 " fill="none" filter="url(#fl502714tvy16)" style="stroke: #A80036; stroke-width: 2.0;"/></a><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="230.5" y="82.9951">This is</text><a href="http://plantuml.com/sequence-diagram" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/sequence-diagram" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="32" x="278.5" y="82.9951">Alice</text></a><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="314.5" y="82.9951">actor</text><ellipse cx="293" cy="13" fill="#BDE3FF" filter="url(#fl502714tvy16)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M293,21 L293,48 M280,29 L306,29 M293,48 L280,63 M293,48 L306,63 " fill="none" filter="url(#fl502714tvy16)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="230.5" y="196.5576">This is</text><a href="http://plantuml.com/sequence-diagram" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/sequence-diagram" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="32" x="278.5" y="196.5576">Alice</text></a><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="314.5" y="196.5576">actor</text><ellipse cx="293" cy="209.8594" fill="#BDE3FF" filter="url(#fl502714tvy16)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M293,217.8594 L293,244.8594 M280,225.8594 L306,225.8594 M293,244.8594 L280,259.8594 M293,244.8594 L306,259.8594 " fill="none" filter="url(#fl502714tvy16)" style="stroke: #A80036; stroke-width: 2.0;"/><a href="http://plantuml.com/index" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/index" xlink:type="simple"><polygon fill="#2980B9" points="281,118.4297,291,122.4297,281,126.4297,285,122.4297" style="stroke: #2980B9; stroke-width: 1.0;"/><line style="stroke: #2980B9; stroke-width: 1.0;" x1="145" x2="287" y1="122.4297" y2="122.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="30" x="152" y="117.3638">hello</text></a><a href="http://plantuml.com/index" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/index" xlink:type="simple"><path d="M8,101.2969 L8,126.2969 L136,126.2969 L136,111.2969 L126,101.2969 L8,101.2969 " fill="#F1FFFF" filter="url(#fl502714tvy16)" style="stroke: #2980B9; stroke-width: 1.0;"/><path d="M126,101.2969 L126,111.2969 L136,111.2969 L126,101.2969 " fill="#F1FFFF" style="stroke: #2980B9; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="107" x="14" y="118.3638">a note with a link</text></a><a href="http://plantuml.com/index" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/index" xlink:type="simple"><polygon fill="#2980B9" points="156,157.5625,146,161.5625,156,165.5625,152,161.5625" style="stroke: #2980B9; stroke-width: 1.0;"/><line style="stroke: #2980B9; stroke-width: 1.0;" x1="150" x2="292" y1="161.5625" y2="161.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="59" x="162" y="156.4966">hello with</text></a><a href="http://plantuml.com/index" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="Tooltip for message" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="61" x="225" y="156.4966">some link</text></a><a href="http://plantuml.com/index" target="_top" xlink:actuate="onRequest" xlink:show="new" xlink:title="http://plantuml.com/index" xlink:type="simple"><path d="M298,140.4297 L298,165.4297 L402,165.4297 L402,150.4297 L392,140.4297 L298,140.4297 " fill="#F1FFFF" filter="url(#fl502714tvy16)" style="stroke: #2980B9; stroke-width: 1.0;"/><path d="M392,140.4297 L392,150.4297 L402,150.4297 L392,140.4297 " fill="#F1FFFF" style="stroke: #2980B9; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="83" x="304" y="157.4966">another note</text></a><!--
+@startuml
+
+skinparam backgroundColor white
+
+skinparam note {
+    BackgroundColor #F1FFFF
+    BorderColor #2980B9
+}
+
+skinparam activity {
+    BackgroundColor #BDE3FF
+    ArrowColor #2980B9
+    BorderColor #2980B9
+    StartColor #227BC6
+    EndColor #227BC6
+    BarColor #227BC6
+}
+
+skinparam sequence {
+    ArrowColor  #2980B9
+    DividerBackgroundColor  #BDE3FF
+    GroupBackgroundColor    #BDE3FF
+    LifeLineBackgroundColor white
+    LifeLineBorderColor #2980B9
+    ParticipantBackgroundColor  #BDE3FF
+    ParticipantBorderColor  #2980B9
+    BoxLineColor    #2980B9
+    BoxBackgroundColor  #DDDDDD
+}
+
+skinparam componentBackgroundColor    #BDE3FF
+skinparam component {
+    skinparam componentArrowColor #A80036
+    skinparam BorderColor    #A80036
+    skinparam InterfaceBackgroundColor   #BDE3FF
+    skinparam InterfaceBorderColor   #A80036
+}
+
+
+skinparam stateBackgroundColor #BDE3FF
+skinparam state {
+    skinparam BorderColor #2980B9
+    skinparam ArrowColor #2980B9
+    skinparam StartColor black
+    skinparam EndColor   black
+}
+
+
+skinparam stereotype {                  
+    skinparam CBackgroundColor  #ADD1B2
+    skinparam ABackgroundColor  #A9DCDF
+    skinparam IBackgroundColor  #B4A7E5
+    skinparam EBackgroundColor  #EB937F
+}
+
+skinparam actorBackgroundColor #BDE3FF
+skinparam actor {
+    skinparam BorderColor    #A80036
+}
+
+skinparam usecase {
+    skinparam ArrowColor   #A80036
+    skinparam BorderColor  #A80036
+}
+
+skinparam class {
+    skinparam ArrowColor #A80036
+    skinparam BackgroundColor    #BDE3FF
+    skinparam BorderColor    #A80036
+}
+
+
+skinparam object {
+    skinparam ArrowColor    #A80036
+    skinparam BackgroundColor   #BDE3FF
+    skinparam BorderColor   #A80036
+}
+
+
+skinparam packageBackgroundColor  #white
+skinparam agentBackgroundColor  #BDE3FF
+skinparam artifactBackgroundColor  #BDE3FF
+skinparam boundaryBackgroundColor  #BDE3FF
+skinparam cardBackgroundColor  #BDE3FF
+skinparam cloudBackgroundColor  #BDE3FF
+skinparam controlBackgroundColor  #BDE3FF
+skinparam databaseBackgroundColor  #BDE3FF
+skinparam entityBackgroundColor  #BDE3FF
+skinparam fileBackgroundColor  #BDE3FF
+skinparam folderBackgroundColor  #BDE3FF
+skinparam frameBackgroundColor  #BDE3FF
+skinparam interfaceBackgroundColor  #BDE3FF
+skinparam nodeBackgroundColor  #BDE3FF
+skinparam queueBackgroundColor  #BDE3FF
+skinparam stackBackgroundColor  #BDE3FF
+skinparam rectangleBackgroundColor  #BDE3FF
+skinparam storageBackgroundColor  #BDE3FF
+skinparam usecaseBackgroundColor #BDE3FF
+actor Bob [[http://plantuml.com/sequence-diagram]]
+actor "This is [[http://plantuml.com/sequence-diagram Alice]] actor" as Alice
+Bob -> Alice [[http://plantuml.com/index]] : hello
+note left [[http://plantuml.com/index]]
+  a note with a link
+end note
+Alice -> Bob : hello with [[http://plantuml.com/index{Tooltip for message} some link]]
+note right [[http://plantuml.com/index]] : another note
+note left of Bob
+end note
+@enduml
+
+PlantUML version 1.2019.09(Mon Aug 26 16:19:51 GMT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.4+11-post-Ubuntu-1ubuntu218.04.3
+Operating System: Linux
+OS Version: 4.15.0-88-generic
+Default Encoding: ANSI_X3.4-1968
+Language: en
+Country: US
+--></g></svg>

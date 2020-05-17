@@ -1,0 +1,1313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Plantuml Sprites &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Understanding PlantUML Stdlib Sprite Library" href="PlantUMLSprites.html" />
+    <link rel="prev" title="2. About this Guide" href="../AboutThisGuide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Stdlib</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Plantuml Sprites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-deployment-diagram-sprites">1.1. Builtin Sprites - Deployment Diagram Sprites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-standard-library-sprites">1.2. Builtin Sprites - Standard Library Sprites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-builtin-sprites-aws">1.2.1. Example Builtin Sprites AWS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-example">1.2.1.1. Simple Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#more-complex-example">1.2.1.2. More Complex Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-sprite">1.3. Create a Sprite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-with-a-100x100-person-icon-png">1.3.1. Start with a 100x100 person icon png</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convert-to-sprite-of-different-resolutions-as-follows">1.3.2. Convert to sprite of different resolutions as follows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-diagram-with-our-sprites">1.3.3. Create Diagram with our Sprites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-sprites-by-converting-osa-icon-libaries">1.4. Create Sprites by converting OSA icon libaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#converting-the-icon-set-to-plantuml-sprites">1.4.1. Converting the icon set to PlantUML Sprites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">1.4.2. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-icons">1.4.3. All Icons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-hyperlinks">1.5. PlantUML HyperLinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>1. Plantuml Sprites</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/PlantUMLSpriteLibraries/plantuml_sprites.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plantuml-sprites">
+<h1>1. Plantuml Sprites<a class="headerlink" href="#plantuml-sprites" title="Permalink to this headline">¶</a></h1>
+<p>PlantUML supports <a class="reference external" href="http://plantuml.com/sprite">sprites:</a> small graphic elements that can be used in diagrams.</p>
+<p>Given we want to make diagrams communicate quickly and clearly, using sprites (rather than just boxes) is very effective.</p>
+<p>You can</p>
+<ol class="arabic simple">
+<li><p>use the builtin  <a class="reference external" href="http://plantuml.com/sprite">sprites</a></p></li>
+<li><p>create your own sprites</p></li>
+</ol>
+<div class="section" id="builtin-sprites-deployment-diagram-sprites">
+<h2>1.1. Builtin Sprites - Deployment Diagram Sprites<a class="headerlink" href="#builtin-sprites-deployment-diagram-sprites" title="Permalink to this headline">¶</a></h2>
+<p><span class="xref std std-ref">Deployment</span> diagrams define several sprites.</p>
+<p>Below is an example using some of these - in a sequence diagram.</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-9d36b03f76ad27c13db65a9473b187d3602bd52d.png" alt="&#64;startuml
+
+
+autonumber
+box &quot;UnTrustedDomain&quot; #Red
+	database UnTrustedKeyStore as UKS
+	control UnTrustedKeyManager as UKM
+    boundary KeyLoader as KL
+end box
+
+box &quot;TrustedDomain&quot; #Green
+	database PersistentStorage as KS
+    control KeyManager as KM
+
+end box
+
+
+group In the Beginning...
+    
+    group RootKBPK    
+        note over KM: Unique Root KEK is pre-programmed to SOC - use this as KBPK
+        KS --&gt; KS: Root KBPK exists
+    end
+   
+    group Class KBPK Creation and Storage in UnTrustedDomain 
+        KM --&gt; KM: Create Class N KPBK
+        KS --&gt; KM: RootKBPK 
+        note over KM: Shorthand for create a KeyBlock with ClassKBPK N as key payload, and RootKBPK as KBPK
+        KM --&gt; KM: KeyBlock[ClassKBPK N]RootKBPK
+        KM --&gt; UKM: KeyBlock[ClassKBPK N]RootKBPK
+        UKM --&gt; UKS: KeyBlock[ClassKBPK N]RootKBPK        
+        note over UKS: Process is repeated for ClassKBPK 1,2,3...N 
+    end
+end 
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+
+
+<span class="n">autonumber</span>
+<span class="n">box</span> <span class="s2">&quot;UnTrustedDomain&quot;</span> <span class="c1">#Red</span>
+	<span class="n">database</span> <span class="n">UnTrustedKeyStore</span> <span class="k">as</span> <span class="n">UKS</span>
+	<span class="n">control</span> <span class="n">UnTrustedKeyManager</span> <span class="k">as</span> <span class="n">UKM</span>
+    <span class="n">boundary</span> <span class="n">KeyLoader</span> <span class="k">as</span> <span class="n">KL</span>
+<span class="n">end</span> <span class="n">box</span>
+
+<span class="n">box</span> <span class="s2">&quot;TrustedDomain&quot;</span> <span class="c1">#Green</span>
+	<span class="n">database</span> <span class="n">PersistentStorage</span> <span class="k">as</span> <span class="n">KS</span>
+    <span class="n">control</span> <span class="n">KeyManager</span> <span class="k">as</span> <span class="n">KM</span>
+
+<span class="n">end</span> <span class="n">box</span>
+
+
+<span class="n">group</span> <span class="n">In</span> <span class="n">the</span> <span class="n">Beginning</span><span class="o">...</span>
+    
+    <span class="n">group</span> <span class="n">RootKBPK</span>    
+        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Unique</span> <span class="n">Root</span> <span class="n">KEK</span> <span class="ow">is</span> <span class="n">pre</span><span class="o">-</span><span class="n">programmed</span> <span class="n">to</span> <span class="n">SOC</span> <span class="o">-</span> <span class="n">use</span> <span class="n">this</span> <span class="k">as</span> <span class="n">KBPK</span>
+        <span class="n">KS</span> <span class="o">--&gt;</span> <span class="n">KS</span><span class="p">:</span> <span class="n">Root</span> <span class="n">KBPK</span> <span class="n">exists</span>
+    <span class="n">end</span>
+   
+    <span class="n">group</span> <span class="n">Class</span> <span class="n">KBPK</span> <span class="n">Creation</span> <span class="ow">and</span> <span class="n">Storage</span> <span class="ow">in</span> <span class="n">UnTrustedDomain</span> 
+        <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Create</span> <span class="n">Class</span> <span class="n">N</span> <span class="n">KPBK</span>
+        <span class="n">KS</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">RootKBPK</span> 
+        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Shorthand</span> <span class="k">for</span> <span class="n">create</span> <span class="n">a</span> <span class="n">KeyBlock</span> <span class="k">with</span> <span class="n">ClassKBPK</span> <span class="n">N</span> <span class="k">as</span> <span class="n">key</span> <span class="n">payload</span><span class="p">,</span> <span class="ow">and</span> <span class="n">RootKBPK</span> <span class="k">as</span> <span class="n">KBPK</span>
+        <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>
+        <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">UKM</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>
+        <span class="n">UKM</span> <span class="o">--&gt;</span> <span class="n">UKS</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>        
+        <span class="n">note</span> <span class="n">over</span> <span class="n">UKS</span><span class="p">:</span> <span class="n">Process</span> <span class="ow">is</span> <span class="n">repeated</span> <span class="k">for</span> <span class="n">ClassKBPK</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">3.</span><span class="o">..</span><span class="n">N</span> 
+    <span class="n">end</span>
+<span class="n">end</span> 
+
+<span class="nd">@enduml</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="builtin-sprites-standard-library-sprites">
+<h2>1.2. Builtin Sprites - Standard Library Sprites<a class="headerlink" href="#builtin-sprites-standard-library-sprites" title="Permalink to this headline">¶</a></h2>
+<p>Some standard libaries are available for PlantUML:</p>
+<ol class="arabic simple">
+<li><p>See <a class="reference external" href="http://plantuml.com/stdlib">http://plantuml.com/stdlib</a> for what is supported in official release of PlantUML</p></li>
+<li><p>“-stdlib” option lists the builtin icon libaries</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aws</span>
+<span class="n">Version</span> <span class="mf">18.02</span><span class="o">.</span><span class="mi">22</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">milo</span><span class="o">-</span><span class="n">minderbinder</span><span class="o">/</span><span class="n">AWS</span><span class="o">-</span><span class="n">PlantUML</span>
+
+<span class="n">awslib</span>
+<span class="n">Version</span> <span class="mf">3.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">awslabs</span><span class="o">/</span><span class="n">aws</span><span class="o">-</span><span class="n">icons</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">plantuml</span>
+
+<span class="n">azure</span>
+<span class="n">Version</span> <span class="mf">2.1</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">RicardoNiepel</span><span class="o">/</span><span class="n">Azure</span><span class="o">-</span><span class="n">PlantUML</span>
+
+<span class="n">c4</span>
+<span class="n">Version</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">RicardoNiepel</span><span class="o">/</span><span class="n">C4</span><span class="o">-</span><span class="n">PlantUML</span>
+
+<span class="n">cloudinsight</span>
+<span class="n">Version</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rabelenda</span><span class="o">/</span><span class="n">cicon</span><span class="o">-</span><span class="n">plantuml</span><span class="o">-</span><span class="n">sprites</span><span class="o">/</span>
+
+<span class="n">cloudogu</span>
+<span class="n">Version</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cloudogu</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">cloudogu</span><span class="o">-</span><span class="n">sprites</span>
+
+<span class="n">material</span>
+<span class="n">Version</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Templarian</span><span class="o">/</span><span class="n">MaterialDesign</span>
+
+<span class="n">office</span>
+<span class="n">Version</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Roemer</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">office</span>
+
+<span class="n">osa</span>
+<span class="n">Version</span> <span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Crashedmind</span><span class="o">/</span><span class="n">PlantUML</span><span class="o">-</span><span class="n">opensecurityarchitecture</span><span class="o">-</span><span class="n">icons</span>
+
+<span class="n">tupadr3</span>
+<span class="n">Version</span> <span class="mf">2.0</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tupadr3</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">sprites</span>
+</pre></div>
+</div>
+<div class="section" id="example-builtin-sprites-aws">
+<h3>1.2.1. Example Builtin Sprites AWS<a class="headerlink" href="#example-builtin-sprites-aws" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/milo-minderbinder/AWS-PlantUML">Plantuml for AWS</a>
+uses the <a class="reference external" href="https://aws.amazon.com/architecture/icons/">icon set from
+AWS</a> and converts these
+to sprites for use with PlantUML.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">milo</span><span class="o">-</span><span class="n">minderbinder</span><span class="o">/</span><span class="n">AWS</span><span class="o">-</span><span class="n">PlantUML</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<div class="section" id="simple-example">
+<h4>1.2.1.1. Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-04b9f5e2a6cbbbd5a8c77fd4ad01c991070c0d5a.png" alt="&#64;startuml
+
+!include &lt;aws/common&gt;
+!include &lt;aws/Storage/AmazonS3/AmazonS3&gt;
+!include &lt;aws/Storage/AmazonS3/bucket/bucket&gt;
+
+AMAZONS3(s3) {
+    BUCKET(site,www.insecurity.co)
+    BUCKET(logs,logs.insecurity.co)
+}
+
+site .r.&gt; logs : events
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include &lt;aws/common&gt;
+!include &lt;aws/Storage/AmazonS3/AmazonS3&gt;
+!include &lt;aws/Storage/AmazonS3/bucket/bucket&gt;
+
+AMAZONS3(s3) {
+    BUCKET(site,www.insecurity.co)
+    BUCKET(logs,logs.insecurity.co)
+}
+
+site .r.&gt; logs : events
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="more-complex-example">
+<h4>1.2.1.2. More Complex Example<a class="headerlink" href="#more-complex-example" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-fceff4230d3ad38b22a7a1d26dc4770f5812a756.png" alt="&#64;startuml
+
+
+!includeurl &lt;aws/common.puml&gt;
+!includeurl &lt;aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+!includeurl &lt;aws/Database/AmazonDynamoDB/AmazonDynamoDB.puml&gt;
+!includeurl &lt;aws/Database/AmazonDynamoDB/table/table.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/user/user.puml&gt;
+!includeurl &lt;aws/SDKs/JavaScript/JavaScript.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+
+skinparam componentArrowColor Black
+skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+USER(user)
+CLIENT(browser)
+JAVASCRIPT(js,SDK)
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3) {
+        BUCKET(site,www.insecurity.co)
+        BUCKET(logs,logs.insecurity.co)
+    }
+
+    AMAZONAPIGATEWAY(api)
+
+    AWSLAMBDA(lambda) {
+        LAMBDAFUNCTION(addComments,addComments)
+    }
+
+    AMAZONDYNAMODB(dynamo) {
+        TABLE(comments,Comments)
+    }
+}
+
+user - browser
+
+browser -d-&gt; site :**1a**) get\nstatic\ncontent
+site ~&gt; logs :1a
+site .u.&gt; browser :**1b**
+browser - js
+js -r-&gt; comments :**2a**) get\ncomments
+comments ..&gt; js :**2b**
+
+js -r-&gt; api :**3**) add\ncomment
+
+api -d-&gt; addComments :**4**
+
+addComments -&gt; comments :**5**
+
+comments ..&gt; js :**6**) new\ncomments
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+
+!includeurl &lt;aws/common.puml&gt;
+!includeurl &lt;aws/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+!includeurl &lt;aws/Database/AmazonDynamoDB/AmazonDynamoDB.puml&gt;
+!includeurl &lt;aws/Database/AmazonDynamoDB/table/table.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/user/user.puml&gt;
+!includeurl &lt;aws/SDKs/JavaScript/JavaScript.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+
+skinparam componentArrowColor Black
+skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+USER(user)
+CLIENT(browser)
+JAVASCRIPT(js,SDK)
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3) {
+        BUCKET(site,www.insecurity.co)
+        BUCKET(logs,logs.insecurity.co)
+    }
+
+    AMAZONAPIGATEWAY(api)
+
+    AWSLAMBDA(lambda) {
+        LAMBDAFUNCTION(addComments,addComments)
+    }
+
+    AMAZONDYNAMODB(dynamo) {
+        TABLE(comments,Comments)
+    }
+}
+
+user - browser
+
+browser -d-&gt; site :**1a**) get\nstatic\ncontent
+site ~&gt; logs :1a
+site .u.&gt; browser :**1b**
+browser - js
+js -r-&gt; comments :**2a**) get\ncomments
+comments ..&gt; js :**2b**
+
+js -r-&gt; api :**3**) add\ncomment
+
+api -d-&gt; addComments :**4**
+
+addComments -&gt; comments :**5**
+
+comments ..&gt; js :**6**) new\ncomments
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-sprite">
+<h2>1.3. Create a Sprite<a class="headerlink" href="#create-a-sprite" title="Permalink to this headline">¶</a></h2>
+<p>It’s easy to create your own sprites from existing icons.</p>
+<div class="section" id="start-with-a-100x100-person-icon-png">
+<h3>1.3.1. Start with a 100x100 person icon png<a class="headerlink" href="#start-with-a-100x100-person-icon-png" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default">
+<img alt="PlantUMLSpriteLibraries/./images/C4person100.png" src="PlantUMLSpriteLibraries/./images/C4person100.png" />
+</div>
+</div>
+<div class="section" id="convert-to-sprite-of-different-resolutions-as-follows">
+<h3>1.3.2. Convert to sprite of different resolutions as follows<a class="headerlink" href="#convert-to-sprite-of-different-resolutions-as-follows" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">4</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person4</span><span class="o">.</span><span class="n">sprite</span>
+<span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">16</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person16</span><span class="o">.</span><span class="n">sprite</span>
+<span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">8</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person8</span><span class="o">.</span><span class="n">sprite</span>
+</pre></div>
+</div>
+<p>C4person4.sprite file:</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span>sprite $C4person100 [100x100/4] {
+0000000000000000000000000000000000000000115555LLLLLLLL5555110000000000000000000000000000000000000000
+00000000000000000000000000000000000115LLLLLLLLLLLLLLLLLLLLLLLL51000000000000000000000000000000000000
+0000000000000000000000000000000015LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL1000000000000000000000000000000000
+00000000000000000000000000000015LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL50000000000000000000000000000000
+000000000000000000000000000005LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL100000000000000000000000000000
+00000000000000000000000000005LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL10000000000000000000000000000
+0000000000000000000000000000LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL0000000000000000000000000000
+0000000000000000000000000000LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL0000000000000000000000000000
+0000000000000000000000000000LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL0000000000000000000000000000
+0000000000000000000000000000KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLG0000000000000000000000000000
+00000000000000000000000000000KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLG00000000000000000000000000000
+0000000000000000000000000000000KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLK0000000000000000000000000000000
+000000000000000000000000000000000KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLKG000000000000000000000000000000000
+00000000001115555555555555555555555LLLLLLLLLLLLLLLLLLLLLLLLLLLLLL55555555555555555555511110000000000
+00000115LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL51000000
+0001LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL51000
+01LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL00
+0LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL0
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL5
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLG
+0KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLK0
+00KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLG00
+0000GKLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLKG0000
+0000000GGKKLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLKKGG0000000
+000000000000000GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG000000000000000
+}
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="create-diagram-with-our-sprites">
+<h3>1.3.3. Create Diagram with our Sprites<a class="headerlink" href="#create-diagram-with-our-sprites" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-7be27c33a3369e61352135753bc455dd38e72a44.png" alt="&#64;startuml
+sprite $C4person100Small [16x16/16] {
+0000004774000000
+0000067777600000
+0000377777720000
+0000477777740000
+0000377777730000
+0000077777600000
+0244467777644420
+3777777777777773
+6777777777777776
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+5777777777777774
+0477777777777640
+}
+
+sprite $C4person100Big [100x100/16] {
+0000000000000000000000000000000000000000000013456666543100000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000014677777777777764100000000000000000000000000000000000000000
+0000000000000000000000000000000000000002577777777777777777751000000000000000000000000000000000000000
+0000000000000000000000000000000000000157777777777777777777777400000000000000000000000000000000000000
+0000000000000000000000000000000000003777777777777777777777777772000000000000000000000000000000000000
+0000000000000000000000000000000000047777777777777777777777777777300000000000000000000000000000000000
+0000000000000000000000000000000000577777777777777777777777777777740000000000000000000000000000000000
+0000000000000000000000000000000005777777777777777777777777777777773000000000000000000000000000000000
+0000000000000000000000000000000047777777777777777777777777777777777300000000000000000000000000000000
+0000000000000000000000000000000277777777777777777777777777777777777710000000000000000000000000000000
+0000000000000000000000000000000677777777777777777777777777777777777760000000000000000000000000000000
+0000000000000000000000000000004777777777777777777777777777777777777773000000000000000000000000000000
+0000000000000000000000000000017777777777777777777777777777777777777776000000000000000000000000000000
+0000000000000000000000000000047777777777777777777777777777777777777777300000000000000000000000000000
+0000000000000000000000000000077777777777777777777777777777777777777777600000000000000000000000000000
+0000000000000000000000000000277777777777777777777777777777777777777777710000000000000000000000000000
+0000000000000000000000000000577777777777777777777777777777777777777777730000000000000000000000000000
+0000000000000000000000000000677777777777777777777777777777777777777777750000000000000000000000000000
+0000000000000000000000000000777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000001777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000002777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777772000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000002777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000001777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000000777777777777777777777777777777777777777777760000000000000000000000000000
+0000000000000000000000000000677777777777777777777777777777777777777777750000000000000000000000000000
+0000000000000000000000000000477777777777777777777777777777777777777777730000000000000000000000000000
+0000000000000000000000000000277777777777777777777777777777777777777777710000000000000000000000000000
+0000000000000000000000000000077777777777777777777777777777777777777777600000000000000000000000000000
+0000000000000000000000000000047777777777777777777777777777777777777777200000000000000000000000000000
+0000000000000000000000000000007777777777777777777777777777777777777776000000000000000000000000000000
+0000000000000000000000000000003777777777777777777777777777777777777772000000000000000000000000000000
+0000000000000000000000000000000677777777777777777777777777777777777750000000000000000000000000000000
+0000000000000000000000000000000177777777777777777777777777777777777710000000000000000000000000000000
+0000000000000000000000000000000037777777777777777777777777777777777200000000000000000000000000000000
+0000000000000000000000000000000004777777777777777777777777777777773000000000000000000000000000000000
+0000000000000000000000000000000000477777777777777777777777777777730000000000000000000000000000000000
+0000000000000000001111111111111111157777777777777777777777777777411111111111111111000000000000000000
+0000000000002456777777777777777777777777777777777777777777777777777777777777777777776531000000000000
+0000000001577777777777777777777777777777777777777777777777777777777777777777777777777777741000000000
+0000000157777777777777777777777777777777777777777777777777777777777777777777777777777777777510000000
+0000003777777777777777777777777777777777777777777777777777777777777777777777777777777777777772000000
+0000047777777777777777777777777777777777777777777777777777777777777777777777777777777777777777300000
+0000477777777777777777777777777777777777777777777777777777777777777777777777777777777777777777730000
+0003777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777772000
+0017777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776000
+0057777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777400
+0177777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777700
+0477777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777730
+0677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777760
+1777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777770
+3777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777772
+5777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777773
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777774
+4777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777773
+3777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777771
+1777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777770
+0677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777750
+0377777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777720
+0077777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777600
+0047777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777200
+0006777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775000
+0001777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777771000
+0000277777777777777777777777777777777777777777777777777777777777777777777777777777777777777777710000
+0000027777777777777777777777777777777777777777777777777777777777777777777777777777777777777777100000
+0000001677777777777777777777777777777777777777777777777777777777777777777777777777777777777750000000
+0000000036777777777777777777777777777777777777777777777777777777777777777777777777777777776200000000
+0000000000257777777777777777777777777777777777777777777777777777777777777777777777777776420000000000
+0000000000000134566666666666666666666666666666666666666666666666666666666666666666554210000000000000
+}
+
+
+Bob : &lt;$C4person100Small&gt; Small
+Alice : &lt;$C4person100Big&gt; Big
+
+Alice -&gt; Bob 
+&#64;enduml
+
+"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+sprite $C4person100Small [16x16/16] {
+0000004774000000
+0000067777600000
+0000377777720000
+0000477777740000
+0000377777730000
+0000077777600000
+0244467777644420
+3777777777777773
+6777777777777776
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+7777777777777777
+5777777777777774
+0477777777777640
+}
+
+sprite $C4person100Big [100x100/16] {
+0000000000000000000000000000000000000000000013456666543100000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000014677777777777764100000000000000000000000000000000000000000
+0000000000000000000000000000000000000002577777777777777777751000000000000000000000000000000000000000
+0000000000000000000000000000000000000157777777777777777777777400000000000000000000000000000000000000
+0000000000000000000000000000000000003777777777777777777777777772000000000000000000000000000000000000
+0000000000000000000000000000000000047777777777777777777777777777300000000000000000000000000000000000
+0000000000000000000000000000000000577777777777777777777777777777740000000000000000000000000000000000
+0000000000000000000000000000000005777777777777777777777777777777773000000000000000000000000000000000
+0000000000000000000000000000000047777777777777777777777777777777777300000000000000000000000000000000
+0000000000000000000000000000000277777777777777777777777777777777777710000000000000000000000000000000
+0000000000000000000000000000000677777777777777777777777777777777777760000000000000000000000000000000
+0000000000000000000000000000004777777777777777777777777777777777777773000000000000000000000000000000
+0000000000000000000000000000017777777777777777777777777777777777777776000000000000000000000000000000
+0000000000000000000000000000047777777777777777777777777777777777777777300000000000000000000000000000
+0000000000000000000000000000077777777777777777777777777777777777777777600000000000000000000000000000
+0000000000000000000000000000277777777777777777777777777777777777777777710000000000000000000000000000
+0000000000000000000000000000577777777777777777777777777777777777777777730000000000000000000000000000
+0000000000000000000000000000677777777777777777777777777777777777777777750000000000000000000000000000
+0000000000000000000000000000777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000001777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000002777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777772000000000000000000000000000
+0000000000000000000000000003777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000002777777777777777777777777777777777777777777771000000000000000000000000000
+0000000000000000000000000001777777777777777777777777777777777777777777770000000000000000000000000000
+0000000000000000000000000000777777777777777777777777777777777777777777760000000000000000000000000000
+0000000000000000000000000000677777777777777777777777777777777777777777750000000000000000000000000000
+0000000000000000000000000000477777777777777777777777777777777777777777730000000000000000000000000000
+0000000000000000000000000000277777777777777777777777777777777777777777710000000000000000000000000000
+0000000000000000000000000000077777777777777777777777777777777777777777600000000000000000000000000000
+0000000000000000000000000000047777777777777777777777777777777777777777200000000000000000000000000000
+0000000000000000000000000000007777777777777777777777777777777777777776000000000000000000000000000000
+0000000000000000000000000000003777777777777777777777777777777777777772000000000000000000000000000000
+0000000000000000000000000000000677777777777777777777777777777777777750000000000000000000000000000000
+0000000000000000000000000000000177777777777777777777777777777777777710000000000000000000000000000000
+0000000000000000000000000000000037777777777777777777777777777777777200000000000000000000000000000000
+0000000000000000000000000000000004777777777777777777777777777777773000000000000000000000000000000000
+0000000000000000000000000000000000477777777777777777777777777777730000000000000000000000000000000000
+0000000000000000001111111111111111157777777777777777777777777777411111111111111111000000000000000000
+0000000000002456777777777777777777777777777777777777777777777777777777777777777777776531000000000000
+0000000001577777777777777777777777777777777777777777777777777777777777777777777777777777741000000000
+0000000157777777777777777777777777777777777777777777777777777777777777777777777777777777777510000000
+0000003777777777777777777777777777777777777777777777777777777777777777777777777777777777777772000000
+0000047777777777777777777777777777777777777777777777777777777777777777777777777777777777777777300000
+0000477777777777777777777777777777777777777777777777777777777777777777777777777777777777777777730000
+0003777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777772000
+0017777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776000
+0057777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777400
+0177777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777700
+0477777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777730
+0677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777760
+1777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777770
+3777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777772
+5777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777773
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777776
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775
+6777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777774
+4777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777773
+3777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777771
+1777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777770
+0677777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777750
+0377777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777720
+0077777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777600
+0047777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777200
+0006777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777775000
+0001777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777771000
+0000277777777777777777777777777777777777777777777777777777777777777777777777777777777777777777710000
+0000027777777777777777777777777777777777777777777777777777777777777777777777777777777777777777100000
+0000001677777777777777777777777777777777777777777777777777777777777777777777777777777777777750000000
+0000000036777777777777777777777777777777777777777777777777777777777777777777777777777777776200000000
+0000000000257777777777777777777777777777777777777777777777777777777777777777777777777776420000000000
+0000000000000134566666666666666666666666666666666666666666666666666666666666666666554210000000000000
+}
+
+
+Bob : &lt;$C4person100Small&gt; Small
+Alice : &lt;$C4person100Big&gt; Big
+
+Alice -&gt; Bob 
+@enduml
+
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="create-sprites-by-converting-osa-icon-libaries">
+<h2>1.4. Create Sprites by converting OSA icon libaries<a class="headerlink" href="#create-sprites-by-converting-osa-icon-libaries" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.opensecurityarchitecture.org/">Open Security
+Architecture</a> (OSA) is a
+useful resource for security architects providing a catalog of
+controls, patterns, and requirements from numerous standards, governance
+frameworks, legislation and regulations. See “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/why-have-osa">why have
+OSA?</a>”.</p>
+<p>Resources include a <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture icon
+library</a>
+available under a “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/license-terms">Creative Commons share-alike
+license</a>”.</p>
+<p>These icons are available as png or svg images.</p>
+<p>Here we’ll convert them to sprites so we can use them with PlantUML.</p>
+<div class="section" id="converting-the-icon-set-to-plantuml-sprites">
+<h3>1.4.1. Converting the icon set to PlantUML Sprites<a class="headerlink" href="#converting-the-icon-set-to-plantuml-sprites" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Download the <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture
+icons</a>
+and extract them into a directory e.g. “osaicons”.</p></li>
+</ol>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>add info on a standard way to create sprites</p>
+</div>
+</div>
+<div class="section" id="example">
+<h3>1.4.2. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-77a4933a093a6e4472f06798be02dddeb5e19ef6.png" alt="&#64;startuml
+
+!include &lt;osa/user/audit/audit.puml&gt;
+!include &lt;osa/user/black/hat/hat.puml&gt;
+!include &lt;osa/user/green/architect/architect.puml&gt;
+
+Auditor : &lt;$audit&gt; 
+Architect: &lt;$architect&gt; 
+BlackHat : &lt;$black_hat&gt;
+
+Auditor -&gt; Architect : blah
+Architect -&gt; BlackHat : blahblah
+
+
+&#64;enduml
+
+"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+!include &lt;osa/user/audit/audit.puml&gt;
+!include &lt;osa/user/black/hat/hat.puml&gt;
+!include &lt;osa/user/green/architect/architect.puml&gt;
+
+Auditor : &lt;$audit&gt; 
+Architect: &lt;$architect&gt; 
+BlackHat : &lt;$black_hat&gt;
+
+Auditor -&gt; Architect : blah
+Architect -&gt; BlackHat : blahblah
+
+
+@enduml
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="all-icons">
+<h3>1.4.3. All Icons<a class="headerlink" href="#all-icons" title="Permalink to this headline">¶</a></h3>
+<p>Below is what the icons look like - and the associated code.</p>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>add info on what osa icons look like</p>
+</div>
+</div>
+</div>
+<div class="section" id="plantuml-hyperlinks">
+<h2>1.5. PlantUML HyperLinks<a class="headerlink" href="#plantuml-hyperlinks" title="Permalink to this headline">¶</a></h2>
+<p>PlantUML supports hyperlinks in output SVG images. This allows diagrams
+to be linked together, and for a user to easily navigate by clicking
+around per <a class="reference external" href="http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html">Shneiderman’s
+mantra</a>:</p>
+<blockquote>
+<div><p><em>Overview first, zoom and filter, then details-on-demand</em></p>
+</div></blockquote>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>fix svg link</p>
+</div>
+<p>Clicking the image opens up the target <code class="docutils literal notranslate"><span class="pre">svg</span></code> image. This target image contains hyperlinks.</p>
+<a class="reference external image-reference" href="../links.svg"><img alt="../_images/links.svg" src="../_images/links.svg" /></a>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="nd">@startuml</span>
+    <span class="n">actor</span> <span class="n">Bob</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sequence</span><span class="o">-</span><span class="n">diagram</span><span class="p">]]</span>
+    <span class="n">actor</span> <span class="s2">&quot;This is [[http://plantuml.com/sequence-diagram Alice]] actor&quot;</span> <span class="k">as</span> <span class="n">Alice</span>
+    <span class="n">Bob</span> <span class="o">-&gt;</span> <span class="n">Alice</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">hello</span>
+    <span class="n">note</span> <span class="n">left</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span>
+      <span class="n">a</span> <span class="n">note</span> <span class="k">with</span> <span class="n">a</span> <span class="n">link</span>
+    <span class="n">end</span> <span class="n">note</span>
+    <span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">hello</span> <span class="k">with</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">{</span><span class="n">Tooltip</span> <span class="k">for</span> <span class="n">message</span><span class="p">}</span> <span class="n">some</span> <span class="n">link</span><span class="p">]]</span>
+    <span class="n">note</span> <span class="n">right</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">another</span> <span class="n">note</span>
+    <span class="n">note</span> <span class="n">left</span> <span class="n">of</span> <span class="n">Bob</span>
+    <span class="s1">&#39; You can use [[http://plantuml.com/index links in notes]] also.</span>
+    <span class="n">end</span> <span class="n">note</span>
+    <span class="nd">@enduml</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PlantUMLSprites.html" class="btn btn-neutral float-right" title="2. Understanding PlantUML Stdlib Sprite Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../AboutThisGuide.html" class="btn btn-neutral float-left" title="2. About this Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
