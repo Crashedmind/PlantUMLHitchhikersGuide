@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="_static/plantumllogo.png"/>
+  
   
   
 
@@ -36,7 +38,7 @@
   <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Principles" href="principles.html" /> 
+    <link rel="next" title="1. About PlantUML" href="AboutPlantUML.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -53,6 +55,9 @@
             <a href="#" class="icon icon-home"> Playing with PlantUML
           
 
+          
+            
+            <img src="_static/plantumllogo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -82,11 +87,27 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="principles.html">1. Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templates/NetworkUsersMachines.html">2. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templates/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
-<p class="caption"><span class="caption-text">OtherFeatures</span></p>
+<p class="caption"><span class="caption-text">Stdlib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">4. Using Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">5. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="todo.html">1. To Do List</a></li>
 </ul>
@@ -155,45 +176,219 @@
             
   <div class="section" id="welcome-to-playing-with-plantuml">
 <h1>Welcome to Playing with PlantUML!<a class="headerlink" href="#welcome-to-playing-with-plantuml" title="Permalink to this headline">¶</a></h1>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="_images/plantumllogo.png"><img alt="alternate text" src="_images/plantumllogo.png" style="width: 200px; height: 100px;" /></a>
+<p class="caption"><span class="caption-text">Where system diagrams meet system reality</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Add instructions for user to provide feedback</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is an initial draft that likely contains typos, and will likely change.
+If you do find an issue, or would like to suggest a change, then submit an issue on Todo</p>
+</div>
+<div class="section" id="imagine">
+<h2>Imagine<a class="headerlink" href="#imagine" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
+<p>Imagine being able to</p>
 <ol class="arabic simple">
-<li><p>This is a “Postcard from the future” <a class="reference external" href="https://www.scaledagileframework.com/vision/">vision</a> of the PlantUML user guide.</p></li>
-<li><p>It gives an overview and details of a specific feature (Functions and Procedures) as an example.</p></li>
-<li><p>The purpose is to elicit feedback on what we want, by presenting a <a class="reference external" href="https://www.scaledagileframework.com/vision/">vision</a> of what we have in the future.</p></li>
-<li><p>Once we know what we want, then we can start to phase it in via who/what/when…</p></li>
+<li><p>share a model or diagram between all members of the team that they can all understand and contribute to and edit</p></li>
+<li><p>draw diagrams like below automatically from a text description.</p></li>
+<li><p>describe a system before you build it, when you’re building it, and as you maintain it into the future - keeping the description and the system current and in sync.</p></li>
+<li><p>maintain that text version in a source code repository beside the code for the system it is describing</p></li>
 </ol>
+<p>Imagine having a diagramming tool that</p>
+<ol class="arabic simple">
+<li><p>fits with a developer workflow, and developers are comfortable using</p></li>
+<li><p>enables <strong>lightweight just-enough</strong> <a class="reference external" href="https://masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/">AgileModeling</a> in a way that meets <a class="reference external" href="https://tdan.com/best-practices-for-agile-documentation/18936">AgileModelingBP</a></p></li>
+<li><p>fits with modern practices of Continuous Integration Continuous Delivery - and “everything as code” including diagrams.</p></li>
+</ol>
+<p>Well that’s what PlantUML gives you, and more…</p>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+border: 1px solid #777;
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+}
+
+div.desc {
+padding: 15px;
+text-align: center;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.responsive {
+padding: 0 6px;
+float: left;
+width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+.responsive {
+   width: 49.99999%;
+   margin: 6px 0;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.responsive {
+   width: 100%;
+}
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+</style>
+</head>
+<body>
+
+
+
+<h3>Some Examples</h3>
+
+<div class="responsive">
+<div class="gallery">
+   <a target="_blank" href="networkusers.png">
+      <img src="networkusers.png" alt="Network Users" width="600" height="400">
+   </a>
+   <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+</div>
+</div>
+
+
+<div class="responsive">
+<div class="gallery">
+   <a target="_blank" href="networkusers.png">
+      <img src="networkusers.png" alt="Network Users" width="600" height="400">
+   </a>
+   <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+   <a target="_blank" href="networkusers.png">
+      <img src="networkusers.png" alt="Network Users" width="600" height="400">
+   </a>
+   <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+   <a target="_blank" href="networkusers.png">
+      <img src="networkusers.png" alt="Network Users" width="600" height="400">
+   </a>
+   <div class="desc">Uses PlantUML Stdlib OSA icons as described here TODO. insert link to puml file</div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+<p>See more examples in Showcase and RealworldPlantuml</p>
+
+</div>
+
+</body>
+</html><div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>include extract from about plantuml chapter</p>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="principles.html">1. Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templates/NetworkUsersMachines.html">2. Create a Diagram of a Typical Network</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#example-network-diagram">2.1. Example Network Diagram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#select-an-icon-library">2.2. Select an icon library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#view-all-the-icons-with-listsprites">2.3. View all the icons with listsprites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#gather-the-icons-we-need">2.4. Gather the icons we need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#decorate-the-icons">2.5. Decorate the Icons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#create-the-diagram-by-connecting-things-together">2.6. Create the diagram by connecting things together</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#change-the-layout-to-vertical">2.7. Change the Layout to Vertical</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#change-the-layout-by-grouping-icons-together">2.8. Change the Layout by grouping icons together</a></li>
-<li class="toctree-l2"><a class="reference internal" href="templates/NetworkUsersMachines.html#conclusion">2.9. Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#goals">2.1. Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#guide-principles">2.2. Guide Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#this-guide">2.3. This Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#credits">2.4. Credits</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templates/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">OtherFeatures</span></p>
+<p class="caption"><span class="caption-text">Stdlib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#example-network-diagram">1.1. Example Network Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#select-an-icon-library">1.2. Select an icon library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#view-all-the-icons-with-listsprites">1.3. View all the icons with listsprites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#gather-the-icons-we-need">1.4. Gather the icons we need</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#decorate-the-icons">1.5. Decorate the Icons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#create-the-diagram-by-connecting-things-together">1.6. Create the diagram by connecting things together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#change-the-layout-to-vertical">1.7. Change the Layout to Vertical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#change-the-layout-by-grouping-icons-together">1.8. Change the Layout by grouping icons together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#conclusion">1.9. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#goal">2.1. Goal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#example-puml-file-from-plantuml-stdlib">2.2. Example Puml file from PlantUML Stdlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#steps-to-understanding">2.3. Steps to Understanding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">4. Using Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-plantuml-vscode">4.1. C4 Plantuml VSCode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">5. ContributingToStdlib</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GenerateDiagrams/GenerateDiagrams.html#github-actions">1.1. Github Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenerateDiagrams/GenerateDiagrams.html#plantuml-github-action">1.2. PlantUML GitHub action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GenerateDiagrams/GenerateDiagrams.html#conclusion">1.3. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4.html">1. C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4.html#cheatsheet">1.1. CheatSheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4.html#video-presentation">1.2. Video Presentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4.html#related-methods">1.3. Related Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4.html#books">1.4. Books</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="todo.html">1. To Do List</a></li>
 </ul>
 </div>
-<div class="section" id="index">
-<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-</ul>
 </div>
 </div>
 
@@ -205,7 +400,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="principles.html" class="btn btn-neutral float-right" title="1. Principles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="AboutPlantUML.html" class="btn btn-neutral float-right" title="1. About PlantUML" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

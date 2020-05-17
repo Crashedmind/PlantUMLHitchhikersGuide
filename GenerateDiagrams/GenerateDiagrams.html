@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Generate diagrams from PlantUML source files using GithubActions &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Generate diagrams from PlantUML source files using AWS Lambda" href="GenerateDiagramsLambda.html" />
+    <link rel="prev" title="5. ContributingToStdlib" href="../Stdlib/ContributingToStdlib.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Stdlib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. Create a Template from our Network Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">5. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Generate diagrams from PlantUML source files using GithubActions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#github-actions">1.1. Github Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#explore">1.1.1. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-github-action">1.2. PlantUML GitHub action</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#source">1.2.1. Source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#action">1.2.1.1. Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-workflow">1.2.1.2. Example Workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#our-workflow">1.2.1.3. Our Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.2.2. Explore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#play">1.2.3. Play</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">1.3. Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>1. Generate diagrams from PlantUML source files using GithubActions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/GenerateDiagrams/GenerateDiagrams.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="generate-diagrams-from-plantuml-source-files-using-githubactions">
+<h1>1. Generate diagrams from PlantUML source files using <a class="reference external" href="https://help.github.com/en/actions">GithubActions</a><a class="headerlink" href="#generate-diagrams-from-plantuml-source-files-using-githubactions" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this section we’re going to look at some recent new ways ways to convert PlantUML source files (puml) to an image.</p>
+<p>We are going to use <a class="reference external" href="https://help.github.com/en/actions">GithubActions</a> to <strong>automagically</strong> generate png and svg files from our puml files when we upload them to Github.</p>
+<p><strong>automagically</strong> because you don’t need to install any software to do this - it just happens every time you upload new puml files.</p>
+<p>There are many other listed in <a class="reference external" href="https://plantuml.com/running">Running</a></p>
+</div>
+<div class="section" id="github-actions">
+<h2>1.1. Github Actions<a class="headerlink" href="#github-actions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://help.github.com/en/actions">GithubActions</a> “Automate, customize, and execute your software development workflows right in your repository with GitHub Actions. You can discover, create, and share actions to perform any job you’d like, including CI/CD, and combine actions in a completely customized workflow.”</p></li>
+<li><p><strong>Workflows</strong> “Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted machines, called ‘runners’.”</p></li>
+<li><p><strong>Events</strong> “A specific activity that triggers a workflow run. For example, activity can originate from GitHub when someone pushes a commit to a repository or when an issue or pull request is created.”</p></li>
+</ul>
+<p>See <a class="reference external" href="https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions">GithubActionsCoreConcepts</a>:.</p>
+<p>These are free up to the generous <a class="reference external" href="https://help.github.com/en/actions/getting-started-with-github-actions/about-github-actions#usage-limits">UsageLimits</a>.</p>
+<p>You can create your own actions or workflows, or use or repurpose ones from the <a class="reference external" href="https://help.github.com/en/actions/getting-started-with-github-actions/using-community-workflows-and-actions">GithubCommunity</a>.</p>
+<ul class="simple">
+<li><p>You can create more than one workflow in your repository.</p></li>
+<li><p>You must store workflows in the .github/workflows directory in the root of your repository.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At at May 2020, there are 4 PlantUML actions in the GitHub Marketplace: <a class="reference external" href="https://github.com/marketplace?query=plantuml">https://github.com/marketplace?query=plantuml</a></p>
+</div>
+<div class="section" id="explore">
+<h3>1.1.1. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>How many PlantUML actions are there now in Github?</p></li>
+<li><p>What are the differences between them?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="plantuml-github-action">
+<h2>1.2. PlantUML GitHub action<a class="headerlink" href="#plantuml-github-action" title="Permalink to this headline">¶</a></h2>
+<p>Here we will use <a class="reference external" href="https://github.com/marketplace/actions/plantuml-generator">https://github.com/marketplace/actions/plantuml-generator</a>
+“This action runs the PlantUML tool to generate images from PlantUML text diagrams”</p>
+<p>Specifically:</p>
+<ol class="arabic simple">
+<li><p>You add the git Workflow file to your repository. This calls one or more <a class="reference external" href="https://help.github.com/en/actions">GithubActions</a></p></li>
+<li><p>You upload some PlantUML source files (puml) to your repository</p></li>
+<li><p>Automagically, you get back some png and svg image files in your repository! (in 30 seconds or so depending on how many source files you uploaded)</p></li>
+<li><p>You can upload more files - only changed files will generate new png/svg files</p></li>
+</ol>
+<div class="section" id="source">
+<h3>1.2.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="action">
+<h4>1.2.1.1. Action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h4>
+<p>On <a class="reference external" href="https://github.com/marketplace/actions/plantuml-generator">https://github.com/marketplace/actions/plantuml-generator</a>, there’s a link to the <a class="reference external" href="https://github.com/cloudbees/plantuml-github-action">https://github.com/cloudbees/plantuml-github-action</a>.</p>
+<p>This uses a Ubuntu OS with PlantUML installed</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll">FROM ubuntu:groovy
+</span># Current plantUML version at time of switch: PlantUML Version 1.2020.02
+# Note: GitHub Actions must be run by the default Docker user (root). Ensure your Dockerfile does not set the USER instruction, otherwise you will not be able to access GITHUB_WORKSPACE.
+
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
+RUN mkdir -p /usr/share/man/man1
+
+RUN apt-get -qy update &amp;&amp; \
+<span class="hll">    DEBIAN_FRONTEND=noninteractive apt-get -yq install plantuml graphviz git &amp;&amp; \
+</span>    rm -rf /var/lib/apt/lists/*
+
+ENV HOME_DIR /app
+
+WORKDIR $HOME_DIR
+
+ENTRYPOINT [&quot;plantuml&quot;]
+</pre></div>
+</td></tr></table></div>
+<p>This file lives here: <a class="reference external" href="https://github.com/cloudbees/plantuml-github-action/blob/master/Dockerfile">https://github.com/cloudbees/plantuml-github-action/blob/master/Dockerfile</a>.</p>
+</div>
+<div class="section" id="example-workflow">
+<h4>1.2.1.2. Example Workflow<a class="headerlink" href="#example-workflow" title="Permalink to this headline">¶</a></h4>
+<p>This generates png and svg diagrams and commits them to your repository.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;**.puml&#39;</span> <span class="c1">#matches zero or more of any character</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre></div></td><td class="code"><div class="highlight"><pre><span></span>name: Generate PlantUML Diagrams
+on:
+  push:
+    paths:
+      - &#39;**.puml&#39;
+    branches:
+      - master
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+        UML_FILES: &quot;.puml&quot;
+    steps:
+      - name: Checkout Source 
+        uses: actions/checkout@v1
+      - name: Get changed UML files
+        id: getfile
+        run: |
+          echo &quot;::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)&quot;
+      - name: UML files considered echo output
+        run: |
+          echo ${{ steps.getfile.outputs.files }}
+
+      - name: Generate SVG Diagrams
+        uses: cloudbees/plantuml-github-action@master
+        with:
+            args: -v -tsvg ${{ steps.getfile.outputs.files }}
+<span class="hll">      - name: Generate PNG Diagrams
+</span>        uses: cloudbees/plantuml-github-action@master
+        with:
+            args: -v -tpng ${{ steps.getfile.outputs.files }}
+<span class="hll">      - name: List files
+</span>        run: ls *${{ env.UML_FILES }}; ls -o ${{ env.OUTPUT_DIR }}/*.svg; ls -o ${{ env.OUTPUT_DIR }}/*.png      
+<span class="hll">      - name: Push Local Changes
+</span>        uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
+        with: 
+          commit_user_name: &quot;my user name&quot;
+          commit_user_email: &quot;me@email.org&quot;
+          commit_author: &quot;My User &lt;me@email.org&gt;&quot;
+          commit_message: &quot;Generate SVG and PNG images for PlantUML diagrams&quot; 
+          branch: ${{ github.head_ref }}
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="our-workflow">
+<h4>1.2.1.3. Our Workflow<a class="headerlink" href="#our-workflow" title="Permalink to this headline">¶</a></h4>
+<p>We made some changes relative to the example provided - highlighted below</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre></div></td><td class="code"><div class="highlight"><pre><span></span>#https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
+
+name: Generate PlantUML Diagrams 
+on:
+  push:
+    paths:
+      - &#39;**.puml&#39; #matches zero or more of any character
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+        UML_FILES: &quot;.puml&quot;
+        OUTPUT_DIR: &quot;diagrams&quot;
+    steps:
+      - name: Checkout Source 
+        uses: actions/checkout@v2
+      
+      - name: Get changed UML files
+        id: getfile
+        run: |
+          echo &quot;::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)&quot;
+      
+      - name: UML files considered echo output
+        run: |
+          echo ${{ steps.getfile.outputs.files }}
+      
+<span class="hll">      - name: Generate SVG Diagrams
+</span>        uses: cloudbees/plantuml-github-action@master
+        with:
+            args: -v -tsvg *${{ env.UML_FILES }} -o ${{ env.OUTPUT_DIR }}
+<span class="hll">
+</span>      - name: Generate PNG Diagrams
+<span class="hll">        uses: cloudbees/plantuml-github-action@master
+</span>        with:
+            args: -v -tpng *${{ env.UML_FILES }} -o  ${{ env.OUTPUT_DIR }}
+      
+      - name: List files
+        run: ls *${{ env.UML_FILES }}; ls -o ${{ env.OUTPUT_DIR }}/*.svg; ls -o ${{ env.OUTPUT_DIR }}/*.png      
+      
+      - name: Commit Changed Files
+        run: |
+          git config --local user.email &quot;action@github.com&quot;
+          git config --local user.name &quot;GitHub Action&quot;
+          git add --all ${{ env.OUTPUT_DIR }}/*
+          git commit -m &quot;Add changes&quot; -a
+      
+      - name: Push Changed Files
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>1.2.2. Explore<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>TBD</p></li>
+</ol>
+</div>
+<div class="section" id="play">
+<h3>1.2.3. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../_images/play.png"><img alt="playbutton1" src="../_images/play.png" style="width: 40px;" /></a> Play time! Here we’re going to play in GitHub.</p>
+<ol class="arabic simple">
+<li><p>Select or create a GitHub repository to use.</p></li>
+<li><p>Copy our workflow PlantumlGenerate.yml to</p></li>
+</ol>
+<div class="align-center figure align-default" id="id4">
+<img alt="../_images/github1.png" src="../_images/github1.png" />
+<p class="caption"><span class="caption-text">create .github/workflows directory</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure align-default" id="id5">
+<img alt="../_images/github2.png" src="../_images/github2.png" />
+<p class="caption"><span class="caption-text">copy workflow.yml to .github/workflows/</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure align-default" id="id6">
+<img alt="../_images/github3_upload2.png" src="../_images/github3_upload2.png" />
+<p class="caption"><span class="caption-text">upload puml files; using web interface in this case to commit</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>section on add some color to icons by user, machine, network
+add a boundary</p>
+</div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>1.3. Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Write up Conclusion</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GenerateDiagramsLambda.html" class="btn btn-neutral float-right" title="2. Generate diagrams from PlantUML source files using AWS Lambda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Stdlib/ContributingToStdlib.html" class="btn btn-neutral float-left" title="5. ContributingToStdlib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
