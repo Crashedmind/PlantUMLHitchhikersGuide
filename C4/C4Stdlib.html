@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
+  <title>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. ContributingToStdlib" href="../Stdlib/ContributingToStdlib.html" />
-    <link rel="prev" title="4. Create a Template from our Network Diagram" href="../PassSpriteAsParameter/PassSpriteAsParameter.html" /> 
+    <link rel="next" title="1. Generate diagrams from PlantUML source files using GithubActions" href="../GenerateDiagrams/GenerateDiagrams.html" />
+    <link rel="prev" title="6. ContributingToStdlib" href="../Stdlib/ContributingToStdlib.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,22 +92,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Stdlib</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#example-big-bank">5.1. Example Big Bank</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#context">5.1.1. Context</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#container">5.1.2. Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#component">5.1.3. Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#class">5.1.4. Class</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingSrdLib.html">5. StandardisingSrdLib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">C4</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-big-bank">1.1. Example Big Bank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#context">1.1.1. Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#container">1.1.2. Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component">1.1.3. Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class">1.1.4. Class</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -167,7 +171,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</li>
+      <li>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,20 +191,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-plantuml-stdlib-c4-lightweight-software-architecture-description-method">
-<h1>5. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#using-plantuml-stdlib-c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
+<h1>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#using-plantuml-stdlib-c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML">C4-PlantUML</a> combines
 the benefits of <a class="reference external" href="http://plantuml.com/">PlantUML</a> and the <a class="reference internal" href="c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> model for providing a simple way of describing
 and communicating software architectures - especially during up-front design sessions - with an intuitive language using open source and platform independent tools.</p>
 <p>It also supports <a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML#snippets-for-visual-studio-code">C4 PlantUML Snippets for Visual Studio Code</a></p>
 <div class="section" id="example-big-bank">
-<h2>5.1. Example Big Bank<a class="headerlink" href="#example-big-bank" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Example Big Bank<a class="headerlink" href="#example-big-bank" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The examples from <a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML">C4-PlantUML</a> are used.</p>
 <p>Person sprites are added to the customer box to emphasize the user in the diagrams.</p>
 </div>
 <div class="section" id="context">
-<h3>5.1.1. Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.1. Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The top-level diagram shows the big boxes in the system.</p>
@@ -424,7 +428,7 @@ Lay_U(mail_system, customer)
 </td></tr></table></div>
 </div>
 <div class="section" id="container">
-<h3>5.1.2. Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.2. Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We then drill down into the “Internet Banking” box.</p>
@@ -563,7 +567,7 @@ Rel_Neighbor(backend_api, banking_system, &quot;Uses&quot;, &quot;sync/async, XM
 </td></tr></table></div>
 </div>
 <div class="section" id="component">
-<h3>5.1.3. Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.3. Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We then drill down into the “API Application” box.</p>
@@ -685,7 +689,7 @@ Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
 </td></tr></table></div>
 </div>
 <div class="section" id="class">
-<h3>5.1.4. Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.4. Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We could then add the Class diagrams for the different Components.</p>
@@ -702,10 +706,10 @@ Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Stdlib/ContributingToStdlib.html" class="btn btn-neutral float-right" title="6. ContributingToStdlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../GenerateDiagrams/GenerateDiagrams.html" class="btn btn-neutral float-right" title="1. Generate diagrams from PlantUML source files using GithubActions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../PassSpriteAsParameter/PassSpriteAsParameter.html" class="btn btn-neutral float-left" title="4. Create a Template from our Network Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Stdlib/ContributingToStdlib.html" class="btn btn-neutral float-left" title="6. ContributingToStdlib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

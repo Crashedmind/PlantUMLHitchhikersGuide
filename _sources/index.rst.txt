@@ -33,10 +33,12 @@ Welcome to Playing with PlantUML!
     This is an initial draft that likely contains typos, and will likely change.
     If you do find an issue, or would like to suggest a change, then submit an issue on Todo
 
+
+
 .. caveat-end-content
 
 
-.. _AgileModeling: https://masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/
+.. _AgileModeling: https://bit.ly/367B4OK
 .. _AgileModelingBP: https://tdan.com/best-practices-for-agile-documentation/18936
 
 .. showcase-begin-content
@@ -202,11 +204,19 @@ Imagine
    PlantUMLSpriteLibraries/PlantUMLSprites
    NetworkUsersMachines/NetworkUsersMachines
    PassSpriteAsParameter/PassSpriteAsParameter
+   Stdlib/StandardisingSrdLib
+   Stdlib/ContributingToStdlib   
+   
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: C4   
    
    C4/C4Stdlib
    
 
-   Stdlib/ContributingToStdlib
+
 
 .. toctree::
    :maxdepth: 2

@@ -1,3 +1,7 @@
+
+
+.. _Deployment: https://plantuml.com/deployment-diagram
+
 ======================================================
 Plantuml Sprites
 ======================================================
@@ -16,7 +20,7 @@ You can
 Builtin Sprites - Deployment Diagram Sprites
 ----------------------------------------------
 
-:ref:`Deployment` diagrams define several sprites.
+Deployment_ diagrams define several sprites.
 
 Below is an example using some of these - in a sequence diagram.
 
@@ -122,7 +126,7 @@ It's easy to create your own sprites from existing icons.
 Start with a 100x100 person icon png
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./images/C4person100.png
+.. figure:: ./C4person100.png
    
 
 Convert to sprite of different resolutions as follows
