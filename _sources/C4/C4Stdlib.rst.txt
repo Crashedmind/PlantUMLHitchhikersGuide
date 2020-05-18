@@ -93,8 +93,14 @@ Component
 Class
 -------------------------------------------------------------------------------
 
+
 .. note :: 
     We could then add the Class diagrams for the different Components.
+
+.. todo ::
+    upgrade docker plantuml to latest to get elk, and named args
+
+
 
 
 C4 ACME Global Widget Production
@@ -143,11 +149,6 @@ Explore
 C4 ACME Container
 -------------------------------------------------------------------------------
 
-.. uml:: acme_c2_host.puml
-    :align: center
-    :caption: *C4 ACME Host* 
-
-
 .. uml:: acme_c2_workstation.puml
     :align: center
     :caption: *C4 ACME Workstation* 
@@ -156,6 +157,7 @@ C4 ACME Container
 
 Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 .. literalinclude:: ./acme_c2_workstation.puml
     :linenos: 
@@ -189,13 +191,9 @@ C4 ACME Component
     :align: center
     :caption: *C4 ACME Component* 
 
-
-.. todo ::
-    upgrade docker plantuml to latest to get elk, and named args
-
 .. uml:: acme_c3_monitoring.puml
     :align: center
-    :caption: *C4 ACME Component - Monitoring* 
+    :caption: *C4 ACME Component Monitoring* 
 
 Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -221,3 +219,5 @@ Play
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. TODO
+
+
