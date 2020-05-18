@@ -8,6 +8,9 @@ C4 Lightweight Software Architecture Description Method
 Introduction
 ===============================================================================
 
+
+.. c4-intro-begin-content
+
     *Big design up front is dumb, but doing no design up front is even
     dumber.* Dave Thomas
 
@@ -23,6 +26,8 @@ mantra <http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html>`__:
 
 It is not formal UML e.g. the UML actor stickman is deliberately not
 used as it causes confusion between a person or a system.
+
+.. c4-intro-end-content
 
 .. figure:: ./c4.png
     
