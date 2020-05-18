@@ -37,8 +37,13 @@ Welcome to Playing with PlantUML!
 
 .. caveat-end-content
 
+.. todo ::
 
-.. _AgileModeling: https://bit.ly/367B4OK
+   this link causes link error to fail : false positive
+   masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/ causes link check errors but link is fine
+   .. _AgileModeling: bit.ly/367B4OK
+
+
 .. _AgileModelingBP: https://tdan.com/best-practices-for-agile-documentation/18936
 
 .. showcase-begin-content
