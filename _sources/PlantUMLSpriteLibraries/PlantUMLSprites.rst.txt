@@ -1,3 +1,5 @@
+.. _understandingstdlib-label:
+
 *******************************************************************************
 Understanding PlantUML Stdlib Sprite Library
 *******************************************************************************
@@ -25,14 +27,14 @@ work of https://github.com/RicardoNiepel (MicroSoft):
 Goal
 ====
 
-1. Look under the hood of the generated plantuml icon files from
+#. Look under the hood of the generated plantuml icon files from
    https://github.com/awslabs/aws-icons-for-plantuml to understand them
    better - from first principles e.g.
    https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml
-2. To confirm understanding
-3. a new bare-minimum macro will be created that requires only 1
-   parameter !define Batch(e\_alias)
-4. a new macro will be added to allow scaling the icon size
+#. To confirm understanding
+
+    * a new bare-minimum macro will be created that requires only 1 parameter `!define Batch(e\_alias)`
+    * a new macro will be added to allow scaling the icon size
 
 |image0| Example image from icons from AWSlabs icon files
 [https://github.com/awslabs/aws-icons-for-plantuml]
@@ -100,7 +102,7 @@ https://github.com/plantuml/plantuml-stdlib/blob/master/material/currency\_rub.p
 The sprite size is different (though uses the maximum 16 shades too).
 
 The macros are completely different - so how the user uses them will be
-different i.e. not very user friendly to the use who just wants to use
+different i.e. not very user friendly to the user who just wants to use
 different icons and does not know or care about any of this stuff.
 
 ::

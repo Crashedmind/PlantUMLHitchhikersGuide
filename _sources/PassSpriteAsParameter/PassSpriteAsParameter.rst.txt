@@ -1,5 +1,5 @@
 ******************************************************
-Create a Template from our Network Diagram
+PassSpriteAsParameter
 ******************************************************
 
 
@@ -9,18 +9,108 @@ Create a Template from our Network Diagram
 .. _listsprites: https://plantuml.com/#
 .. _together: https://forum.plantuml.net/4387/please-provide-together-keyword-group-diagram-nodes-together
 
-.. note ::
 
-    Do you find yourself drawing similar diagrams with slight changes?
+Procedures
+===============================================================================
+defines are eol
 
-    Do you wish you could use a template that you, or someone else, created to make 
-    it quicker and easier? And that you can build on over time?
 
-    Here we'll create re-usable diagram templates using the PlantUMLPreProcessor_.
-    We'll start with a diagram, then show how to make it into a template with customizable parts.
 
-.. tip ::
-    Did you know you can make your diagrams reusable to boost your productivity?
+PassSpriteAsParameter
+===============================================================================
 
-In this section, we'll take our existing Network Diagram and refactor it into a template...
 
+
+Understand How To Pass A Sprite To A Procedure
+-------------------------------------------------------------------------------
+
+.. uml:: option1.puml
+    :align: center
+    :caption: *blah* 
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./option1.puml
+    :emphasize-lines: 10
+    :linenos: 
+
+Play
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|playbutton1| Press to play around with this diagram source online.
+
+.. |playbutton1| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
+                :width: 40 px
+
+
+Explore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Take a look at some other stdlib libraries
+
+
+
+
+
+
+
+Understand How To Pass A Sprite To A Procedure - Another Option
+-------------------------------------------------------------------------------
+
+.. uml:: option2.puml
+    :align: center
+    :caption: *blah* 
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./option2.puml
+    :emphasize-lines: 10
+    :linenos: 
+
+Play
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|playbutton1| Press to play around with this diagram source online.
+
+.. |playbutton1| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
+                :width: 40 px
+
+
+Explore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Take a look at some other stdlib libraries
+
+
+
+
+
+Tidy Up The Procedure So It's Easier To Read
+-------------------------------------------------------------------------------
+
+.. uml:: option3.puml
+    :align: center
+    :caption: *blah* 
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./option3.puml
+    :emphasize-lines: 10
+    :linenos: 
+
+Play
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|playbutton1| Press to play around with this diagram source online.
+
+.. |playbutton1| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
+                :width: 40 px
+
+
+Explore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. Take a look at some other stdlib libraries

@@ -182,12 +182,6 @@ Imagine
 
 
 
-.. todo::
-
-    include extract from about plantuml chapter
-
-
-
 .. comment
     Sphinx is expecting 3 spaces under toctree i.e. it does not work with 4
 
@@ -199,26 +193,34 @@ Imagine
    AboutPlantUML
    AboutThisGuide
 
-      
+
+
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Stdlib
+   :caption: PlantUML Features
 
    PlantUMLSpriteLibraries/plantuml_sprites
-   PlantUMLSpriteLibraries/PlantUMLSprites
-   NetworkUsersMachines/NetworkUsersMachines
+   NamedArguments/scale
    PassSpriteAsParameter/PassSpriteAsParameter
-   Stdlib/StandardisingSrdLib
+   NamedArguments/NamedArguments
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Standard Library 
+
+
+   PlantUMLSpriteLibraries/PlantUMLSprites
+   PlantUMLSpriteLibraries/CreateSpriteLibrary
+   NetworkUsersMachines/NetworkUsersMachines
+   C4/C4Stdlib
+   Stdlib/StandardisingStdLib
    Stdlib/ContributingToStdlib   
    
 
-.. toctree::
-   :maxdepth: 2
-   :numbered:   
-   :caption: C4   
-   
-   C4/C4Stdlib
    
 
 

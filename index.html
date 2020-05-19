@@ -27,6 +27,7 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -90,18 +91,21 @@
 <li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Stdlib</span></p>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stdlib/StandardisingSrdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NamedArguments/scale.html">2. Scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
 </ul>
-<p class="caption"><span class="caption-text">C4</span></p>
+<p class="caption"><span class="caption-text">Standard Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -182,9 +186,9 @@
             
   <div class="section" id="welcome-to-playing-with-plantuml">
 <h1>Welcome to Playing with PlantUML!<a class="headerlink" href="#welcome-to-playing-with-plantuml" title="Permalink to this headline">¶</a></h1>
-<div class="align-center figure" id="id3">
+<div class="align-center figure" id="id2">
 <a class="reference internal image-reference" href="_images/plantumllogo.png"><img alt="alternate text" src="_images/plantumllogo.png" style="width: 200px; height: 100px;" /></a>
-<p class="caption"><span class="caption-text">Where system diagrams meet system reality</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Where system diagrams meet system reality</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
@@ -317,17 +321,13 @@ clear: both;
 </div>
 
 </body>
-</html><div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>include extract from about plantuml chapter</p>
-</div>
-<div class="toctree-wrapper compound">
+</html><div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#goals">2.1. Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#guide-principles">2.2. Guide Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#principles">2.2. Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#this-guide">2.3. This Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="AboutThisGuide.html#credits">2.4. Credits</a></li>
 </ul>
@@ -335,20 +335,41 @@ clear: both;
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Stdlib</span></p>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#builtin-sprites-deployment-diagram-sprites">1.1. Builtin Sprites - Deployment Diagram Sprites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#builtin-sprites-standard-library-sprites">1.2. Builtin Sprites - Standard Library Sprites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#create-a-sprite">1.3. Create a Sprite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#create-sprites-by-converting-osa-icon-libaries">1.4. Create Sprites by converting OSA icon libaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/plantuml_sprites.html#plantuml-hyperlinks">1.5. PlantUML HyperLinks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#goal">2.1. Goal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#example-puml-file-from-plantuml-stdlib">2.2. Example Puml file from PlantUML Stdlib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#steps-to-understanding">2.3. Steps to Understanding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NamedArguments/scale.html">2. Scale</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NamedArguments/scale.html#scale-sd">2.1. Scale sd</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html#procedures">3.1. Procedures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html#id1">3.2. PassSpriteAsParameter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="NamedArguments/NamedArguments.html">4. NamedArguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NamedArguments/NamedArguments.html#named-arguments">4.1. Named Arguments</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#goal">1.1. Goal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#example-puml-file-from-plantuml-stdlib">1.2. Example Puml file from PlantUML Stdlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/PlantUMLSprites.html#steps-to-understanding">1.3. Steps to Understanding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/CreateSpriteLibrary.html#create-sprites-by-converting-osa-icon-libaries">2.1. Create Sprites by converting OSA icon libaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUMLSpriteLibraries/CreateSpriteLibrary.html#plantuml-hyperlinks">2.2. PlantUML HyperLinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a><ul>
@@ -363,21 +384,15 @@ clear: both;
 <li class="toctree-l2"><a class="reference internal" href="NetworkUsersMachines/NetworkUsersMachines.html#conclusion">3.9. Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stdlib/StandardisingSrdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">C4</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4">1.1. C4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-plantuml">1.2. C4 PlantUML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-example-big-bank">1.3. C4 Example Big Bank</a></li>
-<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-acme-global-widget-production">1.4. C4 ACME Global Widget Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4">4.1. C4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-plantuml">4.2. C4 PlantUML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-example-big-bank">4.3. C4 Example Big Bank</a></li>
+<li class="toctree-l2"><a class="reference internal" href="C4/C4Stdlib.html#c4-acme-global-widget-production">4.4. C4 ACME Global Widget Production</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">

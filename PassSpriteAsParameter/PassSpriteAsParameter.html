@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Create a Template from our Network Diagram &mdash; Playing with PlantUML  documentation</title>
+  <title>3. PassSpriteAsParameter &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -38,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. StandardisingStdLib" href="../Stdlib/StandardisingSrdLib.html" />
-    <link rel="prev" title="3. Create a Diagram of a Typical Network" href="../NetworkUsersMachines/NetworkUsersMachines.html" /> 
+    <link rel="next" title="4. NamedArguments" href="../NamedArguments/NamedArguments.html" />
+    <link rel="prev" title="2. Scale" href="../NamedArguments/scale.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,18 +92,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Stdlib</span></p>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingSrdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/scale.html">2. Scale</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. PassSpriteAsParameter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#procedures">3.1. Procedures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.2. PassSpriteAsParameter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#understand-how-to-pass-a-sprite-to-a-procedure">3.2.1. Understand How To Pass A Sprite To A Procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source">3.2.1.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play">3.2.1.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explore">3.2.1.3. Explore</a></li>
 </ul>
-<p class="caption"><span class="caption-text">C4</span></p>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#understand-how-to-pass-a-sprite-to-a-procedure-another-option">3.2.2. Understand How To Pass A Sprite To A Procedure - Another Option</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.2.2.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.2.2.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.2.2.3. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tidy-up-the-procedure-so-it-s-easier-to-read">3.2.3. Tidy Up The Procedure So It’s Easier To Read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.2.3.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">3.2.3.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">3.2.3.3. Explore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -162,7 +190,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>4. Create a Template from our Network Diagram</li>
+      <li>3. PassSpriteAsParameter</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,21 +209,264 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="create-a-template-from-our-network-diagram">
-<h1>4. Create a Template from our Network Diagram<a class="headerlink" href="#create-a-template-from-our-network-diagram" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Do you find yourself drawing similar diagrams with slight changes?</p>
-<p>Do you wish you could use a template that you, or someone else, created to make
-it quicker and easier? And that you can build on over time?</p>
-<p>Here we’ll create re-usable diagram templates using the <a class="reference external" href="https://plantuml.com/preprocessing">PlantUMLPreProcessor</a>.
-We’ll start with a diagram, then show how to make it into a template with customizable parts.</p>
+  <div class="section" id="passspriteasparameter">
+<h1>3. PassSpriteAsParameter<a class="headerlink" href="#passspriteasparameter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="procedures">
+<h2>3.1. Procedures<a class="headerlink" href="#procedures" title="Permalink to this headline">¶</a></h2>
+<p>defines are eol</p>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Did you know you can make your diagrams reusable to boost your productivity?</p>
+<div class="section" id="id1">
+<h2>3.2. PassSpriteAsParameter<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="understand-how-to-pass-a-sprite-to-a-procedure">
+<h3>3.2.1. Understand How To Pass A Sprite To A Procedure<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id8">
+<p class="plantuml">
+<img src="../_images/plantuml-2cbd935b3dfc69a535dbe91cc6856ca0a32bd0e5.png" alt="&#64;startuml
+
+'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+!procedure $SpritePass2($MySprite)
+rectangle &quot;&lt;$MySprite&gt;\n2&quot; as 2
+!endprocedure
+
+$SpritePass2(&quot;$Batch&quot;)
+&#64;enduml
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-<p>In this section, we’ll take our existing Network Diagram and refactor it into a template…</p>
+<div class="section" id="source">
+<h4>3.2.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+&#39;create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+<span class="hll">}
+</span>
+!procedure $SpritePass2($MySprite)
+rectangle &quot;&lt;$MySprite&gt;\n2&quot; as 2
+!endprocedure
+
+$SpritePass2(&quot;$Batch&quot;)
+@enduml
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="play">
+<h4>3.2.1.2. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play3.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="explore">
+<h4>3.2.1.3. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="understand-how-to-pass-a-sprite-to-a-procedure-another-option">
+<h3>3.2.2. Understand How To Pass A Sprite To A Procedure - Another Option<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure-another-option" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id9">
+<p class="plantuml">
+<img src="../_images/plantuml-52f8875c595fb00dfb99a555d72566b69b0cad08.png" alt="&#64;startuml
+
+'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+!unquoted procedure $SpritePass2($MySprite)
+rectangle &quot;&lt;$MySprite&gt;\n2&quot; as 2
+!endprocedure
+
+$SpritePass2($Batch)
+&#64;enduml
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id2">
+<h4>3.2.2.1. Source<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+&#39;create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+<span class="hll">}
+</span>
+!unquoted procedure $SpritePass2($MySprite)
+rectangle &quot;&lt;$MySprite&gt;\n2&quot; as 2
+!endprocedure
+
+$SpritePass2($Batch)
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id3">
+<h4>3.2.2.2. Play<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play3.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id4">
+<h4>3.2.2.3. Explore<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="tidy-up-the-procedure-so-it-s-easier-to-read">
+<h3>3.2.3. Tidy Up The Procedure So It’s Easier To Read<a class="headerlink" href="#tidy-up-the-procedure-so-it-s-easier-to-read" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id10">
+<p class="plantuml">
+<img src="../_images/plantuml-6517da682245c16076d62390b67e42ff438c70b9.png" alt="
+&#64;startuml
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+!unquoted procedure $ffoo5($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+rectangle rect5 as &quot;
+&lt;&lt;$alias&gt;&gt;
+==$label==
+&lt;color:$colour&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description 556&quot;
+!endprocedure
+
+$ffoo5(myalias, &quot;description\non several lines&quot;, $scale=2)
+
+&#64;enduml
+
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id5">
+<h4>3.2.3.1. Source<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span>
+@startuml
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+<span class="hll">}
+</span>
+!unquoted procedure $ffoo5($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+rectangle rect5 as &quot;
+&lt;&lt;$alias&gt;&gt;
+==$label==
+&lt;color:$colour&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description 556&quot;
+!endprocedure
+
+$ffoo5(myalias, &quot;description\non several lines&quot;, $scale=2)
+
+@enduml
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id6">
+<h4>3.2.3.2. Play<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play3.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id7">
+<h4>3.2.3.3. Explore<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -206,10 +477,10 @@ We’ll start with a diagram, then show how to make it into a template with cust
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Stdlib/StandardisingSrdLib.html" class="btn btn-neutral float-right" title="5. StandardisingStdLib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../NamedArguments/NamedArguments.html" class="btn btn-neutral float-right" title="4. NamedArguments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../NetworkUsersMachines/NetworkUsersMachines.html" class="btn btn-neutral float-left" title="3. Create a Diagram of a Typical Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../NamedArguments/scale.html" class="btn btn-neutral float-left" title="2. Scale" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

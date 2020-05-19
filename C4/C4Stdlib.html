@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
+  <title>4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -38,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Generate diagrams from PlantUML source files using GithubActions" href="../GenerateDiagrams/GenerateDiagrams.html" />
-    <link rel="prev" title="6. ContributingToStdlib" href="../Stdlib/ContributingToStdlib.html" /> 
+    <link rel="next" title="5. StandardisingStdLib" href="../Stdlib/StandardisingStdLib.html" />
+    <link rel="prev" title="3. Create a Diagram of a Typical Network" href="../NetworkUsersMachines/NetworkUsersMachines.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,51 +92,54 @@
 <li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Stdlib</span></p>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Plantuml Sprites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingSrdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/scale.html">2. Scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
 </ul>
-<p class="caption"><span class="caption-text">C4</span></p>
+<p class="caption"><span class="caption-text">Standard Library</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#c4">1.1. C4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#c4-plantuml">1.2. C4 PlantUML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#c4-example-big-bank">1.3. C4 Example Big Bank</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#context">1.3.1. Context</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#context-with-more-detail">1.3.2. Context With More detail</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#container">1.3.3. Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#component">1.3.4. Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#class">1.3.5. Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c4">4.1. C4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c4-plantuml">4.2. C4 PlantUML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c4-example-big-bank">4.3. C4 Example Big Bank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#context">4.3.1. Context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context-with-more-detail">4.3.2. Context With More detail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#container">4.3.3. Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component">4.3.4. Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class">4.3.5. Class</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#c4-acme-global-widget-production">1.4. C4 ACME Global Widget Production</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#c4-acme-context">1.4.1. C4 ACME Context</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#source">1.4.1.1. Source</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#play">1.4.1.2. Play</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#explore">1.4.1.3. Explore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c4-acme-global-widget-production">4.4. C4 ACME Global Widget Production</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-context">4.4.1. C4 ACME Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source">4.4.1.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play">4.4.1.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explore">4.4.1.3. Explore</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#c4-acme-container">1.4.2. C4 ACME Container</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">1.4.2.1. Source</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">1.4.2.2. Play</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">1.4.2.3. Explore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-container">4.4.2. C4 ACME Container</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">4.4.2.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">4.4.2.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">4.4.2.3. Explore</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#c4-acme-component">1.4.3. C4 ACME Component</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id6">1.4.3.1. Source</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">1.4.3.2. Play</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">1.4.3.3. Explore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-component">4.4.3. C4 ACME Component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">4.4.3.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">4.4.3.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">4.4.3.3. Explore</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -195,7 +199,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</li>
+      <li>4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -215,9 +219,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="using-plantuml-stdlib-c4-lightweight-software-architecture-description-method">
-<h1>1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#using-plantuml-stdlib-c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
+<h1>4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#using-plantuml-stdlib-c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="c4">
-<h2>1.1. C4<a class="headerlink" href="#c4" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. C4<a class="headerlink" href="#c4" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>See <a class="reference internal" href="c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> for details.</p>
@@ -239,21 +243,21 @@ mantra</a>:</p>
 used as it causes confusion between a person or a system.</p>
 </div>
 <div class="section" id="c4-plantuml">
-<h2>1.2. C4 PlantUML<a class="headerlink" href="#c4-plantuml" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. C4 PlantUML<a class="headerlink" href="#c4-plantuml" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML">C4-PlantUML</a> is included in PlantUML Stdlib. It combines
 the benefits of <a class="reference external" href="http://plantuml.com/">PlantUML</a> and the <a class="reference internal" href="c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> model for providing a simple way of describing
 and communicating software architectures - especially during up-front design sessions - with an intuitive language using open source and platform independent tools.</p>
 <p>It also supports <a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML#snippets-for-visual-studio-code">C4 PlantUML Snippets for Visual Studio Code</a></p>
 </div>
 <div class="section" id="c4-example-big-bank">
-<h2>1.3. C4 Example Big Bank<a class="headerlink" href="#c4-example-big-bank" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. C4 Example Big Bank<a class="headerlink" href="#c4-example-big-bank" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The examples from <a class="reference external" href="https://github.com/RicardoNiepel/C4-PlantUML">C4-PlantUML</a> are used.</p>
 <p>Person sprites are added to the customer box to emphasize the user in the diagrams.</p>
 </div>
 <div class="section" id="context">
-<h3>1.3.1. Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.1. Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The top-level diagram shows the big boxes in the system i.e. the overall context in which a system operates.</p>
@@ -336,7 +340,7 @@ Rel(banking_system, mainframe, &quot;Uses&quot;)
 </td></tr></table></div>
 </div>
 <div class="section" id="context-with-more-detail">
-<h3>1.3.2. Context With More detail<a class="headerlink" href="#context-with-more-detail" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.2. Context With More detail<a class="headerlink" href="#context-with-more-detail" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>More detail is then added.</p>
@@ -481,7 +485,7 @@ Lay_U(mail_system, customer)
 </td></tr></table></div>
 </div>
 <div class="section" id="container">
-<h3>1.3.3. Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.3. Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We then drill down into the “Internet Banking” box.</p>
@@ -620,7 +624,7 @@ Rel_Neighbor(backend_api, banking_system, &quot;Uses&quot;, &quot;sync/async, XM
 </td></tr></table></div>
 </div>
 <div class="section" id="component">
-<h3>1.3.4. Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.4. Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We then drill down into the “API Application” box.</p>
@@ -742,7 +746,7 @@ Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
 </td></tr></table></div>
 </div>
 <div class="section" id="class">
-<h3>1.3.5. Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<h3>4.3.5. Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We could then add the Class diagrams for the different Components.</p>
@@ -754,16 +758,16 @@ Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
 </div>
 </div>
 <div class="section" id="c4-acme-global-widget-production">
-<h2>1.4. C4 ACME Global Widget Production<a class="headerlink" href="#c4-acme-global-widget-production" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. C4 ACME Global Widget Production<a class="headerlink" href="#c4-acme-global-widget-production" title="Permalink to this headline">¶</a></h2>
 <p>Your mission, if you choose to accept it, is to design the ACME Global Widget Production System.</p>
 <ol class="arabic simple">
 <li><p>ACME has its own production sites, and uses 3rd party production sites.</p></li>
 <li><p>All sites are connected to a central production host</p></li>
 </ol>
 <div class="section" id="c4-acme-context">
-<h3>1.4.1. C4 ACME Context<a class="headerlink" href="#c4-acme-context" title="Permalink to this headline">¶</a></h3>
+<h3>4.4.1. C4 ACME Context<a class="headerlink" href="#c4-acme-context" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="source">
-<h4>1.4.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-center" id="id9">
 <p class="plantuml">
 <img src="../_images/plantuml-dffca1ea94c5620bf43ae3cafa30db98e59bd102.png" alt="&#64;startuml
@@ -979,18 +983,18 @@ Rel_D(Monitoring, ProdSystemHost, &quot;Monitoring&quot;)
 </td></tr></table></div>
 </div>
 <div class="section" id="play">
-<h4>1.4.1.2. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.1.2. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play2.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
 </div>
 <div class="section" id="explore">
-<h4>1.4.1.3. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.1.3. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li><p>TODO</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="c4-acme-container">
-<h3>1.4.2. C4 ACME Container<a class="headerlink" href="#c4-acme-container" title="Permalink to this headline">¶</a></h3>
+<h3>4.4.2. C4 ACME Container<a class="headerlink" href="#c4-acme-container" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id10">
 <p class="plantuml">
 <img src="../_images/plantuml-6daa405282097b9c0a604c1adeb5fd1e5fcaf105.png" alt="&#64;startuml
@@ -1028,7 +1032,7 @@ Rel(Hub, UnitN, &quot;Connect&quot;)
 <p class="caption"><span class="caption-text"><em>C4 ACME Workstation</em></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id3">
-<h4>1.4.2.1. Source<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.2.1. Source<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1094,18 +1098,18 @@ Rel(Hub, UnitN, &quot;Connect&quot;)
 </td></tr></table></div>
 </div>
 <div class="section" id="id4">
-<h4>1.4.2.2. Play<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.2.2. Play<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play2.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
 </div>
 <div class="section" id="id5">
-<h4>1.4.2.3. Explore<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.2.3. Explore<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li><p>TODO</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="c4-acme-component">
-<h3>1.4.3. C4 ACME Component<a class="headerlink" href="#c4-acme-component" title="Permalink to this headline">¶</a></h3>
+<h3>4.4.3. C4 ACME Component<a class="headerlink" href="#c4-acme-component" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id11">
 <p class="plantuml">
 <img src="../_images/plantuml-af4be4bd4df2f4be25d00d9d9adb2a3a24097ceb.png" alt="&#64;startuml
@@ -1303,7 +1307,7 @@ AWSCLOUD(awscloud){
 <p class="caption"><span class="caption-text"><em>C4 ACME Component Monitoring</em></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id6">
-<h4>1.4.3.1. Source<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.3.1. Source<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
@@ -1678,11 +1682,11 @@ AWSCLOUD(awscloud){
 </td></tr></table></div>
 </div>
 <div class="section" id="id7">
-<h4>1.4.3.2. Play<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.3.2. Play<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="../_images/play2.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
 </div>
 <div class="section" id="id8">
-<h4>1.4.3.3. Explore<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<h4>4.4.3.3. Explore<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li><p>TODO</p></li>
 </ol>
@@ -1699,10 +1703,10 @@ AWSCLOUD(awscloud){
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../GenerateDiagrams/GenerateDiagrams.html" class="btn btn-neutral float-right" title="1. Generate diagrams from PlantUML source files using GithubActions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Stdlib/StandardisingStdLib.html" class="btn btn-neutral float-right" title="5. StandardisingStdLib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Stdlib/ContributingToStdlib.html" class="btn btn-neutral float-left" title="6. ContributingToStdlib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../NetworkUsersMachines/NetworkUsersMachines.html" class="btn btn-neutral float-left" title="3. Create a Diagram of a Typical Network" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

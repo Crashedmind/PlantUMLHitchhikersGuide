@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -38,7 +39,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Understanding PlantUML Stdlib Sprite Library" href="PlantUMLSprites.html" />
+    <link rel="next" title="2. Scale" href="../NamedArguments/scale.html" />
     <link rel="prev" title="2. About this Guide" href="../AboutThisGuide.html" /> 
 </head>
 
@@ -91,16 +92,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Stdlib</span></p>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Plantuml Sprites</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-deployment-diagram-sprites">1.1. Builtin Sprites - Deployment Diagram Sprites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-standard-library-sprites">1.2. Builtin Sprites - Standard Library Sprites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-builtin-sprites-aws">1.2.1. Example Builtin Sprites AWS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#simple-example">1.2.1.1. Simple Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#more-complex-example">1.2.1.2. More Complex Example</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-builtin-sprites-aws">1.2.1. Example Builtin Sprites AWS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-example">1.2.2. Simple Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-complex-example">1.2.3. More Complex Example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-sprite">1.3. Create a Sprite</a><ul>
@@ -109,24 +108,20 @@
 <li class="toctree-l3"><a class="reference internal" href="#create-diagram-with-our-sprites">1.3.3. Create Diagram with our Sprites</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#create-sprites-by-converting-osa-icon-libaries">1.4. Create Sprites by converting OSA icon libaries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#converting-the-icon-set-to-plantuml-sprites">1.4.1. Converting the icon set to PlantUML Sprites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">1.4.2. Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#all-icons">1.4.3. All Icons</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-hyperlinks">1.5. PlantUML HyperLinks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/scale.html">2. Scale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="PlantUMLSprites.html">2. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. Create a Template from our Network Diagram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingSrdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
-</ul>
-<p class="caption"><span class="caption-text">C4</span></p>
+<p class="caption"><span class="caption-text">Standard Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">1. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -214,6 +209,10 @@
 <li><p>use the builtin  <a class="reference external" href="http://plantuml.com/sprite">sprites</a></p></li>
 <li><p>create your own sprites</p></li>
 </ol>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>add note about png files</p>
+</div>
 <div class="section" id="builtin-sprites-deployment-diagram-sprites">
 <h2>1.1. Builtin Sprites - Deployment Diagram Sprites<a class="headerlink" href="#builtin-sprites-deployment-diagram-sprites" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://plantuml.com/deployment-diagram">Deployment</a> diagrams define several sprites.</p>
@@ -389,8 +388,9 @@ to sprites for use with PlantUML.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">milo</span><span class="o">-</span><span class="n">minderbinder</span><span class="o">/</span><span class="n">AWS</span><span class="o">-</span><span class="n">PlantUML</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
+</div>
 <div class="section" id="simple-example">
-<h4>1.2.1.1. Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h4>
+<h3>1.2.2. Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-04b9f5e2a6cbbbd5a8c77fd4ad01c991070c0d5a.png" alt="&#64;startuml
@@ -440,7 +440,7 @@ site .r.&gt; logs : events
 </td></tr></table></div>
 </div>
 <div class="section" id="more-complex-example">
-<h4>1.2.1.2. More Complex Example<a class="headerlink" href="#more-complex-example" title="Permalink to this headline">¶</a></h4>
+<h3>1.2.3. More Complex Example<a class="headerlink" href="#more-complex-example" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-fceff4230d3ad38b22a7a1d26dc4770f5812a756.png" alt="&#64;startuml
@@ -632,6 +632,10 @@ comments ..&gt; js :**6**) new\ncomments
 @enduml
 </pre></div>
 </td></tr></table></div>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>add note about scale - no need for different sizes
+redo this example with play explore etc…</p>
 </div>
 </div>
 </div>
@@ -1128,141 +1132,6 @@ Alice -&gt; Bob
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="create-sprites-by-converting-osa-icon-libaries">
-<h2>1.4. Create Sprites by converting OSA icon libaries<a class="headerlink" href="#create-sprites-by-converting-osa-icon-libaries" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www.opensecurityarchitecture.org/">Open Security
-Architecture</a> (OSA) is a
-useful resource for security architects providing a catalog of
-controls, patterns, and requirements from numerous standards, governance
-frameworks, legislation and regulations. See “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/why-have-osa">why have
-OSA?</a>”.</p>
-<p>Resources include a <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture icon
-library</a>
-available under a “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/license-terms">Creative Commons share-alike
-license</a>”.</p>
-<p>These icons are available as png or svg images.</p>
-<p>Here we’ll convert them to sprites so we can use them with PlantUML.</p>
-<div class="section" id="converting-the-icon-set-to-plantuml-sprites">
-<h3>1.4.1. Converting the icon set to PlantUML Sprites<a class="headerlink" href="#converting-the-icon-set-to-plantuml-sprites" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Download the <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture
-icons</a>
-and extract them into a directory e.g. “osaicons”.</p></li>
-</ol>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>add info on a standard way to create sprites</p>
-</div>
-</div>
-<div class="section" id="example">
-<h3>1.4.2. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center">
-<p class="plantuml">
-<img src="../_images/plantuml-77a4933a093a6e4472f06798be02dddeb5e19ef6.png" alt="&#64;startuml
-
-!include &lt;osa/user/audit/audit.puml&gt;
-!include &lt;osa/user/black/hat/hat.puml&gt;
-!include &lt;osa/user/green/architect/architect.puml&gt;
-
-Auditor : &lt;$audit&gt; 
-Architect: &lt;$architect&gt; 
-BlackHat : &lt;$black_hat&gt;
-
-Auditor -&gt; Architect : blah
-Architect -&gt; BlackHat : blahblah
-
-
-&#64;enduml
-
-"/>
-</p>
-</div>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
-
-!include &lt;osa/user/audit/audit.puml&gt;
-!include &lt;osa/user/black/hat/hat.puml&gt;
-!include &lt;osa/user/green/architect/architect.puml&gt;
-
-Auditor : &lt;$audit&gt; 
-Architect: &lt;$architect&gt; 
-BlackHat : &lt;$black_hat&gt;
-
-Auditor -&gt; Architect : blah
-Architect -&gt; BlackHat : blahblah
-
-
-@enduml
-
-</pre></div>
-</td></tr></table></div>
-</div>
-<div class="section" id="all-icons">
-<h3>1.4.3. All Icons<a class="headerlink" href="#all-icons" title="Permalink to this headline">¶</a></h3>
-<p>Below is what the icons look like - and the associated code.</p>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>add info on what osa icons look like</p>
-</div>
-</div>
-</div>
-<div class="section" id="plantuml-hyperlinks">
-<h2>1.5. PlantUML HyperLinks<a class="headerlink" href="#plantuml-hyperlinks" title="Permalink to this headline">¶</a></h2>
-<p>PlantUML supports hyperlinks in output SVG images. This allows diagrams
-to be linked together, and for a user to easily navigate by clicking
-around per <a class="reference external" href="http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html">Shneiderman’s
-mantra</a>:</p>
-<blockquote>
-<div><p><em>Overview first, zoom and filter, then details-on-demand</em></p>
-</div></blockquote>
-<div class="admonition-todo admonition" id="id4">
-<p class="admonition-title">Todo</p>
-<p>fix svg link</p>
-</div>
-<p>Clicking the image opens up the target <code class="docutils literal notranslate"><span class="pre">svg</span></code> image. This target image contains hyperlinks.</p>
-<a class="reference external image-reference" href="../links.svg"><img alt="../_images/links.svg" src="../_images/links.svg" /></a>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="nd">@startuml</span>
-    <span class="n">actor</span> <span class="n">Bob</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sequence</span><span class="o">-</span><span class="n">diagram</span><span class="p">]]</span>
-    <span class="n">actor</span> <span class="s2">&quot;This is [[http://plantuml.com/sequence-diagram Alice]] actor&quot;</span> <span class="k">as</span> <span class="n">Alice</span>
-    <span class="n">Bob</span> <span class="o">-&gt;</span> <span class="n">Alice</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">hello</span>
-    <span class="n">note</span> <span class="n">left</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span>
-      <span class="n">a</span> <span class="n">note</span> <span class="k">with</span> <span class="n">a</span> <span class="n">link</span>
-    <span class="n">end</span> <span class="n">note</span>
-    <span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">hello</span> <span class="k">with</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">{</span><span class="n">Tooltip</span> <span class="k">for</span> <span class="n">message</span><span class="p">}</span> <span class="n">some</span> <span class="n">link</span><span class="p">]]</span>
-    <span class="n">note</span> <span class="n">right</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">another</span> <span class="n">note</span>
-    <span class="n">note</span> <span class="n">left</span> <span class="n">of</span> <span class="n">Bob</span>
-    <span class="s1">&#39; You can use [[http://plantuml.com/index links in notes]] also.</span>
-    <span class="n">end</span> <span class="n">note</span>
-    <span class="nd">@enduml</span>
-</pre></div>
-</td></tr></table></div>
-</div>
 </div>
 
 
@@ -1273,7 +1142,7 @@ mantra</a>:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PlantUMLSprites.html" class="btn btn-neutral float-right" title="2. Understanding PlantUML Stdlib Sprite Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../NamedArguments/scale.html" class="btn btn-neutral float-right" title="2. Scale" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../AboutThisGuide.html" class="btn btn-neutral float-left" title="2. About this Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
