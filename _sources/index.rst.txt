@@ -204,6 +204,7 @@ Imagine
    NamedArguments/scale
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
+   NamedArguments/MixingSyntax
 
 
 

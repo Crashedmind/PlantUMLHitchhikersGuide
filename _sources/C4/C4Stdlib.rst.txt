@@ -22,6 +22,9 @@ and communicating software architectures - especially during up-front design ses
 
 It also supports `C4 PlantUML Snippets for Visual Studio Code <https://github.com/RicardoNiepel/C4-PlantUML#snippets-for-visual-studio-code>`__
 
+..
+
+    https://github.com/plantuml/plantuml-stdlib/tree/master/C4
 
 C4 Example Big Bank
 ===============================================================================

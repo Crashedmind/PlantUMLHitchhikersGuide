@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Plantuml Sprites &mdash; Playing with PlantUML  documentation</title>
+  <title>1. Use Images in Diagrams &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -94,18 +94,28 @@
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Plantuml Sprites</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-deployment-diagram-sprites">1.1. Builtin Sprites - Deployment Diagram Sprites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#builtin-sprites-standard-library-sprites">1.2. Builtin Sprites - Standard Library Sprites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-builtin-sprites-aws">1.2.1. Example Builtin Sprites AWS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#simple-example">1.2.2. Simple Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#more-complex-example">1.2.3. More Complex Example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Use Images in Diagrams</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#images">1.1. Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-images-to-a-diagram">1.1.1. Add Images To A Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect-images-in-a-diagram">1.1.2. Connect Images In A Diagram</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#create-a-sprite">1.3. Create a Sprite</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#start-with-a-100x100-person-icon-png">1.3.1. Start with a 100x100 person icon png</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#convert-to-sprite-of-different-resolutions-as-follows">1.3.2. Convert to sprite of different resolutions as follows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#create-diagram-with-our-sprites">1.3.3. Create Diagram with our Sprites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-diagram-elements">1.2. Deployment Diagram Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#review-the-deployment-diagram-elements">1.2.1. Review The Deployment Diagram Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-the-deployment-diagram-elements-in-a-sequence-diagram">1.2.2. Use The Deployment Diagram Elements In A Sequence Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#standard-library-sprites">1.3. Standard Library Sprites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#so-why-do-i-need-sprites">1.3.1. So Why Do I Need Sprites?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-builtin-sprites-aws">1.3.2. Example Builtin Sprites AWS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-example">1.3.3. Simple Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#more-complex-example">1.3.4. More Complex Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-sprite">1.4. Create a Sprite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-with-a-png-image">1.4.1. Start With a Png Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convert-to-sprite-of-different-resolutions-as-follows">1.4.2. Convert to sprite of different resolutions as follows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-diagram-with-our-sprites">1.4.3. Create Diagram with our Sprites</a></li>
 </ul>
 </li>
 </ul>
@@ -113,6 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/scale.html">2. Scale</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standard Library</span></p>
 <ul>
@@ -181,7 +192,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. Plantuml Sprites</li>
+      <li>1. Use Images in Diagrams</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,22 +211,184 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="plantuml-sprites">
-<h1>1. Plantuml Sprites<a class="headerlink" href="#plantuml-sprites" title="Permalink to this headline">¶</a></h1>
-<p>PlantUML supports <a class="reference external" href="http://plantuml.com/sprite">sprites:</a> small graphic elements that can be used in diagrams.</p>
-<p>Given we want to make diagrams communicate quickly and clearly, using sprites (rather than just boxes) is very effective.</p>
-<p>You can</p>
-<ol class="arabic simple">
-<li><p>use the builtin  <a class="reference external" href="http://plantuml.com/sprite">sprites</a></p></li>
-<li><p>create your own sprites</p></li>
+  <div class="section" id="use-images-in-diagrams">
+<h1>1. Use Images in Diagrams<a class="headerlink" href="#use-images-in-diagrams" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Given we want diagrams that communicate quickly and clearly, using images (rather than just shapes) is very effective.</p>
+<p>To add an image to a PlantUML diagram, we can:</p>
+<ol class="arabic">
+<li><p>use an image (jpg, png, etc…)</p></li>
+<li><p>use <a class="reference external" href="https://plantuml.com/deployment-diagram">Deployment</a> diagram elements</p></li>
+<li><p>use sprites</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>the builtin <a class="reference external" href="http://plantuml.com/sprite">sprites</a></p></li>
+<li><p>create our own <a class="reference external" href="http://plantuml.com/sprite">sprites</a></p></li>
 </ol>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>add note about png files</p>
+</div></blockquote>
+</li>
+</ol>
 </div>
-<div class="section" id="builtin-sprites-deployment-diagram-sprites">
-<h2>1.1. Builtin Sprites - Deployment Diagram Sprites<a class="headerlink" href="#builtin-sprites-deployment-diagram-sprites" title="Permalink to this headline">¶</a></h2>
+<p>Let’s look at all of these in detail.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For clarity, sprites will be referred to as icons.
+Image formats, like png, jpg will be referred to as image files.</p>
+</div>
+<div class="section" id="images">
+<h2>1.1. Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-images-to-a-diagram">
+<h3>1.1.1. Add Images To A Diagram<a class="headerlink" href="#add-images-to-a-diagram" title="Permalink to this headline">¶</a></h3>
+<p>This uses the image tag which is part of PlantUML <a class="reference external" href="https://plantuml.com/creole">creole</a> Legacy HTML support per PlantUML specification:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">HTML</span> <span class="n">tags</span> <span class="n">are</span> <span class="n">also</span> <span class="n">working</span><span class="p">:</span>
+
+    <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">bold</span> <span class="n">text</span>
+    <span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">u</span><span class="p">:</span><span class="c1">#AAAAAA&gt; or &lt;u:[[color|colorName]]&gt; for underline</span>
+    <span class="o">&lt;</span><span class="n">i</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">italic</span>
+    <span class="o">&lt;</span><span class="n">s</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">s</span><span class="p">:</span><span class="c1">#AAAAAA&gt; or &lt;s:[[color|colorName]]&gt; for strike text</span>
+    <span class="o">&lt;</span><span class="n">w</span><span class="o">&gt;</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">w</span><span class="p">:</span><span class="c1">#AAAAAA&gt; or &lt;w:[[color|colorName]]&gt; for wave underline text</span>
+    <span class="o">&lt;</span><span class="n">color</span><span class="p">:</span><span class="c1">#AAAAAA&gt; or &lt;color:[[color|colorName]]&gt;</span>
+    <span class="o">&lt;</span><span class="n">back</span><span class="p">:</span><span class="c1">#AAAAAA&gt; or &lt;back:[[color|colorName]]&gt; for background color</span>
+    <span class="o">&lt;</span><span class="n">size</span><span class="p">:</span><span class="n">nn</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">change</span> <span class="n">font</span> <span class="n">size</span>
+    <span class="o">&lt;</span><span class="n">img</span><span class="p">:</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">the</span> <span class="n">file</span> <span class="n">must</span> <span class="n">be</span> <span class="n">accessible</span> <span class="n">by</span> <span class="n">the</span> <span class="n">filesystem</span>
+    <span class="o">&lt;</span><span class="n">img</span><span class="p">:</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">logo3</span><span class="o">.</span><span class="n">png</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">the</span> <span class="n">URL</span> <span class="n">must</span> <span class="n">be</span> <span class="n">available</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Internet</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-414663b841fbbda5d01701df230fb19526c0b51f.png" alt="'diagram from https://plantuml.com/creole
+&#64;startuml
+:* You can change &lt;color:red&gt;text color&lt;/color&gt;
+* You can change &lt;back:cadetblue&gt;background color&lt;/back&gt;
+* You can change &lt;size:18&gt;size&lt;/size&gt;
+* You use &lt;u&gt;legacy&lt;/u&gt; &lt;b&gt;HTML &lt;i&gt;tag&lt;/i&gt;&lt;/b&gt;
+* You use &lt;u:red&gt;color&lt;/u&gt; &lt;s:green&gt;in HTML&lt;/s&gt; &lt;w:#0000FF&gt;tag&lt;/w&gt;
+----
+* Use image : &lt;img:http://plantuml.com/logo3.png&gt;
+;
+&#64;enduml
+
+"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="s1">&#39;diagram from https://plantuml.com/creole</span>
+<span class="nd">@startuml</span>
+<span class="p">:</span><span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">change</span> <span class="o">&lt;</span><span class="n">color</span><span class="p">:</span><span class="n">red</span><span class="o">&gt;</span><span class="n">text</span> <span class="n">color</span><span class="o">&lt;/</span><span class="n">color</span><span class="o">&gt;</span>
+<span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">change</span> <span class="o">&lt;</span><span class="n">back</span><span class="p">:</span><span class="n">cadetblue</span><span class="o">&gt;</span><span class="n">background</span> <span class="n">color</span><span class="o">&lt;/</span><span class="n">back</span><span class="o">&gt;</span>
+<span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">change</span> <span class="o">&lt;</span><span class="n">size</span><span class="p">:</span><span class="mi">18</span><span class="o">&gt;</span><span class="n">size</span><span class="o">&lt;/</span><span class="n">size</span><span class="o">&gt;</span>
+<span class="o">*</span> <span class="n">You</span> <span class="n">use</span> <span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span><span class="n">legacy</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">HTML</span> <span class="o">&lt;</span><span class="n">i</span><span class="o">&gt;</span><span class="n">tag</span><span class="o">&lt;/</span><span class="n">i</span><span class="o">&gt;&lt;/</span><span class="n">b</span><span class="o">&gt;</span>
+<span class="o">*</span> <span class="n">You</span> <span class="n">use</span> <span class="o">&lt;</span><span class="n">u</span><span class="p">:</span><span class="n">red</span><span class="o">&gt;</span><span class="n">color</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">s</span><span class="p">:</span><span class="n">green</span><span class="o">&gt;</span><span class="ow">in</span> <span class="n">HTML</span><span class="o">&lt;/</span><span class="n">s</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">w</span><span class="p">:</span><span class="c1">#0000FF&gt;tag&lt;/w&gt;</span>
+<span class="o">----</span>
+<span class="hll"><span class="o">*</span> <span class="n">Use</span> <span class="n">image</span> <span class="p">:</span> <span class="o">&lt;</span><span class="n">img</span><span class="p">:</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">logo3</span><span class="o">.</span><span class="n">png</span><span class="o">&gt;</span>
+</span><span class="p">;</span>
+<span class="nd">@enduml</span>
+
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="connect-images-in-a-diagram">
+<h3>1.1.2. Connect Images In A Diagram<a class="headerlink" href="#connect-images-in-a-diagram" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Connect Images In A Diagram</p>
+</div>
+</div>
+</div>
+<div class="section" id="deployment-diagram-elements">
+<h2>1.2. Deployment Diagram Elements<a class="headerlink" href="#deployment-diagram-elements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="review-the-deployment-diagram-elements">
+<h3>1.2.1. Review The Deployment Diagram Elements<a class="headerlink" href="#review-the-deployment-diagram-elements" title="Permalink to this headline">¶</a></h3>
+<p>PlantUML supports <a class="reference external" href="http://plantuml.com/sprite">sprites</a> small graphic elements that can be used in diagrams.</p>
 <p><a class="reference external" href="https://plantuml.com/deployment-diagram">Deployment</a> diagrams define several sprites.</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-435d4a471d7cfaf9defebbe61b89acb832ed966e.png" alt="&#64;startuml
+actor actor
+agent agent
+artifact artifact
+boundary boundary
+card card
+cloud cloud
+component component
+control control
+database database
+entity entity
+file file
+folder folder
+frame frame
+interface  interface
+node node
+package package
+queue queue
+stack stack
+rectangle rectangle
+storage storage
+usecase usecase
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="n">actor</span> <span class="n">actor</span>
+<span class="n">agent</span> <span class="n">agent</span>
+<span class="n">artifact</span> <span class="n">artifact</span>
+<span class="n">boundary</span> <span class="n">boundary</span>
+<span class="n">card</span> <span class="n">card</span>
+<span class="n">cloud</span> <span class="n">cloud</span>
+<span class="n">component</span> <span class="n">component</span>
+<span class="n">control</span> <span class="n">control</span>
+<span class="n">database</span> <span class="n">database</span>
+<span class="n">entity</span> <span class="n">entity</span>
+<span class="n">file</span> <span class="n">file</span>
+<span class="n">folder</span> <span class="n">folder</span>
+<span class="n">frame</span> <span class="n">frame</span>
+<span class="n">interface</span>  <span class="n">interface</span>
+<span class="n">node</span> <span class="n">node</span>
+<span class="n">package</span> <span class="n">package</span>
+<span class="n">queue</span> <span class="n">queue</span>
+<span class="n">stack</span> <span class="n">stack</span>
+<span class="n">rectangle</span> <span class="n">rectangle</span>
+<span class="n">storage</span> <span class="n">storage</span>
+<span class="n">usecase</span> <span class="n">usecase</span>
+<span class="nd">@enduml</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="use-the-deployment-diagram-elements-in-a-sequence-diagram">
+<h3>1.2.2. Use The Deployment Diagram Elements In A Sequence Diagram<a class="headerlink" href="#use-the-deployment-diagram-elements-in-a-sequence-diagram" title="Permalink to this headline">¶</a></h3>
 <p>Below is an example using some of these - in a sequence diagram.</p>
 <div class="figure align-center">
 <p class="plantuml">
@@ -295,13 +468,13 @@ end
 36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 
 
-<span class="n">autonumber</span>
-<span class="n">box</span> <span class="s2">&quot;UnTrustedDomain&quot;</span> <span class="c1">#Red</span>
-	<span class="n">database</span> <span class="n">UnTrustedKeyStore</span> <span class="k">as</span> <span class="n">UKS</span>
-	<span class="n">control</span> <span class="n">UnTrustedKeyManager</span> <span class="k">as</span> <span class="n">UKM</span>
-    <span class="n">boundary</span> <span class="n">KeyLoader</span> <span class="k">as</span> <span class="n">KL</span>
-<span class="n">end</span> <span class="n">box</span>
-
+<span class="hll"><span class="n">autonumber</span>
+</span><span class="hll"><span class="n">box</span> <span class="s2">&quot;UnTrustedDomain&quot;</span> <span class="c1">#Red</span>
+</span><span class="hll">	<span class="n">database</span> <span class="n">UnTrustedKeyStore</span> <span class="k">as</span> <span class="n">UKS</span>
+</span><span class="hll">	<span class="n">control</span> <span class="n">UnTrustedKeyManager</span> <span class="k">as</span> <span class="n">UKM</span>
+</span>    <span class="n">boundary</span> <span class="n">KeyLoader</span> <span class="k">as</span> <span class="n">KL</span>
+<span class="hll"><span class="n">end</span> <span class="n">box</span>
+</span>
 <span class="n">box</span> <span class="s2">&quot;TrustedDomain&quot;</span> <span class="c1">#Green</span>
 	<span class="n">database</span> <span class="n">PersistentStorage</span> <span class="k">as</span> <span class="n">KS</span>
     <span class="n">control</span> <span class="n">KeyManager</span> <span class="k">as</span> <span class="n">KM</span>
@@ -309,10 +482,10 @@ end
 <span class="n">end</span> <span class="n">box</span>
 
 
-<span class="n">group</span> <span class="n">In</span> <span class="n">the</span> <span class="n">Beginning</span><span class="o">...</span>
-    
-    <span class="n">group</span> <span class="n">RootKBPK</span>    
-        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Unique</span> <span class="n">Root</span> <span class="n">KEK</span> <span class="ow">is</span> <span class="n">pre</span><span class="o">-</span><span class="n">programmed</span> <span class="n">to</span> <span class="n">SOC</span> <span class="o">-</span> <span class="n">use</span> <span class="n">this</span> <span class="k">as</span> <span class="n">KBPK</span>
+<span class="hll"><span class="n">group</span> <span class="n">In</span> <span class="n">the</span> <span class="n">Beginning</span><span class="o">...</span>
+</span>    
+<span class="hll">    <span class="n">group</span> <span class="n">RootKBPK</span>    
+</span>        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Unique</span> <span class="n">Root</span> <span class="n">KEK</span> <span class="ow">is</span> <span class="n">pre</span><span class="o">-</span><span class="n">programmed</span> <span class="n">to</span> <span class="n">SOC</span> <span class="o">-</span> <span class="n">use</span> <span class="n">this</span> <span class="k">as</span> <span class="n">KBPK</span>
         <span class="n">KS</span> <span class="o">--&gt;</span> <span class="n">KS</span><span class="p">:</span> <span class="n">Root</span> <span class="n">KBPK</span> <span class="n">exists</span>
     <span class="n">end</span>
    
@@ -330,10 +503,17 @@ end
 <span class="nd">@enduml</span>
 </pre></div>
 </td></tr></table></div>
+<p>In this diagram, we’re using some PlantUML keywords:</p>
+<ol class="arabic simple">
+<li><p>autonumber: to automatically number the sequence steps</p></li>
+<li><p>box: to highlight domains: trusted in green, untrusted in green</p></li>
+<li><p>group: to group sequence flows. And these can be grouped within other groups.</p></li>
+</ol>
 </div>
-<div class="section" id="builtin-sprites-standard-library-sprites">
-<h2>1.2. Builtin Sprites - Standard Library Sprites<a class="headerlink" href="#builtin-sprites-standard-library-sprites" title="Permalink to this headline">¶</a></h2>
-<p>Some standard libaries are available for PlantUML:</p>
+</div>
+<div class="section" id="standard-library-sprites">
+<h2>1.3. Standard Library Sprites<a class="headerlink" href="#standard-library-sprites" title="Permalink to this headline">¶</a></h2>
+<p>PlantUML includes a Standard Library. Contents of the library come from third party contributors.</p>
 <ol class="arabic simple">
 <li><p>See <a class="reference external" href="http://plantuml.com/stdlib">http://plantuml.com/stdlib</a> for what is supported in official release of PlantUML</p></li>
 <li><p>“-stdlib” option lists the builtin icon libaries</p></li>
@@ -379,18 +559,30 @@ end
 <span class="n">Delivered</span> <span class="n">by</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tupadr3</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">icon</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">sprites</span>
 </pre></div>
 </div>
+<div class="section" id="so-why-do-i-need-sprites">
+<h3>1.3.1. So Why Do I Need Sprites?<a class="headerlink" href="#so-why-do-i-need-sprites" title="Permalink to this headline">¶</a></h3>
+<p>Sprites are monochrome (16 shades/levels max), versus image files which can be infinite color at high resolution.</p>
+<p>But we can easily change a sprite’s characteristics via PlantUML e.g. color and scale.</p>
+</div>
 <div class="section" id="example-builtin-sprites-aws">
-<h3>1.2.1. Example Builtin Sprites AWS<a class="headerlink" href="#example-builtin-sprites-aws" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.2. Example Builtin Sprites AWS<a class="headerlink" href="#example-builtin-sprites-aws" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/milo-minderbinder/AWS-PlantUML">Plantuml for AWS</a>
 uses the <a class="reference external" href="https://aws.amazon.com/architecture/icons/">icon set from
 AWS</a> and converts these
 to sprites for use with PlantUML.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">milo</span><span class="o">-</span><span class="n">minderbinder</span><span class="o">/</span><span class="n">AWS</span><span class="o">-</span><span class="n">PlantUML</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">plantuml</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">stdlib</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">aws</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AWS-labs has since updated the AWS icons, and submitted a new icon set to PlantUML.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">plantuml</span><span class="o">/</span><span class="n">plantuml</span><span class="o">-</span><span class="n">stdlib</span><span class="o">/</span><span class="n">tree</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">awslib</span>
 </pre></div>
 </div>
 </div>
+</div>
 <div class="section" id="simple-example">
-<h3>1.2.2. Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.3. Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-04b9f5e2a6cbbbd5a8c77fd4ad01c991070c0d5a.png" alt="&#64;startuml
@@ -440,7 +632,7 @@ site .r.&gt; logs : events
 </td></tr></table></div>
 </div>
 <div class="section" id="more-complex-example">
-<h3>1.2.3. More Complex Example<a class="headerlink" href="#more-complex-example" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.4. More Complex Example<a class="headerlink" href="#more-complex-example" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-fceff4230d3ad38b22a7a1d26dc4770f5812a756.png" alt="&#64;startuml
@@ -632,7 +824,7 @@ comments ..&gt; js :**6**) new\ncomments
 @enduml
 </pre></div>
 </td></tr></table></div>
-<div class="admonition-todo admonition" id="id3">
+<div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p>add note about scale - no need for different sizes
 redo this example with play explore etc…</p>
@@ -640,16 +832,18 @@ redo this example with play explore etc…</p>
 </div>
 </div>
 <div class="section" id="create-a-sprite">
-<h2>1.3. Create a Sprite<a class="headerlink" href="#create-a-sprite" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Create a Sprite<a class="headerlink" href="#create-a-sprite" title="Permalink to this headline">¶</a></h2>
 <p>It’s easy to create your own sprites from existing icons.</p>
-<div class="section" id="start-with-a-100x100-person-icon-png">
-<h3>1.3.1. Start with a 100x100 person icon png<a class="headerlink" href="#start-with-a-100x100-person-icon-png" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="start-with-a-png-image">
+<h3>1.4.1. Start With a Png Image<a class="headerlink" href="#start-with-a-png-image" title="Permalink to this headline">¶</a></h3>
+<p>Here we use a 100x100 person icon</p>
 <div class="figure align-default">
 <img alt="../_images/C4person100.png" src="../_images/C4person100.png" />
 </div>
 </div>
 <div class="section" id="convert-to-sprite-of-different-resolutions-as-follows">
-<h3>1.3.2. Convert to sprite of different resolutions as follows<a class="headerlink" href="#convert-to-sprite-of-different-resolutions-as-follows" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.2. Convert to sprite of different resolutions as follows<a class="headerlink" href="#convert-to-sprite-of-different-resolutions-as-follows" title="Permalink to this headline">¶</a></h3>
+<p>You can use the PlantUML GUI as described in <a class="reference external" href="http://plantuml.com/sprite">sprites</a>, or use the command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">4</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person4</span><span class="o">.</span><span class="n">sprite</span>
 <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">16</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person16</span><span class="o">.</span><span class="n">sprite</span>
 <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="o">-</span><span class="n">encodesprite</span> <span class="mi">8</span> <span class="n">images</span><span class="o">/</span><span class="n">C4person100</span><span class="o">.</span><span class="n">png</span> <span class="o">&gt;</span> <span class="n">C4person8</span><span class="o">.</span><span class="n">sprite</span>
@@ -733,7 +927,7 @@ KLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
 </td></tr></table></div>
 </div>
 <div class="section" id="create-diagram-with-our-sprites">
-<h3>1.3.3. Create Diagram with our Sprites<a class="headerlink" href="#create-diagram-with-our-sprites" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.3. Create Diagram with our Sprites<a class="headerlink" href="#create-diagram-with-our-sprites" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-7be27c33a3369e61352135753bc455dd38e72a44.png" alt="&#64;startuml
@@ -1130,6 +1324,15 @@ Alice -&gt; Bob
 
 </pre></div>
 </td></tr></table></div>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<dl class="simple">
+<dt>look later at some more exotic options</dt><dd><p><a class="reference external" href="https://github.com/executablebooks/sphinx-panels">https://github.com/executablebooks/sphinx-panels</a>
+<a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/latest/launch.html">https://sphinx-book-theme.readthedocs.io/en/latest/launch.html</a>
+<a class="reference external" href="https://stackoverflow.com/questions/20303335/ipython-notebook-plantuml-extension">https://stackoverflow.com/questions/20303335/ipython-notebook-plantuml-extension</a></p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
