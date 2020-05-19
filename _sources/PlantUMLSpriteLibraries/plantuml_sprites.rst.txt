@@ -1,7 +1,7 @@
 .. _Deployment: https://plantuml.com/deployment-diagram
 .. _creole: https://plantuml.com/creole
 .. _sprites: http://plantuml.com/sprite
-
+.. _openIconic: https://plantuml.com/openiconic
 
 ======================================================
 Use Images in Diagrams
@@ -11,20 +11,47 @@ Use Images in Diagrams
 
     Given we want diagrams that communicate quickly and clearly, using images (rather than just shapes) is very effective.
 
-    To add an image to a PlantUML diagram, we can: 
+    The following table lists the options to add an image to a PlantUML diagram.
 
-    #. use an image (jpg, png, etc...) 
-    #. use Deployment_ diagram elements
-    #. use sprites 
 
-        #. the builtin sprites_ 
-        #. create our own sprites_
 
+.. csv-table:: Options to add images to PlantUML diagrams
+   :header: "Option", "Builtin", "Details"
+   :widths: 10, 10, 50
+    
+    "Creole openIconic_", "Yes", "e.g. <&person>, e.g. <&cloud>"
+    "Images", "No",	"jpg, png, etc... using <img>tag to add images you specify via file or URL"
+    "Deployment_ Diagram Elements", "Yes",	"These are ~20 shapes"
+    "Standard Library sprites_", "Yes",	"These are part of PlantUML - but submitted by the community"
+    "Create our own sprites_", "No",	"You can convert and use any image. You can also submit to PlantUML for inclusion in Standard Library"
+
+    
 Let's look at all of these in detail.
 
 .. note ::
     For clarity, sprites will be referred to as icons.
     Image formats, like png, jpg will be referred to as image files.
+
+
+Creole openIconic_
+===============================================================================
+openIconic_ open source icon set is integrated into PlantUML ( as part of the creole parser).
+
+
+.. todo ::
+    fix by removing my plantuml.cfg
+
+.. todo ::
+    ask @Arnaud if openiconic icon set is up to date with https://useiconic.com/open/
+
+.. uml:: ./listopeniconic.puml
+    :align: center
+
+
+.. literalinclude:: ./listopeniconic.puml
+    :linenos:
+    :emphasize-lines: 2
+
 
 
 Images
@@ -69,6 +96,8 @@ This uses the image tag which is part of PlantUML creole_ Legacy HTML support pe
 
 .. EndPlayingExample
 
+.. todo ::
+    can scale an image also - need to try    
 
 Connect Images In A Diagram
 -------------------------------------------------------------------------------
@@ -92,7 +121,7 @@ Deployment_ diagrams define several sprites.
     pumlsource: ./deployment_diagram.puml
     emphasize-lines:
     caption: Deployment diagram elements
-    explore: Change the 
+    explore:  
     
 .. uml:: ./deployment_diagram.puml
     :align: center
@@ -119,18 +148,20 @@ Below is an example using some of these - in a sequence diagram.
 
 .. uml:: ./keysequence.puml
     :align: center
+    :caption: Using database, control, boundary Deployment Diagram Elements
 
 .. literalinclude:: ./keysequence.puml
     :linenos:
-    :emphasize-lines: 4, 5, 6, 7, 9, 18, 20
+    :emphasize-lines: 4, 5, 6, 7, 8, 9, 18, 20
 
 .. EndPlayingExample
 
 In this diagram, we're using some PlantUML keywords:
 
-#. autonumber: to automatically number the sequence steps
-#. box: to highlight domains: trusted in green, untrusted in green
-#. group: to group sequence flows. And these can be grouped within other groups.
+#. **autonumber**: to automatically number the sequence steps.
+#. **box**: to highlight domains: trusted in green, untrusted in red.
+#. **group**: to group sequence flows. And these can be grouped within other groups.
+#. **note**: to add a note to the diagram.
 
 
 Standard Library Sprites
@@ -255,7 +286,7 @@ More Complex Example
     add note about scale - no need for different sizes
     redo this example with play explore etc...
 
-Create a Sprite
+Create A Sprite
 ===============================================================================
 
 It's easy to create your own sprites from existing icons.
@@ -268,16 +299,16 @@ Here we use a 100x100 person icon
 .. figure:: ./C4person100.png
    
 
-Convert to sprite of different resolutions as follows
+Convert To Sprite Of Different Resolutions As Follows
 -------------------------------------------------------------------------------
 
 You can use the PlantUML GUI as described in sprites_, or use the command line:
 
 ::
 
-     java -jar plantuml.jar -encodesprite 4 images/C4person100.png > C4person4.sprite
-     java -jar plantuml.jar -encodesprite 16 images/C4person100.png > C4person16.sprite
-     java -jar plantuml.jar -encodesprite 8 images/C4person100.png > C4person8.sprite
+     java -jar plantuml.jar -encodesprite 4 C4person100.png > C4person4.sprite
+     java -jar plantuml.jar -encodesprite 16 C4person100.png > C4person16.sprite
+     java -jar plantuml.jar -encodesprite 8 C4person100.png > C4person8.sprite
 
 
 C4person4.sprite file:
@@ -286,7 +317,9 @@ C4person4.sprite file:
     :linenos:
    
 
-Create Diagram with our Sprites
+.. _scalebigsmall-label:
+
+Create Diagram With Our Sprites
 -------------------------------------------------------------------------------
 
 .. uml:: ./bigsmall.puml
@@ -295,7 +328,13 @@ Create Diagram with our Sprites
 .. literalinclude:: ./bigsmall.puml
     :linenos:
    
-
+.. note ::
+    In this example, we created a big (100x100) icon, and a small (16 x 16) icon.
+    
+    The optimal way to change an icon size is to use one icon of sufficient resolution - not too big or small, (e.g. 48x48) and then use the
+    scale option to increase or decrease its size.
+    
+    See :ref:`scale-label` for details. 
 
 
 
@@ -305,3 +344,5 @@ Create Diagram with our Sprites
         https://github.com/executablebooks/sphinx-panels
         https://sphinx-book-theme.readthedocs.io/en/latest/launch.html
         https://stackoverflow.com/questions/20303335/ipython-notebook-plantuml-extension
+
+        

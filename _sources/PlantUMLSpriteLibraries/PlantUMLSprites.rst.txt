@@ -5,9 +5,25 @@ Understanding PlantUML Stdlib Sprite Library
 *******************************************************************************
 
 
+.. tip ::
+
+    Below are the steps I took to understand the PlantUML Standard Library.
+    
+    * It's a step-by-step in the dark - taking small validated steps.
+    * The steps are listed here because it's educational and interesting.
+    * **You should not, and don't have to, follow these steps.** 
+    * Based on the understanding gained, there's a better way to go.
+
+    **So you can skip this chapter and go straight to todo**
+    
+
+.. todo ::
+    add ref to new way
+
 `PlantUML Standard Library <https://plantuml.com/stdlib>`__ includes
 several icon libraries from different sources (including myself) and
 they are varied in functionality and how to use them.
+When I contributed, I followed the existing stdlib
 
 The most recent addition is
 https://github.com/awslabs/aws-icons-for-plantuml.
@@ -23,6 +39,15 @@ work of https://github.com/RicardoNiepel (MicroSoft):
 
       1. https://github.com/milo-minderbinder/AWS-PlantUML
       2. https://github.com/Roemer/plantuml-office
+
+
+.. note ::
+
+    There are now 2 AWS icon sets in PlantUML Stdlib:
+    
+    * The original one from 2018 with the older icon style: https://github.com/plantuml/plantuml-stdlib/blob/master/aws/INFO
+    * The newer one from 2020 AWSlabs https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/INFO that has the latest icons from AWS.
+
 
 Goal
 ====

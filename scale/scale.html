@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Scaling Sprites &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. PassSpriteAsParameter" href="../PassSpriteAsParameter/PassSpriteAsParameter.html" />
+    <link rel="prev" title="1. Use Images in Diagrams" href="../PlantUMLSpriteLibraries/plantuml_sprites.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Scaling Sprites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-sprite-options">2.1. Scaling Sprite Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#revisiting-scalebigsmall-label">2.2. Revisiting <span class="xref std std-ref">scalebigsmall-label</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2. Scaling Sprites</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/scale/scale.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scaling-sprites">
+<span id="scale-label"></span><h1>2. Scaling Sprites<a class="headerlink" href="#scaling-sprites" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scaling-sprite-options">
+<h2>2.1. Scaling Sprite Options<a class="headerlink" href="#scaling-sprite-options" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<p class="plantuml">
+<img src="../_images/plantuml-2483a6d9bce13963369fe95734ddf09cd5436743.png" alt="&#64;startuml
+sprite $foo1 {
+FFFFFFFFFFFFFFF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+FFFFFFFFFFFFFFF
+}
+
+Alice -&gt; Bob : Scale x1 &lt;$foo1&gt;
+
+Alice -&gt; Bob : Scale x3 using scale &lt;$foo1{scale=3}&gt;
+
+Alice -&gt; Bob : Scale x6 using * &lt;$foo1*6&gt;
+
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text">Different syntax for scaling sprites</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+sprite $foo1 {
+FFFFFFFFFFFFFFF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+F0123456789ABCF
+FFFFFFFFFFFFFFF
+}
+
+Alice -&gt; Bob : Scale x1 &lt;$foo1&gt;
+
+<span class="hll">Alice -&gt; Bob : Scale x3 using scale &lt;$foo1{scale=3}&gt;
+</span>
+<span class="hll">Alice -&gt; Bob : Scale x6 using * &lt;$foo1*6&gt;
+</span>
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="revisiting-scalebigsmall-label">
+<h2>2.2. Revisiting <a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html#scalebigsmall-label"><span class="std std-ref">Create Diagram With Our Sprites</span></a><a class="headerlink" href="#revisiting-scalebigsmall-label" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html#scalebigsmall-label"><span class="std std-ref">Create Diagram With Our Sprites</span></a> we created a large sprite 100x100 sprite, and a small 16x
+16 sprite.</p>
+<p>Here we create 1 48x48 sprite and scale it by x2 for large, and by 0.33 for small.</p>
+<div class="figure align-center" id="id2">
+<p class="plantuml">
+<img src="../_images/plantuml-c104ae593334277e468df9bf237f8df33c0cc93d.png" alt="&#64;startuml
+sprite $C4person48 [48x48/16] {
+000000000000000000002567764200000000000000000000
+000000000000000000367777777763000000000000000000
+000000000000000015777777777777500000000000000000
+000000000000000167777777777777750000000000000000
+000000000000000577777777777777774000000000000000
+000000000000003777777777777777777200000000000000
+000000000000006777777777777777777500000000000000
+000000000000027777777777777777777710000000000000
+000000000000047777777777777777777730000000000000
+000000000000057777777777777777777740000000000000
+000000000000057777777777777777777750000000000000
+000000000000057777777777777777777750000000000000
+000000000000047777777777777777777740000000000000
+000000000000037777777777777777777720000000000000
+000000000000017777777777777777777700000000000000
+000000000000005777777777777777777400000000000000
+000000000000001777777777777777776100000000000000
+000000000000000377777777777777772000000000000000
+000000000000000047777777777777730000000000000000
+000002456666666667777777777777766666666654200000
+000367777777777777777777777777777777777777762000
+004777777777777777777777777777777777777777777300
+037777777777777777777777777777777777777777777720
+077777777777777777777777777777777777777777777760
+377777777777777777777777777777777777777777777772
+577777777777777777777777777777777777777777777774
+677777777777777777777777777777777777777777777776
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+677777777777777777777777777777777777777777777776
+577777777777777777777777777777777777777777777774
+377777777777777777777777777777777777777777777772
+077777777777777777777777777777777777777777777760
+037777777777777777777777777777777777777777777720
+004777777777777777777777777777777777777777777400
+000367777777777777777777777777777777777777762000
+000002466777777777777777777777777777777664200000
+}
+
+
+
+
+Bob : &lt;$C4person48*.33&gt; Small
+Alice : &lt;$C4person48*2&gt; Big
+
+Alice -&gt; Bob 
+&#64;enduml
+
+"/>
+</p>
+<p class="caption"><span class="caption-text">scaling one sprite bigger and smaller</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+sprite $C4person48 [48x48/16] {
+000000000000000000002567764200000000000000000000
+000000000000000000367777777763000000000000000000
+000000000000000015777777777777500000000000000000
+000000000000000167777777777777750000000000000000
+000000000000000577777777777777774000000000000000
+000000000000003777777777777777777200000000000000
+000000000000006777777777777777777500000000000000
+000000000000027777777777777777777710000000000000
+000000000000047777777777777777777730000000000000
+000000000000057777777777777777777740000000000000
+000000000000057777777777777777777750000000000000
+000000000000057777777777777777777750000000000000
+000000000000047777777777777777777740000000000000
+000000000000037777777777777777777720000000000000
+000000000000017777777777777777777700000000000000
+000000000000005777777777777777777400000000000000
+000000000000001777777777777777776100000000000000
+000000000000000377777777777777772000000000000000
+000000000000000047777777777777730000000000000000
+000002456666666667777777777777766666666654200000
+000367777777777777777777777777777777777777762000
+004777777777777777777777777777777777777777777300
+037777777777777777777777777777777777777777777720
+077777777777777777777777777777777777777777777760
+377777777777777777777777777777777777777777777772
+577777777777777777777777777777777777777777777774
+677777777777777777777777777777777777777777777776
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+777777777777777777777777777777777777777777777777
+677777777777777777777777777777777777777777777776
+577777777777777777777777777777777777777777777774
+377777777777777777777777777777777777777777777772
+077777777777777777777777777777777777777777777760
+037777777777777777777777777777777777777777777720
+004777777777777777777777777777777777777777777400
+000367777777777777777777777777777777777777762000
+000002466777777777777777777777777777777664200000
+}
+
+
+
+
+Bob : &lt;$C4person48*.33&gt; Small
+Alice : &lt;$C4person48*2&gt; Big
+
+Alice -&gt; Bob 
+@enduml
+
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../PassSpriteAsParameter/PassSpriteAsParameter.html" class="btn btn-neutral float-right" title="3. PassSpriteAsParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../PlantUMLSpriteLibraries/plantuml_sprites.html" class="btn btn-neutral float-left" title="1. Use Images in Diagrams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

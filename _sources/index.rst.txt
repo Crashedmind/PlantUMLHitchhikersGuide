@@ -5,14 +5,20 @@ Welcome to Playing with PlantUML!
 .. _vision: https://www.scaledagileframework.com/vision/
 .. _PlantUML: https://www.plantuml.com/
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
+.. _AgileModeling: http://agilemodeling.com/essays/barelyGoodEnough.html
+.. _AgileModelingBP: https://tdan.com/best-practices-for-agile-documentation/18936
 
+.. comment 
+   this link causes link error to fail : false positive
+   masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/ causes link check errors but link is fine
+   so replace with related link
 
 .. logo-begin-content
 
 .. figure:: plantumllogo.png
-    :width: 200px
+    :width: 300px
     :align: center
-    :height: 100px
+    :height: 300px
     :alt: alternate text
     :figclass: align-center
 
@@ -22,32 +28,8 @@ Welcome to Playing with PlantUML!
 
 
 
-.. caveat-begin-content
-
-.. todo::
-
-    Add instructions for user to provide feedback
-
-.. warning::
-
-    This is an initial draft that likely contains typos, and will likely change.
-    If you do find an issue, or would like to suggest a change, then submit an issue on Todo
-
-
-
-.. caveat-end-content
-
-.. comment 
-   this link causes link error to fail : false positive
-   masteringbusinessanalysis.com/mba084-agile-modeling-with-scott-ambler/ causes link check errors but link is fine
-   so replace with related link
-
-.. _AgileModeling: http://agilemodeling.com/essays/barelyGoodEnough.html
-
-.. _AgileModelingBP: https://tdan.com/best-practices-for-agile-documentation/18936
 
 .. showcase-begin-content
-
 
 Imagine 
 ===============================================================================
@@ -201,7 +183,7 @@ Imagine
    :caption: PlantUML Features
 
    PlantUMLSpriteLibraries/plantuml_sprites
-   NamedArguments/scale
+   scale/scale
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
@@ -256,3 +238,20 @@ Imagine
       
    todo   
                     
+
+
+
+.. caveat-begin-content
+
+.. todo::
+
+    Add instructions for user to provide feedback
+
+.. warning::
+
+    This is an initial draft that likely contains typos, and will likely change.
+    If you do find an issue, or would like to suggest a change, then submit an issue on Todo
+
+
+
+.. caveat-end-content
