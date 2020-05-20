@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. PassSpriteAsParameter &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. NamedArguments" href="../NamedArguments/NamedArguments.html" />
+    <link rel="prev" title="2. Scaling Sprites" href="../scale/scale.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. PassSpriteAsParameter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">3.1. PassSpriteAsParameter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#understand-how-to-pass-a-sprite-to-a-procedure">3.1.1. Understand How To Pass A Sprite To A Procedure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source">3.1.1.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play">3.1.1.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explore">3.1.1.3. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#understand-how-to-pass-a-sprite-to-a-procedure-another-option">3.1.2. Understand How To Pass A Sprite To A Procedure - Another Option</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.1.2.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.1.2.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.1.2.3. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tidy-up-the-procedure-so-it-s-easier-to-read">3.1.3. Tidy Up The Procedure So It’s Easier To Read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.1.3.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">3.1.3.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">3.1.3.3. Explore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>3. PassSpriteAsParameter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Stdlib/PassSpriteAsParameter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="passspriteasparameter">
+<h1>3. PassSpriteAsParameter<a class="headerlink" href="#passspriteasparameter" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>3.1. PassSpriteAsParameter<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="understand-how-to-pass-a-sprite-to-a-procedure">
+<h3>3.1.1. Understand How To Pass A Sprite To A Procedure<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="source">
+<h4>3.1.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="play">
+<h4>3.1.1.2. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="Stdlib/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="explore">
+<h4>3.1.1.3. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="understand-how-to-pass-a-sprite-to-a-procedure-another-option">
+<h3>3.1.2. Understand How To Pass A Sprite To A Procedure - Another Option<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure-another-option" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h4>3.1.2.1. Source<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id3">
+<h4>3.1.2.2. Play<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="Stdlib/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id4">
+<h4>3.1.2.3. Explore<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="tidy-up-the-procedure-so-it-s-easier-to-read">
+<h3>3.1.3. Tidy Up The Procedure So It’s Easier To Read<a class="headerlink" href="#tidy-up-the-procedure-so-it-s-easier-to-read" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>3.1.3.1. Source<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id6">
+<h4>3.1.3.2. Play<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="Stdlib/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id7">
+<h4>3.1.3.3. Explore<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Take a look at some other stdlib libraries</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../NamedArguments/NamedArguments.html" class="btn btn-neutral float-right" title="4. NamedArguments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../scale/scale.html" class="btn btn-neutral float-left" title="2. Scaling Sprites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

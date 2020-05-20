@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Journey to Documentation as Code &mdash; Playing with PlantUML  documentation</title>
+  <title>1. Journey to Documentation as Code &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. To Do List" href="../todo.html" />
-    <link rel="prev" title="1. C4 Lightweight Software Architecture Description Method" href="../C4/c4.html" /> 
+    <link rel="prev" title="2. Generate diagrams from PlantUML source files using AWS Lambda" href="../GenerateDiagrams/GenerateDiagramsLambda.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,8 +89,8 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
@@ -100,14 +100,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Library</span></p>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -116,9 +127,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Journey to Documentation as Code</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#my-view-on-documenation-from-2013">2.1. My View On Documenation From 2013</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Journey to Documentation as Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#my-view-on-documenation-from-2013">1.1. My View On Documenation From 2013</a></li>
 </ul>
 </li>
 </ul>
@@ -170,7 +180,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>2. Journey to Documentation as Code</li>
+      <li>1. Journey to Documentation as Code</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,7 +200,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="journey-to-documentation-as-code">
-<span id="journeydoc-label"></span><h1>2. Journey to Documentation as Code<a class="headerlink" href="#journey-to-documentation-as-code" title="Permalink to this headline">¶</a></h1>
+<span id="journeydoc-label"></span><h1>1. Journey to Documentation as Code<a class="headerlink" href="#journey-to-documentation-as-code" title="Permalink to this headline">¶</a></h1>
 <p>My journey to Documentation as Code began over a decago ago when either no documentation, or MS Word Documents were common. In more orgainised companies, these documents were maintained in MS Sharepoint.</p>
 <p>Working as part of a large multi-national, I championed the use of Living Documents (Confluence was the tool used as we were using Atlassian tool suite).</p>
 <p>My view today is that the documentation of software should live as close as possible to the software it is describing (e.g. same source code repository).
@@ -202,7 +212,7 @@ It can then be published to multiple formats or platforms from there for consump
 <li><p>is useful to guide the software architecture, implementation, development, and maintainance</p></li>
 </ol>
 <div class="section" id="my-view-on-documenation-from-2013">
-<h2>2.1. My View On Documenation From 2013<a class="headerlink" href="#my-view-on-documenation-from-2013" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. My View On Documenation From 2013<a class="headerlink" href="#my-view-on-documenation-from-2013" title="Permalink to this headline">¶</a></h2>
 <p>Below is what I wrote at the time and I still believe it - even more so now.</p>
 <div class="figure align-default">
 <img alt="../_images/LivingDocs1.png" src="../_images/LivingDocs1.png" />
@@ -224,7 +234,7 @@ It can then be published to multiple formats or platforms from there for consump
         <a href="../todo.html" class="btn btn-neutral float-right" title="1. To Do List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../C4/c4.html" class="btn btn-neutral float-left" title="1. C4 Lightweight Software Architecture Description Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../GenerateDiagrams/GenerateDiagramsLambda.html" class="btn btn-neutral float-left" title="2. Generate diagrams from PlantUML source files using AWS Lambda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -19,12 +19,11 @@ Use Images in Diagrams
    :header: "Option", "Builtin", "Details"
    :widths: 10, 10, 50
     
-    "Creole openIconic_", "Yes", "e.g. <&person>, e.g. <&cloud>"
-    "Images", "No",	"jpg, png, etc... using <img>tag to add images you specify via file or URL"
     "Deployment_ Diagram Elements", "Yes",	"These are ~20 shapes"
+    "Creole openIconic_", "Yes", "e.g. <&person>, e.g. <&cloud>"
     "Standard Library sprites_", "Yes",	"These are part of PlantUML - but submitted by the community"
     "Create our own sprites_", "No",	"You can convert and use any image. You can also submit to PlantUML for inclusion in Standard Library"
-
+    "Images", "No",	"jpg, png, etc... using <img>tag to add images you specify via file or URL"
     
 Let's look at all of these in detail.
 
@@ -33,77 +32,6 @@ Let's look at all of these in detail.
     Image formats, like png, jpg will be referred to as image files.
 
 
-Creole openIconic_
-===============================================================================
-openIconic_ open source icon set is integrated into PlantUML ( as part of the creole parser).
-
-
-.. todo ::
-    fix by removing my plantuml.cfg
-
-.. todo ::
-    ask @Arnaud if openiconic icon set is up to date with https://useiconic.com/open/
-
-.. uml:: ./listopeniconic.puml
-    :align: center
-
-
-.. literalinclude:: ./listopeniconic.puml
-    :linenos:
-    :emphasize-lines: 2
-
-
-
-Images
-===============================================================================
-
-Add Images To A Diagram
--------------------------------------------------------------------------------
-
-
-This uses the image tag which is part of PlantUML creole_ Legacy HTML support per PlantUML specification:
-
-.. code-block:: 
-
-    Some HTML tags are also working:
-
-        <b> for bold text
-        <u> or <u:#AAAAAA> or <u:[[color|colorName]]> for underline
-        <i> for italic
-        <s> or <s:#AAAAAA> or <s:[[color|colorName]]> for strike text
-        <w> or <w:#AAAAAA> or <w:[[color|colorName]]> for wave underline text
-        <color:#AAAAAA> or <color:[[color|colorName]]>
-        <back:#AAAAAA> or <back:[[color|colorName]]> for background color
-        <size:nn> to change font size
-        <img:file> : the file must be accessible by the filesystem
-        <img:http://plantuml.com/logo3.png> : the URL must be available from the Internet
-
-.. BeginPlayingExample 
-    pumlsource: ./image.puml
-    emphasize-lines: 9
-    caption: Adding a PNG image to a diagram
-    explore: Change the image to one you select from a different URL.
-    explore: Change the foreground or background color of the image.
-    explore: Change the size of the image.
-    explore: How would you share a PlantUML diagram with images in it for another user to edit?
-
-.. uml:: ./image.puml
-    :align: center
-
-.. literalinclude:: ./image.puml
-    :linenos:
-    :emphasize-lines: 9
-
-.. EndPlayingExample
-
-.. todo ::
-    can scale an image also - need to try    
-
-Connect Images In A Diagram
--------------------------------------------------------------------------------
-
-.. todo ::
-    Connect Images In A Diagram
 
 
 
@@ -164,6 +92,8 @@ In this diagram, we're using some PlantUML keywords:
 #. **note**: to add a note to the diagram.
 
 
+
+
 Standard Library Sprites
 ===============================================================================
 
@@ -216,12 +146,6 @@ PlantUML includes a Standard Library. Contents of the library come from third pa
     Delivered by https://github.com/tupadr3/plantuml-icon-font-sprites
 
 
-So Why Do I Need Sprites?
--------------------------------------------------------------------------------
-
-Sprites are monochrome (16 shades/levels max), versus image files which can be infinite color at high resolution.
-
-But we can easily change a sprite's characteristics via PlantUML e.g. color and scale.
 
 
 Example Builtin Sprites AWS
@@ -317,6 +241,13 @@ C4person4.sprite file:
     :linenos:
    
 
+.. note ::
+    You may have noticed there are more than 4 different values in C4person4.sprite
+    This is to make sprite definition as compact as possible. For sprite with 4 colors, each pixel can have 4 values.
+    If you group pixels by 3, it means that you have 4*4*4 = 64 possible values by pixel's group.
+    If you use characters 0-9, A-Z, a-z and _ and -, you have exactly 64 values. 
+    So each character encodes actually 3 pixels at once.
+
 .. _scalebigsmall-label:
 
 Create Diagram With Our Sprites
@@ -345,4 +276,63 @@ Create Diagram With Our Sprites
         https://sphinx-book-theme.readthedocs.io/en/latest/launch.html
         https://stackoverflow.com/questions/20303335/ipython-notebook-plantuml-extension
 
-        
+
+
+Images
+===============================================================================
+
+Add Images To A Diagram
+-------------------------------------------------------------------------------
+
+
+This uses the image tag which is part of PlantUML creole_ Legacy HTML support per PlantUML specification:
+
+.. code-block:: 
+
+    Some HTML tags are also working:
+
+        <b> for bold text
+        <u> or <u:#AAAAAA> or <u:[[color|colorName]]> for underline
+        <i> for italic
+        <s> or <s:#AAAAAA> or <s:[[color|colorName]]> for strike text
+        <w> or <w:#AAAAAA> or <w:[[color|colorName]]> for wave underline text
+        <color:#AAAAAA> or <color:[[color|colorName]]>
+        <back:#AAAAAA> or <back:[[color|colorName]]> for background color
+        <size:nn> to change font size
+        <img:file> : the file must be accessible by the filesystem
+        <img:http://plantuml.com/logo3.png> : the URL must be available from the Internet
+
+.. BeginPlayingExample 
+    pumlsource: ./image.puml
+    emphasize-lines: 9
+    caption: Adding a PNG image to a diagram
+    explore: Change the image to one you select from a different URL.
+    explore: Change the foreground or background color of the image.
+    explore: Change the size of the image.
+    explore: How would you share a PlantUML diagram with images in it for another user to edit?
+
+.. uml:: ./image.puml
+    :align: center
+
+.. literalinclude:: ./image.puml
+    :linenos:
+    :emphasize-lines: 9
+
+.. EndPlayingExample
+
+.. todo ::
+    can scale an image also - need to try    
+
+Connect Images In A Diagram
+-------------------------------------------------------------------------------
+
+.. todo ::
+    Connect Images In A Diagram
+
+
+So Why Do I Need Sprites?
+-------------------------------------------------------------------------------
+
+Sprites are monochrome (16 shades/levels max), versus image files which can be infinite color at high resolution.
+
+But we can easily change a sprite's characteristics via PlantUML e.g. color and scale.

@@ -1,0 +1,1211 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Architecting and Understanding ACME Global Widget Production &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Generate diagrams from PlantUML source files using GithubActions" href="../GenerateDiagrams/GenerateDiagrams.html" />
+    <link rel="prev" title="2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method" href="C4Stdlib.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Architecting and Understanding ACME Global Widget Production</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c4-acme-global-widget-production">3.1. C4 ACME Global Widget Production</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-context">3.1.1. C4 ACME Context</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#source">3.1.1.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#play">3.1.1.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explore">3.1.1.3. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-container">3.1.2. C4 ACME Container</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1.2.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.1.2.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.1.2.3. Explore</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#c4-acme-component">3.1.3. C4 ACME Component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.1.3.1. Source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">3.1.3.2. Play</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">3.1.3.3. Explore</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Architecting and Understanding ACME Global Widget Production</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/C4/c4acme.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="architecting-and-understanding-acme-global-widget-production">
+<h1>3. Architecting and Understanding ACME Global Widget Production<a class="headerlink" href="#architecting-and-understanding-acme-global-widget-production" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="c4-acme-global-widget-production">
+<h2>3.1. C4 ACME Global Widget Production<a class="headerlink" href="#c4-acme-global-widget-production" title="Permalink to this headline">¶</a></h2>
+<p>Your mission, if you choose to accept it, is to design the ACME Global Widget Production System.</p>
+<ol class="arabic simple">
+<li><p>ACME has its own production sites, and uses 3rd party production sites.</p></li>
+<li><p>All sites are connected to a central production host</p></li>
+</ol>
+<div class="section" id="c4-acme-context">
+<h3>3.1.1. C4 ACME Context<a class="headerlink" href="#c4-acme-context" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="source">
+<h4>3.1.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id7">
+<p class="plantuml">
+<img src="../_images/plantuml-dffca1ea94c5620bf43ae3cafa30db98e59bd102.png" alt="&#64;startuml
+!include  &lt;C4/C4_Context.puml&gt;
+!include &lt;office/Users/user.puml&gt;
+
+LAYOUT_WITH_LEGEND()
+
+
+title Top level Context diagram for ACME Global Widget Production
+
+
+Person(AcmeProdOwner, Acme Production Owner , &quot;&lt;$user&gt; \n Responsible for Production of widgets in ACME Production Site&quot; )
+Person(3rdProdOwner, 3rdParty Production Owner , &quot;&lt;$user&gt; \n Responsible for Production of widgets in 3rdParty Production Site&quot; )
+
+
+System_Boundary(Remote, &quot;Remote&quot;) {
+
+    System(ProdSystemHost, &quot;Production Host&quot;, &quot;Drives widget Production\n Analyses widget Production data to create reports&quot;)
+    System(Analytics, &quot;Analytics&quot;, &quot;Provides data analysis and a dashboard view data - including relevant Production data&quot;)
+    System(Monitoring, &quot;Monitoring&quot;, &quot;Monitors Production Host\nUses AWS Services&quot;)
+    System_Ext(SupplyChain, &quot;SupplyChain&quot;, &quot;Provides parts to make the widgets&quot;)
+    System_Ext(InventoryTracking, &quot;InventoryTracking&quot;, &quot;Customer Reference&quot;)
+    
+
+}
+
+
+
+Enterprise_Boundary(AcmeProd, &quot;ACME Production Site&quot;) {
+
+    System(AcmeWorkStation1, &quot;WorkStation1&quot;, &quot; Production setup for a group of widgets&quot;)    
+    System(AcmeWorkStation2, &quot;WorkStation2&quot;, &quot; Production setup for a group of widgets&quot;)        
+    System(AcmeWorkStationN, &quot;WorkStationN&quot;, &quot; Production setup for a group of widgets&quot;)        
+
+}
+
+
+Enterprise_Boundary(3rdProd, &quot;3rdParty Production Site&quot;) {
+
+
+    System(3rdWorkStation1, &quot;WorkStation1&quot;, &quot; Production setup for a group of widgets&quot;)    
+    System(3rdWorkStation2, &quot;WorkStation2&quot;, &quot; Production setup for a group of widgets&quot;)        
+    System(3rdWorkStationN, &quot;WorkStationN&quot;, &quot; Production setup for a group of widgets&quot;)     
+}
+
+
+Rel_U(AcmeWorkStation1, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(AcmeWorkStation2, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(AcmeWorkStationN, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+
+
+Rel_U(3rdWorkStation1, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(3rdWorkStation2, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(3rdWorkStationN, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+
+
+
+
+
+Rel_D(AcmeProdOwner, ProdSystemHost, &quot;Reviews Acme and 3rdParty site Production reports&quot;)
+Rel_D(3rdProdOwner, ProdSystemHost, &quot;Reviews 3rdParty site Production reports&quot;)
+
+
+Rel_D(Analytics, ProdSystemHost, &quot;Data Analysis&quot;)
+Rel_D(SupplyChain, ProdSystemHost, &quot;Parts&quot;)
+Rel_D(InventoryTracking, ProdSystemHost, &quot;Tracking&quot;)
+Rel_D(Monitoring, ProdSystemHost, &quot;Monitoring&quot;)
+
+
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>C4 ACME Context</em></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!include  &lt;C4/C4_Context.puml&gt;
+!include &lt;office/Users/user.puml&gt;
+
+LAYOUT_WITH_LEGEND()
+
+
+title Top level Context diagram for ACME Global Widget Production
+
+
+Person(AcmeProdOwner, Acme Production Owner , &quot;&lt;$user&gt; \n Responsible for Production of widgets in ACME Production Site&quot; )
+Person(3rdProdOwner, 3rdParty Production Owner , &quot;&lt;$user&gt; \n Responsible for Production of widgets in 3rdParty Production Site&quot; )
+
+
+System_Boundary(Remote, &quot;Remote&quot;) {
+
+    System(ProdSystemHost, &quot;Production Host&quot;, &quot;Drives widget Production\n Analyses widget Production data to create reports&quot;)
+    System(Analytics, &quot;Analytics&quot;, &quot;Provides data analysis and a dashboard view data - including relevant Production data&quot;)
+    System(Monitoring, &quot;Monitoring&quot;, &quot;Monitors Production Host\nUses AWS Services&quot;)
+    System_Ext(SupplyChain, &quot;SupplyChain&quot;, &quot;Provides parts to make the widgets&quot;)
+    System_Ext(InventoryTracking, &quot;InventoryTracking&quot;, &quot;Customer Reference&quot;)
+    
+
+}
+
+
+
+Enterprise_Boundary(AcmeProd, &quot;ACME Production Site&quot;) {
+
+    System(AcmeWorkStation1, &quot;WorkStation1&quot;, &quot; Production setup for a group of widgets&quot;)    
+    System(AcmeWorkStation2, &quot;WorkStation2&quot;, &quot; Production setup for a group of widgets&quot;)        
+    System(AcmeWorkStationN, &quot;WorkStationN&quot;, &quot; Production setup for a group of widgets&quot;)        
+
+}
+
+
+Enterprise_Boundary(3rdProd, &quot;3rdParty Production Site&quot;) {
+
+
+    System(3rdWorkStation1, &quot;WorkStation1&quot;, &quot; Production setup for a group of widgets&quot;)    
+    System(3rdWorkStation2, &quot;WorkStation2&quot;, &quot; Production setup for a group of widgets&quot;)        
+    System(3rdWorkStationN, &quot;WorkStationN&quot;, &quot; Production setup for a group of widgets&quot;)     
+}
+
+
+Rel_U(AcmeWorkStation1, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(AcmeWorkStation2, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(AcmeWorkStationN, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+
+
+Rel_U(3rdWorkStation1, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(3rdWorkStation2, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+Rel_U(3rdWorkStationN, ProdSystemHost, &quot;Sends Production report for widget&quot;)
+
+
+
+
+
+Rel_D(AcmeProdOwner, ProdSystemHost, &quot;Reviews Acme and 3rdParty site Production reports&quot;)
+Rel_D(3rdProdOwner, ProdSystemHost, &quot;Reviews 3rdParty site Production reports&quot;)
+
+
+Rel_D(Analytics, ProdSystemHost, &quot;Data Analysis&quot;)
+Rel_D(SupplyChain, ProdSystemHost, &quot;Parts&quot;)
+Rel_D(InventoryTracking, ProdSystemHost, &quot;Tracking&quot;)
+Rel_D(Monitoring, ProdSystemHost, &quot;Monitoring&quot;)
+
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="play">
+<h4>3.1.1.2. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="C4/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="explore">
+<h4>3.1.1.3. Explore<a class="headerlink" href="#explore" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>TODO</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="c4-acme-container">
+<h3>3.1.2. C4 ACME Container<a class="headerlink" href="#c4-acme-container" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id8">
+<p class="plantuml">
+<img src="../_images/plantuml-6daa405282097b9c0a604c1adeb5fd1e5fcaf105.png" alt="&#64;startuml
+!include  &lt;C4/C4_Context.puml&gt;
+!include  &lt;C4/C4_Container.puml&gt;
+!include &lt;office/Users/user.puml&gt;
+
+LAYOUT_WITH_LEGEND()
+skinparam handwritten false
+
+
+title Container Diagram for ACME Widget Workstation 
+
+
+
+System_Boundary(WorkStation, &quot;Workstation&quot;) {
+    Person(VfiOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
+
+    System(WorkStationPC, &quot;WorkStation PC&quot;, &quot;Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system&quot;)    
+
+    System(Hub, &quot;Hub&quot;, &quot;Connects Multiple Widgets&quot;)    
+
+    System(Unit1, &quot;Unit1&quot;, &quot;Widget 1&quot;)    
+    System(Unit2, &quot;Unit2&quot;, &quot;Widget 2&quot;)    
+    System(UnitN, &quot;UnitN&quot;, &quot;Widget N&quot;)    
+}
+
+Rel_R(VfiOperator, WorkStationPC, &quot;Checks Production status&quot;)
+Rel_D(WorkStationPC, Hub, &quot;Drive Production and Info Retrieval&quot;)
+Rel(Hub, Unit1, &quot;Connect&quot;)
+Rel(Hub, Unit2, &quot;Connect&quot;)
+Rel(Hub, UnitN, &quot;Connect&quot;)
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>C4 ACME Workstation</em></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id1">
+<h4>3.1.2.1. Source<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!include  &lt;C4/C4_Context.puml&gt;
+!include  &lt;C4/C4_Container.puml&gt;
+!include &lt;office/Users/user.puml&gt;
+
+LAYOUT_WITH_LEGEND()
+skinparam handwritten false
+
+
+title Container Diagram for ACME Widget Workstation 
+
+
+
+System_Boundary(WorkStation, &quot;Workstation&quot;) {
+    Person(VfiOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
+
+    System(WorkStationPC, &quot;WorkStation PC&quot;, &quot;Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system&quot;)    
+
+    System(Hub, &quot;Hub&quot;, &quot;Connects Multiple Widgets&quot;)    
+
+    System(Unit1, &quot;Unit1&quot;, &quot;Widget 1&quot;)    
+    System(Unit2, &quot;Unit2&quot;, &quot;Widget 2&quot;)    
+    System(UnitN, &quot;UnitN&quot;, &quot;Widget N&quot;)    
+}
+
+Rel_R(VfiOperator, WorkStationPC, &quot;Checks Production status&quot;)
+Rel_D(WorkStationPC, Hub, &quot;Drive Production and Info Retrieval&quot;)
+Rel(Hub, Unit1, &quot;Connect&quot;)
+Rel(Hub, Unit2, &quot;Connect&quot;)
+Rel(Hub, UnitN, &quot;Connect&quot;)
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id2">
+<h4>3.1.2.2. Play<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="C4/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id3">
+<h4>3.1.2.3. Explore<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>TODO</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="c4-acme-component">
+<h3>3.1.3. C4 ACME Component<a class="headerlink" href="#c4-acme-component" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id9">
+<p class="plantuml">
+<img src="../_images/plantuml-af4be4bd4df2f4be25d00d9d9adb2a3a24097ceb.png" alt="&#64;startuml
+
+'AWS stuff here
+'================================
+!includeurl &lt;aws/common&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+
+'Elastic stuff here
+'================================
+!define ELASTIC_PUML ./plantuml-elastic
+
+!include ELASTIC_PUML/apm/apm.puml
+!include ELASTIC_PUML/app_search/app_search.puml
+!include ELASTIC_PUML/beats/beats.puml
+!include ELASTIC_PUML/cloud/cloud.puml
+!include ELASTIC_PUML/cloud_in_kubernetes/cloud_in_kubernetes.puml
+!include ELASTIC_PUML/code_search/code_search.puml
+!include ELASTIC_PUML/ece/ece.puml
+!include ELASTIC_PUML/eck/eck.puml
+!include ELASTIC_PUML/elastic_search/elastic_search.puml
+!include ELASTIC_PUML/endpoint/endpoint.puml
+!include ELASTIC_PUML/enterprise_search/enterprise_search.puml
+!include ELASTIC_PUML/kibana/kibana.puml
+!include ELASTIC_PUML/logging/logging.puml
+!include ELASTIC_PUML/logstash/logstash.puml
+!include ELASTIC_PUML/maps/maps.puml
+!include ELASTIC_PUML/metrics/metrics.puml
+!include ELASTIC_PUML/siem/siem.puml
+!include ELASTIC_PUML/site_search/site_search.puml
+!include ELASTIC_PUML/stack/stack.puml
+!include ELASTIC_PUML/uptime/uptime.puml
+
+
+'change color of selected background shape https://plantuml.com/deployment-diagram
+skinparam actorBackgroundColor White 
+skinparam agentBackgroundColor White 
+skinparam artifactBackgroundColor White 
+skinparam boundaryBackgroundColor White 
+skinparam cardBackgroundColor White 
+skinparam cloudBackgroundColor White 
+skinparam componentBackgroundColor White 
+skinparam controlBackgroundColor White 
+skinparam databaseBackgroundColor White 
+skinparam entityBackgroundColor White 
+skinparam fileBackgroundColor White 
+skinparam folderBackgroundColor White 
+skinparam frameBackgroundColor White 
+skinparam interfaceBackgroundColor White 
+skinparam nodeBackgroundColor White 
+skinparam packageBackgroundColor White 
+skinparam queueBackgroundColor White 
+skinparam stackBackgroundColor White 
+skinparam rectangleBackgroundColor White 
+skinparam storageBackgroundColor White 
+skinparam usecaseBackgroundColor White 
+
+
+
+'To change background color to elastic green
+'skinparam componentBackgroundColor 00BFB3 
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3_bucket,&quot;Logs uploaded to here&quot;)
+
+package Elastic {
+
+    'add &quot;node&quot;, &quot;component&quot;, &quot;agent&quot; etc... to change background shape per https://plantuml.com/deployment-diagram
+    'default is agent 
+    ELASTIC_SEARCH(ElasticSearch, &quot;Search and Analyze&quot;,database)
+    LOGSTASH(Logstash, &quot;Parse and Transform&quot;,node)
+    KIBANA(Kibana, &quot;Visualize&quot;,agent) 
+}
+
+    s3_bucket -down-&gt; Logstash: Raw logs
+    Logstash -right-&gt; ElasticSearch: Transformed Data
+    ElasticSearch -right-&gt; Kibana: Data to View
+
+}
+
+&#64;enduml
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>C4 ACME Component</em></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id10">
+<p class="plantuml">
+<img src="../_images/plantuml-3f6e3851da811da008e80ae3d01cc6a53ef5a03f.png" alt=" 
+!includeurl &lt;aws/common&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+!includeurl &lt;aws/ManagementTools/AWSCloudTrail/AWSCloudTrail.puml&gt;
+
+!includeurl &lt;aws/Messaging/AmazonSNS/AmazonSNS.puml&gt;
+
+skinparam componentArrowColor Black
+skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+
+
+
+AWSCLOUD(awscloud){
+ 
+    
+    APPLICATIONLOADBALANCER(loadbalancer, &quot;ALB Logs&quot;)
+    AMAZONS3(S3, &quot;S3 access Logs&quot;)
+    AWSLAMBDA(Lambda, &quot;Lambda logs\nand metrics&quot;)
+    AWSCLOUDTRAIL(AWSCloudTrail, &quot;API logs&quot;)
+    
+    AMAZONCLOUDWATCH(AmazonCloudWatch)
+    AMAZONSNS(AmazonSNS, &quot;Send Notifications\n to Owner/Admin&quot;)
+
+
+    loadbalancer --&gt; AmazonCloudWatch
+    S3 --&gt; AmazonCloudWatch
+    Lambda --&gt; AmazonCloudWatch
+    AWSCloudTrail --&gt; AmazonCloudWatch
+    
+    AmazonCloudWatch --&gt; AmazonSNS
+ 
+}
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>C4 ACME Component Monitoring</em></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="id4">
+<h4>3.1.3.1. Source<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+&#39;AWS stuff here
+&#39;================================
+!includeurl &lt;aws/common&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+
+&#39;Elastic stuff here
+&#39;================================
+!define ELASTIC_PUML ./plantuml-elastic
+
+!include ELASTIC_PUML/apm/apm.puml
+!include ELASTIC_PUML/app_search/app_search.puml
+!include ELASTIC_PUML/beats/beats.puml
+!include ELASTIC_PUML/cloud/cloud.puml
+!include ELASTIC_PUML/cloud_in_kubernetes/cloud_in_kubernetes.puml
+!include ELASTIC_PUML/code_search/code_search.puml
+!include ELASTIC_PUML/ece/ece.puml
+!include ELASTIC_PUML/eck/eck.puml
+!include ELASTIC_PUML/elastic_search/elastic_search.puml
+!include ELASTIC_PUML/endpoint/endpoint.puml
+!include ELASTIC_PUML/enterprise_search/enterprise_search.puml
+!include ELASTIC_PUML/kibana/kibana.puml
+!include ELASTIC_PUML/logging/logging.puml
+!include ELASTIC_PUML/logstash/logstash.puml
+!include ELASTIC_PUML/maps/maps.puml
+!include ELASTIC_PUML/metrics/metrics.puml
+!include ELASTIC_PUML/siem/siem.puml
+!include ELASTIC_PUML/site_search/site_search.puml
+!include ELASTIC_PUML/stack/stack.puml
+!include ELASTIC_PUML/uptime/uptime.puml
+
+
+&#39;change color of selected background shape https://plantuml.com/deployment-diagram
+skinparam actorBackgroundColor White 
+skinparam agentBackgroundColor White 
+skinparam artifactBackgroundColor White 
+skinparam boundaryBackgroundColor White 
+skinparam cardBackgroundColor White 
+skinparam cloudBackgroundColor White 
+skinparam componentBackgroundColor White 
+skinparam controlBackgroundColor White 
+skinparam databaseBackgroundColor White 
+skinparam entityBackgroundColor White 
+skinparam fileBackgroundColor White 
+skinparam folderBackgroundColor White 
+skinparam frameBackgroundColor White 
+skinparam interfaceBackgroundColor White 
+skinparam nodeBackgroundColor White 
+skinparam packageBackgroundColor White 
+skinparam queueBackgroundColor White 
+skinparam stackBackgroundColor White 
+skinparam rectangleBackgroundColor White 
+skinparam storageBackgroundColor White 
+skinparam usecaseBackgroundColor White 
+
+
+
+&#39;To change background color to elastic green
+&#39;skinparam componentBackgroundColor 00BFB3 
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3_bucket,&quot;Logs uploaded to here&quot;)
+
+package Elastic {
+
+    &#39;add &quot;node&quot;, &quot;component&quot;, &quot;agent&quot; etc... to change background shape per https://plantuml.com/deployment-diagram
+    &#39;default is agent 
+    ELASTIC_SEARCH(ElasticSearch, &quot;Search and Analyze&quot;,database)
+    LOGSTASH(Logstash, &quot;Parse and Transform&quot;,node)
+    KIBANA(Kibana, &quot;Visualize&quot;,agent) 
+}
+
+    s3_bucket -down-&gt; Logstash: Raw logs
+    Logstash -right-&gt; ElasticSearch: Transformed Data
+    ElasticSearch -right-&gt; Kibana: Data to View
+
+}
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre></div></td><td class="code"><div class="highlight"><pre><span></span> 
+!includeurl &lt;aws/common&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+!includeurl &lt;aws/ManagementTools/AWSCloudTrail/AWSCloudTrail.puml&gt;
+
+!includeurl &lt;aws/Messaging/AmazonSNS/AmazonSNS.puml&gt;
+
+skinparam componentArrowColor Black
+skinparam componentBackgroundColor White
+skinparam nodeBackgroundColor White
+skinparam agentBackgroundColor White
+skinparam artifactBackgroundColor White
+
+
+
+
+
+AWSCLOUD(awscloud){
+ 
+    
+    APPLICATIONLOADBALANCER(loadbalancer, &quot;ALB Logs&quot;)
+    AMAZONS3(S3, &quot;S3 access Logs&quot;)
+    AWSLAMBDA(Lambda, &quot;Lambda logs\nand metrics&quot;)
+    AWSCLOUDTRAIL(AWSCloudTrail, &quot;API logs&quot;)
+    
+    AMAZONCLOUDWATCH(AmazonCloudWatch)
+    AMAZONSNS(AmazonSNS, &quot;Send Notifications\n to Owner/Admin&quot;)
+
+
+    loadbalancer --&gt; AmazonCloudWatch
+    S3 --&gt; AmazonCloudWatch
+    Lambda --&gt; AmazonCloudWatch
+    AWSCloudTrail --&gt; AmazonCloudWatch
+    
+    AmazonCloudWatch --&gt; AmazonSNS
+ 
+}
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id5">
+<h4>3.1.3.2. Play<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="C4/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id6">
+<h4>3.1.3.3. Explore<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>TODO</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../GenerateDiagrams/GenerateDiagrams.html" class="btn btn-neutral float-right" title="1. Generate diagrams from PlantUML source files using GithubActions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="C4Stdlib.html" class="btn btn-neutral float-left" title="2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

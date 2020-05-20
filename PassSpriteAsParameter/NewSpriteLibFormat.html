@@ -1,0 +1,638 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. A new sprite format &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Standardising Standard Library" href="../Stdlib/StandardisingStdLib.html" />
+    <link rel="prev" title="3. Standard Library" href="../Stdlib/stdlibRequirements.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. A new sprite format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#features-that-may-be-useful">4.1. Features that may be useful</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listsprites">4.1.1. Listsprites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#listsprites-per-icon">4.1.1.1. listsprites per icon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listsprites-with-an-all-puml">4.1.1.2. listsprites with an all.puml</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#skinparam">4.2. skinparam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#function-and-procedure-vs-define-and-definelong">4.3. !function and !procedure vs !define and !definelong</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#procedure-with-sprite">4.3.1. Procedure with sprite</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#css">4.4. CSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final">4.5. final</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>4. A new sprite format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/PassSpriteAsParameter/NewSpriteLibFormat.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a-new-sprite-format">
+<h1>4. A new sprite format<a class="headerlink" href="#a-new-sprite-format" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="features-that-may-be-useful">
+<h2>4.1. Features that may be useful<a class="headerlink" href="#features-that-may-be-useful" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="listsprites">
+<h3>4.1.1. Listsprites<a class="headerlink" href="#listsprites" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="listsprites-per-icon">
+<h4>4.1.1.1. listsprites per icon<a class="headerlink" href="#listsprites-per-icon" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+!include &lt;tupadr3/common&gt;
+!include &lt;tupadr3/font-awesome/server&gt;
+!include &lt;tupadr3/font-awesome/database&gt;
+!include &lt;cloudinsight/tomcat&gt;
+!include &lt;cloudinsight/kafka&gt;
+!include &lt;cloudinsight/java&gt;
+!include &lt;cloudinsight/cassandra&gt;
+listsprites
+@enduml
+</pre></div>
+</div>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/XSynai8m34RXFgVOFG3ZWfPXSfKVIm4JMyf8ShW-q57WeVvUysOFMFHMf_yYkNRYlrFq3MJ7bBKrbVCNMLJYW0UxDaxEjhFzp0Y12vm_mrorKn4lrrkaq9OHGrwnh1Zg7ViOCzmXPA-Y5W_Vh0JxDBFG-_m9">http://www.plantuml.com/plantuml/uml/XSynai8m34RXFgVOFG3ZWfPXSfKVIm4JMyf8ShW-q57WeVvUysOFMFHMf_yYkNRYlrFq3MJ7bBKrbVCNMLJYW0UxDaxEjhFzp0Y12vm_mrorKn4lrrkaq9OHGrwnh1Zg7ViOCzmXPA-Y5W_Vh0JxDBFG-_m9</a></p>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./listsprites.png" />
+</div>
+</div>
+<div class="section" id="listsprites-with-an-all-puml">
+<h4>4.1.1.2. listsprites with an all.puml<a class="headerlink" href="#listsprites-with-an-all-puml" title="Permalink to this headline">¶</a></h4>
+<p>Some libaries have an all.puml that includes all icons and their macros
+for a given category/subset of icons. This allows including all icons by
+including one file - rather than an include per icon.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/General/all.puml&gt;
+listsprites
+@enduml
+</pre></div>
+</div>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2_EoKpITmmFTixFpStFiyEKSq_DIorApD5FpCdHAm3gjkFAoImkAIueoYn9BUPoICrB0Ge20000">http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2_EoKpITmmFTixFpStFiyEKSq_DIorApD5FpCdHAm3gjkFAoImkAIueoYn9BUPoICrB0Ge20000</a></p>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./listsprites-colour.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="skinparam">
+<h2>4.2. skinparam<a class="headerlink" href="#skinparam" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="n">skinparameters</span>
+<span class="nd">@enduml</span>
+</pre></div>
+</div>
+<p><img alt="image0" src="PassSpriteAsParameter/./skinparams.png" /> <a class="reference external" href="http://www.plantuml.com/plantuml/uml/AyxEp2j8B4hCJIr9BIe60000">http://www.plantuml.com/plantuml/uml/AyxEp2j8B4hCJIr9BIe60000</a></p>
+</div>
+<div class="section" id="function-and-procedure-vs-define-and-definelong">
+<h2>4.3. !function and !procedure vs !define and !definelong<a class="headerlink" href="#function-and-procedure-vs-define-and-definelong" title="Permalink to this headline">¶</a></h2>
+<p>Per <a class="reference external" href="https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng">https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng</a>:</p>
+<p><em>You should not use !define and !definelong anymore. Use !function, !procedure
+or variable definition instead.</em></p>
+<p><em>!define should be replaced by return !function</em></p>
+<p><em>!definelong should be replaced by !procedure.</em></p>
+<p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default
+argument</a>
+value may help to simplify also definitions There are also now <a class="reference external" href="https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov">dynamic
+invocation</a>
+which may be useful</p>
+<div class="section" id="procedure-with-sprite">
+<h3>4.3.1. Procedure with sprite<a class="headerlink" href="#procedure-with-sprite" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./procedure.png" />
+</div>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/1C7Bag8w003GlL_HYxkrRi83ktU3ID8g1beWG4zDfQ1H7X3b4P0mFp_d_1f5EeY9jvkn6ofnU_jldugVyksteIs6zZyqrZzlVpUByxNBweghmCfNj59XKrZPWzUSkc1N9LnFeyFPlaur-jRttNlI-FC5G4ZlbzK_IENoWgSgponi2jwsFFEcO_CyybhYS9HxgZdqGsVnG-eWwo9j2gvcxPwdTvXjuXJCMQowPuHr2nmln95BR3BLcoEzx3zz5-qzviwD1bIZJ2hGdVB0Alg3OO92Gr-WT5-oMFogmMxwU45eJhDuyYMkINKzs1P_A71PWkRa0QA9N4BC9prGSBGnP84SDlRPefBPP8WAmOQA8MXzao7TGX1qf9pfe9pnZwIMcp_tqc-xULjRyDkdyyrL3OPU6GXDlySz1b_T_LHuYlqqmAH_REyEVQvbcPD6YOBReUiLrp1DXsqckZjZZxXAArEuArRONQe3f1oHpu_ZtY4tTJ7L7knkPBn85kMnxRz2hRxoFBURBGed3zMrAAlUj34Dr_UXxVbuXezI96tJpjrkZgxt9WLrI8v1c0ThiI2vEijcUsnAbkGy6PW4-5_prBBJC0m4x_iLOwjIG0X1ULC5YnQ9B-074iUD0euNkV418VwThL53cmDdzkRPdV7CogOlel59h9dd-2JW-R2soFdyulBg-kRsxdwvUle7o6593FKUsRecnMqGIN9qJ4lVMOTJWnNNME35ROOkj2XpK4FAXMOa4UrO59qTgj1w1rrQzXmNqJMc_FanfZpBcD50jS4uIwJMATYXuu1Pa_h-GwIKPrjvpBhNDpn0vvCc5TsGOe2U-DCuoQFPs4vCT5lFzPwAkDGqpPPvuxrInVu-wcnT6iKVWQYOBAJuvJrA9_N-6m00">http://www.plantuml.com/plantuml/uml/1C7Bag8w003GlL_HYxkrRi83ktU3ID8g1beWG4zDfQ1H7X3b4P0mFp_d_1f5EeY9jvkn6ofnU_jldugVyksteIs6zZyqrZzlVpUByxNBweghmCfNj59XKrZPWzUSkc1N9LnFeyFPlaur-jRttNlI-FC5G4ZlbzK_IENoWgSgponi2jwsFFEcO_CyybhYS9HxgZdqGsVnG-eWwo9j2gvcxPwdTvXjuXJCMQowPuHr2nmln95BR3BLcoEzx3zz5-qzviwD1bIZJ2hGdVB0Alg3OO92Gr-WT5-oMFogmMxwU45eJhDuyYMkINKzs1P_A71PWkRa0QA9N4BC9prGSBGnP84SDlRPefBPP8WAmOQA8MXzao7TGX1qf9pfe9pnZwIMcp_tqc-xULjRyDkdyyrL3OPU6GXDlySz1b_T_LHuYlqqmAH_REyEVQvbcPD6YOBReUiLrp1DXsqckZjZZxXAArEuArRONQe3f1oHpu_ZtY4tTJ7L7knkPBn85kMnxRz2hRxoFBURBGed3zMrAAlUj34Dr_UXxVbuXezI96tJpjrkZgxt9WLrI8v1c0ThiI2vEijcUsnAbkGy6PW4-5_prBBJC0m4x_iLOwjIG0X1ULC5YnQ9B-074iUD0euNkV418VwThL53cmDdzkRPdV7CogOlel59h9dd-2JW-R2soFdyulBg-kRsxdwvUle7o6593FKUsRecnMqGIN9qJ4lVMOTJWnNNME35ROOkj2XpK4FAXMOa4UrO59qTgj1w1rrQzXmNqJMc_FanfZpBcD50jS4uIwJMATYXuu1Pa_h-GwIKPrjvpBhNDpn0vvCc5TsGOe2U-DCuoQFPs4vCT5lFzPwAkDGqpPPvuxrInVu-wcnT6iKVWQYOBAJuvJrA9_N-6m00</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+
+sprite $foo1 {
+  FFFFFFFFFFFFFFF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  FFFFFFFFFFFFFFF
+}
+!procedure $ffoo()
+Alice -&gt; Bob : Testing &lt;$foo1&gt;
+!endprocedure
+
+$ffoo()
+
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;  as rectangle
+
+!function $dummy()
+!local $ijk = &quot;local&quot;
+!return &quot;Alice -&gt; Bob : &quot; + $ijk
+!endfunction
+
+!global $ijk = &quot;foo&quot;
+
+Alice -&gt; Bob : $ijk
+$dummy()
+
+
+
+&#39;!procedure $bBatch()
+&#39;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;
+&#39;!endprocedure
+
+&#39;$bBatch()
+@enduml
+</pre></div>
+</div>
+<p>Above - deployment diagram  now works</p>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./procedure2.png" />
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+
+sprite $foo1 {
+  FFFFFFFFFFFFFFF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  F0123456789ABCF
+  FFFFFFFFFFFFFFF
+}
+!procedure $ffoo($scale=2)
+Alice -&gt; Bob : Testing\n &lt;color:red&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;\n dfgsdgs
+!endprocedure
+
+$ffoo()
+
+!procedure $ffoo1()
+
+!endprocedure
+
+$ffoo1()
+
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;  as rectangle
+
+!function $dummy()
+!local $ijk = &quot;local&quot;
+!return &quot;Alice -&gt; Bob : &quot; + $ijk
+!endfunction
+
+!global $ijk = &quot;foo&quot;
+
+Alice -&gt; Bob : $ijk
+$dummy()
+
+
+
+&#39;!procedure $bBatch()
+&#39;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;
+&#39;!endprocedure
+
+&#39;$bBatch()
+@enduml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="css">
+<h2>4.4. CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./css.png" />
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+&#39; https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
+
+skinparam useBetaStyle true
+
+&lt;style&gt;
+    &#39; scope to sequenceDiagram elements
+
+     &#39; scope to actor element types
+     rectangle {
+       FontColor Blue
+        BackGroundColor Blue
+     }
+
+}
+&lt;/style&gt;
+
+
+&#39;both of these have the same outcome. &quot;global&quot; is optional but emphasises the var mycolor is global
+!global $DefaultColor = &quot;red&quot;
+&#39;!$mycolor = &quot;red&quot;
+
+!global $DefaultBackgroundColor = &quot;red&quot;
+
+&#39;https://plantuml.com/deployment-diagram
+&#39;!global $DefaultDeploymentShape = &quot;rectangle&quot;
+!global $DefaultDeploymentShape = &quot;agent&quot;
+
+&#39;https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images
+!global $DefaultScale = &quot;3&quot;
+
+&#39;add background color
+&#39; add label
+&#39; add tech
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;  as rectangle1
+
+
+$DefaultDeploymentShape &quot;&lt;color:$DefaultColor&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;  as DefaultDeploymentShape1
+
+$DefaultDeploymentShape &quot;&lt;color:$DefaultColor&gt;&lt;$Batch*$DefaultScale&gt;&lt;/color&gt;asdfasdf&quot;  as DefaultDeploymentShape
+@enduml
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+&#39; https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
+
+skinparam useBetaStyle true
+
+&lt;style&gt;
+    &#39; scope to sequenceDiagram elements
+
+     &#39; scope to actor element types
+     rectangle {
+       Color Blue
+       FontColor red
+        BackGroundColor Pink
+     }
+
+}
+&lt;/style&gt;
+
+
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+rectangle &quot;&lt;$Batch&gt;asdfasfd&quot;  as rectangle1
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;asdfasfd&quot;  as rectangle2
+@enduml
+</pre></div>
+</div>
+</div>
+<div class="section" id="final">
+<h2>4.5. final<a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/7CnDavem083XEx-2GsTweYPyu6vFHGHMHM05KRVJOK2G10WV493GwNzlkwVtyixpOw1nJqTISL_lVHRJZC-w4KznbTMKRnuylZVrm0-eUTOyolgCHvIsm_VLAiSKZSctUqDMyNEeucJuN-7p5nvDBxHLN7_273UqFVudVzd4z8xudweyg_8Agiil_ZSts">http://www.plantuml.com/plantuml/uml/7CnDavem083XEx-2GsTweYPyu6vFHGHMHM05KRVJOK2G10WV493GwNzlkwVtyixpOw1nJqTISL_lVHRJZC-w4KznbTMKRnuylZVrm0-eUTOyolgCHvIsm_VLAiSKZSctUqDMyNEeucJuN-7p5nvDBxHLN7_273UqFVudVzd4z8xudweyg_8Agiil_ZSts</a>-<em>hfC140dgwc4j8ZH1Ye</em>VAVHkiyOqeyMLxC4vZONuec_RbLlhJ4K0OFewBlsNYyGdtE4rqIwEagaZYZRkosP62MUU1RKBP3b-Lw5ep1IJjHHw3arQuX_459jmr1bDobTo3QIaws1qTcyrNBPAywQAWxirtpOqNkLCf0qb5DmpQVHheURTLDP3BvZj0xfFbiuzBouth9uJQED66pDV2mQUjePDQXFCSb7iFE39D6RJ8g0IYTU5KbfjsD7J9B3cJ5faXfL6F8nFg7quV2n04hOEci1SFrfs5kfis6-PNxIGKElpmmobp9JKodmauQtvdTHPuRn_xt1EDHWMZyYeyxB1P44gTKhm4sRRjH5VLD3lYnd1zi3p75IiMmtM-mFQ8jp0aflFskjlOJYRDcjI1TUOCHnPTqglXFyzoSI9fQfI2UHuzioWemfrcME5vUUchZWm7M2DwgyfgQjVJvVGeOr2SdLrmJeCbdqsss3Cdx4eKtL9owoC6BExFtsBAhwTj7WhZz_aKftahbRugzPeMBgeq6eEoSGFJG9iqYg8qERGHYTt53enz-lbFQECgeA6YhHULdJZd_CvpdcDfYG9Z4T55Xk3wCSjOCIum2NnZaS0d-bame-zSW8Z3-hZyjBKgM8n9MI2qRsyP6-nrhN0cXlnsu3ejfCdwkECydM-8ubbHNeRoNCNaDKRtTFJEgyU4p3Cs9td41HOaIRaW7v5Y4MNa9ELt_PKUqHhWP8AX38VPZ5Qi61e-lusXcRWQCY4-Jt_X-6fw_EayFBqulmelpxvFWsiC1SPBUkCJzJuWn0NVnr1X80i2LIY6KPP6tEcq4hnDAO8Y-XmL8etJbQJVMva3FLWP9BamKTKYGHuNNJZwTlcwJthmdpVqJeVJdivd_hkxAijPMSH89CqnotD6As7ZpMOCVqFb6PrHG5Ffyuet-7He-tGoiV6Q3NkjiylDul56PpvHUTELI1c5eNRpiD7DmyPP6MtDYizPZcAPqaKWaxsCj2tLm0lgTBP05kT8SuuQEKUDd0TxxSfbxMGJQEAwye5cDCjDUhFdSPJXP21N2hOi9h82QRoB3vVJBr-Fhiukpc4m1h54eFXJGAP68c78WJ813wouWtqmre2KmyDIBVRrInd85ixm6TNQjcnLyYVf_ZTOpoZOVbP2gtGuq1eUE1sRNa5pIFlOhu4hs8v5IuZX9SGcjcxBPbnt5rwJTRlnJjLZDt_KxsNhvBBsjNcW6SroarJklHxCinAxZlfrIlgZP08Jo36Y7CGo4l38IaWOxGXOHlS8Wa794VGvrLQa84lCfEkr5sfahNMqRKCEtjAH_zXAWyfBJkD4obAhllJ0wehQLbT-lIDMGxO7-V0jPViZIpSxUdVL3k45HvjQruQUgxJU3hQshYnlBEsgp9mmMD_NaALt27B9OH_cfO2ObLcYVRx8s3pAu3ugkB9-mkh7r7nqp8KN2Ubor5LmpWeGQOxzfrAg5dXTvxqijSoptm00</p>
+<div class="figure align-default">
+<img alt="" src="PassSpriteAsParameter/./final.png" />
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+&#39;create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;\n0&quot;  as rectangle
+
+
+!procedure $ffoo1()
+rectangle &quot;&lt;$Batch&gt;\n1&quot;
+!endprocedure
+
+$ffoo1()
+
+
+!procedure $ffoo2()
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;\n2&quot; as 2
+!endprocedure
+
+$ffoo2()
+
+
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/General/Disk.puml
+&#39;rectangle &quot;==e_label\n&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;\n//&lt;size:TECHN_FONT_SIZE&gt;[e_techn]&lt;/size&gt;//&quot; &lt;&lt;e_stereo&gt;&gt; as e_alias
+&#39;!define DiskParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #232F3E, Disk, Disk)
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/source/AWSCommon.puml
+&#39;common.puml: rectangle &quot;==e_label\n&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;\n//&lt;size:TECHN_FONT_SIZE&gt;[e_techn]&lt;/size&gt;//\n\n e_descr&quot; &lt;&lt;e_stereo&gt;&gt; as e_alias
+
+
+
+!procedure $ffoo3()
+rectangle &quot;==label\n&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;\n[technology]\n\n Description 3&quot; as 3
+!endprocedure
+
+$ffoo3()
+
+
+!procedure $ffoo4()
+rectangle &quot;&lt;&lt;something&gt;&gt;\n==label\n&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;\n//&lt;size:12&gt;[technology]&lt;/size&gt;//\n\n  Description 4&quot; as 4
+!endprocedure
+
+$ffoo4()
+
+
+!procedure $ffoo5($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=red)
+&#39;OBSERVATION 1: the next line does not work - sprite is white - not red
+rectangle &quot;&lt;&lt;$alias&gt;&gt;\n==$label\n&lt;color:$colour&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;\n//&lt;size:12&gt;[$technology]&lt;/size&gt;//\n\n  $description 5&quot; as 5
+&#39;the next line works i.e. sprite is red
+&#39;rectangle &quot;&lt;&lt;//$alias//&gt;&gt;\n==$label\n&quot;&lt;color:red&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;&quot;\n//&lt;size:12&gt;[$technology]&lt;/size&gt;//\n\n  $description 5&quot; as $alias
+!endprocedure
+
+
+$ffoo5(&quot;myalias&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;, &quot;mytechnology&quot;, 2, blue)
+
+
+
+
+&#39;unquoted means that you don&#39;t have to use quotes when calling the procedure
+
+!unquoted procedure $ffoo51($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=red)
+
+rectangle &quot;&lt;&lt;$alias&gt;&gt;\n==$label\n&lt;color:$colour&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;\n//&lt;size:12&gt;[$technology]&lt;/size&gt;//\n\n  $description 51&quot; as 5
+
+
+!endprocedure
+
+$ffoo51(myalias, mydescription, mylabel, mytechnology, 2, blue)
+
+
+!procedure $ffoo6($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=red)
+rectangle &quot;&lt;&lt;//$alias//&gt;&gt;\n==$label\n&lt;color:red&gt;&lt;$Batch*$scale&gt;&lt;/color&gt;\n//&lt;size:12&gt;[$technology]&lt;/size&gt;//\n\n  $description 6 &quot; as $alias
+!endprocedure
+
+$ffoo6(&quot;myaliasbatch2&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;, &quot;mytechnology&quot;, 2, blue)
+
+
+
+&#39;OBSERVATION 2: can&#39;t do something like this - but could use global vars to do this - but that&#39;s not at preprocessor time.
+$ffoo6($scale=2)
+@enduml
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Stdlib/StandardisingStdLib.html" class="btn btn-neutral float-right" title="5. Standardising Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Stdlib/stdlibRequirements.html" class="btn btn-neutral float-left" title="3. Standard Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

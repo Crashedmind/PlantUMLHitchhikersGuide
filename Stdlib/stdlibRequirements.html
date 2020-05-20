@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Standard Library &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. A new sprite format" href="../PassSpriteAsParameter/NewSpriteLibFormat.html" />
+    <link rel="prev" title="2. PlantUML Stdlib Under The Hood" href="../StdlibUnderTheHood/StdlibUnderstanding.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Standard Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#observations-on-standard-library">3.1. Observations on Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-a-user-wants-in-a-standard-library">3.2. What a User Wants In A Standard Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Standard Library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Stdlib/stdlibRequirements.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="standard-library">
+<h1>3. Standard Library<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="observations-on-standard-library">
+<h2>3.1. Observations on Standard Library<a class="headerlink" href="#observations-on-standard-library" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Marcos use define and definelong which are deprecated per below</p></li>
+<li><p>DRY Do not Repeat Yourself. The macros are repeated</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>within a file -repeat the macro to add each new parameter</p></li>
+<li><p>across files - the macro content is largely the same - but the macro name changes to specify the icon to use</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Close Coupling</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Macros are defined in the icon file for each icon</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Lack of consistency</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>icon sizes</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>some have multiple sizes</p></li>
+<li><p>for those that have one size, it is not standard/common with the other stdlib libraries</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>icon files</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>some break up the icons into categories sub-directories, some don’t</p></li>
+<li><p>some have an <code class="docutils literal notranslate"><span class="pre">`all.puml`</span></code> file that includes all sprite content per category, some don’target</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>There’s no way to scale the icons from the macros (the !define statements). Plantuml does support scaling per <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images">https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images</a>. Support for scaling stereotypes is available since <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images?show=9086#c9086">March 2019</a>.</p></li>
+<li><p>At least 3 parameters are required and are rendered in the diagams  “!define Batch(e_alias, e_label, e_techn)”.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>So if we wanted a colored or scaled icon only (with no label or technology), the only option is to use the raw sprite (more on that later).</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>Overall, the PlantUML Stdlib lacks consistency and therefore user friendliness.
+We need to change this to empower the user with PlantUML.</p>
+</div>
+<div class="section" id="what-a-user-wants-in-a-standard-library">
+<h2>3.2. What a User Wants In A Standard Library<a class="headerlink" href="#what-a-user-wants-in-a-standard-library" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Consistency of macros, files, sizes</p></li>
+<li><p>Specify the things they care about</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>The marcos force a user to specify things they may not care about e.g. to specify color in this macro, the user needs to specify the preceeding parameters also</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">`!define</span> <span class="pre">WHATEVER(_alias,</span> <span class="pre">_label,</span> <span class="pre">_shape,</span> <span class="pre">_color)</span> <span class="pre">ENTITY(_shape,_color,whatever,_label,</span> <span class="pre">_alias,WHATEVER)`</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Default values specified when the icons are built, but can be overridden by the user in their diagram file (at runtime)</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Decoupling of the sprite (the image), from the decoration (text, shape, color, scale etc…)</p></li>
+<li><p>Future Proofing</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>uses supported PlantUML features, and can be easily changed in the future.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../PassSpriteAsParameter/NewSpriteLibFormat.html" class="btn btn-neutral float-right" title="4. A new sprite format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../StdlibUnderTheHood/StdlibUnderstanding.html" class="btn btn-neutral float-left" title="2. PlantUML Stdlib Under The Hood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

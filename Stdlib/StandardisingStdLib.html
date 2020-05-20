@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. StandardisingStdLib &mdash; Playing with PlantUML  documentation</title>
+  <title>5. Standardising Standard Library &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. ContributingToStdlib" href="ContributingToStdlib.html" />
-    <link rel="prev" title="4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method" href="../C4/C4Stdlib.html" /> 
+    <link rel="next" title="6. Create A Sprite library" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" />
+    <link rel="prev" title="4. A new sprite format" href="../PassSpriteAsParameter/NewSpriteLibFormat.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,8 +89,8 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../AboutPlantUML.html">1. About PlantUML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
@@ -100,14 +100,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Library</span></p>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/PlantUMLSprites.html">1. Understanding PlantUML Stdlib Sprite Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">2. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">3. Create a Diagram of a Typical Network</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. StandardisingStdLib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">6. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Standardising Standard Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#defines-are-deprecated">5.1. Defines Are Deprecated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#default-values">5.2. Default Values</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -116,8 +131,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -167,7 +181,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>5. StandardisingStdLib</li>
+      <li>5. Standardising Standard Library</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,8 +200,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="standardisingstdlib">
-<h1>5. StandardisingStdLib<a class="headerlink" href="#standardisingstdlib" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="standardising-standard-library">
+<h1>5. Standardising Standard Library<a class="headerlink" href="#standardising-standard-library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defines-are-deprecated">
+<h2>5.1. Defines Are Deprecated<a class="headerlink" href="#defines-are-deprecated" title="Permalink to this headline">¶</a></h2>
+<p>Existing stdlib icon libraries use !define and !definelong to create different macros.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>!function and !procedure should be used instead of !define and !definelong</p>
+<p>Per <a href="#id1"><span class="problematic" id="id2">MigrationNotes_</span></a>:</p>
+<blockquote>
+<div><p><em>You should not use !define and !definelong anymore. Use !function, !procedure
+or variable definition instead.</em></p>
+<p><em>!define should be replaced by return !function</em></p>
+<p><em>!definelong should be replaced by !procedure.</em></p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="default-values">
+<h2>5.2. Default Values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id3"><span class="problematic" id="id4">DefaultArgumentValue_</span></a></p>
+<dl>
+<dt>“In both procedure and return functions, you can define default values for arguments”</dt><dd><p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default argument</a>
+value can help to simplify definitions</p>
+<p>There are also now <a class="reference external" href="https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov">dynamic invocation</a>
+which may be useful</p>
+</dd>
+</dl>
+</div>
 </div>
 
 
@@ -198,10 +238,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ContributingToStdlib.html" class="btn btn-neutral float-right" title="6. ContributingToStdlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" class="btn btn-neutral float-right" title="6. Create A Sprite library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../C4/C4Stdlib.html" class="btn btn-neutral float-left" title="4. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../PassSpriteAsParameter/NewSpriteLibFormat.html" class="btn btn-neutral float-left" title="4. A new sprite format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

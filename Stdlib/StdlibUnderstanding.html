@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Understanding PlantUML Stdlib Sprite Library &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. PassSpriteAsParameter" href="PassSpriteAsParameter.html" />
+    <link rel="prev" title="1. PlantUML Stdlib Overview" href="StdLibOverview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">3. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Understanding PlantUML Stdlib Sprite Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#goal">2.1. Goal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#steps-to-understanding">2.2. Steps to Understanding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-using-the-sprite-directly">2.2.1. Step 1: Using the sprite directly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-add-an-as-whatever">2.2.2. Step 2 Add an “as whatever”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-bare-minimum">2.2.3. Step 3 Bare Minimum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-1-bare-minimum-by-including-batch-puml">2.2.3.1. Step 3.1 Bare Minimum by including Batch.puml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-2-illegal-bare-minimum-by-including-all-puml">2.2.3.2. Step 3.2 Illegal Bare Minimum by including all.puml</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-where-did-that-guy-come-from">2.2.4. Step 4 Where did that guy come from?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead">2.2.4.1. Step 4.1 Lose the guy - add a Deployment Diagram Rectangle Instead</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-add-some-color">2.2.5. Step 5 Add some color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-understanding-the-awsentity-macro">2.2.6. Step 6 Understanding the AWSEntity Macro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-1-add-scaling-to-awsentity-macro">2.2.6.1. Step 6.1 Add Scaling to AWSEntity Macro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-7-updating-the-puml-files-to-support-minimal-macro">2.2.7. Step 7 Updating the puml files to support minimal macro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">4. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2. Understanding PlantUML Stdlib Sprite Library</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Stdlib/StdlibUnderstanding.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="understanding-plantuml-stdlib-sprite-library">
+<span id="understandingstdlib-label"></span><h1>2. Understanding PlantUML Stdlib Sprite Library<a class="headerlink" href="#understanding-plantuml-stdlib-sprite-library" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Below are the steps I took to understand the PlantUML Standard Library.</p>
+<ul class="simple">
+<li><p>It’s a step-by-step in the dark - taking small validated steps.</p></li>
+<li><p>The steps are listed here because it’s educational and interesting.</p></li>
+<li><p><strong>You should not, and don’t have to, follow these steps.</strong></p></li>
+<li><p>Based on the understanding gained, there’s a better way to go.</p></li>
+</ul>
+<p><strong>So you can skip this chapter and go straight to todo</strong></p>
+</div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>add ref to new way</p>
+</div>
+<div class="section" id="goal">
+<h2>2.1. Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Look under the hood of the generated plantuml icon files from
+<a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml">https://github.com/awslabs/aws-icons-for-plantuml</a> to understand them
+better - from first principles e.g.
+<a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml">https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml</a></p></li>
+<li><p>To confirm understanding</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>a new bare-minimum macro will be created that requires only 1 parameter <cite>!define Batch(e_alias)</cite></p></li>
+<li><p>a new macro will be added to allow scaling the icon size</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="steps-to-understanding">
+<h2>2.2. Steps to Understanding<a class="headerlink" href="#steps-to-understanding" title="Permalink to this headline">¶</a></h2>
+<p>Note Each puml file can be converted to png image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="n">filename</span><span class="o">.</span><span class="n">puml</span> <span class="c1">#this outputs filename.png</span>
+</pre></div>
+</div>
+<div class="section" id="step-1-using-the-sprite-directly">
+<h3>2.2.1. Step 1: Using the sprite directly<a class="headerlink" href="#step-1-using-the-sprite-directly" title="Permalink to this headline">¶</a></h3>
+<p>“Batch” is defined in
+<a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml">https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml</a>)
+ala</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sprite $Batch [64x64/16z] {...
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+!include ./AWSCommon.puml
+!include ./Compute/Batch.puml
+
+rectangle &quot;&lt;$Batch&gt;&quot;
+
+&#39;NOTE that if we add a more than one call - nothing happens! We&#39;re missing an &quot;as x&quot;
+rectangle &quot;&lt;$Batch&gt;&quot;
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/1.png" />
+</div>
+</div>
+<div class="section" id="step-2-add-an-as-whatever">
+<h3>2.2.2. Step 2 Add an “as whatever”<a class="headerlink" href="#step-2-add-an-as-whatever" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+!include ./AWSCommon.puml
+!include ./Compute/Batch.puml
+
+rectangle &quot;&lt;$Batch&gt;&quot;
+
+&#39;NOTE that if we add a more than one call - nothing happens! Need to change the second one to &quot;as whateverElse&quot;
+rectangle &quot;&lt;$Batch&gt;&quot; as whatever
+rectangle &quot;&lt;$Batch&gt;&quot; as whatever
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/2.png" />
+</div>
+</div>
+<div class="section" id="step-3-bare-minimum">
+<h3>2.2.3. Step 3 Bare Minimum<a class="headerlink" href="#step-3-bare-minimum" title="Permalink to this headline">¶</a></h3>
+<p>Extract the sprite from the Batch.puml</p>
+<p>Note that plantuml needs the &#64;startuml and &#64;endumlto recognize the file
+as a plantuml diagram i.e. it won’t work without these</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81bXa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx-Ikh_YdmYr_y0G
+}
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/3.png" />
+</div>
+<div class="section" id="step-3-1-bare-minimum-by-including-batch-puml">
+<h4>2.2.3.1. Step 3.1 Bare Minimum by including Batch.puml<a class="headerlink" href="#step-3-1-bare-minimum-by-including-batch-puml" title="Permalink to this headline">¶</a></h4>
+<p>The result is the same.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+
+!include ./AWSCommon.puml
+!include ./Compute/Batch.puml
+
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/3.png" />
+</div>
+</div>
+<div class="section" id="step-3-2-illegal-bare-minimum-by-including-all-puml">
+<h4>2.2.3.2. Step 3.2 Illegal Bare Minimum by including all.puml<a class="headerlink" href="#step-3-2-illegal-bare-minimum-by-including-all-puml" title="Permalink to this headline">¶</a></h4>
+<p>Note: This is not valid plantuml as it does not contain any elements. *
+The VSCode Plantuml extension will happily render this in preview mode.
+But VSCode Plantuml extension export will fail * Plantuml call will
+generate a blank output.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="o">~/</span><span class="n">system</span><span class="o">/</span><span class="n">plantuml</span><span class="o">.</span><span class="n">jar</span> <span class="n">dist</span><span class="o">/</span><span class="nb">all</span><span class="o">.</span><span class="n">puml</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+!include ./AWSCommon.puml
+!include ./Compute/all.puml
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/all.png" />
+</div>
+</div>
+</div>
+<div class="section" id="step-4-where-did-that-guy-come-from">
+<h3>2.2.4. Step 4 Where did that guy come from?<a class="headerlink" href="#step-4-where-did-that-guy-come-from" title="Permalink to this headline">¶</a></h3>
+<p>If any color is added we get an actor (from Deployment Diagram so can
+explicitly use a rectangle as the Deployment Diagram entity - see next
+example)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+&quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/4.png" />
+</div>
+<div class="section" id="step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead">
+<h4>2.2.4.1. Step 4.1 Lose the guy - add a Deployment Diagram Rectangle Instead<a class="headerlink" href="#step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+rectangle &quot;&lt;$Batch&gt;&quot;
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/5.png" />
+</div>
+</div>
+</div>
+<div class="section" id="step-5-add-some-color">
+<h3>2.2.5. Step 5 Add some color<a class="headerlink" href="#step-5-add-some-color" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+!include ./AWSCommon.puml
+!include ./Compute/Batch.puml
+
+rectangle &quot;&lt;$Batch&gt;&quot;
+
+&#39;this overides/specifies a color as red
+rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/6.png" />
+</div>
+</div>
+<div class="section" id="step-6-understanding-the-awsentity-macro">
+<h3>2.2.6. Step 6 Understanding the AWSEntity Macro<a class="headerlink" href="#step-6-understanding-the-awsentity-macro" title="Permalink to this headline">¶</a></h3>
+<p>Based on reconstructing the existing Macros, we can define our own
+minimal macro:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_alias) AWSEntity(Batch, #D86613) as e_alias
+</pre></div>
+</div>
+<p>where the parameters are 1. Batch - this refers to the sprite $Batch 2.
+e_alias - this adds on a “as whatever” so multiple calls to same sprite
+return multiple rendered icons. “#D86613” is the color defined as part
+of the sprite puml file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+!include ./AWSCommon.puml
+!include ./Compute/Batch.puml
+!include ./Compute/Compute.puml
+
+
+
+&#39;Use the Compute icon here for contrast
+&#39;this uses a macro - and hardcodes the color - color copyNpasted from Batch.puml file
+&#39;===================================================================================
+!define Compute(e_alias) rectangle &quot;&lt;color:#D86613&gt;&lt;$Compute&gt;&lt;/color&gt;&quot;
+Compute(Compute)
+Compute(Compute) as something
+
+
+&#39; This uses the AWSEntity macros defined in Batch.puml
+&#39; the end result is same as above - but we use the e_alias so that multiple calls show
+&#39;===================================================================================
+!definelong AWSEntity(e_sprite, e_color)
+rectangle &quot;&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;&quot;
+!enddefinelong
+
+&#39; Batch.puml
+!define Batch(e_alias) AWSEntity(Batch, #D86613) as e_alias
+
+Batch(whatever)
+Batch(whateverElse)
+Batch(3.13xyz)
+
+
+@enduml
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/7.png" />
+</div>
+<div class="section" id="step-6-1-add-scaling-to-awsentity-macro">
+<h4>2.2.6.1. Step 6.1 Add Scaling to AWSEntity Macro<a class="headerlink" href="#step-6-1-add-scaling-to-awsentity-macro" title="Permalink to this headline">¶</a></h4>
+<p>Replacing the last lines from the previous example to add scale.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_alias, scale) AWSEntity(Batch*scale, #D86613) as e_alias
+Batch(whatever,2)
+Batch(whateverElse,5)
+Batch(3.13xyz, 0.3)
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="" src="Stdlib/8.png" />
+</div>
+<p>This scale parameter could be added to existing macros in puml files
+e.g.
+<a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml">https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_alias, e_label, e_techn) AWSEntity(e_alias, e_label, e_techn, #D86613, Batch, Batch)
+!define Batch(e_alias, e_label, e_techn, e_descr) AWSEntity(e_alias, e_label, e_techn, e_descr, #D86613, Batch, Batch)
+!define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
+!define BatchParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #D86613, Batch, Batch)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-7-updating-the-puml-files-to-support-minimal-macro">
+<h3>2.2.7. Step 7 Updating the puml files to support minimal macro<a class="headerlink" href="#step-7-updating-the-puml-files-to-support-minimal-macro" title="Permalink to this headline">¶</a></h3>
+<p>Using AWSSimplified.puml as a reference, we can create an AWSBare.puml
+file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&#39; Styling
+&#39; ##################################
+
+hide stereotype
+
+!definelong AWSEntityColoring(e_stereo)
+skinparam rectangle&lt;&lt;e_stereo&gt;&gt; {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor transparent
+    Shadowing false
+}
+!enddefinelong
+
+&#39; Overwriting Elements
+&#39; ##################################
+
+!definelong AWSEntity(e_sprite, e_color)
+rectangle &quot;&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;&quot;
+!enddefinelong
+</pre></div>
+</div>
+<p>For each icon puml file e.g. Batch.puml</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_sprite) AWSEntity(e_sprite, #D86613)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PassSpriteAsParameter.html" class="btn btn-neutral float-right" title="3. PassSpriteAsParameter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="StdLibOverview.html" class="btn btn-neutral float-left" title="1. PlantUML Stdlib Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

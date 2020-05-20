@@ -1,0 +1,397 @@
+*******************************************************************************
+A new sprite format
+*******************************************************************************
+
+
+Features that may be useful
+===============================================================================
+
+Listsprites
+-------------------------------------------------------------------------------
+
+listsprites per icon
+^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    @startuml
+    !include <tupadr3/common>
+    !include <tupadr3/font-awesome/server>
+    !include <tupadr3/font-awesome/database>
+    !include <cloudinsight/tomcat>
+    !include <cloudinsight/kafka>
+    !include <cloudinsight/java>
+    !include <cloudinsight/cassandra>
+    listsprites
+    @enduml
+
+http://www.plantuml.com/plantuml/uml/XSynai8m34RXFgVOFG3ZWfPXSfKVIm4JMyf8ShW-q57WeVvUysOFMFHMf\_yYkNRYlrFq3MJ7bBKrbVCNMLJYW0UxDaxEjhFzp0Y12vm\_mrorKn4lrrkaq9OHGrwnh1Zg7ViOCzmXPA-Y5W\_Vh0JxDBFG-\_m9
+
+.. figure:: ./listsprites.png
+   :alt: 
+
+listsprites with an all.puml
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some libaries have an all.puml that includes all icons and their macros
+for a given category/subset of icons. This allows including all icons by
+including one file - rather than an include per icon.
+
+::
+
+    @startuml
+    !include <awslib/AWSCommon>
+    !include <awslib/General/all.puml>
+    listsprites
+    @enduml
+
+http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2\_EoKpITmmFTixFpStFiyEKSq\_DIorApD5FpCdHAm3gjkFAoImkAIueoYn9BUPoICrB0Ge20000
+
+.. figure:: ./listsprites-colour.png
+   :alt: 
+
+
+
+skinparam
+=========
+
+::
+
+    @startuml
+    skinparameters
+    @enduml
+
+|image0| http://www.plantuml.com/plantuml/uml/AyxEp2j8B4hCJIr9BIe60000
+
+!function and !procedure vs !define and !definelong
+===================================================
+
+Per https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng: 
+
+*You should not use !define and !definelong anymore. Use !function, !procedure 
+or variable definition instead.*
+
+*!define should be replaced by return !function*
+
+*!definelong should be replaced by !procedure.*
+
+The `default
+argument <https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng>`__
+value may help to simplify also definitions There are also now `dynamic
+invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__
+which may be useful
+
+Procedure with sprite
+---------------------
+
+.. figure:: ./procedure.png
+   :alt: 
+
+http://www.plantuml.com/plantuml/uml/1C7Bag8w003GlL\_HYxkrRi83ktU3ID8g1beWG4zDfQ1H7X3b4P0mFp\_d\_1f5EeY9jvkn6ofnU\_jldugVyksteIs6zZyqrZzlVpUByxNBweghmCfNj59XKrZPWzUSkc1N9LnFeyFPlaur-jRttNlI-FC5G4ZlbzK\_IENoWgSgponi2jwsFFEcO\_CyybhYS9HxgZdqGsVnG-eWwo9j2gvcxPwdTvXjuXJCMQowPuHr2nmln95BR3BLcoEzx3zz5-qzviwD1bIZJ2hGdVB0Alg3OO92Gr-WT5-oMFogmMxwU45eJhDuyYMkINKzs1P\_A71PWkRa0QA9N4BC9prGSBGnP84SDlRPefBPP8WAmOQA8MXzao7TGX1qf9pfe9pnZwIMcp\_tqc-xULjRyDkdyyrL3OPU6GXDlySz1b\_T\_LHuYlqqmAH\_REyEVQvbcPD6YOBReUiLrp1DXsqckZjZZxXAArEuArRONQe3f1oHpu\_ZtY4tTJ7L7knkPBn85kMnxRz2hRxoFBURBGed3zMrAAlUj34Dr\_UXxVbuXezI96tJpjrkZgxt9WLrI8v1c0ThiI2vEijcUsnAbkGy6PW4-5\_prBBJC0m4x\_iLOwjIG0X1ULC5YnQ9B-074iUD0euNkV418VwThL53cmDdzkRPdV7CogOlel59h9dd-2JW-R2soFdyulBg-kRsxdwvUle7o6593FKUsRecnMqGIN9qJ4lVMOTJWnNNME35ROOkj2XpK4FAXMOa4UrO59qTgj1w1rrQzXmNqJMc\_FanfZpBcD50jS4uIwJMATYXuu1Pa\_h-GwIKPrjvpBhNDpn0vvCc5TsGOe2U-DCuoQFPs4vCT5lFzPwAkDGqpPPvuxrInVu-wcnT6iKVWQYOBAJuvJrA9\_N-6m00
+
+::
+
+    @startuml
+    sprite $Batch [64x64/16z] {
+    xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+    Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+    6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+    uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+    -Ikh_YdmYr_y0G
+    }
+
+
+    sprite $foo1 {
+      FFFFFFFFFFFFFFF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      FFFFFFFFFFFFFFF
+    }
+    !procedure $ffoo()
+    Alice -> Bob : Testing <$foo1>
+    !endprocedure
+
+    $ffoo()
+
+    rectangle "<color:red><$Batch></color>"  as rectangle
+
+    !function $dummy()
+    !local $ijk = "local"
+    !return "Alice -> Bob : " + $ijk
+    !endfunction
+
+    !global $ijk = "foo"
+
+    Alice -> Bob : $ijk
+    $dummy()
+
+
+
+    '!procedure $bBatch()
+    '<color:red><$Batch></color>
+    '!endprocedure
+
+    '$bBatch()
+    @enduml
+
+Above - deployment diagram  now works
+
+.. figure:: ./procedure2.png
+   :alt: 
+
+::
+
+    @startuml
+    sprite $Batch [64x64/16z] {
+    xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+    Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+    6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+    uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+    -Ikh_YdmYr_y0G
+    }
+
+
+    sprite $foo1 {
+      FFFFFFFFFFFFFFF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      F0123456789ABCF
+      FFFFFFFFFFFFFFF
+    }
+    !procedure $ffoo($scale=2)
+    Alice -> Bob : Testing\n <color:red><$Batch*$scale></color>\n dfgsdgs
+    !endprocedure
+
+    $ffoo()
+
+    !procedure $ffoo1()
+
+    !endprocedure
+
+    $ffoo1()
+
+    rectangle "<color:red><$Batch></color>"  as rectangle
+
+    !function $dummy()
+    !local $ijk = "local"
+    !return "Alice -> Bob : " + $ijk
+    !endfunction
+
+    !global $ijk = "foo"
+
+    Alice -> Bob : $ijk
+    $dummy()
+
+
+
+    '!procedure $bBatch()
+    '<color:red><$Batch></color>
+    '!endprocedure
+
+    '$bBatch()
+    @enduml
+
+CSS
+===
+
+.. figure:: ./css.png
+   :alt: 
+
+::
+
+    @startuml
+    ' https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
+
+    skinparam useBetaStyle true 
+
+    <style>
+        ' scope to sequenceDiagram elements
+
+         ' scope to actor element types
+         rectangle {
+           FontColor Blue
+            BackGroundColor Blue
+         }
+
+    }
+    </style>
+
+
+    'both of these have the same outcome. "global" is optional but emphasises the var mycolor is global
+    !global $DefaultColor = "red"
+    '!$mycolor = "red" 
+
+    !global $DefaultBackgroundColor = "red"
+
+    'https://plantuml.com/deployment-diagram 
+    '!global $DefaultDeploymentShape = "rectangle"
+    !global $DefaultDeploymentShape = "agent"
+
+    'https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images
+    !global $DefaultScale = "3"
+
+    'add background color
+    ' add label
+    ' add tech
+
+    sprite $Batch [64x64/16z] {
+    xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+    Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+    6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+    uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+    -Ikh_YdmYr_y0G
+    }
+
+    rectangle "<color:red><$Batch></color>"  as rectangle1
+
+
+    $DefaultDeploymentShape "<color:$DefaultColor><$Batch></color>"  as DefaultDeploymentShape1
+
+    $DefaultDeploymentShape "<color:$DefaultColor><$Batch*$DefaultScale></color>asdfasdf"  as DefaultDeploymentShape
+    @enduml
+
+::
+
+    @startuml
+    ' https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
+
+    skinparam useBetaStyle true 
+
+    <style>
+        ' scope to sequenceDiagram elements
+
+         ' scope to actor element types
+         rectangle {
+           Color Blue
+           FontColor red
+            BackGroundColor Pink
+         }
+
+    }
+    </style>
+
+
+
+    sprite $Batch [64x64/16z] {
+    xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+    Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+    6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+    uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+    -Ikh_YdmYr_y0G
+    }
+
+    rectangle "<$Batch>asdfasfd"  as rectangle1
+    rectangle "<color:red><$Batch></color>asdfasfd"  as rectangle2
+    @enduml
+
+final
+=====
+
+http://www.plantuml.com/plantuml/uml/7CnDavem083XEx-2GsTweYPyu6vFHGHMHM05KRVJOK2G10WV493GwNzlkwVtyixpOw1nJqTISL\_lVHRJZC-w4KznbTMKRnuylZVrm0-eUTOyolgCHvIsm\_VLAiSKZSctUqDMyNEeucJuN-7p5nvDBxHLN7\_273UqFVudVzd4z8xudweyg\_8Agiil\_ZSts-\ *hfC140dgwc4j8ZH1Ye*\ VAVHkiyOqeyMLxC4vZONuec\_RbLlhJ4K0OFewBlsNYyGdtE4rqIwEagaZYZRkosP62MUU1RKBP3b-Lw5ep1IJjHHw3arQuX\_459jmr1bDobTo3QIaws1qTcyrNBPAywQAWxirtpOqNkLCf0qb5DmpQVHheURTLDP3BvZj0xfFbiuzBouth9uJQED66pDV2mQUjePDQXFCSb7iFE39D6RJ8g0IYTU5KbfjsD7J9B3cJ5faXfL6F8nFg7quV2n04hOEci1SFrfs5kfis6-PNxIGKElpmmobp9JKodmauQtvdTHPuRn\_xt1EDHWMZyYeyxB1P44gTKhm4sRRjH5VLD3lYnd1zi3p75IiMmtM-mFQ8jp0aflFskjlOJYRDcjI1TUOCHnPTqglXFyzoSI9fQfI2UHuzioWemfrcME5vUUchZWm7M2DwgyfgQjVJvVGeOr2SdLrmJeCbdqsss3Cdx4eKtL9owoC6BExFtsBAhwTj7WhZz\_aKftahbRugzPeMBgeq6eEoSGFJG9iqYg8qERGHYTt53enz-lbFQECgeA6YhHULdJZd\_CvpdcDfYG9Z4T55Xk3wCSjOCIum2NnZaS0d-bame-zSW8Z3-hZyjBKgM8n9MI2qRsyP6-nrhN0cXlnsu3ejfCdwkECydM-8ubbHNeRoNCNaDKRtTFJEgyU4p3Cs9td41HOaIRaW7v5Y4MNa9ELt\_PKUqHhWP8AX38VPZ5Qi61e-lusXcRWQCY4-Jt\_X-6fw\_EayFBqulmelpxvFWsiC1SPBUkCJzJuWn0NVnr1X80i2LIY6KPP6tEcq4hnDAO8Y-XmL8etJbQJVMva3FLWP9BamKTKYGHuNNJZwTlcwJthmdpVqJeVJdivd\_hkxAijPMSH89CqnotD6As7ZpMOCVqFb6PrHG5Ffyuet-7He-tGoiV6Q3NkjiylDul56PpvHUTELI1c5eNRpiD7DmyPP6MtDYizPZcAPqaKWaxsCj2tLm0lgTBP05kT8SuuQEKUDd0TxxSfbxMGJQEAwye5cDCjDUhFdSPJXP21N2hOi9h82QRoB3vVJBr-Fhiukpc4m1h54eFXJGAP68c78WJ813wouWtqmre2KmyDIBVRrInd85ixm6TNQjcnLyYVf\_ZTOpoZOVbP2gtGuq1eUE1sRNa5pIFlOhu4hs8v5IuZX9SGcjcxBPbnt5rwJTRlnJjLZDt\_KxsNhvBBsjNcW6SroarJklHxCinAxZlfrIlgZP08Jo36Y7CGo4l38IaWOxGXOHlS8Wa794VGvrLQa84lCfEkr5sfahNMqRKCEtjAH\_zXAWyfBJkD4obAhllJ0wehQLbT-lIDMGxO7-V0jPViZIpSxUdVL3k45HvjQruQUgxJU3hQshYnlBEsgp9mmMD\_NaALt27B9OH\_cfO2ObLcYVRx8s3pAu3ugkB9-mkh7r7nqp8KN2Ubor5LmpWeGQOxzfrAg5dXTvxqijSoptm00
+
+.. figure:: ./final.png
+   :alt: 
+
+::
+
+    @startuml
+    'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+
+
+    sprite $Batch [64x64/16z] {
+    xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+    Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+    6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+    uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+    -Ikh_YdmYr_y0G
+    }
+
+
+    rectangle "<color:red><$Batch></color>\n0"  as rectangle
+
+
+    !procedure $ffoo1()
+    rectangle "<$Batch>\n1"
+    !endprocedure
+
+    $ffoo1()
+
+
+    !procedure $ffoo2()
+    rectangle "<color:red><$Batch></color>\n2" as 2
+    !endprocedure
+
+    $ffoo2()
+
+
+    'https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/General/Disk.puml
+    'rectangle "==e_label\n<color:e_color><$e_sprite></color>\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<e_stereo>> as e_alias
+    '!define DiskParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #232F3E, Disk, Disk)
+    'https://github.com/awslabs/aws-icons-for-plantuml/blob/master/source/AWSCommon.puml
+    'common.puml: rectangle "==e_label\n<color:e_color><$e_sprite></color>\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<e_stereo>> as e_alias
+
+
+
+    !procedure $ffoo3()
+    rectangle "==label\n<color:red><$Batch></color>\n[technology]\n\n Description 3" as 3
+    !endprocedure
+
+    $ffoo3()
+
+
+    !procedure $ffoo4()
+    rectangle "<<something>>\n==label\n<color:red><$Batch></color>\n//<size:12>[technology]</size>//\n\n  Description 4" as 4
+    !endprocedure
+
+    $ffoo4()
+
+
+    !procedure $ffoo5($alias, $description="", $label="", $technology="", $scale=1, $colour=red)
+    'OBSERVATION 1: the next line does not work - sprite is white - not red
+    rectangle "<<$alias>>\n==$label\n<color:$colour><$Batch*$scale></color>\n//<size:12>[$technology]</size>//\n\n  $description 5" as 5
+    'the next line works i.e. sprite is red
+    'rectangle "<<//$alias//>>\n==$label\n"<color:red><$Batch*$scale></color>"\n//<size:12>[$technology]</size>//\n\n  $description 5" as $alias
+    !endprocedure
+
+
+    $ffoo5("myalias", "mydescription", "mylabel", "mytechnology", 2, blue)
+
+
+
+
+    'unquoted means that you don't have to use quotes when calling the procedure
+
+    !unquoted procedure $ffoo51($alias, $description="", $label="", $technology="", $scale=1, $colour=red)
+
+    rectangle "<<$alias>>\n==$label\n<color:$colour><$Batch*$scale></color>\n//<size:12>[$technology]</size>//\n\n  $description 51" as 5
+
+
+    !endprocedure
+
+    $ffoo51(myalias, mydescription, mylabel, mytechnology, 2, blue)
+
+
+    !procedure $ffoo6($alias, $description="", $label="", $technology="", $scale=1, $colour=red)
+    rectangle "<<//$alias//>>\n==$label\n<color:red><$Batch*$scale></color>\n//<size:12>[$technology]</size>//\n\n  $description 6 " as $alias
+    !endprocedure
+
+    $ffoo6("myaliasbatch2", "mydescription", "mylabel", "mytechnology", 2, blue)
+
+
+
+    'OBSERVATION 2: can't do something like this - but could use global vars to do this - but that's not at preprocessor time.
+    $ffoo6($scale=2)
+    @enduml
+
+.. |image0| image:: ./skinparams.png

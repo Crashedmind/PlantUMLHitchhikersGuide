@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. About this Guide &mdash; Playing with PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Use Images in Diagrams" href="../PlantUMLSpriteLibraries/plantuml_sprites.html" />
+    <link rel="prev" title="1. About PlantUML" href="AboutPlantUML.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. About this Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#goals">2.1. Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principles">2.2. Principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deliver-value-to-the-user">2.2.1. Deliver Value To The User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#learn-by-playing">2.2.2. Learn by Playing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#to-teach-is-to-learn-twice">2.2.3. To Teach Is To Learn Twice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-source-the-network-effect">2.2.4. Open Source - The Network Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#it-must-be-fun-to-write-it-and-to-read-it">2.2.5. It Must Be Fun To Write It - And To Read It</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-of-code-documentation-as-code">2.2.6. Documentation-Of-Code Documentation-As-Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#this-guide">2.3. This Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tools-used">2.3.1. Tools Used</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#credits">2.4. Credits</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Playing with PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>2. About this Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/about/AboutThisGuide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="about-this-guide">
+<h1>2. About this Guide<a class="headerlink" href="#about-this-guide" title="Permalink to this headline">¶</a></h1>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="about/plantumllogo.png"><img alt="alternate text" src="about/plantumllogo.png" style="width: 300px; height: 300px;" /></a>
+<p class="caption"><span class="caption-text">Where system diagrams meet system reality</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="goals">
+<h2>2.1. Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create a user-focused guide for PlantUML that enables you, the user, to deliver maximum value with PlantUML.</p></li>
+<li><p>Create a guide that was better than anything that existed and that I, &#64;crashedmind, would be happy with.</p></li>
+<li><p>Grow PlantUML; this guide and other information, the tool, and the community.</p></li>
+</ol>
+</div>
+<div class="section" id="principles">
+<h2>2.2. Principles<a class="headerlink" href="#principles" title="Permalink to this headline">¶</a></h2>
+<p>The Principles on which this guide are based:</p>
+<ol class="arabic simple">
+<li><p>Deliver Value to the user</p></li>
+<li><p>Learn by Playing: All examples include a link to allow you to edit and play with them easily - no setup required.</p></li>
+<li><p>To teach is to learn twice.</p></li>
+<li><p>Open Source - The Network Effect - anyone can and should contribute to this guide.</p></li>
+<li><p>It must be fun to write it - and to read it.</p></li>
+<li><p>Documentation-Of-Code Documentation-As-Code: documentation of the examples, and the example source live together in the same directory in Git.</p></li>
+</ol>
+<div class="section" id="deliver-value-to-the-user">
+<span id="delivervalue-label"></span><h3>2.2.1. Deliver Value To The User<a class="headerlink" href="#deliver-value-to-the-user" title="Permalink to this headline">¶</a></h3>
+<p>This guide is focused on enabling you to do what you need to do - empowered by PlantUML.
+So it is outcome focused.</p>
+<p>In my professional role building products in the software industry, I tell my team members:</p>
+<p><em>The customer cares about what they are trying to do - not your product.</em></p>
+<p>I came across this tweet that illustrates this graphically:</p>
+<blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/UserOnboard/status/408372844876165120">https://twitter.com/UserOnboard/status/408372844876165120</a></blockquote><p>So the examples focus on what we’re trying to do - and explain only the parts of PlantUML that are necessary to do it.</p>
+</div>
+<div class="section" id="learn-by-playing">
+<h3>2.2.2. Learn by Playing<a class="headerlink" href="#learn-by-playing" title="Permalink to this headline">¶</a></h3>
+<p>Each chapter has an outcome.</p>
+<p>Each step in each chapter has</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>An outcome - the step heading</p></li>
+<li><p>Source code - for the diagram</p></li>
+<li><p>Play - where you can test the diagram and play with it.</p></li>
+<li><p>Explore - where you can confirm your understanding by trying things as you play.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="to-teach-is-to-learn-twice">
+<h3>2.2.3. To Teach Is To Learn <a class="reference external" href="https://en.wikipedia.org/wiki/Joseph_Joubert">Twice</a><a class="headerlink" href="#to-teach-is-to-learn-twice" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>If I knew all this info already, I would have no interest in writing this guide.</p>
+<p>It was the quest for knowledge that drove it, and the quest for a solution to a problem that consumed my thoughts (making PlantUML StdLib simpler, standard, and more friendly and powerful to the user ).</p>
+<p>There’s no better way to learn than by writing a guide for others - and having the master on hand to provide insights as you go - and the community to share their knowledge.</p>
+<p>I expect to learn from feedback on this guide.</p>
+</div></blockquote>
+</div>
+<div class="section" id="open-source-the-network-effect">
+<h3>2.2.4. Open Source - The Network Effect<a class="headerlink" href="#open-source-the-network-effect" title="Permalink to this headline">¶</a></h3>
+<p>PlantUML, and all the <a class="reference internal" href="#tools-label"><span class="std std-ref">Tools Used</span></a> required to write this guide are Open Source.</p>
+<p>Moreover, the first release is intended as a seed to be grown by the PlantUML community.</p>
+</div>
+<div class="section" id="it-must-be-fun-to-write-it-and-to-read-it">
+<h3>2.2.5. It Must Be Fun To Write It - And To Read It<a class="headerlink" href="#it-must-be-fun-to-write-it-and-to-read-it" title="Permalink to this headline">¶</a></h3>
+<p>Happy People are Productive People are Happy People!</p>
+</div>
+<div class="section" id="documentation-of-code-documentation-as-code">
+<h3>2.2.6. Documentation-Of-Code Documentation-As-Code<a class="headerlink" href="#documentation-of-code-documentation-as-code" title="Permalink to this headline">¶</a></h3>
+<p>As part of the Agile, and Continuous Delivery, movements, software, and the models that describe software, are necessarily coming closer together.
+PlantUML is one way to enable this.</p>
+<p>See <a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html#journeydoc-label"><span class="std std-ref">Journey to Documentation as Code</span></a> for more details.</p>
+</div>
+</div>
+<div class="section" id="this-guide">
+<h2>2.3. This Guide<a class="headerlink" href="#this-guide" title="Permalink to this headline">¶</a></h2>
+<p>I, &#64;crashedmind, wrote this guide as part of my own “Journey to Documentation as Code” where I landed on PlantUML and Sphinx as the main tools for proposing, analysing, documenting, maintaining software systems based on working with thousands of engineers across the globe.</p>
+<p>I am a regular user of PlantUML and I believe in it.</p>
+<p>I had initially contributed the OSA icon set to PlantUML Stdlib. Specifically I generated the icon set and published it in my github. I was pleasantly surprised that it was picked up and included in the PlantUML Stdlib.</p>
+<p>Some time later I was working on a project that used an Elastic stack, and I needed the Elastic icon set for PlantUML. So I created that - and submitted via an email and PR.</p>
+<p>I was thinking about adding more icon sets I needed, and trying to better understand the macros people had defined as part of their stdlib icon sets.
+That’s descibed in the chapter todo</p>
+<p>So, I contacted Arnaud to see if anything like this was on the roadmap.</p>
+<p>In the subsequent 3 weeks, the idea to standardize the Stdlib was discussed, and this guide went from zero to first release.</p>
+<p>To enable the StdLib standardisation, I suggested the <em>keyword arguments</em> and Arnaud produced a release to play with next day - and this became part of an official release:</p>
+<p><a class="reference external" href="https://plantuml.com/news">https://plantuml.com/news</a>
+<em>17 May, 2020: Use keyword arguments with the preprocessor (V1.2020.10). (Thanks to Crashedmind for the suggestion !)</em></p>
+<p>See <a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html#understandingstdlib-label"><span class="std std-ref">PlantUML Stdlib Under The Hood</span></a> for more info.</p>
+<p>This 3 weeks for me was an opportunity in my career to give something back.</p>
+<div class="section" id="tools-used">
+<span id="tools-label"></span><h3>2.3.1. Tools Used<a class="headerlink" href="#tools-used" title="Permalink to this headline">¶</a></h3>
+<p>Sphinx and PlantUML (running in Docker), and GitHub, are the primary tools used for this guide.</p>
+<ul class="simple">
+<li><p>The document (as HTML and images, generated by Sphinx and PlantUML respectively) and the document source (as ReStructuredText, Plantuml source files) are hosted in Github.</p></li>
+<li><p>GitHub actions and workflow are used e.g. when output html is committed, it triggers a link checker than auto-creates an Github issue for the project if a URL link is broken.</p></li>
+</ul>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-5938814369bd50d1d37a0b8a162a7b7da10e7182.png" alt="&#64;startuml
+
+checkversion
+
+&#64;enduml
+"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+
+<span class="n">checkversion</span>
+
+<span class="nd">@enduml</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="credits">
+<h2>2.4. Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Arnaud for giving us PlantUML. And for being receptive and responsive; from my initial contact asking questions, to subsequent interactions providing suggestions.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../PlantUMLSpriteLibraries/plantuml_sprites.html" class="btn btn-neutral float-right" title="1. Use Images in Diagrams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AboutPlantUML.html" class="btn btn-neutral float-left" title="1. About PlantUML" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

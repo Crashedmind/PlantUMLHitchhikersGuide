@@ -52,6 +52,13 @@ Imagine
     Well that's what PlantUML gives you, and more...
 
 
+.. todo::
+
+   recreate in plantuml
+   https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/real-time-recommendation
+
+   also pick an aws arch blog example
+
 .. raw:: html
 
       <!DOCTYPE html>
@@ -172,8 +179,8 @@ Imagine
    :numbered:
    :caption: Introduction
 
-   AboutPlantUML
-   AboutThisGuide
+   about/AboutPlantUML
+   about/AboutThisGuide
 
 
 
@@ -184,27 +191,43 @@ Imagine
 
    PlantUMLSpriteLibraries/plantuml_sprites
    scale/scale
+   
+ 
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
    NamedArguments/MixingSyntax
+   
 
 
 
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Standard Library 
+   :caption: Understanding Standard Library 
 
-
-   PlantUMLSpriteLibraries/PlantUMLSprites
-   PlantUMLSpriteLibraries/CreateSpriteLibrary
-   NetworkUsersMachines/NetworkUsersMachines
-   C4/C4Stdlib
+   Stdlib/StdLibOverview
+   StdlibUnderTheHood/StdlibUnderstanding
+   Stdlib/stdlibRequirements
+   PassSpriteAsParameter/NewSpriteLibFormat
    Stdlib/StandardisingStdLib
+   PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   
-   
 
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Using Standard Library 
+
+   NetworkUsersMachines/NetworkUsersMachines
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Standard Library C4
    
+   C4/c4
+   C4/C4Stdlib   
+   C4/c4acme
 
 
 
@@ -228,7 +251,6 @@ Imagine
    :numbered:
    :caption: Annex
    
-   C4/c4
    DocumentationAsCode/JourneyDocumentationASCode
 
 .. toctree::
@@ -254,4 +276,8 @@ Imagine
 
 
 
+
 .. caveat-end-content
+
+
+
