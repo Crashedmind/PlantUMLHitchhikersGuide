@@ -1197,6 +1197,131 @@ SNS1 -down-&gt; SESEmail
 <p>For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.
 Use together to group the SQS and File processing icons.</p>
 <div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-05baa993e3cc07f2a84f4196eaeedd734cf5ca6a.png" alt="&#64;startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/Storage/all.puml&gt;
+!include &lt;awslib/ManagementAndGovernance/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/MachineLearning/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/Database/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/SNS.puml&gt;
+!include &lt;awslib/CustomerEngagement/SESEmail.puml&gt;
+
+
+
+'Compute/General
+'Storage/SimpleStorageServiceS3.png
+'ApplicationIntegration/SQS.png
+'Compute/Lambda.png
+'Compute/EC2
+'ManagementAndGovernance/CloudWatch.png
+'CustomerEngagement/SESEmail.png
+'MachineLearning/SageMaker.png
+''Mobile/APIGateway.png
+'NetworkingAndContentDelivery/APIGateway2.png
+'Database/Aurora.png
+'ApplicationIntegration/SQSQueue.png
+
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+'top left section 
+'-------------------------------------------------------------
+package EC2_Instance {
+General(IngestionApp, &quot;Ingestion App&quot;, &quot; &quot;)
+General(ChunkingApp, &quot;Chunking Orchestration App&quot;, &quot; &quot;)
+}
+
+SimpleStorageServiceS3(S3Staging, &quot;Amazon S3 Staging Bucket&quot;, &quot; &quot;)
+SQS(SQSIngest, &quot;Amazon SQS Ingest Queue&quot;, &quot; &quot;)
+
+Lambda(LambdaTrigger, &quot;AWS Lambda Trigger Function&quot;, &quot; &quot;)
+
+LambdaTrigger -up-&gt; IngestionApp
+IngestionApp -up-&gt; SQSIngest
+SQSIngest -down-&gt; ChunkingApp
+S3Staging &lt;-down-&gt; EC2_Instance
+
+'top right section 
+'-------------------------------------------------------------
+together {
+SQS(SQSLargeFileQueue, &quot;Amazon SQS Large File Queue&quot;, &quot; &quot;)
+SQS(SQSSmallFileQueue, &quot;Amazon SQS Small File Queue&quot;, &quot; &quot;)
+SQS(SQSSingleFileQueue, &quot;Amazon SQS Single File Queue&quot;, &quot; &quot;)
+
+EC2(LargeFileChunkingAppEC2, &quot;Large File Chunking App on EC2&quot;, &quot; &quot;)
+Lambda(LambdaSmallFileChunking, &quot;Small File Chunking Lambda&quot;, &quot; &quot;)
+Lambda(ImageConversionLambdaFunction, &quot;Image Conversion Lambda Function&quot;, &quot; &quot;)
+}
+'todo dashed line boundary
+package DLQ {
+SQSQueue(DLQ1, &quot;DLQ&quot;, &quot; &quot;)
+SQSQueue(DLQ2, &quot;DLQ&quot;, &quot; &quot;)
+SQSQueue(DLQ3, &quot;DLQ&quot;, &quot; &quot;)
+}
+
+ChunkingApp -right-&gt; SQSLargeFileQueue
+ChunkingApp -right-&gt; SQSSmallFileQueue
+ChunkingApp -right-&gt; SQSSingleFileQueue
+
+SQSLargeFileQueue -right-&gt; LargeFileChunkingAppEC2
+LargeFileChunkingAppEC2 -down-&gt; SQSSmallFileQueue
+SQSSmallFileQueue -right-&gt; LambdaSmallFileChunking
+LambdaSmallFileChunking -down-&gt; SQSSingleFileQueue
+SQSSingleFileQueue -right-&gt; ImageConversionLambdaFunction
+
+'todo dashed line
+SQSLargeFileQueue -down-&gt; DLQ1
+SQSSmallFileQueue -down-&gt; DLQ2
+SQSSingleFileQueue -down-&gt; DLQ3
+
+
+'bottom right section 
+'-------------------------------------------------------------
+
+SimpleStorageServiceS3(S3Images, &quot;Amazon S3 Images Bucket&quot;, &quot; &quot;)
+EC2(EC2DLQFailsafeApp, &quot;DLQ Failsafe App on EC2&quot;, &quot; &quot;)
+SQS(SQSConvertedImageQueue, &quot;Amazon SQS Converted Image Queue&quot;, &quot; &quot;)
+Lambda(LambdaInferenceInvocation, &quot;Inference Invocation Lambda Function&quot;, &quot; &quot;)
+Aurora(Aurora, &quot;Amazon Aurora&quot;, &quot; &quot;)
+APIGateway(AmazonAPIGateway, &quot;Amazon API Gateway&quot;, &quot;&quot;)
+SageMaker(AmazonSageMaker, &quot;Amazon SageMaker Endpoint&quot;, &quot;&quot;)
+
+DLQ1 -down-&gt; EC2DLQFailsafeApp
+DLQ2 -down-&gt; EC2DLQFailsafeApp
+DLQ3 -down-&gt; EC2DLQFailsafeApp
+
+EC2DLQFailsafeApp -right-&gt; S3Images
+
+ImageConversionLambdaFunction -down-&gt; S3Images
+S3Images -down-&gt; SQSConvertedImageQueue
+SQSConvertedImageQueue -left-&gt; LambdaInferenceInvocation
+LambdaInferenceInvocation -down-&gt; Aurora
+LambdaInferenceInvocation &lt;-left-&gt; AmazonAPIGateway
+AmazonAPIGateway &lt;-left-&gt; AmazonSageMaker
+
+
+'bottom left section 
+'-------------------------------------------------------------
+
+CloudWatch(CloudWatch, &quot;Amazon Cloudwatch&quot;, &quot; &quot;)
+SNS(SNS1, &quot;Amazon SNS&quot;, &quot;&quot;)
+SESEmail(SESEmail, &quot;Email Notification&quot;, &quot;&quot;)
+
+CloudWatch -right-&gt; DLQ
+CloudWatch -left-&gt; SNS1
+SNS1 -left-&gt; SESEmail
+&#64;enduml"/>
+</p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
