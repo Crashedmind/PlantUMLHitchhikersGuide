@@ -1,6 +1,9 @@
+.. _FunctionPointer: https://www.geeksforgeeks.org/function-pointer-in-c/
+
 *******************************************************************************
 Standardising Standard Library 
 *******************************************************************************
+
 
 
 
@@ -88,10 +91,45 @@ Procedure Keyword Arguments
 
 To enable the StdLib standardisation, I suggested the *keyword arguments* and Arnaud produced a release to play with next day - and this became part of an official release:
 
-https://plantuml.com/news
-*17 May, 2020: Use keyword arguments with the preprocessor (V1.2020.10). (Thanks to Crashedmind for the suggestion !)*
 
-See :ref:`understandingstdlib-label` for more info.
+.. uml:: pre-processing.puml
+    :align: center
+    :caption: *each output is numbered to match the procedure e.g. 51 is output for ffoo51()* 
 
-.. todo ::
-    add example code
+
+.. literalinclude:: pre-processing.puml
+    :linenos: 
+
+
+
+Extensibility
+===============================================================================
+
+So now we have a way for the user to specify any or all of the sprite parameters.
+
+But what happens if we want to add new parameters in the future?
+
+Option 1: Reserve Parameters
+-------------------------------------------------------------------------------
+One option is to reserve parameters in the procedure definition:
+```!unquoted procedure $SpriteDecorator($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red", $res1="", $res2="", $res3="", $res4="")```
+
+and used a function/procedure to map the new parameter feature to a reserved word.
+
+We're not smart enough to predict the future, and we don't want to impose limits, so we won't be doing this. 
+
+Option 2: Dynamic Invocation
+-------------------------------------------------------------------------------
+
+As a user I want to be able to call a procedure to draw an icon - and not have to change my code if new functionality is added in the future.
+But I would like to benefit from the new features.
+
+This type of thing can be done in e.g. C code, using a FunctionPointer_ i.e. if I had different functions with different parameters, I could pass any of these as a parameter (pointer to that function) to another function, for that function to call.
+
+This gives a level of abstraction / separation between the user code, and the library code.
+
+
+
+
+Backwards Compatiblity
+===============================================================================

@@ -92,12 +92,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">2. Using C4 To Architect ACME Global Widget Production</a></li>
+</ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
@@ -111,20 +116,21 @@
 <li class="toctree-l2"><a class="reference internal" href="#step-by-step-towards-a-standard-macro">4.3. Step-by-step Towards A Standard Macro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#close-but">4.4. Close But…</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#procedure-keyword-arguments">4.5. Procedure Keyword Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extensibility">4.6. Extensibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#option-1-reserve-parameters">4.6.1. Option 1: Reserve Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-2-dynamic-invocation">4.6.2. Option 2: Dynamic Invocation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#backwards-compatiblity">4.7. Backwards Compatiblity</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Using Standard Library</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Standard Library C4</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -226,7 +232,7 @@ or variable definition instead.</em></p>
 <p class="admonition-title">Tip</p>
 <p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default argument</a> value can help to simplify definitions</p>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <p class="plantuml">
 <img src="../_images/plantuml-17431f4899c291de2012c1b1aace7066ce510163.png" alt="&#64;startuml
 !function $inc($value, $step=1)
@@ -238,7 +244,7 @@ Alice -&gt; Bob : Add two to three : $inc(3, 2)
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>Using default argument</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>Using default argument</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -265,7 +271,7 @@ I think of this as like C function pointers which are very useful.</p>
 </div>
 <div class="section" id="step-by-step-towards-a-standard-macro">
 <h2>4.3. Step-by-step Towards A Standard Macro<a class="headerlink" href="#step-by-step-towards-a-standard-macro" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id3">
 <p class="plantuml">
 <img src="../_images/plantuml-8b8311b97c0cdf54ecd3fcf752eb4be4340c384c.png" alt="&#64;startuml
 'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
@@ -356,7 +362,7 @@ $ffoo6(&quot;myaliasbatch2&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -555,13 +561,192 @@ or
 <div class="section" id="procedure-keyword-arguments">
 <h2>4.5. Procedure Keyword Arguments<a class="headerlink" href="#procedure-keyword-arguments" title="Permalink to this headline">¶</a></h2>
 <p>To enable the StdLib standardisation, I suggested the <em>keyword arguments</em> and Arnaud produced a release to play with next day - and this became part of an official release:</p>
-<p><a class="reference external" href="https://plantuml.com/news">https://plantuml.com/news</a>
-<em>17 May, 2020: Use keyword arguments with the preprocessor (V1.2020.10). (Thanks to Crashedmind for the suggestion !)</em></p>
-<p>See <a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html#understandingstdlib-label"><span class="std std-ref">PlantUML Stdlib Under The Hood</span></a> for more info.</p>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>add example code</p>
+<div class="figure align-center" id="id4">
+<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+&#39;all sprites in a category would be included in an all.puml file for that category
+&#39;==================================================================================================
+
+&#39;create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/ARVR.puml
+sprite $Arvr [64x64/16z] {
+xTG3WiH054NHzutP_th7RHkfsmnEdE1HZMZsIn0_DGDuuVsZJwnMVJ-57txuuKrsP4Tv1mjl3Nw43qZlo147VO9xPueyu8j1l3jm7V0GtPFWe8_UKzpL3rzc
+TO4l0gZEzufCsDd-rnhoN2zKtKLoWk-bkHq--vabr0TypEy_WiwEmc9K7FATAd_fVDwOZygdU_uEF_pmLgUMA_wChkV1SavCc4LdXNVe2m
+}
+
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/Sumerian.puml
+sprite $Sumerian [64x64/16z] {
+xPO5qkim38HN3FU_xuE29mMx-Hbtg4to6GIZxVVJhtvLLI-XbK2QJo6sVv90JA3SImUJRVuAjBeDl8zE0G2EyVy42d87NGOmGG0vVHuu7iRWZt4daBUWWW6j
+8w_zNufuHES9KgxpKjr5o6CKQyh5uGi59BTfEuR1GHvEi6cu0N2sWE8sb99j03370L41CkryG9FQh6rTffOJlEWGLz-cbv5N4Pqh83Vf5THL67BA-qXltEu_
+2XWrtrzlzZUfwuBCdjy_3ilGeY0Pgmj0NO5ehtb1vh9c0OhsaV_Qfa_hKUzKUDIs_eJgy7myMFEPLzinwd3nSQ0rpwYR_kiWmAgVmezmYuKSJ_94VZJDABad
+y4EnAVcdyy4Xo6H_7g-02Se1oIVprMqKX_YdW9_AEtjtdVlNiykVmAS0Tjd_1exTl8wS3Ju5q5sydGux-94Dty4xGtfeyAEewG4FQCvv0vQy0b8zvuiN_EYw
+AHy0nu8Ue-gMJrFBOgjTKr_pYfyChlaOjDhmay6vj0xaWvyFxdKOyiYlZSFQGGZIVMbSrhaa46WOf-dmcOS1a3mPjp9mFqqf77FZ-7JZ-Y76UQvV_Uel
+}
+
+
+&#39; sprite decorator is defined once only - not once per sprite as per current puml files in stdlib
+&#39;==================================================================================================
+
+&#39; We define 1 or more sprite decorators in stdlib
+&#39;---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+
+rectangle $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description&quot;
+!endprocedure
+
+&#39;stdlib macros pass the sprite to the decorator - and the other parameters
+&#39;all this would happen in an all.puml file per sprite category
+&#39;==================================================================================================
+!unquoted procedure $BATCH($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+$SpriteDecorator($Batch, $alias, $description, $label, $technology, $scale, $colour)
+!endprocedure
+
+!unquoted procedure $ARVR($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+$SpriteDecorator($Arvr, $alias, $description, $label, $technology, $scale, $colour)
+!endprocedure
+
+!unquoted procedure $SUMERIAN($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+$SpriteDecorator($Sumerian, $alias, $description, $label, $technology, $scale, $colour)
+!endprocedure
+
+
+
+
+&#39;user code
+&#39;================
+$BATCH(BATCH, $scale=2)
+
+$ARVR(ARVR, &quot;description\non several lines&quot;, $scale=.9, $colour=&quot;blue&quot;)
+
+$SUMERIAN(SUMERIAN, &quot;other description&quot;, $label=&quot;sdsd&quot;, $scale=1.4)
+
+
+&#39;TODO: play with this to see if &quot;Dynamic invocation&quot; could be useful here? 
+&#39; i.e. given 
+&#39;   a sprite
+&#39;   a decorator function/procedure with params ($alias, $description, $label, $technology, $scale, $colour)
+&#39; %call_user_func(&quot;decorator&quot;, &quot;$sprite&quot;)
+&#39; this would reduce the duplication even further in examples below 
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="extensibility">
+<h2>4.6. Extensibility<a class="headerlink" href="#extensibility" title="Permalink to this headline">¶</a></h2>
+<p>So now we have a way for the user to specify any or all of the sprite parameters.</p>
+<p>But what happens if we want to add new parameters in the future?</p>
+<div class="section" id="option-1-reserve-parameters">
+<h3>4.6.1. Option 1: Reserve Parameters<a class="headerlink" href="#option-1-reserve-parameters" title="Permalink to this headline">¶</a></h3>
+<p>One option is to reserve parameters in the procedure definition:
+<code class="docutils literal notranslate"><span class="pre">`!unquoted</span> <span class="pre">procedure</span> <span class="pre">$SpriteDecorator($MySprite,</span> <span class="pre">$alias,</span> <span class="pre">$description=&quot;&quot;,</span> <span class="pre">$label=&quot;&quot;,</span> <span class="pre">$technology=&quot;&quot;,</span> <span class="pre">$scale=1,</span> <span class="pre">$colour=&quot;red&quot;,</span> <span class="pre">$res1=&quot;&quot;,</span> <span class="pre">$res2=&quot;&quot;,</span> <span class="pre">$res3=&quot;&quot;,</span> <span class="pre">$res4=&quot;&quot;)`</span></code></p>
+<p>and used a function/procedure to map the new parameter feature to a reserved word.</p>
+<p>We’re not smart enough to predict the future, and we don’t want to impose limits, so we won’t be doing this.</p>
+</div>
+<div class="section" id="option-2-dynamic-invocation">
+<h3>4.6.2. Option 2: Dynamic Invocation<a class="headerlink" href="#option-2-dynamic-invocation" title="Permalink to this headline">¶</a></h3>
+<p>As a user I want to be able to call a procedure to draw an icon - and not have to change my code if new functionality is added in the future.
+But I would like to benefit from the new features.</p>
+<p>This type of thing can be done in e.g. C code, using a <a class="reference external" href="https://www.geeksforgeeks.org/function-pointer-in-c/">FunctionPointer</a> i.e. if I had different functions with different parameters, I could pass any of these as a parameter (pointer to that function) to another function, for that function to call.</p>
+<p>This gives a level of abstraction / separation between the user code, and the library code.</p>
+</div>
+</div>
+<div class="section" id="backwards-compatiblity">
+<h2>4.7. Backwards Compatiblity<a class="headerlink" href="#backwards-compatiblity" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

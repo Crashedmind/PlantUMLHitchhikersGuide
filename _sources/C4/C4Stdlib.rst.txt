@@ -2,11 +2,15 @@
 Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method
 *******************************************************************************
 
+.. _c4plantuml-label:
+
 C4
 ===============================================================================
 .. tip ::
     
-    See :ref:`c4-label` for details. 
+    This section details PlantUML stdlib support for C4.
+    
+    See :ref:`c4-label` for details of C4. 
 
 .. include:: c4.rst
    :start-after: c4-intro-begin-content

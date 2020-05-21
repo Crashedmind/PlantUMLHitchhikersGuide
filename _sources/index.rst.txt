@@ -182,7 +182,13 @@ Imagine
    about/AboutPlantUML
    about/AboutThisGuide
 
+.. toctree::
+   :maxdepth: 2
+   :numbered:   
+   :caption: Using Standard Library 
 
+   NetworkUsersMachines/NetworkUsersMachines
+   C4/c4acme
 
 .. toctree::
    :maxdepth: 2
@@ -215,18 +221,11 @@ Imagine
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Using Standard Library 
-
-   NetworkUsersMachines/NetworkUsersMachines
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:   
    :caption: Standard Library C4
    
    C4/c4
    C4/C4Stdlib   
-   C4/c4acme
+
 
 
 

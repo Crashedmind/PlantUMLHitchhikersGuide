@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Architecting and Understanding ACME Global Widget Production" href="c4acme.html" />
+    <link rel="next" title="1. Generate diagrams from PlantUML source files using GithubActions" href="../GenerateDiagrams/GenerateDiagrams.html" />
     <link rel="prev" title="1. C4 Lightweight Software Architecture Description Method" href="c4.html" /> 
 </head>
 
@@ -92,12 +92,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4acme.html">2. Using C4 To Architect ACME Global Widget Production</a></li>
+</ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. NamedArguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
@@ -108,10 +113,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Using Standard Library</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standard Library C4</span></p>
 <ul class="current">
@@ -129,7 +130,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="c4acme.html">3. Architecting and Understanding ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
 <ul>
@@ -210,10 +210,11 @@
   <div class="section" id="using-plantuml-stdlib-c4-lightweight-software-architecture-description-method">
 <h1>2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method<a class="headerlink" href="#using-plantuml-stdlib-c4-lightweight-software-architecture-description-method" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="c4">
-<h2>2.1. C4<a class="headerlink" href="#c4" title="Permalink to this headline">¶</a></h2>
+<span id="c4plantuml-label"></span><h2>2.1. C4<a class="headerlink" href="#c4" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>See <a class="reference internal" href="c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> for details.</p>
+<p>This section details PlantUML stdlib support for C4.</p>
+<p>See <a class="reference internal" href="c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> for details of C4.</p>
 </div>
 <blockquote>
 <div><p><em>Big design up front is dumb, but doing no design up front is even
@@ -759,7 +760,7 @@ Rel(ma, accounts, &quot;Uses&quot;, &quot;JSON/HTTPS&quot;)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="c4acme.html" class="btn btn-neutral float-right" title="3. Architecting and Understanding ACME Global Widget Production" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../GenerateDiagrams/GenerateDiagrams.html" class="btn btn-neutral float-right" title="1. Generate diagrams from PlantUML source files using GithubActions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="c4.html" class="btn btn-neutral float-left" title="1. C4 Lightweight Software Architecture Description Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
