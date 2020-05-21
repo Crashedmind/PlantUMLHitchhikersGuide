@@ -112,7 +112,11 @@ But what happens if we want to add new parameters in the future?
 Option 1: Reserve Parameters
 -------------------------------------------------------------------------------
 One option is to reserve parameters in the procedure definition:
-```!unquoted procedure $SpriteDecorator($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red", $res1="", $res2="", $res3="", $res4="")```
+
+
+.. code-block:: 
+
+    !unquoted procedure $SpriteDecorator($MySprite, $alias, $description="", $label="", $technology="", $scale=1, $colour="red", $res1="", $res2="", $res3="", $res4="")
 
 and used a function/procedure to map the new parameter feature to a reserved word.
 

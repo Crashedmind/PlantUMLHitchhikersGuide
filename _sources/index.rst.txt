@@ -188,6 +188,7 @@ Imagine
    :caption: Using Standard Library 
 
    NetworkUsersMachines/NetworkUsersMachines
+   aws/aws
    C4/c4acme
 
 .. toctree::
