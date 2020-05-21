@@ -35,7 +35,6 @@ This overview is at May 2020.
 `PlantUML Standard Library <https://plantuml.com/stdlib>`__ includes
 several icon libraries from different sources (including myself) and
 they are varied in functionality and how to use them.
-When I contributed, I followed the existing stdlib
 
 The most recent addition is
 https://github.com/awslabs/aws-icons-for-plantuml.
@@ -61,7 +60,8 @@ work of https://github.com/RicardoNiepel (MicroSoft):
     * The newer one from 2020 AWSlabs https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/INFO that has the latest icons from AWS.
 
 
-Broadly, the main groupings are per diagram
+Broadly, the main groupings (based on macro definition) are per diagram.
+Osa and Elastic are based on aws.
 
 .. uml:: StdlibGroupings.puml
     :align: center
@@ -72,7 +72,7 @@ Broadly, the main groupings are per diagram
 
 
 
-Type 1
+Type 1 (e_type,e_color,e_sprite,label,alias,e_stereo)
 ---------------------------------------------------------------------------------------------------
 AWS is one of the original stdlib entries - it's from 2017.
 Some libraries, listed below, followed the same layout, or used the same tools to create the sprites.
@@ -126,7 +126,7 @@ https://github.com/plantuml/plantuml-stdlib/blob/master/osa
 
 
 
-Type 2
+Type 2 (e_alias, e_label, e_techn, e_descr)
 ---------------------------------------------------------------------------------------------------
 
 Below shows what the macros look like for each icon
@@ -169,6 +169,8 @@ i.e.
 .. figure:: sequence.png
    :alt: 
 
+Type 3 (_alias, _label, _shape, _color)
+---------------------------------------------------------------------------------------------------
 
 office
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,6 +211,8 @@ tupadr3
     skinparam folderBackgroundColor<<DEV ANDROID>> White
     @enduml
 
+Type 4 (_color, _scale, _alias, _shape, _label)
+---------------------------------------------------------------------------------------------------
 
 material
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -104,24 +104,30 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. PlantUML Stdlib Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#plantuml-standard-library-overview">1.1. PlantUML Standard Library Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#type-1">1.1.1. Type 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type-1-e-type-e-color-e-sprite-label-alias-e-stereo">1.1.1. Type 1 (e_type,e_color,e_sprite,label,alias,e_stereo)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#osa">1.1.1.1. osa</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#elastic">1.1.1.2. elastic</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#type-2">1.1.2. Type 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type-2-e-alias-e-label-e-techn-e-descr">1.1.2. Type 2 (e_alias, e_label, e_techn, e_descr)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#azure">1.1.2.1. azure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#awslib">1.1.2.2. awslib</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#office">1.1.2.3. office</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cloudogu">1.1.2.4. cloudogu</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tupadr3">1.1.2.5. tupadr3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#material">1.1.2.6. material</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#no-macros">1.1.3. No Macros</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#logos">1.1.3.1. logos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cloudinsight">1.1.3.2. cloudinsight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#kubernetes">1.1.3.3. kubernetes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#type-3-alias-label-shape-color">1.1.3. Type 3 (_alias, _label, _shape, _color)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#office">1.1.3.1. office</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloudogu">1.1.3.2. cloudogu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tupadr3">1.1.3.3. tupadr3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#type-4-color-scale-alias-shape-label">1.1.4. Type 4 (_color, _scale, _alias, _shape, _label)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#material">1.1.4.1. material</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#no-macros">1.1.5. No Macros</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logos">1.1.5.1. logos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cloudinsight">1.1.5.2. cloudinsight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kubernetes">1.1.5.3. kubernetes</a></li>
 </ul>
 </li>
 </ul>
@@ -129,11 +135,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">5. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -241,8 +246,7 @@
 <p>This overview is at May 2020.</p>
 <p><a class="reference external" href="https://plantuml.com/stdlib">PlantUML Standard Library</a> includes
 several icon libraries from different sources (including myself) and
-they are varied in functionality and how to use them.
-When I contributed, I followed the existing stdlib</p>
+they are varied in functionality and how to use them.</p>
 <p>The most recent addition is
 <a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml">https://github.com/awslabs/aws-icons-for-plantuml</a>.</p>
 <p><a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml">https://github.com/awslabs/aws-icons-for-plantuml</a> (Amazon) builds on the
@@ -268,10 +272,11 @@ work of <a class="reference external" href="https://github.com/RicardoNiepel">ht
 <li><p>The newer one from 2020 AWSlabs <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/INFO">https://github.com/plantuml/plantuml-stdlib/blob/master/awslib/INFO</a> that has the latest icons from AWS.</p></li>
 </ul>
 </div>
-<p>Broadly, the main groupings are per diagram</p>
+<p>Broadly, the main groupings (based on macro definition) are per diagram.
+Osa and Elastic are based on aws.</p>
 <div class="figure align-center" id="id2">
 <p class="plantuml">
-<img src="../_images/plantuml-93dbfad07a1990c1f8e5b2e7e57b49bafe53e265.png" alt="
+<img src="../_images/plantuml-d294193b75e8101e75da62db424870a2d594b09e.png" alt="
 &#64;startmindmap
 * Standard Library groupings
 ** C4 (does not contain sprites)
@@ -282,23 +287,25 @@ work of <a class="reference external" href="https://github.com/RicardoNiepel">ht
 **** kubernetes
 *** Sprites and Macros
 **** Type 1
-***** aws 
-***** osa
-***** elastic
+***** aws (origina)
+****** osa
+****** elastic
 **** Type 2
 ***** azure
-***** awslib (newest)
+****** awslib (newest)
+**** Type 3
 ***** office
-***** cloudogu
 ***** tupadr3
+****** cloudogu
+**** Type 4
 ***** material
 &#64;endmindmap
 "/>
 </p>
 <p class="caption"><span class="caption-text">PlantUML Stdlib Groupings Of Libraries Based On Similarity</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="type-1">
-<h3>1.1.1. Type 1<a class="headerlink" href="#type-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="type-1-e-type-e-color-e-sprite-label-alias-e-stereo">
+<h3>1.1.1. Type 1 (e_type,e_color,e_sprite,label,alias,e_stereo)<a class="headerlink" href="#type-1-e-type-e-color-e-sprite-label-alias-e-stereo" title="Permalink to this headline">¶</a></h3>
 <p>AWS is one of the original stdlib entries - it’s from 2017.
 Some libraries, listed below, followed the same layout, or used the same tools to create the sprites.</p>
 <p><a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/aws/AI/AmazonLex/">https://github.com/plantuml/plantuml-stdlib/blob/master/aws/AI/AmazonLex/</a> contains 4 files:</p>
@@ -342,8 +349,8 @@ PUML_ENTITY(e_type,e_color,e_sprite,label,alias,e_stereo)
 </div>
 </div>
 </div>
-<div class="section" id="type-2">
-<h3>1.1.2. Type 2<a class="headerlink" href="#type-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="type-2-e-alias-e-label-e-techn-e-descr">
+<h3>1.1.2. Type 2 (e_alias, e_label, e_techn, e_descr)<a class="headerlink" href="#type-2-e-alias-e-label-e-techn-e-descr" title="Permalink to this headline">¶</a></h3>
 <p>Below shows what the macros look like for each icon</p>
 <div class="section" id="azure">
 <h4>1.1.2.1. azure<a class="headerlink" href="#azure" title="Permalink to this headline">¶</a></h4>
@@ -377,8 +384,11 @@ i.e.</p>
 <img alt="" src="../_images/sequence.png" />
 </div>
 </div>
+</div>
+<div class="section" id="type-3-alias-label-shape-color">
+<h3>1.1.3. Type 3 (_alias, _label, _shape, _color)<a class="headerlink" href="#type-3-alias-label-shape-color" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="office">
-<h4>1.1.2.3. office<a class="headerlink" href="#office" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.3.1. office<a class="headerlink" href="#office" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/office/Clouds/azure.puml">https://github.com/plantuml/plantuml-stdlib/blob/master/office/Clouds/azure.puml</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define OFF_AZURE(_alias) ENTITY(rectangle,black,azure,_alias,OFF AZURE)
 !define OFF_AZURE(_alias,_label) ENTITY(rectangle,black,azure,_label,_alias,OFF AZURE)
@@ -388,7 +398,7 @@ i.e.</p>
 </div>
 </div>
 <div class="section" id="cloudogu">
-<h4>1.1.2.4. cloudogu<a class="headerlink" href="#cloudogu" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.3.2. cloudogu<a class="headerlink" href="#cloudogu" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://github.com/plantuml/plantuml-stdlib/blob/master/cloudogu/tools/ansible.puml
 !define TOOL_ANSIBLE(_alias) ENTITY(rectangle,black,ansible,_alias,TOOL ANSIBLE)
 !define TOOL_ANSIBLE(_alias, _label) ENTITY(rectangle,black,ansible,_label, _alias,TOOL ANSIBLE)
@@ -400,7 +410,7 @@ skinparam folderBackgroundColor&lt;&lt;TOOL ANSIBLE&gt;&gt; White
 </div>
 </div>
 <div class="section" id="tupadr3">
-<h4>1.1.2.5. tupadr3<a class="headerlink" href="#tupadr3" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.3.3. tupadr3<a class="headerlink" href="#tupadr3" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://github.com/plantuml/plantuml-stdlib/blob/master/tupadr3/devicons/android.puml
 !define DEV_ANDROID(_alias) ENTITY(rectangle,black,android,_alias,DEV ANDROID)
 !define DEV_ANDROID(_alias, _label) ENTITY(rectangle,black,android,_label, _alias,DEV ANDROID)
@@ -411,8 +421,11 @@ skinparam folderBackgroundColor&lt;&lt;DEV ANDROID&gt;&gt; White
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="type-4-color-scale-alias-shape-label">
+<h3>1.1.4. Type 4 (_color, _scale, _alias, _shape, _label)<a class="headerlink" href="#type-4-color-scale-alias-shape-label" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="material">
-<h4>1.1.2.6. material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.4.1. material<a class="headerlink" href="#material" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://github.com/plantuml/plantuml-stdlib/blob/master/material/access_point.
 
 1153 files (not in categorised folders)
@@ -427,20 +440,20 @@ skinparam folderBackgroundColor&lt;&lt;MA ACCESS_POINT&gt;&gt; White
 </div>
 </div>
 <div class="section" id="no-macros">
-<h3>1.1.3. No Macros<a class="headerlink" href="#no-macros" title="Permalink to this headline">¶</a></h3>
+<h3>1.1.5. No Macros<a class="headerlink" href="#no-macros" title="Permalink to this headline">¶</a></h3>
 <p>The following macros are sprites only with no macros.</p>
 <div class="section" id="logos">
-<h4>1.1.3.1. logos<a class="headerlink" href="#logos" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.5.1. logos<a class="headerlink" href="#logos" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/logos/100tb.puml">https://github.com/plantuml/plantuml-stdlib/blob/master/logos/100tb.puml</a></p>
 <p>This one includes sprites only.</p>
 </div>
 <div class="section" id="cloudinsight">
-<h4>1.1.3.2. cloudinsight<a class="headerlink" href="#cloudinsight" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.5.2. cloudinsight<a class="headerlink" href="#cloudinsight" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/tree/master/cloudinsight">https://github.com/plantuml/plantuml-stdlib/tree/master/cloudinsight</a></p>
 <p>This one includes sprites only.</p>
 </div>
 <div class="section" id="kubernetes">
-<h4>1.1.3.3. kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h4>
+<h4>1.1.5.3. kubernetes<a class="headerlink" href="#kubernetes" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/kubernetes">https://github.com/plantuml/plantuml-stdlib/blob/master/kubernetes</a></p>
 <p>This does include a <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/blob/master/kubernetes/k8s-skinparam.puml">https://github.com/plantuml/plantuml-stdlib/blob/master/kubernetes/k8s-skinparam.puml</a></p>
 <p>Icons are grouped into a file based on resolutions and labels</p>

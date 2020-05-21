@@ -27,11 +27,71 @@ Existing stdlib icon libraries use !define and !definelong to create different m
 Default Values
 ===============================================================================
 
-DefaultArgumentValue_
+Per DefaultArgumentValue_, "In both procedure and return functions, you can define default values for arguments"
 
-"In both procedure and return functions, you can define default values for arguments"
-    The `default argument <https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng>`__
-    value can help to simplify definitions
-    
-    There are also now `dynamic invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__
-    which may be useful
+.. tip ::
+    The `default argument <https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng>`__ value can help to simplify definitions
+
+
+.. uml:: defaultArgument.puml
+    :align: center
+    :caption: *Using default argument* 
+
+
+.. literalinclude:: defaultArgument.puml
+    :linenos: 
+    :emphasize-lines: 2,6,7
+
+.. note ::
+    There is also `dynamic invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__ which may be useful. 
+    I think of this as like C function pointers which are very useful.
+
+
+
+Step-by-step Towards A Standard Macro
+===============================================================================
+
+
+.. uml:: ProcedureBuildup.puml
+    :align: center
+    :caption: *each output is numbered to match the procedure e.g. 51 is output for ffoo51()* 
+
+
+.. literalinclude:: ProcedureBuildup.puml
+    :linenos: 
+
+
+Close But... 
+===============================================================================
+
+We can use the DefaultArgumentValue_ to avoid having to specify a parameter value when we call our procedure.
+BUT this only works if the default parameters are at the end i.e. it is all based on the order of the procedure parameters.
+
+*In other words, the user has to know/care about the order of parameters.*
+
+.. todo ::
+    add ref to reqs
+
+To specify color blue I need to do
+
+```$ffoo6("myaliasbatch2", "mydescription", "mylabel", "mytechnology", 2, blue)```
+
+What I want to do 
+```$ffoo6($color=blue)```
+or 
+```$ffoo6($scale=2)```
+
+
+Procedure Keyword Arguments
+===============================================================================
+
+
+To enable the StdLib standardisation, I suggested the *keyword arguments* and Arnaud produced a release to play with next day - and this became part of an official release:
+
+https://plantuml.com/news
+*17 May, 2020: Use keyword arguments with the preprocessor (V1.2020.10). (Thanks to Crashedmind for the suggestion !)*
+
+See :ref:`understandingstdlib-label` for more info.
+
+.. todo ::
+    add example code

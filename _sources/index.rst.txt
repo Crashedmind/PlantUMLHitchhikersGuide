@@ -208,7 +208,6 @@ Imagine
    Stdlib/StdLibOverview
    StdlibUnderTheHood/StdlibUnderstanding
    Stdlib/stdlibRequirements
-   PassSpriteAsParameter/NewSpriteLibFormat
    Stdlib/StandardisingStdLib
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   

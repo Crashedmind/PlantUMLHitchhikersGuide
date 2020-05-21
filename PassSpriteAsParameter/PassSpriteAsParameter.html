@@ -109,10 +109,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#id3">3.2.3. Explore</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tidy-up-the-procedure-so-it-s-easier-to-read">3.3. Tidy Up The Procedure So It’s Easier To Read</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use-procedure-defaults">3.3. Use Procedure Defaults</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">3.3.1. Source</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">3.3.2. Play</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">3.3.3. Explore</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#so-what">3.4. So What?</a></li>
@@ -125,11 +123,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NewSpriteLibFormat.html">4. A new sprite format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -221,7 +218,7 @@
 <h1>3. PassSpriteAsParameter<a class="headerlink" href="#passspriteasparameter" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="understand-how-to-pass-a-sprite-to-a-procedure">
 <h2>3.1. Understand How To Pass A Sprite To A Procedure<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id5">
 <p class="plantuml">
 <img src="../_images/plantuml-2cbd935b3dfc69a535dbe91cc6856ca0a32bd0e5.png" alt="&#64;startuml
 
@@ -243,7 +240,7 @@ $SpritePass2(&quot;$Batch&quot;)
 
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="source">
 <h3>3.1.1. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h3>
@@ -300,7 +297,7 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 <h2>3.2. Understand How To Pass A Sprite To A Procedure - using unquoted keyword<a class="headerlink" href="#understand-how-to-pass-a-sprite-to-a-procedure-using-unquoted-keyword" title="Permalink to this headline">¶</a></h2>
 <p>This option uses the unquoted keyword. The caller of the procedure does not need
 to add quotes when calling the procedure.</p>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id6">
 <p class="plantuml">
 <img src="../_images/plantuml-52f8875c595fb00dfb99a555d72566b69b0cad08.png" alt="&#64;startuml
 
@@ -321,7 +318,7 @@ $SpritePass2($Batch)
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id1">
 <h3>3.2.1. Source<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -372,9 +369,10 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 </ol>
 </div>
 </div>
-<div class="section" id="tidy-up-the-procedure-so-it-s-easier-to-read">
-<h2>3.3. Tidy Up The Procedure So It’s Easier To Read<a class="headerlink" href="#tidy-up-the-procedure-so-it-s-easier-to-read" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id9">
+<div class="section" id="use-procedure-defaults">
+<h2>3.3. Use Procedure Defaults<a class="headerlink" href="#use-procedure-defaults" title="Permalink to this headline">¶</a></h2>
+<p>And Tidy Up The Procedure So It’s Easier To Read</p>
+<div class="figure align-center" id="id7">
 <p class="plantuml">
 <img src="../_images/plantuml-6517da682245c16076d62390b67e42ff438c70b9.png" alt="
 &#64;startuml
@@ -403,7 +401,7 @@ $ffoo5(myalias, &quot;description\non several lines&quot;, $scale=2)
 
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>blah</em></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="id4">
 <h3>3.3.1. Source<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
@@ -459,22 +457,11 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="id5">
-<h3>3.3.2. Play<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80"><img alt="playbutton1" src="PassSpriteAsParameter/../play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
-</div>
-<div class="section" id="id6">
-<h3>3.3.3. Explore<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Take a look at some other stdlib libraries</p></li>
-</ol>
-</div>
 </div>
 <div class="section" id="so-what">
 <h2>3.4. So What?<a class="headerlink" href="#so-what" title="Permalink to this headline">¶</a></h2>
 <p>We said previously that the current stdlib macros are largely the same across files - changing for each icon.</p>
-<p>So now we have a way to define a procedure(s) in one place, and pass an icon.
-This all happens at pre-processor time.</p>
+<p>So now we have a way to define a procedure(s) in one place, and pass an icon.</p>
 </div>
 </div>
 

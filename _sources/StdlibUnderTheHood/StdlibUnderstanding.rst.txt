@@ -37,7 +37,7 @@ Goal
 Steps to Understanding
 ===============================================================================
 
-Step 1: Using the sprite directly
+Using the sprite directly
 -------------------------------------------------------------------------------
 
 "Batch" is defined in
@@ -51,7 +51,7 @@ ala
 
 .. uml:: ./1.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./1.puml
     :linenos:
@@ -60,19 +60,19 @@ ala
 
 
 
-Step 2 Add an “as whatever”
+Add an “as whatever”
 -------------------------------------------------------------------------------
 
 .. uml:: ./2.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./2.puml
     :linenos:
     :emphasize-lines: 9,10    
 
 
-Step 3 Bare Minimum
+Bare Minimum
 -------------------
 
 Extract the sprite from the Batch.puml
@@ -84,22 +84,22 @@ as a plantuml diagram i.e. it won’t work without these
 
 .. uml:: ./3.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./3.puml
     :linenos:
-    :emphasize-lines: 1,6
+    :emphasize-lines: 3-9
 
 
 
-Step 3.1 Bare Minimum by including Batch.puml
+Bare Minimum by including Batch.puml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The result is the same.
 
 .. uml:: ./3.1.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./3.1.puml
     :linenos:
@@ -107,7 +107,7 @@ The result is the same.
 
 
 
-Step 3.2 Illegal Bare Minimum by including all.puml
+Illegal Bare Minimum by including all.puml
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note: This is not valid plantuml as it does not contain any elements. 
@@ -119,8 +119,24 @@ Note: This is not valid plantuml as it does not contain any elements.
     :linenos:
     :emphasize-lines: 4
 
+Listsprites
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Step 4 Where did that guy come from?
+Add the listsprites keyword
+
+.. uml:: ./3.3.puml
+    :align: center
+
+.. literalinclude:: ./3.3.puml
+    :linenos:
+    :emphasize-lines: 6
+
+
+
+
+
+
+Where did that guy come from?
 ------------------------------------
 
 If any color is added we get an actor (from Deployment Diagram so can
@@ -129,37 +145,37 @@ example)
 
 .. uml:: ./4.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./4.puml
     :linenos:
     :emphasize-lines: 12
 
 
-Step 4.1 Lose the guy - add a Deployment Diagram Rectangle Instead
+Lose the guy - add a Deployment Diagram Rectangle Instead
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. uml:: ./4.1.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./4.1.puml
     :linenos:
     :emphasize-lines: 11
 
-Step 5 Add some color
+Add some color
 ---------------------
 
 .. uml:: ./5.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./5.puml
     :linenos:
     :emphasize-lines: 9
 
 
-Step 6 Understanding the AWSEntity Macro
+Understanding the AWSEntity Macro
 ----------------------------------------
 
 Based on reconstructing the existing Macros, we can define our own
@@ -171,15 +187,14 @@ minimal macro:
 
 where the parameters are 
 
-#. Batch - this refers to the sprite $Batch 
-#. e\_alias - this adds on a "as whatever" so multiple calls to same sprite
-return multiple rendered icons. 
-#. "#D86613" is the color defined as part of the sprite puml file
+#. ```Batch``` this refers to the sprite $Batch 
+#. ```e_alias``` this adds on a "as whatever" so multiple calls to same sprite return multiple rendered icons. 
+#. ```#D86613``` is the color defined as part of the sprite puml file
 
 
 .. uml:: ./6.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./6.puml
     :linenos:
@@ -189,14 +204,14 @@ return multiple rendered icons.
 
 
 
-Step 6.1 Add Scaling to AWSEntity Macro
+Add Scaling to AWSEntity Macro
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Replacing the last lines from the previous example to add scale.
 
 .. uml:: ./6.1.puml
     :align: center
-    :caption: todo
+
 
 .. literalinclude:: ./6.1.puml
     :linenos:
@@ -208,7 +223,10 @@ Replacing the last lines from the previous example to add scale.
     https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml
 
     But, for each macro (4 in this case), we would need to add a new macro that supports a scale parameter (giving 8 macros in total).
-    This is not very extensible or future proof!
+    
+    This is not very extensible or future proof! 
+    
+    So we need to come up with a better way...
 
 ::
 
@@ -217,8 +235,10 @@ Replacing the last lines from the previous example to add scale.
     !define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
     !define BatchParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #D86613, Batch, Batch)
 
+.. todo ::
+    refine the scale, raw macros
 
-Step 7 Updating the puml files to support minimal macro
+Updating the puml files to support minimal macro
 -------------------------------------------------------
 
 Using AWSSimplified.puml as a reference, we can create an AWSBare.puml

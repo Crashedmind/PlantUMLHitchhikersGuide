@@ -79,8 +79,10 @@ Explore
 
 
 
-Tidy Up The Procedure So It's Easier To Read
+Use Procedure Defaults 
 ===============================================================================
+
+And Tidy Up The Procedure So It's Easier To Read
 
 .. uml:: option3.puml
     :align: center
@@ -93,20 +95,6 @@ Source
     :emphasize-lines: 12, 22
     :linenos: 
 
-Play
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|playbutton1| Press to play around with this diagram source online.
-
-.. |playbutton1| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
-                :width: 40 px
-
-
-Explore
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#. Take a look at some other stdlib libraries
-
 
 
 
@@ -115,6 +103,7 @@ So What?
 We said previously that the current stdlib macros are largely the same across files - changing for each icon.
 
 So now we have a way to define a procedure(s) in one place, and pass an icon.
-This all happens at pre-processor time.
+
+
 
 

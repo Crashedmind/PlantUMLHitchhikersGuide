@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Standard Library &mdash; Playing with PlantUML  documentation</title>
+  <title>3. Standard Library - What We Have And What We Want &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. A new sprite format" href="../PassSpriteAsParameter/NewSpriteLibFormat.html" />
+    <link rel="next" title="4. Standardising Standard Library" href="StandardisingStdLib.html" />
     <link rel="prev" title="2. PlantUML Stdlib Under The Hood" href="../StdlibUnderTheHood/StdlibUnderstanding.html" /> 
 </head>
 
@@ -104,15 +104,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Standard Library</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Standard Library - What We Have And What We Want</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#observations-on-standard-library">3.1. Observations on Standard Library</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-a-user-wants-in-a-standard-library">3.2. What a User Wants In A Standard Library</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">5. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -181,7 +180,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>3. Standard Library</li>
+      <li>3. Standard Library - What We Have And What We Want</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,13 +199,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="standard-library">
-<h1>3. Standard Library<a class="headerlink" href="#standard-library" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="standard-library-what-we-have-and-what-we-want">
+<h1>3. Standard Library - What We Have And What We Want<a class="headerlink" href="#standard-library-what-we-have-and-what-we-want" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>put this stuff in tables to make it clearer</p>
+</div>
 <div class="section" id="observations-on-standard-library">
 <h2>3.1. Observations on Standard Library<a class="headerlink" href="#observations-on-standard-library" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Marcos use define and definelong which are deprecated per below</p></li>
-<li><p>DRY Do not Repeat Yourself. The macros are repeated</p>
+<li><p>DRY (Don’t Repeat Yourself). The macros are repeated</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>within a file -repeat the macro to add each new parameter</p></li>
@@ -243,17 +246,40 @@
 </ol>
 </div></blockquote>
 </li>
-<li><p>There’s no way to scale the icons from the macros (the !define statements). Plantuml does support scaling per <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images">https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images</a>. Support for scaling stereotypes is available since <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images?show=9086#c9086">March 2019</a>.</p></li>
-<li><p>At least 3 parameters are required and are rendered in the diagams  “!define Batch(e_alias, e_label, e_techn)”.</p>
+<li><p>There’s no way to scale the icons from the macros (the !define statements) except for Material. Plantuml does support scaling per <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images">https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images</a>. Support for scaling stereotypes is available since <a class="reference external" href="https://forum.plantuml.net/4267/scaling-of-the-sprites-or-images?show=9086#c9086">March 2019</a>.</p></li>
+<li><p>At least 3 parameters are required and are rendered in the diagams  <code class="docutils literal notranslate"><span class="pre">`!define</span> <span class="pre">Batch(e\_alias,</span> <span class="pre">e\_label,</span> <span class="pre">e\_techn)`</span></code>.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>In other words, the marcos force a user to specify things they may not care about e.g. to specify color in this macro, the user needs to specify the preceeding parameters also</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">`!define</span> <span class="pre">WHATEVER(_alias,</span> <span class="pre">_label,</span> <span class="pre">_shape,</span> <span class="pre">_color)</span> <span class="pre">ENTITY(_shape,_color,whatever,_label,</span> <span class="pre">_alias,WHATEVER)`</span></code></p>
+</div></blockquote>
+</li>
+<li><p>So if we wanted a colored or scaled icon only (with no label or technology), we have to implement it ourselves.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Some libaries have an <code class="docutils literal notranslate"><span class="pre">`all.puml`</span></code> that includes all icons and their macros for a given category/subset of icons. This allows including all icons by including one file - rather than an include per icon.</p></li>
+<li><p>The superset of parameters provided by the macros are</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>So if we wanted a colored or scaled icon only (with no label or technology), the only option is to use the raw sprite (more on that later).</p></li>
+<li><p>sprite</p></li>
+<li><p>color</p></li>
+<li><p>scale (material library only)</p></li>
+<li><p>shape (Type 1 (e_type), 4 (_shape))</p></li>
+<li><p>technology</p></li>
+<li><p>description</p></li>
+<li><p>label</p></li>
 </ol>
 </div></blockquote>
 </li>
 </ol>
 <p>Overall, the PlantUML Stdlib lacks consistency and therefore user friendliness.
 We need to change this to empower the user with PlantUML.</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>get material scaling macro</p>
+</div>
 </div>
 <div class="section" id="what-a-user-wants-in-a-standard-library">
 <h2>3.2. What a User Wants In A Standard Library<a class="headerlink" href="#what-a-user-wants-in-a-standard-library" title="Permalink to this headline">¶</a></h2>
@@ -262,16 +288,37 @@ We need to change this to empower the user with PlantUML.</p>
 <li><p>Specify the things they care about</p>
 <blockquote>
 <div><ol class="arabic">
-<li><p>The marcos force a user to specify things they may not care about e.g. to specify color in this macro, the user needs to specify the preceeding parameters also</p>
+<li><p>The current superset of parameters provided by the existing macros should be supported</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">`!define</span> <span class="pre">WHATEVER(_alias,</span> <span class="pre">_label,</span> <span class="pre">_shape,</span> <span class="pre">_color)</span> <span class="pre">ENTITY(_shape,_color,whatever,_label,</span> <span class="pre">_alias,WHATEVER)`</span></code></p>
-</div></blockquote>
-</li>
-<li><p>Default values specified when the icons are built, but can be overridden by the user in their diagram file (at runtime)</p></li>
+<div><ol class="arabic simple">
+<li><p>sprite</p></li>
+<li><p>color</p></li>
+<li><p>scale (material library only)</p></li>
+<li><p>shape (Type 1 (e_type), 4 (_shape))</p></li>
+<li><p>technology</p></li>
+<li><p>description</p></li>
+<li><p>label</p></li>
 </ol>
 </div></blockquote>
 </li>
-<li><p>Decoupling of the sprite (the image), from the decoration (text, shape, color, scale etc…)</p></li>
+<li><p>Default values specified when the icons are built, but the ones the user cares about can be overridden by the user in their diagram file (at runtime)</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Decoupling of the sprite (the image), from the decoration (text, shape, color, scale etc…)</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>To benefit from other people’s work e.g. if a new parameter or decoration/theme is added they like, they want to use it in their diagrams</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Grouping of icons into categories.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A user can include a file for that category that incldues all the icons (and not have to include a file for every icon)</p></li>
+</ol>
+</div></blockquote>
+</li>
 <li><p>Future Proofing</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -279,6 +326,7 @@ We need to change this to empower the user with PlantUML.</p>
 </ol>
 </div></blockquote>
 </li>
+<li><p>To be able to easily contribute their icon set to stdlib</p></li>
 </ol>
 </div>
 </div>
@@ -291,7 +339,7 @@ We need to change this to empower the user with PlantUML.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../PassSpriteAsParameter/NewSpriteLibFormat.html" class="btn btn-neutral float-right" title="4. A new sprite format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="StandardisingStdLib.html" class="btn btn-neutral float-right" title="4. Standardising Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../StdlibUnderTheHood/StdlibUnderstanding.html" class="btn btn-neutral float-left" title="2. PlantUML Stdlib Under The Hood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

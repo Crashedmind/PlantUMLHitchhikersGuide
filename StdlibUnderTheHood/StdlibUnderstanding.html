@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Standard Library" href="../Stdlib/stdlibRequirements.html" />
+    <link rel="next" title="3. Standard Library - What We Have And What We Want" href="../Stdlib/stdlibRequirements.html" />
     <link rel="prev" title="1. PlantUML Stdlib Overview" href="../Stdlib/StdLibOverview.html" /> 
 </head>
 
@@ -106,32 +106,32 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. PlantUML Stdlib Under The Hood</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#goal">2.1. Goal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#steps-to-understanding">2.2. Steps to Understanding</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-1-using-the-sprite-directly">2.2.1. Step 1: Using the sprite directly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-add-an-as-whatever">2.2.2. Step 2 Add an “as whatever”</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-3-bare-minimum">2.2.3. Step 3 Bare Minimum</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-1-bare-minimum-by-including-batch-puml">2.2.3.1. Step 3.1 Bare Minimum by including Batch.puml</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-2-illegal-bare-minimum-by-including-all-puml">2.2.3.2. Step 3.2 Illegal Bare Minimum by including all.puml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-sprite-directly">2.2.1. Using the sprite directly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-an-as-whatever">2.2.2. Add an “as whatever”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bare-minimum">2.2.3. Bare Minimum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bare-minimum-by-including-batch-puml">2.2.3.1. Bare Minimum by including Batch.puml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#illegal-bare-minimum-by-including-all-puml">2.2.3.2. Illegal Bare Minimum by including all.puml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listsprites">2.2.3.3. Listsprites</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#step-4-where-did-that-guy-come-from">2.2.4. Step 4 Where did that guy come from?</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead">2.2.4.1. Step 4.1 Lose the guy - add a Deployment Diagram Rectangle Instead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-did-that-guy-come-from">2.2.4. Where did that guy come from?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#lose-the-guy-add-a-deployment-diagram-rectangle-instead">2.2.4.1. Lose the guy - add a Deployment Diagram Rectangle Instead</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#step-5-add-some-color">2.2.5. Step 5 Add some color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-6-understanding-the-awsentity-macro">2.2.6. Step 6 Understanding the AWSEntity Macro</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-6-1-add-scaling-to-awsentity-macro">2.2.6.1. Step 6.1 Add Scaling to AWSEntity Macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-some-color">2.2.5. Add some color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-the-awsentity-macro">2.2.6. Understanding the AWSEntity Macro</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-scaling-to-awsentity-macro">2.2.6.1. Add Scaling to AWSEntity Macro</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#step-7-updating-the-puml-files-to-support-minimal-macro">2.2.7. Step 7 Updating the puml files to support minimal macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-the-puml-files-to-support-minimal-macro">2.2.7. Updating the puml files to support minimal macro</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/NewSpriteLibFormat.html">4. A new sprite format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -255,15 +255,15 @@ better - from first principles e.g.
 </div>
 <div class="section" id="steps-to-understanding">
 <h2>2.2. Steps to Understanding<a class="headerlink" href="#steps-to-understanding" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="step-1-using-the-sprite-directly">
-<h3>2.2.1. Step 1: Using the sprite directly<a class="headerlink" href="#step-1-using-the-sprite-directly" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="using-the-sprite-directly">
+<h3>2.2.1. Using the sprite directly<a class="headerlink" href="#using-the-sprite-directly" title="Permalink to this headline">¶</a></h3>
 <p>“Batch” is defined in
 <a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml">https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml</a>)
 ala</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sprite $Batch [64x64/16z] {...
 </pre></div>
 </div>
-<div class="figure align-center" id="id2">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-4fa61e0e0c6ac84aca4b63f7d9ec71b37a48f732.png" alt="&#64;startuml 
 
@@ -278,7 +278,6 @@ rectangle &quot;&lt;$Batch&gt;&quot;
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -304,9 +303,9 @@ rectangle &quot;&lt;$Batch&gt;&quot;
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="step-2-add-an-as-whatever">
-<h3>2.2.2. Step 2 Add an “as whatever”<a class="headerlink" href="#step-2-add-an-as-whatever" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id3">
+<div class="section" id="add-an-as-whatever">
+<h3>2.2.2. Add an “as whatever”<a class="headerlink" href="#add-an-as-whatever" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-463066f3ded7f976cb61778d4ec638e26c58b753.png" alt="&#64;startuml 
 
@@ -320,7 +319,6 @@ rectangle &quot;&lt;$Batch&gt;&quot; as whatever
 rectangle &quot;&lt;$Batch&gt;&quot; as whatever
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -346,12 +344,12 @@ rectangle &quot;&lt;$Batch&gt;&quot;
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="step-3-bare-minimum">
-<h3>2.2.3. Step 3 Bare Minimum<a class="headerlink" href="#step-3-bare-minimum" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bare-minimum">
+<h3>2.2.3. Bare Minimum<a class="headerlink" href="#bare-minimum" title="Permalink to this headline">¶</a></h3>
 <p>Extract the sprite from the Batch.puml</p>
 <p>Note that plantuml needs the &#64;startuml and &#64;endumlto recognize the file
 as a plantuml diagram i.e. it won’t work without these</p>
-<div class="figure align-center" id="id4">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-4708529c1973720e9b2994f2bbd88d7c3360a542.png" alt="&#64;startuml
 
@@ -366,7 +364,6 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -378,23 +375,23 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
  8
  9
 10
-11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll">@startuml
-</span>
-sprite $Batch [64x64/16z] {
-xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
-Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
-<span class="hll">6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
-</span>uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
--Ikh_YdmYr_y0G
-}
-@enduml
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+<span class="hll">sprite $Batch [64x64/16z] {
+</span><span class="hll">xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+</span><span class="hll">Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+</span><span class="hll">6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+</span><span class="hll">uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+</span><span class="hll">-Ikh_YdmYr_y0G
+</span><span class="hll">}
+</span>@enduml
 
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="step-3-1-bare-minimum-by-including-batch-puml">
-<h4>2.2.3.1. Step 3.1 Bare Minimum by including Batch.puml<a class="headerlink" href="#step-3-1-bare-minimum-by-including-batch-puml" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="bare-minimum-by-including-batch-puml">
+<h4>2.2.3.1. Bare Minimum by including Batch.puml<a class="headerlink" href="#bare-minimum-by-including-batch-puml" title="Permalink to this headline">¶</a></h4>
 <p>The result is the same.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-2b6f64a87b00dc0fb7c0ccc2aa8c4a80928e84ad.png" alt="&#64;startuml 
 
@@ -403,7 +400,6 @@ Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -419,8 +415,8 @@ Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="step-3-2-illegal-bare-minimum-by-including-all-puml">
-<h4>2.2.3.2. Step 3.2 Illegal Bare Minimum by including all.puml<a class="headerlink" href="#step-3-2-illegal-bare-minimum-by-including-all-puml" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="illegal-bare-minimum-by-including-all-puml">
+<h4>2.2.3.2. Illegal Bare Minimum by including all.puml<a class="headerlink" href="#illegal-bare-minimum-by-including-all-puml" title="Permalink to this headline">¶</a></h4>
 <p>Note: This is not valid plantuml as it does not contain any elements.</p>
 <ul class="simple">
 <li><p>The VSCode Plantuml extension will happily render this in preview mode. But VSCode Plantuml extension export will fail</p></li>
@@ -440,13 +436,47 @@ Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11
 </pre></div>
 </td></tr></table></div>
 </div>
+<div class="section" id="listsprites">
+<h4>2.2.3.3. Listsprites<a class="headerlink" href="#listsprites" title="Permalink to this headline">¶</a></h4>
+<p>Add the listsprites keyword</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-8672abec5c489e853218df6cc5ede73dc30f8177.png" alt="&#64;startuml 
+
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+
+listsprites
+
+&#64;enduml
+"/>
+</p>
 </div>
-<div class="section" id="step-4-where-did-that-guy-come-from">
-<h3>2.2.4. Step 4 Where did that guy come from?<a class="headerlink" href="#step-4-where-did-that-guy-come-from" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml 
+
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+
+<span class="hll">listsprites
+</span>
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="where-did-that-guy-come-from">
+<h3>2.2.4. Where did that guy come from?<a class="headerlink" href="#where-did-that-guy-come-from" title="Permalink to this headline">¶</a></h3>
 <p>If any color is added we get an actor (from Deployment Diagram so can
 explicitly use a rectangle as the Deployment Diagram entity - see next
 example)</p>
-<div class="figure align-center" id="id6">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-376ddbcda8485ffe4974708d93160884b5ce3bea.png" alt="&#64;startuml 
 
@@ -464,7 +494,6 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -495,9 +524,9 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 @enduml
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead">
-<h4>2.2.4.1. Step 4.1 Lose the guy - add a Deployment Diagram Rectangle Instead<a class="headerlink" href="#step-4-1-lose-the-guy-add-a-deployment-diagram-rectangle-instead" title="Permalink to this headline">¶</a></h4>
-<div class="figure align-center" id="id7">
+<div class="section" id="lose-the-guy-add-a-deployment-diagram-rectangle-instead">
+<h4>2.2.4.1. Lose the guy - add a Deployment Diagram Rectangle Instead<a class="headerlink" href="#lose-the-guy-add-a-deployment-diagram-rectangle-instead" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-b8be8ab25ceaca8ecd94a7d577e36b9ff6ed91ac.png" alt="&#64;startuml
 
@@ -514,7 +543,6 @@ rectangle &quot;&lt;$Batch&gt;&quot;
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -545,9 +573,9 @@ uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="step-5-add-some-color">
-<h3>2.2.5. Step 5 Add some color<a class="headerlink" href="#step-5-add-some-color" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center" id="id8">
+<div class="section" id="add-some-color">
+<h3>2.2.5. Add some color<a class="headerlink" href="#add-some-color" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-5a926f2d6aa985f93b5835c6e929c56aa0aa4e0f.png" alt="&#64;startuml 
 
@@ -561,7 +589,6 @@ rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;&quot;
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -585,8 +612,8 @@ rectangle &quot;&lt;$Batch&gt;&quot;
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="section" id="step-6-understanding-the-awsentity-macro">
-<h3>2.2.6. Step 6 Understanding the AWSEntity Macro<a class="headerlink" href="#step-6-understanding-the-awsentity-macro" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="understanding-the-awsentity-macro">
+<h3>2.2.6. Understanding the AWSEntity Macro<a class="headerlink" href="#understanding-the-awsentity-macro" title="Permalink to this headline">¶</a></h3>
 <p>Based on reconstructing the existing Macros, we can define our own
 minimal macro:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_alias) AWSEntity(Batch, #D86613) as e_alias
@@ -594,12 +621,11 @@ minimal macro:</p>
 </div>
 <p>where the parameters are</p>
 <ol class="arabic simple">
-<li><p>Batch - this refers to the sprite $Batch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`Batch`</span></code> this refers to the sprite $Batch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`e_alias`</span></code> this adds on a “as whatever” so multiple calls to same sprite return multiple rendered icons.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`#D86613`</span></code> is the color defined as part of the sprite puml file</p></li>
 </ol>
-<p>#. e_alias - this adds on a “as whatever” so multiple calls to same sprite
-return multiple rendered icons.
-#. “#D86613” is the color defined as part of the sprite puml file</p>
-<div class="figure align-center" id="id9">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-0ef8fffddfa3ac501255096e2e49883df1a4c1b3.png" alt="&#64;startuml 
 
@@ -635,7 +661,6 @@ Batch(3.13xyz)
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -702,10 +727,10 @@ rectangle &quot;&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;&quot;
 @enduml
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="step-6-1-add-scaling-to-awsentity-macro">
-<h4>2.2.6.1. Step 6.1 Add Scaling to AWSEntity Macro<a class="headerlink" href="#step-6-1-add-scaling-to-awsentity-macro" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="add-scaling-to-awsentity-macro">
+<h4>2.2.6.1. Add Scaling to AWSEntity Macro<a class="headerlink" href="#add-scaling-to-awsentity-macro" title="Permalink to this headline">¶</a></h4>
 <p>Replacing the last lines from the previous example to add scale.</p>
-<div class="figure align-center" id="id10">
+<div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-4706cfb07e282e210d574defbdad9c42c9636b48.png" alt="&#64;startuml 
 
@@ -739,7 +764,6 @@ Batch(3.13xyz, 0.3)
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text">todo</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -806,8 +830,9 @@ rectangle &quot;&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;&quot;
 <p class="admonition-title">Note</p>
 <p>This scale parameter could be added to existing macros in puml files e.g.
 <a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml">https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/Compute/Batch.puml</a></p>
-<p>But, for each macro (4 in this case), we would need to add a new macro that supports a scale parameter (giving 8 macros in total).
-This is not very extensible or future proof!</p>
+<p>But, for each macro (4 in this case), we would need to add a new macro that supports a scale parameter (giving 8 macros in total).</p>
+<p>This is not very extensible or future proof!</p>
+<p>So we need to come up with a better way…</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define Batch(e_alias, e_label, e_techn) AWSEntity(e_alias, e_label, e_techn, #D86613, Batch, Batch)
 !define Batch(e_alias, e_label, e_techn, e_descr) AWSEntity(e_alias, e_label, e_techn, e_descr, #D86613, Batch, Batch)
@@ -815,10 +840,14 @@ This is not very extensible or future proof!</p>
 !define BatchParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #D86613, Batch, Batch)
 </pre></div>
 </div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>refine the scale, raw macros</p>
 </div>
 </div>
-<div class="section" id="step-7-updating-the-puml-files-to-support-minimal-macro">
-<h3>2.2.7. Step 7 Updating the puml files to support minimal macro<a class="headerlink" href="#step-7-updating-the-puml-files-to-support-minimal-macro" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="updating-the-puml-files-to-support-minimal-macro">
+<h3>2.2.7. Updating the puml files to support minimal macro<a class="headerlink" href="#updating-the-puml-files-to-support-minimal-macro" title="Permalink to this headline">¶</a></h3>
 <p>Using AWSSimplified.puml as a reference, we can create an AWSBare.puml
 file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&#39; Styling
@@ -858,7 +887,7 @@ rectangle &quot;&lt;color:e_color&gt;&lt;$e_sprite&gt;&lt;/color&gt;&quot;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Stdlib/stdlibRequirements.html" class="btn btn-neutral float-right" title="3. Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Stdlib/stdlibRequirements.html" class="btn btn-neutral float-right" title="3. Standard Library - What We Have And What We Want" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../Stdlib/StdLibOverview.html" class="btn btn-neutral float-left" title="1. PlantUML Stdlib Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

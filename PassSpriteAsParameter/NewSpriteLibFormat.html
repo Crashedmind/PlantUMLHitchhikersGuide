@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. A new sprite format &mdash; Playing with PlantUML  documentation</title>
+  <title>A new sprite format &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -38,9 +38,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Standardising Standard Library" href="../Stdlib/StandardisingStdLib.html" />
-    <link rel="prev" title="3. Standard Library" href="../Stdlib/stdlibRequirements.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -101,31 +99,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. A new sprite format</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#features-that-may-be-useful">4.1. Features that may be useful</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#listsprites">4.1.1. Listsprites</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#listsprites-per-icon">4.1.1.1. listsprites per icon</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#listsprites-with-an-all-puml">4.1.1.2. listsprites with an all.puml</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#skinparam">4.2. skinparam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#function-and-procedure-vs-define-and-definelong">4.3. !function and !procedure vs !define and !definelong</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#procedure-with-sprite">4.3.1. Procedure with sprite</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#css">4.4. CSS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#final">4.5. final</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">5. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -194,7 +174,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>4. A new sprite format</li>
+      <li>A new sprite format</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -214,72 +194,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="a-new-sprite-format">
-<h1>4. A new sprite format<a class="headerlink" href="#a-new-sprite-format" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="features-that-may-be-useful">
-<h2>4.1. Features that may be useful<a class="headerlink" href="#features-that-may-be-useful" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="listsprites">
-<h3>4.1.1. Listsprites<a class="headerlink" href="#listsprites" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="listsprites-per-icon">
-<h4>4.1.1.1. listsprites per icon<a class="headerlink" href="#listsprites-per-icon" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
-!include &lt;tupadr3/common&gt;
-!include &lt;tupadr3/font-awesome/server&gt;
-!include &lt;tupadr3/font-awesome/database&gt;
-!include &lt;cloudinsight/tomcat&gt;
-!include &lt;cloudinsight/kafka&gt;
-!include &lt;cloudinsight/java&gt;
-!include &lt;cloudinsight/cassandra&gt;
-listsprites
-@enduml
-</pre></div>
-</div>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/XSynai8m34RXFgVOFG3ZWfPXSfKVIm4JMyf8ShW-q57WeVvUysOFMFHMf_yYkNRYlrFq3MJ7bBKrbVCNMLJYW0UxDaxEjhFzp0Y12vm_mrorKn4lrrkaq9OHGrwnh1Zg7ViOCzmXPA-Y5W_Vh0JxDBFG-_m9">http://www.plantuml.com/plantuml/uml/XSynai8m34RXFgVOFG3ZWfPXSfKVIm4JMyf8ShW-q57WeVvUysOFMFHMf_yYkNRYlrFq3MJ7bBKrbVCNMLJYW0UxDaxEjhFzp0Y12vm_mrorKn4lrrkaq9OHGrwnh1Zg7ViOCzmXPA-Y5W_Vh0JxDBFG-_m9</a></p>
-<div class="figure align-default">
-<img alt="" src="PassSpriteAsParameter/./listsprites.png" />
-</div>
-</div>
-<div class="section" id="listsprites-with-an-all-puml">
-<h4>4.1.1.2. listsprites with an all.puml<a class="headerlink" href="#listsprites-with-an-all-puml" title="Permalink to this headline">¶</a></h4>
-<p>Some libaries have an all.puml that includes all icons and their macros
-for a given category/subset of icons. This allows including all icons by
-including one file - rather than an include per icon.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
-!include &lt;awslib/AWSCommon&gt;
-!include &lt;awslib/General/all.puml&gt;
-listsprites
-@enduml
-</pre></div>
-</div>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2_EoKpITmmFTixFpStFiyEKSq_DIorApD5FpCdHAm3gjkFAoImkAIueoYn9BUPoICrB0Ge20000">http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuLBCp4lEAKr9LR19B2_EoKpITmmFTixFpStFiyEKSq_DIorApD5FpCdHAm3gjkFAoImkAIueoYn9BUPoICrB0Ge20000</a></p>
-<div class="figure align-default">
-<img alt="" src="PassSpriteAsParameter/./listsprites-colour.png" />
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="skinparam">
-<h2>4.2. skinparam<a class="headerlink" href="#skinparam" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
-<span class="n">skinparameters</span>
-<span class="nd">@enduml</span>
-</pre></div>
-</div>
-<p><img alt="image0" src="PassSpriteAsParameter/./skinparams.png" /> <a class="reference external" href="http://www.plantuml.com/plantuml/uml/AyxEp2j8B4hCJIr9BIe60000">http://www.plantuml.com/plantuml/uml/AyxEp2j8B4hCJIr9BIe60000</a></p>
-</div>
-<div class="section" id="function-and-procedure-vs-define-and-definelong">
-<h2>4.3. !function and !procedure vs !define and !definelong<a class="headerlink" href="#function-and-procedure-vs-define-and-definelong" title="Permalink to this headline">¶</a></h2>
-<p>Per <a class="reference external" href="https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng">https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng</a>:</p>
-<p><em>You should not use !define and !definelong anymore. Use !function, !procedure
-or variable definition instead.</em></p>
-<p><em>!define should be replaced by return !function</em></p>
-<p><em>!definelong should be replaced by !procedure.</em></p>
-<p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default
-argument</a>
-value may help to simplify also definitions There are also now <a class="reference external" href="https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov">dynamic
-invocation</a>
-which may be useful</p>
+<h1>A new sprite format<a class="headerlink" href="#a-new-sprite-format" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="procedure-with-sprite">
-<h3>4.3.1. Procedure with sprite<a class="headerlink" href="#procedure-with-sprite" title="Permalink to this headline">¶</a></h3>
+<h2>Procedure with sprite<a class="headerlink" href="#procedure-with-sprite" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default">
 <img alt="" src="PassSpriteAsParameter/./procedure.png" />
 </div>
@@ -394,10 +311,8 @@ $dummy()
 @enduml
 </pre></div>
 </div>
-</div>
-</div>
 <div class="section" id="css">
-<h2>4.4. CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h2>
+<h3>CSS<a class="headerlink" href="#css" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
 <img alt="" src="PassSpriteAsParameter/./css.png" />
 </div>
@@ -488,7 +403,7 @@ rectangle &quot;&lt;color:red&gt;&lt;$Batch&gt;&lt;/color&gt;asdfasfd&quot;  as 
 </div>
 </div>
 <div class="section" id="final">
-<h2>4.5. final<a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h2>
+<h3>final<a class="headerlink" href="#final" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/7CnDavem083XEx-2GsTweYPyu6vFHGHMHM05KRVJOK2G10WV493GwNzlkwVtyixpOw1nJqTISL_lVHRJZC-w4KznbTMKRnuylZVrm0-eUTOyolgCHvIsm_VLAiSKZSctUqDMyNEeucJuN-7p5nvDBxHLN7_273UqFVudVzd4z8xudweyg_8Agiil_ZSts">http://www.plantuml.com/plantuml/uml/7CnDavem083XEx-2GsTweYPyu6vFHGHMHM05KRVJOK2G10WV493GwNzlkwVtyixpOw1nJqTISL_lVHRJZC-w4KznbTMKRnuylZVrm0-eUTOyolgCHvIsm_VLAiSKZSctUqDMyNEeucJuN-7p5nvDBxHLN7_273UqFVudVzd4z8xudweyg_8Agiil_ZSts</a>-<em>hfC140dgwc4j8ZH1Ye</em>VAVHkiyOqeyMLxC4vZONuec_RbLlhJ4K0OFewBlsNYyGdtE4rqIwEagaZYZRkosP62MUU1RKBP3b-Lw5ep1IJjHHw3arQuX_459jmr1bDobTo3QIaws1qTcyrNBPAywQAWxirtpOqNkLCf0qb5DmpQVHheURTLDP3BvZj0xfFbiuzBouth9uJQED66pDV2mQUjePDQXFCSb7iFE39D6RJ8g0IYTU5KbfjsD7J9B3cJ5faXfL6F8nFg7quV2n04hOEci1SFrfs5kfis6-PNxIGKElpmmobp9JKodmauQtvdTHPuRn_xt1EDHWMZyYeyxB1P44gTKhm4sRRjH5VLD3lYnd1zi3p75IiMmtM-mFQ8jp0aflFskjlOJYRDcjI1TUOCHnPTqglXFyzoSI9fQfI2UHuzioWemfrcME5vUUchZWm7M2DwgyfgQjVJvVGeOr2SdLrmJeCbdqsss3Cdx4eKtL9owoC6BExFtsBAhwTj7WhZz_aKftahbRugzPeMBgeq6eEoSGFJG9iqYg8qERGHYTt53enz-lbFQECgeA6YhHULdJZd_CvpdcDfYG9Z4T55Xk3wCSjOCIum2NnZaS0d-bame-zSW8Z3-hZyjBKgM8n9MI2qRsyP6-nrhN0cXlnsu3ejfCdwkECydM-8ubbHNeRoNCNaDKRtTFJEgyU4p3Cs9td41HOaIRaW7v5Y4MNa9ELt_PKUqHhWP8AX38VPZ5Qi61e-lusXcRWQCY4-Jt_X-6fw_EayFBqulmelpxvFWsiC1SPBUkCJzJuWn0NVnr1X80i2LIY6KPP6tEcq4hnDAO8Y-XmL8etJbQJVMva3FLWP9BamKTKYGHuNNJZwTlcwJthmdpVqJeVJdivd_hkxAijPMSH89CqnotD6As7ZpMOCVqFb6PrHG5Ffyuet-7He-tGoiV6Q3NkjiylDul56PpvHUTELI1c5eNRpiD7DmyPP6MtDYizPZcAPqaKWaxsCj2tLm0lgTBP05kT8SuuQEKUDd0TxxSfbxMGJQEAwye5cDCjDUhFdSPJXP21N2hOi9h82QRoB3vVJBr-Fhiukpc4m1h54eFXJGAP68c78WJ813wouWtqmre2KmyDIBVRrInd85ixm6TNQjcnLyYVf_ZTOpoZOVbP2gtGuq1eUE1sRNa5pIFlOhu4hs8v5IuZX9SGcjcxBPbnt5rwJTRlnJjLZDt_KxsNhvBBsjNcW6SroarJklHxCinAxZlfrIlgZP08Jo36Y7CGo4l38IaWOxGXOHlS8Wa794VGvrLQa84lCfEkr5sfahNMqRKCEtjAH_zXAWyfBJkD4obAhllJ0wehQLbT-lIDMGxO7-V0jPViZIpSxUdVL3k45HvjQruQUgxJU3hQshYnlBEsgp9mmMD_NaALt27B9OH_cfO2ObLcYVRx8s3pAu3ugkB9-mkh7r7nqp8KN2Ubor5LmpWeGQOxzfrAg5dXTvxqijSoptm00</p>
 <div class="figure align-default">
 <img alt="" src="PassSpriteAsParameter/./final.png" />
@@ -585,21 +500,13 @@ $ffoo6($scale=2)
 </div>
 </div>
 </div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Stdlib/StandardisingStdLib.html" class="btn btn-neutral float-right" title="5. Standardising Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../Stdlib/stdlibRequirements.html" class="btn btn-neutral float-left" title="3. Standard Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
