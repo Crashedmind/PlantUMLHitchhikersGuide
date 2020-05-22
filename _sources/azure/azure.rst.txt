@@ -1,0 +1,1 @@
+https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/real-time-recommendation

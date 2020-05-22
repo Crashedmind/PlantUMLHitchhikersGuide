@@ -96,7 +96,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Create Real Life AWS Diagrams</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">2.1. AWSArchitectureBlogSample1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#original">2.1.1. Original</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plantuml-equivalent">2.1.2. PlantUML Equivalent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#select-an-icon-library">2.1.3. Select an icon library</a></li>
@@ -112,12 +112,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">2.2.1. Original</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.2. PlantUML Equivalent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.2. AWSArchitectureBlogSample2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.1. Original</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.2.2. PlantUML Equivalent</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">2.3. 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">2.3. AWSArchitectureBlogSample3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.3.1. Gather the icons we need</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Using C4 To Architect ACME Global Widget Production</a></li>
@@ -224,24 +227,25 @@
 <h1>2. Create Real Life AWS Diagrams<a class="headerlink" href="#create-real-life-aws-diagrams" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this section we’ll put PlantUML to the test by seeing if we can recreate some real diagrams from the <a class="reference external" href="https://aws.amazon.com/blogs/architecture">AWSArchitectureBlog</a> .</p>
-<p>We’re aiming for architectural equivalence (not image reproduction).</p>
-<p>We will take the 3 most recent entries showing architecture diagrams on the front page as at May 2020.</p>
+<p>In this section we’ll put PlantUML to the test by seeing if we can recreate some real diagrams from the <a class="reference external" href="https://aws.amazon.com/blogs/architecture">AWSArchitectureBlog</a>.</p>
+<p>We’ll show the original image from the <a class="reference external" href="https://aws.amazon.com/blogs/architecture">AWSArchitectureBlog</a>, and the PlantUML version for comparison.</p>
+<p><strong>We’re aiming for architectural equivalence (not image reproduction).</strong></p>
+</div>
+<p>We take the 3 most recent entries that show architecture diagrams on the front page of <a class="reference external" href="https://aws.amazon.com/blogs/architecture">AWSArchitectureBlog</a> as at May 2020.</p>
 <ol class="arabic simple">
 <li><p>BBVA: Helping Global Remote Working with Amazon AppStream 2.0 <a class="reference external" href="https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/">https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/</a></p></li>
 <li><p>Building a Scalable Document Pre-Processing Pipeline <a class="reference external" href="https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/">https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/</a></p></li>
 <li><p>Serving Billions of Ads in Just 100 ms Using Amazon Elasticache for Redis <a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/</a></p></li>
 </ol>
-<p>Then we’ll show the original image from blog, and the PlantUML version for comparison.</p>
+<p>This sample of 3 diagrams is quite varied in complexity and features.</p>
 <p>We’ll approach them in order of complexity.</p>
-</div>
 <div class="section" id="id1">
-<h2>2.1. 1<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. <a class="reference external" href="HelpingGlobalRemoteWorkingwithAmazonAppStream2.0https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/">AWSArchitectureBlogSample1</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="original">
 <h3>2.1.1. Original<a class="headerlink" href="#original" title="Permalink to this headline">¶</a></h3>
-<p>Original image from <a class="reference external" href="https://aws.amazon.com/blogs/architecture">AWSArchitectureBlog</a> “Serving Billions of Ads in Just 100 ms Using Amazon Elasticache for Redis” <a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/</a></p>
-<div class="figure align-default">
+<div class="figure align-default" id="id10">
 <img alt="../_images/High-level-digram-1-Smadex-1024x584.png" src="../_images/High-level-digram-1-Smadex-1024x584.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="HelpingGlobalRemoteWorkingwithAmazonAppStream2.0https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/">AWSArchitectureBlogSample1</a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="plantuml-equivalent">
@@ -338,15 +342,20 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 </div>
 <div class="section" id="gather-the-icons-we-need">
 <h3>2.1.4. Gather the icons we need<a class="headerlink" href="#gather-the-icons-we-need" title="Permalink to this headline">¶</a></h3>
-<p>For AWS icons, Orange is AWS Compute so let’s take a look at the compute icons.
-Yes, that’s the EC2 icon on right of diagram (which is part of AWS Compute).</p>
-<p>Use our github trick to find “users”; they are in General.</p>
-<p>The green box isn’t an AWS service - it’s showing a mobile/laptop client.
-Traditional Server</p>
-<p>We need “Traditional Server” for “Ad Exchange”</p>
+<ul class="simple">
+<li><p>For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons.</p></li>
+<li><p>Use our github trick to find “users”; they are in General.</p></li>
+<li><p>The green box isn’t an AWS service - it’s showing a mobile/laptop client.</p></li>
+<li><p>We need “Traditional Server” for “Ad Exchange”</p></li>
+<li><p>For the box we’ll use a <a class="reference external" href="https://plantuml.com/deployment-diagram">Deployment</a> Diagram shape; <code class="docutils literal notranslate"><span class="pre">`package`</span></code> or <code class="docutils literal notranslate"><span class="pre">`cloud`</span></code></p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">`autonumber`</span></code> does not work in these diagrams.</p>
+<p><code class="docutils literal notranslate"><span class="pre">`autonumber`</span></code> does not work in these diagrams. So we will manually number the arrows.</p>
+</div>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>ask &#64;Arnaud about autonumber of sprite diagrams</p>
 </div>
 <div class="figure align-center">
 <p class="plantuml">
@@ -416,8 +425,8 @@ listsprites
 !include &lt;awslib/mobile/all.puml&gt;
 !include &lt;awslib/general/all.puml&gt;
 
-listsprites
-@enduml
+<span class="hll">listsprites
+</span>@enduml
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -456,11 +465,11 @@ Mobile(Mobile, &quot;Publisher app or web&quot;, &quot; &quot;)
 !include &lt;awslib/mobile/all.puml&gt;
 !include &lt;awslib/general/all.puml&gt;
 
-EC2(EC2, &quot;Smadex Service&quot;, &quot; &quot;)
-Users(Users, &quot;Users&quot;, &quot; &quot;)
-TraditionalServer(TraditionalServer, &quot;Ad Exchange&quot;, &quot; &quot;)
-Mobile(Mobile, &quot;Publisher app or web&quot;, &quot; &quot;)
-
+<span class="hll">EC2(EC2, &quot;Smadex Service&quot;, &quot; &quot;)
+</span><span class="hll">Users(Users, &quot;Users&quot;, &quot; &quot;)
+</span><span class="hll">TraditionalServer(TraditionalServer, &quot;Ad Exchange&quot;, &quot; &quot;)
+</span><span class="hll">Mobile(Mobile, &quot;Publisher app or web&quot;, &quot; &quot;)
+</span>
 @enduml
 </pre></div>
 </td></tr></table></div>
@@ -498,8 +507,8 @@ Mobile(Mobile, &quot;Publisher app or web&quot;, &quot; &quot;)
 12
 13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
 !include &lt;awslib/AWSCommon&gt;
-!include &lt;awslib/AWSSimplified.puml&gt;
-!include &lt;awslib/Compute/all.puml&gt;
+<span class="hll">!include &lt;awslib/AWSSimplified.puml&gt;
+</span>!include &lt;awslib/Compute/all.puml&gt;
 !include &lt;awslib/mobile/all.puml&gt;
 !include &lt;awslib/general/all.puml&gt;
 
@@ -565,12 +574,12 @@ Users(Users, &quot;Users&quot;, &quot; &quot;)
 TraditionalServer(AdExchange, &quot;Ad Exchange&quot;, &quot; &quot;)
 Mobile(Mobile, &quot;Publisher app or web&quot;, &quot; &quot;)
 
-Users -down-&gt; Mobile: 1. Visits
-Mobile -right-&gt; AdExchange: 2. Start auction
-AdExchange -right-&gt; Smadex: 3. Bid request / response
-Smadex -left-&gt; Mobile: 4. Show Ad
-Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
-@enduml
+<span class="hll">Users -down-&gt; Mobile: 1. Visits
+</span><span class="hll">Mobile -right-&gt; AdExchange: 2. Start auction
+</span><span class="hll">AdExchange -right-&gt; Smadex: 3. Bid request / response
+</span><span class="hll">Smadex -left-&gt; Mobile: 4. Show Ad
+</span><span class="hll">Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
+</span>@enduml
 </pre></div>
 </td></tr></table></div>
 </div>
@@ -631,9 +640,9 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 !include &lt;awslib/mobile/all.puml&gt;
 !include &lt;awslib/general/all.puml&gt;
 
-&#39; skinparam linetype polyline
- skinparam linetype ortho
-
+<span class="hll">&#39; skinparam linetype polyline
+</span><span class="hll"> skinparam linetype ortho
+</span>
 EC2(Smadex, &quot;Smadex Service&quot;, &quot; &quot;)
 Users(Users, &quot;Users&quot;, &quot; &quot;)
 TraditionalServer(AdExchange, &quot;Ad Exchange&quot;, &quot; &quot;)
@@ -703,9 +712,9 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 !include &lt;awslib/mobile/all.puml&gt;
 !include &lt;awslib/general/all.puml&gt;
 
-skinparam linetype polyline
-&#39; skinparam linetype ortho
-
+<span class="hll">skinparam linetype polyline
+</span><span class="hll">&#39; skinparam linetype ortho
+</span>
 EC2(Smadex, &quot;Smadex Service&quot;, &quot; &quot;)
 Users(Users, &quot;Users&quot;, &quot; &quot;)
 TraditionalServer(AdExchange, &quot;Ad Exchange&quot;, &quot; &quot;)
@@ -786,8 +795,8 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
  skinparam linetype polyline
 &#39; skinparam linetype ortho
 
-package &quot;AWS Cloud&quot; {
-EC2(Smadex, &quot;Smadex Service&quot;, &quot; &quot;)
+<span class="hll">package &quot;AWS Cloud&quot; {
+</span>EC2(Smadex, &quot;Smadex Service&quot;, &quot; &quot;)
 }
 
 Users(Users, &quot;Users&quot;, &quot; &quot;)
@@ -805,23 +814,33 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>2.2. 2<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id3">
-<h3>2.2.1. Original<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Building a Scalable Document Pre-Processing Pipeline <a class="reference external" href="https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/">https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/</a></p>
-<div class="figure align-default">
-<img alt="../_images/Pre-processing-pipeline-architecture-SM.jpg" src="../_images/Pre-processing-pipeline-architecture-SM.jpg" />
-</div>
-</div>
+<h2>2.2. <a class="reference external" href="https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/">AWSArchitectureBlogSample2</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
-<h3>2.2.2. PlantUML Equivalent<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1. Original<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id11">
+<img alt="../_images/Pre-processing-pipeline-architecture-SM.jpg" src="../_images/Pre-processing-pipeline-architecture-SM.jpg" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://aws.amazon.com/blogs/architecture/building-a-scalable-document-pre-processing-pipeline/">AWSArchitectureBlogSample2</a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>2.2.2. PlantUML Equivalent<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
 <img alt="../_images/2.8.png" src="../_images/2.8.png" />
 </div>
-<div class="admonition-todo admonition" id="id5">
+<div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">Todo</p>
 <p>update docker version of plantuml so awslib icons are available - screenshot of plantuml server for now</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In general, I recommend starting a diagram without forcing the arrow directions to let PlantUML optimise the layout; then tweak the result.</p>
+<p>Because we are trying to compare to an existing complex diagram, I will force the layout to match the original - but only up to a point that allows clarity and comparison.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Because there are a lot of parts to this diagram, I built it step-by-step in sections to validate as I went - which makes it easier to fix a typo, or get feedback as we go.
+Not all steps are shown here - only the final ones - but the PlantUML source code files for each step are in the directory with the source and documentation.</p>
 </div>
 <div class="figure align-center">
 <p class="plantuml">
@@ -1194,11 +1213,15 @@ SNS1 -down-&gt; SESEmail
 @enduml
 </pre></div>
 </td></tr></table></div>
-<p>For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.
-Use together to group the SQS and File processing icons.</p>
+<p>Notes:</p>
+<ol class="arabic simple">
+<li><p>For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">`together`</span></code> to group the SQS and File processing icons.</p></li>
+<li><p>I did not change the boxes line style or colour.</p></li>
+</ol>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="../_images/plantuml-05baa993e3cc07f2a84f4196eaeedd734cf5ca6a.png" alt="&#64;startuml
+<img src="../_images/plantuml-55f9b44550085d1e7396f5dc29fcff085cfad26e.png" alt="&#64;startuml
 !include &lt;awslib/AWSCommon&gt;
 !include &lt;awslib/AWSSimplified.puml&gt;
 !include &lt;awslib/Compute/all.puml&gt;
@@ -1212,8 +1235,8 @@ Use together to group the SQS and File processing icons.</p>
 !include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
 !include &lt;awslib/Database/all.puml&gt;
 !include &lt;awslib/ApplicationIntegration/all.puml&gt;
-!include &lt;awslib/ApplicationIntegration/SNS.puml&gt;
-!include &lt;awslib/CustomerEngagement/SESEmail.puml&gt;
+
+
 
 
 
@@ -1459,8 +1482,8 @@ SNS1 -left-&gt; SESEmail
 !include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
 !include &lt;awslib/Database/all.puml&gt;
 !include &lt;awslib/ApplicationIntegration/all.puml&gt;
-!include &lt;awslib/ApplicationIntegration/SNS.puml&gt;
-!include &lt;awslib/CustomerEngagement/SESEmail.puml&gt;
+
+
 
 
 
@@ -1572,17 +1595,123 @@ SNS1 -left-&gt; SESEmail
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>2.3. 3<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default">
+<div class="section" id="id7">
+<h2>2.3. <a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">AWSArchitectureBlogSample3</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id12">
 <img alt="../_images/BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png" src="../_images/BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">AWSArchitectureBlogSample3</a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<p>BBVA: Helping Global Remote Working with Amazon AppStream 2.0 <a class="reference external" href="https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/">https://aws.amazon.com/blogs/architecture/bbva-helping-global-remote-working-with-amazon-appstream-2-0/</a></p>
-<div class="admonition-todo admonition" id="id7">
+<div class="section" id="id8">
+<h3>2.3.1. Gather the icons we need<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When using <code class="docutils literal notranslate"><span class="pre">`listsprites`</span></code> limit the number of library categories you include to make it easier to search category by category.
+Simplified off (by commenting out the simplified header) so we can see the icon name.</p>
+</div>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-1134703b2004589dccdb980168ece30c22b57aca.png" alt="&#64;startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/EndUserComputing/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+
+
+Appstream2_0(Appstream2_0, &quot; &quot;, &quot; &quot;)
+AutoScalingGroup(AutoScalingGroup, &quot; &quot;, &quot; &quot;)
+EC2Instance(EC2Instance, &quot; &quot;, &quot; &quot;)
+InternetAlt1(InternetAlt1, &quot; &quot;, &quot; &quot;)
+DirectConnect(DirectConnect, &quot; &quot;, &quot; &quot;)
+VPCVPNConnection(VPCVPNConnection, &quot; &quot;, &quot; &quot;)
+VPCSubnetPublic(VPCSubnetPublic, &quot; &quot;, &quot; &quot;)
+VPCSubnetPrivate(VPCSubnetPrivate, &quot; &quot;, &quot; &quot;)
+VPCInternetGateway(VPCInternetGateway, &quot; &quot;, &quot; &quot;)
+VPCCustomerGateway(VPCCustomerGateway, &quot; &quot;, &quot; &quot;)
+TransitGateway(S3TransitGatewayStaging, &quot; &quot;, &quot; &quot;)
+VPCElasticNetworkInterface(VPCElasticNetworkInterface, &quot; &quot;, &quot; &quot;)
+ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, &quot; &quot;, &quot; &quot;)
+
+Cloudalt(Cloudalt, &quot; &quot;, &quot; &quot;)
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/EndUserComputing/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+<span class="hll">
+</span>
+Appstream2_0(Appstream2_0, &quot; &quot;, &quot; &quot;)
+AutoScalingGroup(AutoScalingGroup, &quot; &quot;, &quot; &quot;)
+EC2Instance(EC2Instance, &quot; &quot;, &quot; &quot;)
+InternetAlt1(InternetAlt1, &quot; &quot;, &quot; &quot;)
+DirectConnect(DirectConnect, &quot; &quot;, &quot; &quot;)
+VPCVPNConnection(VPCVPNConnection, &quot; &quot;, &quot; &quot;)
+VPCSubnetPublic(VPCSubnetPublic, &quot; &quot;, &quot; &quot;)
+VPCSubnetPrivate(VPCSubnetPrivate, &quot; &quot;, &quot; &quot;)
+VPCInternetGateway(VPCInternetGateway, &quot; &quot;, &quot; &quot;)
+VPCCustomerGateway(VPCCustomerGateway, &quot; &quot;, &quot; &quot;)
+TransitGateway(S3TransitGatewayStaging, &quot; &quot;, &quot; &quot;)
+VPCElasticNetworkInterface(VPCElasticNetworkInterface, &quot; &quot;, &quot; &quot;)
+ELBNetworkLoadBalancer(ELBNetworkLoadBalancer, &quot; &quot;, &quot; &quot;)
+
+Cloudalt(Cloudalt, &quot; &quot;, &quot; &quot;)
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+<div class="admonition-todo admonition" id="id9">
 <p class="admonition-title">Todo</p>
 <p>recover info from png with plantuml
 High-level-digram-1-Smadex-1024x584.png
 <a class="reference external" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png">https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png</a></p>
+</div>
 </div>
 </div>
 </div>
