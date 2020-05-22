@@ -150,7 +150,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -579,6 +580,123 @@ Rel(Hub, UnitN, &quot;Connect&quot;)
 <div class="section" id="c4-acme-component">
 <h3>3.1.3. C4 ACME Component<a class="headerlink" href="#c4-acme-component" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id9">
+<p class="plantuml">
+<img src="../_images/plantuml-af4be4bd4df2f4be25d00d9d9adb2a3a24097ceb.png" alt="&#64;startuml
+
+'AWS stuff here
+'================================
+!includeurl &lt;aws/common&gt;
+!includeurl &lt;aws/SDKs/Java/Java.puml&gt;
+!includeurl &lt;aws/SDKs/Nodejs/Nodejs.puml&gt;
+
+!includeurl &lt;aws/General/users/users.puml&gt;
+!includeurl &lt;aws/General/client/client.puml&gt;
+!includeurl &lt;aws/General/AWScloud/AWScloud.puml&gt;
+!includeurl &lt;aws/General/mobileclient/mobileclient.puml&gt;
+
+!includeurl &lt;aws/Database/AmazonRDS/AmazonRDS.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/DBinstance/DBinstance.puml&gt;
+!includeurl &lt;aws/Database/AmazonRDS/MySQLDBinstance/MySQLDBinstance.puml&gt;
+
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/AWSElasticBeanstalk.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/deployment/deployment.puml&gt;
+!includeurl &lt;aws/Compute/AWSElasticBeanstalk/application/application.puml&gt;
+!includeurl &lt;aws/Compute/ElasticLoadBalancing/ApplicationLoadBalancer/ApplicationLoadBalancer.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/AWSLambda.puml&gt;
+!includeurl &lt;aws/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml&gt;
+
+!includeurl &lt;aws/Storage/AmazonS3/AmazonS3.puml&gt;
+!includeurl &lt;aws/Storage/AmazonS3/bucket/bucket.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/AmazonGlacier.puml&gt;
+!includeurl &lt;aws/Storage/AmazonGlacier/archive/archive.puml&gt;
+
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/permissions/permissions.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/IAM/role/role.puml&gt;
+
+!includeurl &lt;aws/MobileServices/AmazonCognito/AmazonCognito.puml&gt;
+!includeurl &lt;aws/NetworkingContentDelivery/AmazonRoute53/AmazonRoute53.puml&gt;
+!includeurl &lt;aws/SecurityIdentityCompliance/AWSIAM/AWSIAM.puml&gt;
+
+!includeurl &lt;aws/Analytics/AmazonES/AmazonES.puml&gt;
+!includeurl &lt;aws/ManagementTools/AmazonCloudWatch/AmazonCloudWatch.puml&gt;
+
+'Elastic stuff here
+'================================
+!define ELASTIC_PUML ./plantuml-elastic
+
+!include ELASTIC_PUML/apm/apm.puml
+!include ELASTIC_PUML/app_search/app_search.puml
+!include ELASTIC_PUML/beats/beats.puml
+!include ELASTIC_PUML/cloud/cloud.puml
+!include ELASTIC_PUML/cloud_in_kubernetes/cloud_in_kubernetes.puml
+!include ELASTIC_PUML/code_search/code_search.puml
+!include ELASTIC_PUML/ece/ece.puml
+!include ELASTIC_PUML/eck/eck.puml
+!include ELASTIC_PUML/elastic_search/elastic_search.puml
+!include ELASTIC_PUML/endpoint/endpoint.puml
+!include ELASTIC_PUML/enterprise_search/enterprise_search.puml
+!include ELASTIC_PUML/kibana/kibana.puml
+!include ELASTIC_PUML/logging/logging.puml
+!include ELASTIC_PUML/logstash/logstash.puml
+!include ELASTIC_PUML/maps/maps.puml
+!include ELASTIC_PUML/metrics/metrics.puml
+!include ELASTIC_PUML/siem/siem.puml
+!include ELASTIC_PUML/site_search/site_search.puml
+!include ELASTIC_PUML/stack/stack.puml
+!include ELASTIC_PUML/uptime/uptime.puml
+
+
+'change color of selected background shape https://plantuml.com/deployment-diagram
+skinparam actorBackgroundColor White 
+skinparam agentBackgroundColor White 
+skinparam artifactBackgroundColor White 
+skinparam boundaryBackgroundColor White 
+skinparam cardBackgroundColor White 
+skinparam cloudBackgroundColor White 
+skinparam componentBackgroundColor White 
+skinparam controlBackgroundColor White 
+skinparam databaseBackgroundColor White 
+skinparam entityBackgroundColor White 
+skinparam fileBackgroundColor White 
+skinparam folderBackgroundColor White 
+skinparam frameBackgroundColor White 
+skinparam interfaceBackgroundColor White 
+skinparam nodeBackgroundColor White 
+skinparam packageBackgroundColor White 
+skinparam queueBackgroundColor White 
+skinparam stackBackgroundColor White 
+skinparam rectangleBackgroundColor White 
+skinparam storageBackgroundColor White 
+skinparam usecaseBackgroundColor White 
+
+
+
+'To change background color to elastic green
+'skinparam componentBackgroundColor 00BFB3 
+
+AWSCLOUD(aws) {
+
+    AMAZONS3(s3_bucket,&quot;Logs uploaded to here&quot;)
+
+package Elastic {
+
+    'add &quot;node&quot;, &quot;component&quot;, &quot;agent&quot; etc... to change background shape per https://plantuml.com/deployment-diagram
+    'default is agent 
+    ELASTIC_SEARCH(ElasticSearch, &quot;Search and Analyze&quot;,database)
+    LOGSTASH(Logstash, &quot;Parse and Transform&quot;,node)
+    KIBANA(Kibana, &quot;Visualize&quot;,agent) 
+}
+
+    s3_bucket -down-&gt; Logstash: Raw logs
+    Logstash -right-&gt; ElasticSearch: Transformed Data
+    ElasticSearch -right-&gt; Kibana: Data to View
+
+}
+
+&#64;enduml
+"/>
+</p>
 <p class="caption"><span class="caption-text"><em>C4 ACME Component</em></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id10">

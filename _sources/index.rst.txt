@@ -52,13 +52,6 @@ Imagine
     Well that's what PlantUML gives you, and more...
 
 
-.. todo::
-
-   recreate in plantuml
-   https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/real-time-recommendation
-
-   also pick an aws arch blog example
-
 .. raw:: html
 
       <!DOCTYPE html>
@@ -181,6 +174,8 @@ Imagine
 
    about/AboutPlantUML
    about/AboutThisGuide
+   
+
 
 .. toctree::
    :maxdepth: 2
@@ -250,6 +245,7 @@ Imagine
    :numbered:
    :caption: Annex
    
+   github/githubFileFinder
    DocumentationAsCode/JourneyDocumentationASCode
 
 .. toctree::

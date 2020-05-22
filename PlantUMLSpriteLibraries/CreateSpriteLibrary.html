@@ -119,7 +119,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#all-icons">5.1.3. All Icons</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-hyperlinks">5.2. PlantUML HyperLinks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">6. ContributingToStdlib</a></li>
@@ -136,7 +135,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -236,6 +236,25 @@ and extract them into a directory e.g. “osaicons”.</p></li>
 <div class="section" id="example">
 <h3>5.1.2. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-77a4933a093a6e4472f06798be02dddeb5e19ef6.png" alt="&#64;startuml
+
+!include &lt;osa/user/audit/audit.puml&gt;
+!include &lt;osa/user/black/hat/hat.puml&gt;
+!include &lt;osa/user/green/architect/architect.puml&gt;
+
+Auditor : &lt;$audit&gt; 
+Architect: &lt;$architect&gt; 
+BlackHat : &lt;$black_hat&gt;
+
+Auditor -&gt; Architect : blah
+Architect -&gt; BlackHat : blahblah
+
+
+&#64;enduml
+
+"/>
+</p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -279,49 +298,6 @@ Architect -&gt; BlackHat : blahblah
 <p>add info on what osa icons look like</p>
 </div>
 </div>
-</div>
-<div class="section" id="plantuml-hyperlinks">
-<h2>5.2. PlantUML HyperLinks<a class="headerlink" href="#plantuml-hyperlinks" title="Permalink to this headline">¶</a></h2>
-<p>PlantUML supports hyperlinks in output SVG images. This allows diagrams
-to be linked together, and for a user to easily navigate by clicking
-around per <a class="reference external" href="http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html">Shneiderman’s
-mantra</a>:</p>
-<blockquote>
-<div><p><em>Overview first, zoom and filter, then details-on-demand</em></p>
-</div></blockquote>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>fix svg link</p>
-</div>
-<p>Clicking the image opens up the target <code class="docutils literal notranslate"><span class="pre">svg</span></code> image. This target image contains hyperlinks.</p>
-<a class="reference external image-reference" href="../links.svg"><img alt="../_images/links.svg" src="../_images/links.svg" /></a>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span></span>    <span class="nd">@startuml</span>
-    <span class="n">actor</span> <span class="n">Bob</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sequence</span><span class="o">-</span><span class="n">diagram</span><span class="p">]]</span>
-    <span class="n">actor</span> <span class="s2">&quot;This is [[http://plantuml.com/sequence-diagram Alice]] actor&quot;</span> <span class="k">as</span> <span class="n">Alice</span>
-    <span class="n">Bob</span> <span class="o">-&gt;</span> <span class="n">Alice</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">hello</span>
-    <span class="n">note</span> <span class="n">left</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span>
-      <span class="n">a</span> <span class="n">note</span> <span class="k">with</span> <span class="n">a</span> <span class="n">link</span>
-    <span class="n">end</span> <span class="n">note</span>
-    <span class="n">Alice</span> <span class="o">-&gt;</span> <span class="n">Bob</span> <span class="p">:</span> <span class="n">hello</span> <span class="k">with</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">{</span><span class="n">Tooltip</span> <span class="k">for</span> <span class="n">message</span><span class="p">}</span> <span class="n">some</span> <span class="n">link</span><span class="p">]]</span>
-    <span class="n">note</span> <span class="n">right</span> <span class="p">[[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">index</span><span class="p">]]</span> <span class="p">:</span> <span class="n">another</span> <span class="n">note</span>
-    <span class="n">note</span> <span class="n">left</span> <span class="n">of</span> <span class="n">Bob</span>
-    <span class="s1">&#39; You can use [[http://plantuml.com/index links in notes]] also.</span>
-    <span class="n">end</span> <span class="n">note</span>
-    <span class="nd">@enduml</span>
-</pre></div>
-</td></tr></table></div>
 </div>
 </div>
 

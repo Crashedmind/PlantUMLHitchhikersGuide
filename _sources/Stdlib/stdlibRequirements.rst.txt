@@ -1,3 +1,5 @@
+.. _stdlibreqs-label:
+
 *******************************************************************************
 Standard Library - What We Have And What We Want
 *******************************************************************************
@@ -43,15 +45,21 @@ Observations on Standard Library
 
 #. Some libaries have an ```all.puml``` that includes all icons and their macros for a given category/subset of icons. This allows including all icons by including one file - rather than an include per icon.
 
-#. The superset of parameters provided by the macros are
+#. Macros define the following 
 
-    #. sprite
-    #. color
-    #. scale (material library only)
-    #. shape (Type 1 (e_type), 4 (_shape))
-    #. technology
-    #. description
-    #. label
+    #. The superset of parameters 
+
+        #. sprite
+        #. color
+        #. scale (material library only)
+        #. shape (Type 1 (e_type), 4 (_shape))
+        #. technology
+        #. description
+        #. label
+    #. Fixed
+
+        #. Text Size 
+        #. Text Order
 
 Overall, the PlantUML Stdlib lacks consistency and therefore user friendliness.
 We need to change this to empower the user with PlantUML.
@@ -81,13 +89,11 @@ What a User Wants In A Standard Library
     
     #. To benefit from other people's work e.g. if a new parameter or decoration/theme is added they like, they want to use it in their diagrams
 
+    #. Future Proofing with backwards compatibility: new functionality can be added to the sprite library, but the user's existing code will still work with this new library
+
 #. Grouping of icons into categories.
 
     #. A user can include a file for that category that incldues all the icons (and not have to include a file for every icon)
-
-#. Future Proofing
-
-    #. uses supported PlantUML features, and can be easily changed in the future.
 
 #. To be able to easily contribute their icon set to stdlib
 

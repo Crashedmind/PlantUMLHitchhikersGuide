@@ -192,10 +192,9 @@ Original
 PlantUML Equivalent
 -------------------------------------------------------------------------------
 
-.. figure :: 2.8.png
-
-.. todo ::
-    update docker version of plantuml so awslib icons are available - screenshot of plantuml server for now
+.. uml:: 2.8.puml
+    :align: center
+    
 
 .. tip ::
     In general, I recommend starting a diagram without forcing the arrow directions to let PlantUML optimise the layout; then tweak the result.
@@ -206,14 +205,16 @@ PlantUML Equivalent
     Because there are a lot of parts to this diagram, I built it step-by-step in sections to validate as I went - which makes it easier to fix a typo, or get feedback as we go.
     Not all steps are shown here - only the final ones - but the PlantUML source code files for each step are in the directory with the source and documentation.
 
+First Pass
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. uml:: 2.6.puml
     :align: center
     
 .. literalinclude:: 2.6.puml
     :linenos: 
 
-Notes:
-
+Second Pass: Tweak
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #. For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.
 #. Use ```together``` to group the SQS and File processing icons.
 #. I did not change the boxes line style or colour. 
@@ -226,13 +227,6 @@ Notes:
 
 
 
-.. comment 
-
-    http://www.plantuml.com/plantuml/uml/hLRHZgis47ttLxZx0fMQUzNajRgwQJQxYhIxxOfA-rWvC25eZOsCsIYj-kyTR6oJnD27RgG8VCwP6NDcZFZUQgPqLtFoGoLotXL0Vs6dbbVxh-ktR2FhMeflKIwhwePNXmgABmt6HqGOtNGQlZBEfoIrt5TyLb620CNudEHHoQxPvLAqSwfCIyNAsLhFJA2Y1g7NedYK7w044_bioAPhjQn1RKKvXCuNo8-LW2TWIbIYd9E-W3v9zOugtCj62esfxu5NkAdpNDmzqspFsjbDhnliNCvq9SKE4vVAt8uYy9UuxZtQ1f346MWQ3yCg0_LHvP2jlZIY9Cb4vkmrixnB-iJgVS4kiUrcIPAf5coux8etflEZ3OhudcspRSqgRWNNLcSeUsRle2oTFDl9M_--UsGQJkniyLdRWtXfrTxiTQVGZl_ouBM33eo849gqMALXYjMKuqRrkG7QI7xk5oIX4LOgVPJO6IqRok6WQGjvdvgIPF5_VgHX-JlQGx43V-v4gtl7wTzaw7ow4oMqVI5yif_edLzINDyXGEz-zDhDiHF6FIDrA_gRoeyOfDXrt3-4nESfpLQPPYK6et9TixymBblH0QE_TlaxQ9S5lKtnRtSMz0XHYr5ZlPCJEtwflVoXgh84rOUzPTHYT03fGoUCnrUXZbvqpU8R7Hj4nek1zriZ_euk2daIo8qC8_wHFJlkoD1vh7pyjDOxvvwOAk6Xuc1ykdJGSBGdBrnqeLdDE9y8DTnCA3ugdofhoKWmGLDIl-6HVuYZPBHTnr4aAQP5WKjoCG7-4Lm0YWnsbSQghrBiQbR2HeeFK2rsnA9kR51gU1e4GvRRoSBk5f8Mh3r2OGuztSjE54oT_G6zVth5S-dU92akVyPel0HZ0xMSfbQUSeTmP2DTc173wRiPZ4cPTt1ETjDmGcug1Fb4Xya4RezCT3SUYHM9zfzCuBP8_5ay52apEoEHpaTySPNxdlidYjBBi9Kelo9OSI-rblNdlancNkN6WFRYJMwXonUvEThunrq-i8gtx03ONJkir24tfzc_Jwp36WgJE_9EyG9RdHf9z9Mm4mTG87BOYG-PCtUM7KezF7cUxIT1QYzX6tRjH4duf4Yj800X1Z4wW7sC_vGPGlmwH7Y8RaNHo4fe32JzxFX9kB6vfvVpz6g69ZTGc7yt08JCdWIVtUlTZMVYNIPnc2uu7FhwapqbauolQ1j6aacbhn9QD-whftrFmldxtCyu4ZwIqt0RXi9WfnxpuvUzP2d-WmON1X--fLDtWmfpfIzILuVXynQLevgXtJW690c4jnAJcv8USDa9-GwYw6fE_WK0
-
-    http://www.plantuml.com/plantuml/uml/hLPHRzis47xdhxZbnHemjsZyEXJr72Sma6GBDA2F0osTPI4KAL1K3A_eVzz952bPbZXiJG1NulTznoE_ExBwKXckJLq8zbCk4r6d2B_oKoNo_SVrrtYZYaB9pvDSd1Ubo0yvfXzAYfyGKNHP6_p8XPYJ56gVYw0YGucQYv3aGQkwt2LALY5LR9JcMJ3N4vUaA52QjKmVr1jgoMKI3DdKbL45wgtCkj1mWkIOItn4hcKkiv3q6Sr9wLTIqLesIXgQ-Wv5JeiwX-BkkE5xNWKNlIwfSWatkP8xcZZJxUl_Y8YVu_zWJBoDjmNFNHBwMxWMUR1LPWjNfRQxi1l5gD_o1EFLXr9cR36tc9VOycxIHrxiKtw9RJUtR35NvurGTVgLc-HeWm9xi89nFMEIFV5Nr9PUFDdsNl-nU-06J_niyM1jU_6jLVkAhcjDTloR1oyrrjYA6AieHyarBq3GCisvH2YLE3S3je09LcbpL5GNeqeGU31GOT9C36on_94_LlBabSm1yl-ldQnCupTyOrtTevtCi6eIqRv-WHi_11hV400tFtljvbZBnZihTIFuNIT72j9y7FUTiUbkYk9LR7X6mQHS5_nlYejNq67mMvsyed6paBCH_UpAUZr1O35eZNToPfiliey_TPvbg8cZYnCi1Xq8zxLiFHw5EdfPbylFC3I83GSTxvV6_1iiKtMIn0qCOtxBdXrMfAiyPJw-N-cDoj0SKSCtP-8ZrndUvm9RooxDR3beo0j3NMXSS25cGbik44gx5dDfBJaHpCYVo2zuO2NX91airt509D2q972JN3I3tu8B856BZQQnwj4Kku9dk56IhegAYcDHrq4aRNde1M0LLqtslQbqgY3brH7JzWA0lQfbolNP7zQxnnTRjDQHY8QVA9mUlRCzTJjFhHpb3-J0HrYsxKQTUDKPip9lOL0shZXZLnbw-Ko9sGnkZy_aQZmoaMIw0TWCRfDCxyL34sc2JSAkAt_jYy_SrDplQ9A-dLnApwyOPTmhOrJnlXTBu5fl3QWkRdKBZIxrvcpJZrPvptDHyGFQ_rG808TS7MT_eLY73QRjt1ENYXVOxD1A9k-4dJoWHfdWJhwfXBl3x53myEo1jXy7aNtqox1ZB_BV5f7bUw0F8Gmwi8cZCFzPqqNvSH_a8TZAj5IvD5qiQph8zyELsGrz6wPN0PfTGVqfS6t0MF0y-DczthruPhhMR1g6fS13at-sicoMyHbjsUQ5FicuZ6mCUEMeTFsfVDyFFTP_H4VzQzyeBNPgC7-QdkE8Vfzw3OrSvtMVsv5x8RXzmhCo-I6tRbZnC7NV1TGT0zoxqIHapJyUSHdO5vHfNOX_0000
-
-
 AWSArchitectureBlogSample3_
 ===============================================================================
 
@@ -242,25 +236,34 @@ AWSArchitectureBlogSample3_
 
 Gather the icons we need
 --------------------------------------------------------------------------------
-* For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
 
 .. tip ::
     When using ```listsprites``` limit the number of library categories you include to make it easier to search category by category.
     Simplified off (by commenting out the simplified header) so we can see the icon name.
 
-.. uml:: 3.2.puml
+.. uml:: 3.1.puml
     :align: center
     
-.. literalinclude:: ./3.2.puml
+.. literalinclude:: ./3.1.puml
     :linenos: 
-    :emphasize-lines: 12       
 
 
 
+Add Text and Simplify The Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. uml:: 3.3.puml
+    :align: center
+    
+.. literalinclude:: ./3.3.puml
+    :linenos: 
+
+
+Connect The Icons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. todo ::
-    recover info from png with plantuml
-    High-level-digram-1-Smadex-1024x584.png
-    https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png
+    finish aws 3 diagram - figure out best way to do boundaries
+    https://github.com/dcasati/kubernetes-PlantUML uses the c4 type boundary macros 
+

@@ -114,11 +114,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">2.2. AWSArchitectureBlogSample2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id4">2.2.1. Original</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">2.2.2. PlantUML Equivalent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.2.2. PlantUML Equivalent</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#first-pass">2.2.2.1. First Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#second-pass-tweak">2.2.2.2. Second Pass: Tweak</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">2.3. AWSArchitectureBlogSample3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id8">2.3.1. Gather the icons we need</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2.3. AWSArchitectureBlogSample3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.3.1. Gather the icons we need</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-text-and-simplify-the-icons">2.3.1.1. Add Text and Simplify The Icons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.3.1.2. Connect The Icons</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -154,7 +162,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -825,12 +834,132 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 </div>
 <div class="section" id="id5">
 <h3>2.2.2. PlantUML Equivalent<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default">
-<img alt="../_images/2.8.png" src="../_images/2.8.png" />
-</div>
-<div class="admonition-todo admonition" id="id6">
-<p class="admonition-title">Todo</p>
-<p>update docker version of plantuml so awslib icons are available - screenshot of plantuml server for now</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-55f9b44550085d1e7396f5dc29fcff085cfad26e.png" alt="&#64;startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/Storage/all.puml&gt;
+!include &lt;awslib/ManagementAndGovernance/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/MachineLearning/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/Database/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+
+
+
+
+
+'Compute/General
+'Storage/SimpleStorageServiceS3.png
+'ApplicationIntegration/SQS.png
+'Compute/Lambda.png
+'Compute/EC2
+'ManagementAndGovernance/CloudWatch.png
+'CustomerEngagement/SESEmail.png
+'MachineLearning/SageMaker.png
+''Mobile/APIGateway.png
+'NetworkingAndContentDelivery/APIGateway2.png
+'Database/Aurora.png
+'ApplicationIntegration/SQSQueue.png
+
+
+skinparam linetype polyline
+' skinparam linetype ortho
+
+'top left section 
+'-------------------------------------------------------------
+package EC2_Instance {
+General(IngestionApp, &quot;Ingestion App&quot;, &quot; &quot;)
+General(ChunkingApp, &quot;Chunking Orchestration App&quot;, &quot; &quot;)
+}
+
+SimpleStorageServiceS3(S3Staging, &quot;Amazon S3 Staging Bucket&quot;, &quot; &quot;)
+SQS(SQSIngest, &quot;Amazon SQS Ingest Queue&quot;, &quot; &quot;)
+
+Lambda(LambdaTrigger, &quot;AWS Lambda Trigger Function&quot;, &quot; &quot;)
+
+LambdaTrigger -up-&gt; IngestionApp
+IngestionApp -up-&gt; SQSIngest
+SQSIngest -down-&gt; ChunkingApp
+S3Staging &lt;-down-&gt; EC2_Instance
+
+'top right section 
+'-------------------------------------------------------------
+together {
+SQS(SQSLargeFileQueue, &quot;Amazon SQS Large File Queue&quot;, &quot; &quot;)
+SQS(SQSSmallFileQueue, &quot;Amazon SQS Small File Queue&quot;, &quot; &quot;)
+SQS(SQSSingleFileQueue, &quot;Amazon SQS Single File Queue&quot;, &quot; &quot;)
+
+EC2(LargeFileChunkingAppEC2, &quot;Large File Chunking App on EC2&quot;, &quot; &quot;)
+Lambda(LambdaSmallFileChunking, &quot;Small File Chunking Lambda&quot;, &quot; &quot;)
+Lambda(ImageConversionLambdaFunction, &quot;Image Conversion Lambda Function&quot;, &quot; &quot;)
+}
+'todo dashed line boundary
+package DLQ {
+SQSQueue(DLQ1, &quot;DLQ&quot;, &quot; &quot;)
+SQSQueue(DLQ2, &quot;DLQ&quot;, &quot; &quot;)
+SQSQueue(DLQ3, &quot;DLQ&quot;, &quot; &quot;)
+}
+
+ChunkingApp -right-&gt; SQSLargeFileQueue
+ChunkingApp -right-&gt; SQSSmallFileQueue
+ChunkingApp -right-&gt; SQSSingleFileQueue
+
+SQSLargeFileQueue -right-&gt; LargeFileChunkingAppEC2
+LargeFileChunkingAppEC2 -down-&gt; SQSSmallFileQueue
+SQSSmallFileQueue -right-&gt; LambdaSmallFileChunking
+LambdaSmallFileChunking -down-&gt; SQSSingleFileQueue
+SQSSingleFileQueue -right-&gt; ImageConversionLambdaFunction
+
+'todo dashed line
+SQSLargeFileQueue -down-&gt; DLQ1
+SQSSmallFileQueue -down-&gt; DLQ2
+SQSSingleFileQueue -down-&gt; DLQ3
+
+
+'bottom right section 
+'-------------------------------------------------------------
+
+SimpleStorageServiceS3(S3Images, &quot;Amazon S3 Images Bucket&quot;, &quot; &quot;)
+EC2(EC2DLQFailsafeApp, &quot;DLQ Failsafe App on EC2&quot;, &quot; &quot;)
+SQS(SQSConvertedImageQueue, &quot;Amazon SQS Converted Image Queue&quot;, &quot; &quot;)
+Lambda(LambdaInferenceInvocation, &quot;Inference Invocation Lambda Function&quot;, &quot; &quot;)
+Aurora(Aurora, &quot;Amazon Aurora&quot;, &quot; &quot;)
+APIGateway(AmazonAPIGateway, &quot;Amazon API Gateway&quot;, &quot;&quot;)
+SageMaker(AmazonSageMaker, &quot;Amazon SageMaker Endpoint&quot;, &quot;&quot;)
+
+DLQ1 -down-&gt; EC2DLQFailsafeApp
+DLQ2 -down-&gt; EC2DLQFailsafeApp
+DLQ3 -down-&gt; EC2DLQFailsafeApp
+
+EC2DLQFailsafeApp -right-&gt; S3Images
+
+ImageConversionLambdaFunction -down-&gt; S3Images
+S3Images -down-&gt; SQSConvertedImageQueue
+SQSConvertedImageQueue -left-&gt; LambdaInferenceInvocation
+LambdaInferenceInvocation -down-&gt; Aurora
+LambdaInferenceInvocation &lt;-left-&gt; AmazonAPIGateway
+AmazonAPIGateway &lt;-left-&gt; AmazonSageMaker
+
+
+'bottom left section 
+'-------------------------------------------------------------
+
+CloudWatch(CloudWatch, &quot;Amazon Cloudwatch&quot;, &quot; &quot;)
+SNS(SNS1, &quot;Amazon SNS&quot;, &quot;&quot;)
+SESEmail(SESEmail, &quot;Email Notification&quot;, &quot;&quot;)
+
+CloudWatch -right-&gt; DLQ
+CloudWatch -left-&gt; SNS1
+SNS1 -left-&gt; SESEmail
+&#64;enduml"/>
+</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -842,6 +971,8 @@ Users -right-&gt; Smadex: 5. Impression / click / install / event {request id}
 <p>Because there are a lot of parts to this diagram, I built it step-by-step in sections to validate as I went - which makes it easier to fix a typo, or get feedback as we go.
 Not all steps are shown here - only the final ones - but the PlantUML source code files for each step are in the directory with the source and documentation.</p>
 </div>
+<div class="section" id="first-pass">
+<h4>2.2.2.1. First Pass<a class="headerlink" href="#first-pass" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-54aacbbb817e695902a4224d7df46c6589bf794a.png" alt="&#64;startuml
@@ -1213,7 +1344,9 @@ SNS1 -down-&gt; SESEmail
 @enduml
 </pre></div>
 </td></tr></table></div>
-<p>Notes:</p>
+</div>
+<div class="section" id="second-pass-tweak">
+<h4>2.2.2.2. Second Pass: Tweak<a class="headerlink" href="#second-pass-tweak" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li><p>For clarity, force the cloudwatch branch to go horizontal and connect from left to DLQ.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">`together`</span></code> to group the SQS and File processing icons.</p></li>
@@ -1595,22 +1728,120 @@ SNS1 -left-&gt; SESEmail
 </td></tr></table></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h2>2.3. <a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">AWSArchitectureBlogSample3</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id6">
+<h2>2.3. <a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">AWSArchitectureBlogSample3</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id12">
 <img alt="../_images/BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png" src="../_images/BBVA-uses-AWS-Transit-Gateway-to-build-a-hub-and-spoke-network-topology-2.png" />
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://aws.amazon.com/blogs/architecture/serving-billions-of-ads-with-amazon-elasticache-for-redis/">AWSArchitectureBlogSample3</a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id8">
-<h3>2.3.1. Gather the icons we need<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons.</p></li>
-</ul>
+<div class="section" id="id7">
+<h3>2.3.1. Gather the icons we need<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">`listsprites`</span></code> limit the number of library categories you include to make it easier to search category by category.
 Simplified off (by commenting out the simplified header) so we can see the icon name.</p>
 </div>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-c09afb020974828bcaec16208ab1056fa471a015.png" alt="&#64;startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+'!include &lt;awslib/Compute/all.puml&gt;
+'!include &lt;awslib/mobile/all.puml&gt;
+'!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/EndUserComputing/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+
+listsprites
+
+'Appstream2_0
+'AutoScalingGroup
+'EC2Instance
+'InternetAlt1
+'DirectConnect
+'VPCVPNConnection
+'VPCSubnetPublic
+'VPCSubnetPrivate
+'VPCInternetGateway
+'VPCCustomerGateway
+'TransitGateway
+'VPCElasticNetworkInterface
+'ELBNetworkLoadBalancer
+
+'Cloudalt
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+&#39;!include &lt;awslib/Compute/all.puml&gt;
+&#39;!include &lt;awslib/mobile/all.puml&gt;
+&#39;!include &lt;awslib/general/all.puml&gt;
+!include &lt;awslib/GroupIcons/all.puml&gt;
+!include &lt;awslib/CustomerEngagement/all.puml&gt;
+!include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
+!include &lt;awslib/EndUserComputing/all.puml&gt;
+!include &lt;awslib/ApplicationIntegration/all.puml&gt;
+
+listsprites
+
+&#39;Appstream2_0
+&#39;AutoScalingGroup
+&#39;EC2Instance
+&#39;InternetAlt1
+&#39;DirectConnect
+&#39;VPCVPNConnection
+&#39;VPCSubnetPublic
+&#39;VPCSubnetPrivate
+&#39;VPCInternetGateway
+&#39;VPCCustomerGateway
+&#39;TransitGateway
+&#39;VPCElasticNetworkInterface
+&#39;ELBNetworkLoadBalancer
+
+&#39;Cloudalt
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="add-text-and-simplify-the-icons">
+<h4>2.3.1.1. Add Text and Simplify The Icons<a class="headerlink" href="#add-text-and-simplify-the-icons" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-center">
 <p class="plantuml">
 <img src="../_images/plantuml-1134703b2004589dccdb980168ece30c22b57aca.png" alt="&#64;startuml
@@ -1685,8 +1916,8 @@ Cloudalt(Cloudalt, &quot; &quot;, &quot; &quot;)
 !include &lt;awslib/NetworkingAndContentDelivery/all.puml&gt;
 !include &lt;awslib/EndUserComputing/all.puml&gt;
 !include &lt;awslib/ApplicationIntegration/all.puml&gt;
-<span class="hll">
-</span>
+
+
 Appstream2_0(Appstream2_0, &quot; &quot;, &quot; &quot;)
 AutoScalingGroup(AutoScalingGroup, &quot; &quot;, &quot; &quot;)
 EC2Instance(EC2Instance, &quot; &quot;, &quot; &quot;)
@@ -1706,11 +1937,14 @@ Cloudalt(Cloudalt, &quot; &quot;, &quot; &quot;)
 @enduml
 </pre></div>
 </td></tr></table></div>
+</div>
+<div class="section" id="id8">
+<h4>2.3.1.2. Connect The Icons<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <div class="admonition-todo admonition" id="id9">
 <p class="admonition-title">Todo</p>
-<p>recover info from png with plantuml
-High-level-digram-1-Smadex-1024x584.png
-<a class="reference external" href="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png">https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2020/04/15/High-level-digram-1-Smadex-1024x584.png</a></p>
+<p>finish aws 3 diagram - figure out best way to do boundaries
+<a class="reference external" href="https://github.com/dcasati/kubernetes-PlantUML">https://github.com/dcasati/kubernetes-PlantUML</a> uses the c4 type boundary macros</p>
+</div>
 </div>
 </div>
 </div>

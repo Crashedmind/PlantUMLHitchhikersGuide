@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Mixing syntax &mdash; Playing with PlantUML  documentation</title>
+  <title>1. GitHub File Finder &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. PlantUML Stdlib Overview" href="../Stdlib/StdLibOverview.html" />
-    <link rel="prev" title="4. Keywords Arguments" href="NamedArguments.html" /> 
+    <link rel="next" title="2. Journey to Documentation as Code" href="../DocumentationAsCode/JourneyDocumentationASCode.html" />
+    <link rel="prev" title="2. Generate diagrams from PlantUML source files using AWS Lambda" href="../GenerateDiagrams/GenerateDiagramsLambda.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,15 +99,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Using C4 To Architect ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NamedArguments.html">4. Keywords Arguments</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Mixing syntax</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">5.1. Mixing syntax</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
 <ul>
@@ -129,8 +126,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. GitHub File Finder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
@@ -181,13 +178,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>5. Mixing syntax</li>
+      <li>1. GitHub File Finder</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/NamedArguments/MixingSyntax.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/github/githubFileFinder.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -200,25 +197,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mixing-syntax">
-<h1>5. Mixing syntax<a class="headerlink" href="#mixing-syntax" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>5.1. Mixing syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>As a user, I want to add classes, artifacts, databases and nodes in the same diagram.</p>
-<p>add “allow_mixing” at top of diagram</p>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>Mixing syntax keyword</p>
+  <div class="section" id="github-file-finder">
+<span id="githubfilefinder-label"></span><h1>1. GitHub File Finder<a class="headerlink" href="#github-file-finder" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use GitHub File Finder to search for an icon quickly - directly from GitHub:</p>
+<ol class="arabic simple">
+<li><p>Browse to the PlantUML Standard Library repo <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib">https://github.com/plantuml/plantuml-stdlib</a></p></li>
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">`t`</span></code> key to enter GitHub File Finder mode</p></li>
+<li><p>Type e.g. “lock”, “key”, “user”… or whatever you want to search for</p></li>
+<li><p>The list of files/icons filenames that contain that text are shown</p></li>
+</ol>
+<div class="figure align-default">
+<img alt="../_images/filefinder.png" src="../_images/filefinder.png" />
 </div>
-<div class="admonition-todo admonition" id="id3">
-<p class="admonition-title">Todo</p>
-<p>add note about mixing syntax</p>
-</div>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/PL5DRvqm4BppArRaPjLOKIuHGbRI0t-WkIE3zu7x38lyaQVqm6-lpICDRH6IONPtPdRyueDo8SwsMDDf1hEg9S2hDGF-XPHl4m9ZhPefUiRWE_KbA9_FejZRWSly1pLCQ2q1vs52XvmNLLN13veHjitICe96gpws3H9Uv8aqU6UeWQx5GW71uYKK06-JyP1Undgoch4J98G9Aarv8KveMSwqa5_LWBeiJmNEVN1qHStv2Uswk6XqrYoek-vKsBQRUaUzRGKk6hAb_xPyJHPkQ2rSoCqg1DH2m8pUgn7lIpWpJW7eSiJvXxpfrN2j1wKnz3QYRBpvXVNZizJ6hoaQr8t8a6n4xfH5yfa2oLHTToUhldpjKaTvlmveOkrGoopNY2XtoO4iENXuV7nEprbeBoG9newUDRhLeZmOFnkWyJlfhfxi1MUkk4V1sBzcw1tTtUQtmz2jVcZRfwUsbPyPJEH3bhz9w3-WCVC8dg8RCAKvOlLp7UKNwqlwYhFz3G00">http://www.plantuml.com/plantuml/uml/PL5DRvqm4BppArRaPjLOKIuHGbRI0t-WkIE3zu7x38lyaQVqm6-lpICDRH6IONPtPdRyueDo8SwsMDDf1hEg9S2hDGF-XPHl4m9ZhPefUiRWE_KbA9_FejZRWSly1pLCQ2q1vs52XvmNLLN13veHjitICe96gpws3H9Uv8aqU6UeWQx5GW71uYKK06-JyP1Undgoch4J98G9Aarv8KveMSwqa5_LWBeiJmNEVN1qHStv2Uswk6XqrYoek-vKsBQRUaUzRGKk6hAb_xPyJHPkQ2rSoCqg1DH2m8pUgn7lIpWpJW7eSiJvXxpfrN2j1wKnz3QYRBpvXVNZizJ6hoaQr8t8a6n4xfH5yfa2oLHTToUhldpjKaTvlmveOkrGoopNY2XtoO4iENXuV7nEprbeBoG9newUDRhLeZmOFnkWyJlfhfxi1MUkk4V1sBzcw1tTtUQtmz2jVcZRfwUsbPyPJEH3bhz9w3-WCVC8dg8RCAKvOlLp7UKNwqlwYhFz3G00</a>
-<a class="reference external" href="https://stackoverflow.com/questions/34364024/is-it-possible-to-use-custom-images-for-uml-items-in-plantuml">https://stackoverflow.com/questions/34364024/is-it-possible-to-use-custom-images-for-uml-items-in-plantuml</a></p>
-<blockquote>
-<div><p>I want to add classes, artifacts, databases and nodes in the same diagram</p>
-</div></blockquote>
 </div>
 </div>
 
@@ -230,10 +222,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Stdlib/StdLibOverview.html" class="btn btn-neutral float-right" title="1. PlantUML Stdlib Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../DocumentationAsCode/JourneyDocumentationASCode.html" class="btn btn-neutral float-right" title="2. Journey to Documentation as Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="NamedArguments.html" class="btn btn-neutral float-left" title="4. Keywords Arguments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../GenerateDiagrams/GenerateDiagramsLambda.html" class="btn btn-neutral float-left" title="2. Generate diagrams from PlantUML source files using AWS Lambda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

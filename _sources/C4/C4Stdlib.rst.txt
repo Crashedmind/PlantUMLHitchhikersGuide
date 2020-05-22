@@ -9,7 +9,7 @@ C4
 .. tip ::
     
     This section details PlantUML stdlib support for C4.
-    
+
     See :ref:`c4-label` for details of C4. 
 
 .. include:: c4.rst
@@ -84,15 +84,9 @@ Component
 .. note :: 
     We then drill down into the "API Application" box.
 
-.. todo ::
 
-    for some reason this diagram did not render to png - so include the png for now...
-
-    .. uml:: ./C4-PlantUML/C4_ComponentDiagramSample-bigbankplc.puml
-        :align: center
-
-
-.. figure:: ./C4-PlantUML/C4_ComponentDiagramSample-bigbankplc.png
+.. uml:: ./C4-PlantUML/C4_ComponentDiagramSample-bigbankplc.puml
+    :align: center
 
 .. literalinclude:: ./C4-PlantUML/C4_ComponentDiagramSample-bigbankplc.puml
     :linenos: 
@@ -104,8 +98,6 @@ Class
 .. note :: 
     We could then add the Class diagrams for the different Components.
 
-.. todo ::
-    upgrade docker plantuml to latest to get elk, and named args
 
 
 

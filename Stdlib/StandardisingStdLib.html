@@ -119,10 +119,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#procedure-keyword-arguments">4.5. Procedure Keyword Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#extensibility">4.6. Extensibility</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#option-1-reserve-parameters">4.6.1. Option 1: Reserve Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#option-2-dynamic-invocation">4.6.2. Option 2: Dynamic Invocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#option-2-dynamic-invocation">4.6.2. Option 2: Dynamic Invocation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#user-code">4.6.2.1. User code</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#backwards-compatiblity">4.7. Backwards Compatiblity</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">5. Create A Sprite library</a></li>
@@ -140,7 +142,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -217,7 +220,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>!function and !procedure should be used instead of !define and !definelong</p>
-<p>Per <a href="#id5"><span class="problematic" id="id6">MigrationNotes_</span></a>:</p>
+<p>Per <a href="#id6"><span class="problematic" id="id7">MigrationNotes_</span></a>:</p>
 <blockquote>
 <div><p><em>You should not use !define and !definelong anymore. Use !function, !procedure
 or variable definition instead.</em></p>
@@ -228,7 +231,7 @@ or variable definition instead.</em></p>
 </div>
 <div class="section" id="default-values">
 <h2>4.2. Default Values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h2>
-<p>Per <a href="#id7"><span class="problematic" id="id8">DefaultArgumentValue_</span></a>, “In both procedure and return functions, you can define default values for arguments”</p>
+<p>Per <a href="#id8"><span class="problematic" id="id9">DefaultArgumentValue_</span></a>, “In both procedure and return functions, you can define default values for arguments”</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default argument</a> value can help to simplify definitions</p>
@@ -545,7 +548,7 @@ $ffoo6(&quot;myaliasbatch2&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;
 </div>
 <div class="section" id="close-but">
 <h2>4.4. Close But…<a class="headerlink" href="#close-but" title="Permalink to this headline">¶</a></h2>
-<p>We can use the <a href="#id9"><span class="problematic" id="id10">DefaultArgumentValue_</span></a> to avoid having to specify a parameter value when we call our procedure.
+<p>We can use the <a href="#id10"><span class="problematic" id="id11">DefaultArgumentValue_</span></a> to avoid having to specify a parameter value when we call our procedure.
 BUT this only works if the default parameters are at the end i.e. it is all based on the order of the procedure parameters.</p>
 <p><em>In other words, the user has to know/care about the order of parameters.</em></p>
 <div class="admonition-todo admonition" id="id1">
@@ -825,14 +828,418 @@ $SUMERIAN(SUMERIAN, &quot;other description&quot;, $label=&quot;sdsd&quot;, $sca
 </div>
 <div class="section" id="option-2-dynamic-invocation">
 <h3>4.6.2. Option 2: Dynamic Invocation<a class="headerlink" href="#option-2-dynamic-invocation" title="Permalink to this headline">¶</a></h3>
-<p>As a user I want to be able to call a procedure to draw an icon - and not have to change my code if new functionality is added in the future.
-But I would like to benefit from the new features.</p>
-<p>This type of thing can be done in e.g. C code, using a <a class="reference external" href="https://www.geeksforgeeks.org/function-pointer-in-c/">FunctionPointer</a> i.e. if I had different functions with different parameters, I could pass any of these as a parameter (pointer to that function) to another function, for that function to call.</p>
-<p>This gives a level of abstraction / separation between the user code, and the library code.</p>
+<p>See <a class="reference internal" href="stdlibRequirements.html#stdlibreqs-label"><span class="std std-ref">Standard Library - What We Have And What We Want</span></a> for requirements for stdlib.</p>
+<p>Let’s define 3 SpriteDecorator Procedures that change the sprite parameters per <a class="reference internal" href="stdlibRequirements.html#stdlibreqs-label"><span class="std std-ref">Standard Library - What We Have And What We Want</span></a>, where each procedure adds more parameters than the previous one.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+!unquoted procedure $SpriteDecorator2($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;green&quot;, $shape=&quot;node&quot;)
+!unquoted procedure $SpriteDecorator3($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;)
+</pre></div>
+</div>
+<p>When we define the procedure for the user to call e.g. $BATCH_DYN, we specify which SpriteDecorator to be used via $dynN dynamic invocation.</p>
+<p>If at some point later, a new SpriteDecorator becomes available with same parameters but differnt processing, or with new parameters, then we can change this dynN to the new procedure.</p>
+<div class="section" id="user-code">
+<h4>4.6.2.1. User code<a class="headerlink" href="#user-code" title="Permalink to this headline">¶</a></h4>
+<p>Parameters
+#. can use ordered list of parameters up to the one they want to specify.
+#. can use named arguments to specify only the parameter(s) they care about.</p>
+<p>Existing code does not need to know or care that the SpriteDecorator has changed.</p>
+<p>New code can use the new decorator functionality if desired.</p>
+<p>Play with <a class="reference external" href="http://www.plantuml.com/plantuml/uml/j911YiCm34NtFiLV36ILP3ymCCnD54U93OhjiUI6thvk2hr1XK0WwIt--rMZQkqGDv08jDHeh8W914_6UwvtdBd9YeNxsajRURtklKMcqbbiKHXRhh10zkRSyFFnScxmbSaO_D_YZOIJ8M-8FYU5Xdmc1AwCO5RqUvxtQA4jay_7JASABVgSu_K_zWXZ4KgNa9SBVFsH-O07g_Ioyo1JW75ytwlm1l0TpcL9Mw052hJ0q6BC15xEC2q71XYCzwunCT5lP-BcMJpBVtv_aOHD4dvOQV_hd_vssEo7d3Orvi4vs_KTpXfaQstqMhCFvFgDnIIwMDgJD7eidlhZk_MNEs1PMDnt_qAv-ygQTPQU3NN6NOTJZzpQxmqtr0WdUeA23HKHlJvK16aV2IHugerhaIER7bu9MD8Nxrgw8Px1xUxOT7kfYFUMIAo6g-_g9m-vIoi0NghUDUZDB3YNmqLIGIde3r2vAoqtlsuDD_ciBAkIPVxYxTKuzVEYdV67OxSjQ4qFECASKTR0H0mu8pf8jDHjD0tfnZkBYdGupsYiaSwUOsTC61O4lLCjSEGiuvV2ivjzJzJl-eLfpcpimoLtUGdfQmf2rH-CmG2FlZ1BZzE-4Y2YmXGs_EvLbJaj5mNvfHyuLr9L6nq8b2t3SrokemahbplRt-iB2x7kN9NRoNPoVbFv0SYvCzqfYhANvg-Xq3nnbcajeuV4qvjchkf1rGmOxiUn6_1aiPzgVdTjj_Jo4ZsBDW5DwDo2C0lsSjFfRcy7vjPMw9tXzuWeC0v__oUr_ndHJzfzqn-SJ7C-_cJrDF-eJ_Zyr_ov_qzawhYCVpGM67nKNu4eEDUTp1wQA_bvROi9VxHCOw_nFPvk7u0kneKGECNc-hb3an7bUIF46YTF21OMDntlh08_nDsN5MJeAfj7SagE3Tln3POXC6PFZ_8Z2gszj_bn_pq4hj21CjPsKfodIyQCd-hhSBirM_OtQfcqlGuCioJf20BQQnH5zQhXNyMITJLGCrJ0o-h6jCn2H3GTzTWkmxkArdFLGjPFblElO6Sl1-OS_hz6zGdEnphv_7VOVxz_ZEkvuj3Mc3zU7LuFqKOqJi7tZRccSodCNycunHk4PZKljdrZNgd5FSolDC550QRA-pSScaz8rEQKNxhZhW63qoYa0fSTPSTmiM601Lu9aUjd5Cz2bfp2A8gavd1SqUwGWbmrNx7AhRUQKVnAP-j1Av4OjQYSWa8ZJzQuBbej_HBWS5Ea7QTKKHh0ypAm1VRSZjHGz4SbZK5Hk6QdHOQzCx_f8Zg2DrH77XPYSBKb-QGomwkRDO8Et2iQvt7lzZWiLd8wPmr5VDqP-Hju9Mw0uufvDQViKYc_mAsc1A97aQ3A2dShlDmcb9ibbJ6zwvfdx_LdpVYF_m1ZlxwVgAqZh9OGvpj-4yitaIB0sBoefoGxK47xgF0terHuVQKhaai6S7xEVc-m7--3zKBlB5AGgitDdC7EgMaBiUg3eCaGcsz1TrnztYJY84uqCyZ6AC9bfi9cp4LELIrV3K5_d9S5B0yAqkE-aDf1sdizg5SAFkGOvanvDqVzv9PDO8seVnVqN7M9srmgd51fQS2MH0lLjynoQVtkObz_64PyW_VK7wia4QJ8BPWC_xe-c_3OQte5wyDGoB8UCx8PCszP2X_BFwgl_jwsRI3wlpx5HSZWU7NiMDg08N2CPKs15LXI83ys3CDWqEBP9YAH7ab5qpxzZfGYEv7Lf5jTe4KAYzJnlVlnU29_dTrXwXGTlF3XepxxuVhyziFrpIk-Rptu3O7ZGaY4CIWDcT88jRev9aepgxJ_OXlBKp6d5HULkShrjeN_DXS8zr8LuFuV0vCS4YO1cH5f-KWZiG0bqMCkSfiJNq5x4vY1Z4bRUeCrqon3YmHCZCmuv8BU3XeUhcJF0ZwWh2ZPNEKMIhHa_mlQdW73IhZnaLmykWd2r6vmYbGIwtZmt2Pg6qKjexXj50Uzuq__5npaygzSMO9PQvKWT_auVCPsT7XPLbC3E6IfO8P-EPf4YxKLIfw58KsaR8vfzMWnMKcLgcLPZKt2KZmRqrD2ixa-2pNoi1y46XFBv3B56XVeBmmcaseqdGOLQZ1nw_HflNmwQHpwjiAUJaRUOXgCHXCZ_i7JSJJzOykFFoSZDpqTZO80dZWV1WSeUHCyoPjn3ipBmApO6ZTYs5-6epsaUAaHfN_beZWBfUBeSkx7NqV2uGtDM_pR4jGNgKEyXphCqnotof3GB7VZEYwQ6l-mnxeqFAyi3xJh0nQDXPlRyzltRu5OKb2BxTxh-wTX6VgBoN-hJgldXDNLX38L6ikiI6R4E0xxBSjejsdKbdwhshjNnX-lLdGIzfkaNFn-TNwvlwpqxCerUeK6fB9GA7qFNBYkcPR0J4k_S0n6LPyd4BAoT7PhrB1GQQeA8PUG2ed1mI4l9Pn1M6E4Ro1iSCBW6o4Vr3tE6XqSEVi1R6MCnYohw-B76n6veHUiUzYeZX9NyKPTn54NSzH57JMWSHTet0KQTu76OV_5WywxgmlufCEEGuJR5S8SMMxBwkOkwgFBGcbWi1GFABrU1b2WFxqaAoQNsBpBMA8LvEk2QMxWQ9vRhmok2kcd-iI1m-LmU-rFvxTlVvwHLA7AWk-0lEg02wqog4fhbN-8cgSOq2R3uH30oT0xO4w12Efp4w6e1Gdg57A3kcSW8LGmbfKkAFJY7u1pqUJhjT9LbCtvodWVvmYCapC4o-OY5ROa-lhCLWVWmJWkM9xQUeVvJhMxfJVH7dtMiyhB6s8NtIFN4w97beQZ_wpbxWxCtGDzN7i-8NHlG7-H_r-HFfAzBkARkyjtr-_FhtpKN-np7Bi6tzqmcaltPqd4XhcTaw07TmQrtoPcZObOb52uPc5NMFhx20W9IdCaEANXGJ2GB4CEJEVB3AKrmTPs2ETEg3CAOzRqwrQZfjznlsDLzB5LJXzphGePTYsFDmNvZjhhbfv3Hhgg7UjllTZCDzI6B-YlxK1_DrxyN1HPMPi7mLDvXQOkQ-t7otpTorzsTm0dm-zfi1RodWRLrXj0VE8S2tv4oVCi_HS0">StdlibProposalCode</a> online.</p>
+<div class="figure align-center" id="id5">
+<p class="plantuml">
+<img src="../_images/plantuml-5ce55fbcd62f498992a92207a51eed2004bbd11f.png" alt="&#64;startuml
+'all sprites in a category would be included in an all.puml file for that category
+'==================================================================================================
+
+'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+'https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/ARVR.puml
+sprite $Arvr [64x64/16z] {
+xTG3WiH054NHzutP_th7RHkfsmnEdE1HZMZsIn0_DGDuuVsZJwnMVJ-57txuuKrsP4Tv1mjl3Nw43qZlo147VO9xPueyu8j1l3jm7V0GtPFWe8_UKzpL3rzc
+TO4l0gZEzufCsDd-rnhoN2zKtKLoWk-bkHq--vabr0TypEy_WiwEmc9K7FATAd_fVDwOZygdU_uEF_pmLgUMA_wChkV1SavCc4LdXNVe2m
+}
+
+'https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/Sumerian.puml
+sprite $Sumerian [64x64/16z] {
+xPO5qkim38HN3FU_xuE29mMx-Hbtg4to6GIZxVVJhtvLLI-XbK2QJo6sVv90JA3SImUJRVuAjBeDl8zE0G2EyVy42d87NGOmGG0vVHuu7iRWZt4daBUWWW6j
+8w_zNufuHES9KgxpKjr5o6CKQyh5uGi59BTfEuR1GHvEi6cu0N2sWE8sb99j03370L41CkryG9FQh6rTffOJlEWGLz-cbv5N4Pqh83Vf5THL67BA-qXltEu_
+2XWrtrzlzZUfwuBCdjy_3ilGeY0Pgmj0NO5ehtb1vh9c0OhsaV_Qfa_hKUzKUDIs_eJgy7myMFEPLzinwd3nSQ0rpwYR_kiWmAgVmezmYuKSJ_94VZJDABad
+y4EnAVcdyy4Xo6H_7g-02Se1oIVprMqKX_YdW9_AEtjtdVlNiykVmAS0Tjd_1exTl8wS3Ju5q5sydGux-94Dty4xGtfeyAEewG4FQCvv0vQy0b8zvuiN_EYw
+AHy0nu8Ue-gMJrFBOgjTKr_pYfyChlaOjDhmay6vj0xaWvyFxdKOyiYlZSFQGGZIVMbSrhaa46WOf-dmcOS1a3mPjp9mFqqf77FZ-7JZ-Y76UQvV_Uel
+}
+
+
+
+'=============================DECORATORS==================================
+' We define 1 or more sprite decorators in stdlib
+' Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+' as we want, that we don't even know about yet
+' Let's say SpriteDecorator is defined month 1, SpriteDecorator2 is defined month 2, SpriteDecorator3 is defined month 3
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+
+rectangle $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description&quot;
+!endprocedure
+
+'add a new shape parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator2($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;green&quot;, $shape=&quot;node&quot;)
+
+$shape $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description&quot;
+!endprocedure
+
+'add a new shape parameter + a textsize parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator3($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;)
+
+$shape $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
+
+  $description &quot;
+!endprocedure
+
+' test STATIC call of decorators with same icon
+'---------------------------------------------------
+$SpriteDecorator(&quot;$Batch&quot;, &quot;static_dec1&quot;)
+$SpriteDecorator2(&quot;$Batch&quot;, &quot;static_dec2&quot;, $shape=&quot;node&quot;)
+$SpriteDecorator3(&quot;$Batch&quot;, &quot;static_dec3&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;20&quot;)
+
+' test DYNAMIC call of decorators with same icon
+'---------------------------------------------------
+'this does not work directly as $SpriteDecorator - so we do indirect as per following line
+!$dyn = &quot;$Sprite&quot;+ &quot;Decorator&quot;
+%invoke_procedure($dyn, &quot;$Batch&quot;, &quot;dynamic_dec1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;)
+
+!$dyn2 = &quot;$Sprite&quot;+ &quot;Decorator2&quot;
+%invoke_procedure($dyn2, &quot;$Batch&quot;, &quot;dynamic_dec2&quot;)
+
+!$dyn3 = &quot;$Sprite&quot;+ &quot;Decorator3&quot;
+%invoke_procedure($dyn3, &quot;$Batch&quot;, &quot;dynamic_dec3&quot;)
+
+
+'=============================END DECORATORS==================================
+
+
+
+' The beauty here is that for a given icon, we can change a given macro upwards (but not downwards)
+' e.g. can change BATCH_DYN invoked prodedure from $dyn, to $dyn2, to $dyn3 etc...  this gives: 
+' future proofing: user's code stays the same, but support for new params can be added
+' ability to easily change the default decoration 
+!unquoted procedure $BATCH_DYN($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+%invoke_procedure($dyn, &quot;$Batch&quot;, $alias, $description, $label, $technology, $scale, $colour)
+!endprocedure
+
+!unquoted procedure $ARVR_DYN( $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;green&quot;, $shape=&quot;node&quot;)
+%invoke_procedure($dyn2, &quot;$Arvr&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape)
+!endprocedure
+
+!unquoted procedure $SUMERIAN_DYN($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;30&quot;)
+%invoke_procedure($dyn3, &quot;$Sumerian&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize)
+!endprocedure
+
+
+' User can specify what they want in order, or via named arugments
+$BATCH_DYN(&quot;batch_dyn_1&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 1)
+$BATCH_DYN(&quot;batch_dyn_2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
+$BATCH_DYN(&quot;batch_dyn_3&quot;, $scale=4)
+
+$ARVR_DYN( &quot;arvr_dyn_1&quot;)
+$ARVR_DYN(&quot;arvr_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;)
+$ARVR_DYN( &quot;arvr_dyn_3&quot;, $technology=&quot;mytech&quot;)
+
+
+$SUMERIAN_DYN(&quot;sumerian_dyn_1&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;)
+$SUMERIAN_DYN(&quot;sumerian_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;, 0.5, &quot;pink&quot;, &quot;node&quot;, 30)
+
+
+
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>decorators separated from sprite</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+&#39;all sprites in a category would be included in an all.puml file for that category
+&#39;==================================================================================================
+
+&#39;create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
+sprite $Batch [64x64/16z] {
+xLQ7bjim30CdzFzVtEV1iErPkJpT7iYm5aWDKERujFZ5Bp8YkSvM011VfMzSDy2Mw1JidbCGAtmllmbPuIkoImjyGUsyBV4LV95_Xny50bpW4uTRAjOKu81b
+Xa0vbX3OKFG5C0IMNLyxXA_3PvW5hqHSOFBP_Ovk4036hYi0pJdTCgqD6A0g4FQ0hOwygxSikGOanw11AuvtomxXjNiRDECmn21xxTkJP0N4tdy1Gmu5T2GW
+6ygFL_sqbx3NvA_FVtt_ri_F1CZNra-10TpNhvVr2KGcyVCOdoBySlpv-jC1ZSVveO36_Fwb0UASqGqG0QpfJgP2Eo60u59-fLVozhhdNk2WTeDpq2O6AAL_
+uV7KGPNO2lya17gz1pMiD1VmFNH9IBLNe3xA3q07eNsMy_WdXESwU4jRmddEk-FUuPFjjthiqAEGVUz8rlqmsK1nhtYlklvp7vWRfka0jUNITUdTzgxFyzLx
+-Ikh_YdmYr_y0G
+}
+
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/ARVR.puml
+sprite $Arvr [64x64/16z] {
+xTG3WiH054NHzutP_th7RHkfsmnEdE1HZMZsIn0_DGDuuVsZJwnMVJ-57txuuKrsP4Tv1mjl3Nw43qZlo147VO9xPueyu8j1l3jm7V0GtPFWe8_UKzpL3rzc
+TO4l0gZEzufCsDd-rnhoN2zKtKLoWk-bkHq--vabr0TypEy_WiwEmc9K7FATAd_fVDwOZygdU_uEF_pmLgUMA_wChkV1SavCc4LdXNVe2m
+}
+
+&#39;https://github.com/awslabs/aws-icons-for-plantuml/blob/master/dist/ARVR/Sumerian.puml
+sprite $Sumerian [64x64/16z] {
+xPO5qkim38HN3FU_xuE29mMx-Hbtg4to6GIZxVVJhtvLLI-XbK2QJo6sVv90JA3SImUJRVuAjBeDl8zE0G2EyVy42d87NGOmGG0vVHuu7iRWZt4daBUWWW6j
+8w_zNufuHES9KgxpKjr5o6CKQyh5uGi59BTfEuR1GHvEi6cu0N2sWE8sb99j03370L41CkryG9FQh6rTffOJlEWGLz-cbv5N4Pqh83Vf5THL67BA-qXltEu_
+2XWrtrzlzZUfwuBCdjy_3ilGeY0Pgmj0NO5ehtb1vh9c0OhsaV_Qfa_hKUzKUDIs_eJgy7myMFEPLzinwd3nSQ0rpwYR_kiWmAgVmezmYuKSJ_94VZJDABad
+y4EnAVcdyy4Xo6H_7g-02Se1oIVprMqKX_YdW9_AEtjtdVlNiykVmAS0Tjd_1exTl8wS3Ju5q5sydGux-94Dty4xGtfeyAEewG4FQCvv0vQy0b8zvuiN_EYw
+AHy0nu8Ue-gMJrFBOgjTKr_pYfyChlaOjDhmay6vj0xaWvyFxdKOyiYlZSFQGGZIVMbSrhaa46WOf-dmcOS1a3mPjp9mFqqf77FZ-7JZ-Y76UQvV_Uel
+}
+
+
+
+&#39;=============================DECORATORS==================================
+&#39; We define 1 or more sprite decorators in stdlib
+&#39; Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+&#39; as we want, that we don&#39;t even know about yet
+&#39; Let&#39;s say SpriteDecorator is defined month 1, SpriteDecorator2 is defined month 2, SpriteDecorator3 is defined month 3
+&#39;---------------------------------------------------
+<span class="hll">!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+</span>
+rectangle $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description&quot;
+!endprocedure
+
+&#39;add a new shape parameter
+&#39;---------------------------------------------------
+<span class="hll">!unquoted procedure $SpriteDecorator2($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;green&quot;, $shape=&quot;node&quot;)
+</span>
+$shape $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:12&gt;[$technology]&lt;/size&gt;//
+
+  $description&quot;
+!endprocedure
+
+&#39;add a new shape parameter + a textsize parameter
+&#39;---------------------------------------------------
+<span class="hll">!unquoted procedure $SpriteDecorator3($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;)
+</span>
+$shape $alias as &quot;
+&lt;&lt;$alias&gt;&gt;
+$label
+&lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+//&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
+
+  $description &quot;
+!endprocedure
+
+&#39; test STATIC call of decorators with same icon
+&#39;---------------------------------------------------
+$SpriteDecorator(&quot;$Batch&quot;, &quot;static_dec1&quot;)
+$SpriteDecorator2(&quot;$Batch&quot;, &quot;static_dec2&quot;, $shape=&quot;node&quot;)
+$SpriteDecorator3(&quot;$Batch&quot;, &quot;static_dec3&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;20&quot;)
+
+&#39; test DYNAMIC call of decorators with same icon
+&#39;---------------------------------------------------
+&#39;this does not work directly as $SpriteDecorator - so we do indirect as per following line
+<span class="hll">!$dyn = &quot;$Sprite&quot;+ &quot;Decorator&quot;
+</span>%invoke_procedure($dyn, &quot;$Batch&quot;, &quot;dynamic_dec1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;)
+
+<span class="hll">!$dyn2 = &quot;$Sprite&quot;+ &quot;Decorator2&quot;
+</span>%invoke_procedure($dyn2, &quot;$Batch&quot;, &quot;dynamic_dec2&quot;)
+
+<span class="hll">!$dyn3 = &quot;$Sprite&quot;+ &quot;Decorator3&quot;
+</span>%invoke_procedure($dyn3, &quot;$Batch&quot;, &quot;dynamic_dec3&quot;)
+
+
+&#39;=============================END DECORATORS==================================
+
+
+
+&#39; The beauty here is that for a given icon, we can change a given macro upwards (but not downwards)
+&#39; e.g. can change BATCH_DYN invoked prodedure from $dyn, to $dyn2, to $dyn3 etc...  this gives: 
+&#39; future proofing: user&#39;s code stays the same, but support for new params can be added
+&#39; ability to easily change the default decoration 
+!unquoted procedure $BATCH_DYN($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;red&quot;)
+<span class="hll">%invoke_procedure($dyn, &quot;$Batch&quot;, $alias, $description, $label, $technology, $scale, $colour)
+</span>!endprocedure
+
+!unquoted procedure $ARVR_DYN( $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;green&quot;, $shape=&quot;node&quot;)
+<span class="hll">%invoke_procedure($dyn2, &quot;$Arvr&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape)
+</span>!endprocedure
+
+!unquoted procedure $SUMERIAN_DYN($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;30&quot;)
+<span class="hll">%invoke_procedure($dyn3, &quot;$Sumerian&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize)
+</span>!endprocedure
+
+
+&#39; User can specify what they want in order, or via named arugments
+$BATCH_DYN(&quot;batch_dyn_1&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 1)
+$BATCH_DYN(&quot;batch_dyn_2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
+$BATCH_DYN(&quot;batch_dyn_3&quot;, $scale=4)
+
+$ARVR_DYN( &quot;arvr_dyn_1&quot;)
+$ARVR_DYN(&quot;arvr_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;)
+$ARVR_DYN( &quot;arvr_dyn_3&quot;, $technology=&quot;mytech&quot;)
+
+
+$SUMERIAN_DYN(&quot;sumerian_dyn_1&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;)
+$SUMERIAN_DYN(&quot;sumerian_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&quot;, &quot;tech&quot;, 0.5, &quot;pink&quot;, &quot;node&quot;, 30)
+
+
+
+@enduml
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
-<div class="section" id="backwards-compatiblity">
-<h2>4.7. Backwards Compatiblity<a class="headerlink" href="#backwards-compatiblity" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

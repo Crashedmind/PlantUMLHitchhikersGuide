@@ -131,7 +131,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -201,7 +202,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="standard-library-what-we-have-and-what-we-want">
-<h1>3. Standard Library - What We Have And What We Want<a class="headerlink" href="#standard-library-what-we-have-and-what-we-want" title="Permalink to this headline">¶</a></h1>
+<span id="stdlibreqs-label"></span><h1>3. Standard Library - What We Have And What We Want<a class="headerlink" href="#standard-library-what-we-have-and-what-we-want" title="Permalink to this headline">¶</a></h1>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>put this stuff in tables to make it clearer</p>
@@ -261,7 +262,10 @@
 </div></blockquote>
 </li>
 <li><p>Some libaries have an <code class="docutils literal notranslate"><span class="pre">`all.puml`</span></code> that includes all icons and their macros for a given category/subset of icons. This allows including all icons by including one file - rather than an include per icon.</p></li>
-<li><p>The superset of parameters provided by the macros are</p>
+<li><p>Macros define the following</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>The superset of parameters</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>sprite</p></li>
@@ -271,6 +275,17 @@
 <li><p>technology</p></li>
 <li><p>description</p></li>
 <li><p>label</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Fixed</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Text Size</p></li>
+<li><p>Text Order</p></li>
+</ol>
+</div></blockquote>
+</li>
 </ol>
 </div></blockquote>
 </li>
@@ -310,6 +325,7 @@ We need to change this to empower the user with PlantUML.</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>To benefit from other people’s work e.g. if a new parameter or decoration/theme is added they like, they want to use it in their diagrams</p></li>
+<li><p>Future Proofing with backwards compatibility: new functionality can be added to the sprite library, but the user’s existing code will still work with this new library</p></li>
 </ol>
 </div></blockquote>
 </li>
@@ -317,13 +333,6 @@ We need to change this to empower the user with PlantUML.</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>A user can include a file for that category that incldues all the icons (and not have to include a file for every icon)</p></li>
-</ol>
-</div></blockquote>
-</li>
-<li><p>Future Proofing</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>uses supported PlantUML features, and can be easily changed in the future.</p></li>
 </ol>
 </div></blockquote>
 </li>

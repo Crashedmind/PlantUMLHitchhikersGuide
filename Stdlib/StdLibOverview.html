@@ -158,7 +158,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">1. Journey to Documentation as Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
 <ul>
@@ -231,16 +232,7 @@
 <h1>1. PlantUML Stdlib Overview<a class="headerlink" href="#plantuml-stdlib-overview" title="Permalink to this headline">¶</a></h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use GitHub File Finder to search for an icon quickly - directly from GitHub:</p>
-<ol class="arabic simple">
-<li><p>Browse to the PlantUML Standard Library repo <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib">https://github.com/plantuml/plantuml-stdlib</a></p></li>
-<li><p>Press the <code class="docutils literal notranslate"><span class="pre">`t`</span></code> key to enter GitHub File Finder mode</p></li>
-<li><p>Type e.g. “lock”, “key”, “user”… or whatever you want to search for</p></li>
-<li><p>The list of files/icons filenames that contain that text are shown</p></li>
-</ol>
-<div class="figure align-default">
-<img alt="../_images/filefinder.png" src="../_images/filefinder.png" />
-</div>
+<p>See <a class="reference internal" href="../github/githubFileFinder.html#githubfilefinder-label"><span class="std std-ref">GitHub File Finder</span></a> for a handy hint on searching for icons.</p>
 </div>
 <div class="section" id="plantuml-standard-library-overview">
 <h2>1.1. PlantUML Standard Library Overview<a class="headerlink" href="#plantuml-standard-library-overview" title="Permalink to this headline">¶</a></h2>
@@ -275,7 +267,7 @@ work of <a class="reference external" href="https://github.com/RicardoNiepel">ht
 </div>
 <p>Broadly, the main groupings (based on macro definition) are per diagram.
 Osa and Elastic are based on aws.</p>
-<div class="figure align-center" id="id2">
+<div class="figure align-center" id="id1">
 <p class="plantuml">
 <img src="../_images/plantuml-d294193b75e8101e75da62db424870a2d594b09e.png" alt="
 &#64;startmindmap
@@ -303,7 +295,7 @@ Osa and Elastic are based on aws.</p>
 &#64;endmindmap
 "/>
 </p>
-<p class="caption"><span class="caption-text">PlantUML Stdlib Groupings Of Libraries Based On Similarity</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">PlantUML Stdlib Groupings Of Libraries Based On Similarity</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="type-1-e-type-e-color-e-sprite-label-alias-e-stereo">
 <h3>1.1.1. Type 1 (e_type,e_color,e_sprite,label,alias,e_stereo)<a class="headerlink" href="#type-1-e-type-e-color-e-sprite-label-alias-e-stereo" title="Permalink to this headline">¶</a></h3>
@@ -377,12 +369,36 @@ i.e.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
 </pre></div>
 </div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>replace sequence.png with puml file</p>
-</div>
-<div class="figure align-default">
-<img alt="" src="../_images/sequence.png" />
+<div class="figure align-center" id="id2">
+<p class="plantuml">
+<img src="../_images/plantuml-1e6fa5171f818deaa1af432de6c4a2f2e86dd167.png" alt="&#64;startuml Sequence Diagram - Spots and stereotypes
+
+'source from https://github.com/awslabs/aws-icons-for-plantuml
+
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/master/dist
+!includeurl AWSPuml/AWSCommon.puml
+!includeurl AWSPuml/Compute/all.puml
+!includeurl AWSPuml/Mobile/APIGateway.puml
+!includeurl AWSPuml/General/InternetGateway.puml
+!includeurl AWSPuml/Database/DynamoDB.puml
+
+actor User as user
+APIGatewayParticipant(api, Credit Card System, All methods are POST)
+LambdaParticipant(lambda,AuthorizeCard,)
+DynamoDBParticipant(db, PaymentTransactions, sortkey=transaction_id+token)
+InternetGatewayParticipant(processor, Authorizer, Returns status and token)
+
+user -&gt; api: Process transaction\nPOST /prod/process
+api -&gt; lambda: Invokes lambda with cardholder details
+lambda -&gt; processor: Submit via API token\ncard number, expiry, CID
+processor -&gt; processor: Validate and create token
+processor -&gt; lambda: Returns status code and token
+lambda -&gt; db: PUT transaction id, token
+lambda -&gt; api: Returns\nstatus code, transaction id
+api -&gt; user: Returns status code
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Sequence diagram with icons</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>

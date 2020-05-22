@@ -50,27 +50,3 @@ Below is what the icons look like - and the associated code.
 
 .. todo ::
     add info on what osa icons look like
-
-
-PlantUML HyperLinks
-----------------------
-
-PlantUML supports hyperlinks in output SVG images. This allows diagrams
-to be linked together, and for a user to easily navigate by clicking
-around per `Shneiderman's
-mantra <http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html>`__:
-
-    *Overview first, zoom and filter, then details-on-demand*
-
-.. todo ::
-    fix svg link
-
-
-Clicking the image opens up the target ``svg`` image. This target image contains hyperlinks.
-
-.. image:: ./links.svg
-       :target: ../links.svg
-
-.. literalinclude:: ./links.puml
-    :linenos:
-   
