@@ -211,6 +211,7 @@ Imagine
    StdlibUnderTheHood/StdlibUnderstanding
    Stdlib/stdlibRequirements
    Stdlib/StandardisingStdLib
+   Stdlib/StandardisingStdLib2
    PlantUMLSpriteLibraries/CreateSpriteLibrary
    Stdlib/ContributingToStdlib   
 

@@ -142,7 +142,9 @@ If at some point later, a new SpriteDecorator becomes available with same parame
 
 User code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Parameters
+
 #. can use ordered list of parameters up to the one they want to specify.
 #. can use named arguments to specify only the parameter(s) they care about.
 
@@ -162,4 +164,42 @@ Play with StdlibProposalCode_ online.
     :emphasize-lines: 37, 50, 63, 102, 106,110, 83, 86, 89
 
 
+
+.. todo ::
+    ref https://zimtkeks.github.io/2019/03/08/plantuml-diagrams-without-redundancy.html on iuml use
+    'todo add background color option via background text e.g. highlight , or red-amber-green
+    ' add ability to add small icons
+
+
+
+Standardising Parameters API
+===============================================================================
+
+
+Given the current library macros are not consistent, it is not possible to define a new universal macro without breaking 
+some user's code.
+
+
+
+        The superset of parameters
+
+                sprite
+
+                color
+
+                scale (material library only)
+
+                shape (Type 1 (e_type), 4 (_shape))
+
+                technology
+
+                description
+
+                label
+
+        Fixed
+
+                Text Size
+
+                Text Order
 

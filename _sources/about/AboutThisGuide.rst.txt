@@ -39,16 +39,25 @@ The Principles on which this guide are based:
 
 Deliver Value To The User
 -------------------------------------------------------------------------------
+
+.. tip ::
+
+    "Users want powerful tools that amplify their capabilities and enable them to do their tasks."
+
+    http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html
+
 This guide is focused on enabling you to do what you need to do - empowered by PlantUML.
 So it is outcome focused.
 
 In my professional role building products in the software industry, I tell my team members: 
-
 *The customer cares about what they are trying to do - not your product.*
 
-I came across this tweet that illustrates this graphically:
+This tweet illustrates this graphically:
 
 .. tweet:: https://twitter.com/UserOnboard/status/408372844876165120
+
+
+
 
 So the examples focus on what we're trying to do - and explain only the parts of PlantUML that are necessary to do it.
         

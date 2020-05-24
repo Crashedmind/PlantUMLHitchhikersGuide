@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. GitHub File Finder &mdash; Playing with PlantUML  documentation</title>
+  <title>5. Standardising Standard Library 2 &mdash; Playing with PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Journey to Documentation as Code" href="../DocumentationAsCode/JourneyDocumentationASCode.html" />
-    <link rel="prev" title="2. Generate diagrams from PlantUML source files using AWS Lambda" href="../GenerateDiagrams/GenerateDiagramsLambda.html" /> 
+    <link rel="next" title="6. Create A Sprite library" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" />
+    <link rel="prev" title="4. Standardising Standard Library" href="StandardisingStdLib.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,14 +107,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">5. Standardising Standard Library 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Standardising Standard Library 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-file-layout">5.1. Plantuml Stdlib File Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-themes-styles-layouts">5.2. Plantuml Stdlib Themes, Styles, Layouts</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Stdlib/ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standard Library C4</span></p>
 <ul>
@@ -127,8 +131,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. GitHub File Finder</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">ToDo</span></p>
@@ -179,13 +183,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. GitHub File Finder</li>
+      <li>5. Standardising Standard Library 2</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/github/githubFileFinder.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Stdlib/StandardisingStdLib2.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,20 +202,133 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="github-file-finder">
-<span id="githubfilefinder-label"></span><h1>1. GitHub File Finder<a class="headerlink" href="#github-file-finder" title="Permalink to this headline">¶</a></h1>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use GitHub File Finder to search for an icon quickly - directly from GitHub:</p>
-<ol class="arabic simple">
-<li><p>Browse to the PlantUML Standard Library repo <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib">https://github.com/plantuml/plantuml-stdlib</a></p></li>
-<li><p>Press the <code class="docutils literal notranslate"><span class="pre">`t`</span></code> key to enter GitHub File Finder mode</p></li>
-<li><p>Type e.g. “lock”, “key”, “user”… or whatever you want to search for</p></li>
-<li><p>The list of files/icons filenames that contain that text are shown</p></li>
-</ol>
-<div class="figure align-default">
-<img alt="../_images/filefinder.png" src="../_images/filefinder.png" />
+  <div class="section" id="standardising-standard-library-2">
+<h1>5. Standardising Standard Library 2<a class="headerlink" href="#standardising-standard-library-2" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>this salt diagram does not work so use png for now</p>
+<div class="figure align-center" id="id2">
+<p class="plantuml">
+<img src="../_images/plantuml-797e35274634b82d9a29e716dd8636b86ca7d142.png" alt="&#64;startsalt
+{
+{T
+ + **PlantUML stdlib**
+ ++ **library** e.g. awslib
+ +++ **library category** e.g. awslib/ARVR
+ ++++ **sprite** e.g. awslib/ARVR/Sumerian
+ ++++ **all.puml** file e.g. awslib/ARVR/all.puml
+ 
+}
+}
+&#64;endsalt
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Plantuml Stdlib File Layout</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="section" id="plantuml-stdlib-file-layout">
+<h2>5.1. Plantuml Stdlib File Layout<a class="headerlink" href="#plantuml-stdlib-file-layout" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="../_images/stdlibFileLayout.png" src="../_images/stdlibFileLayout.png" />
+</div>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Plantuml Stdlib Terminology</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>PlantUML Stdlib</strong></p></td>
+<td><p>Plantuml Standard Library</p>
+<blockquote>
+<div><p>i.e. <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib">https://github.com/plantuml/plantuml-stdlib</a></p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Library</strong></p></td>
+<td><p>Plantuml stdlib consists of several icon  <strong>libraries</strong></p>
+<blockquote>
+<div><p>e.g. awslib, elastic, azure…</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Category</strong></p></td>
+<td><p>Each icon libary consists one or more icons <strong>categories</strong></p>
+<blockquote>
+<div><p>Category is a subdir / grouping of icons within an icon library</p>
+<p>some libraries don’t sub-divide the icons - so the category is the library</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p>Each category consists one or more <strong>icons</strong></p>
+<blockquote>
+<div><p>An Icon is a decorated sprite e.g. a coloured sprite in a rectangle with all the text and colour</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Macro</strong></p></td>
+<td><p>The pre-processor code applied to a sprite</p>
+<blockquote>
+<div><p>i.e. the define/definelong or function/procedure associated with a sprite to make it an icon</p>
+<p>The call from the user puml file is a macro.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sprite</strong></p></td>
+<td><p>A 2D bitmap</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file</strong></p>
+</div>
+<div class="section" id="plantuml-stdlib-themes-styles-layouts">
+<h2>5.2. Plantuml Stdlib Themes, Styles, Layouts<a class="headerlink" href="#plantuml-stdlib-themes-styles-layouts" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Plantuml Stdlib Themes Terminology</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Diagram</strong></p></td>
+<td><p>Everything you see. Everything represented by the puml file</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Style</strong></p></td>
+<td><p>A collection of attributes that specify the appearance for a <strong>single icon</strong>.</p>
+<blockquote>
+<div><blockquote>
+<div><p>A style can specify attributes such as font color, font size, background color, and much more.</p>
+<p>Optional.</p>
+</div></blockquote>
+<p>If present, a style takes precedence over a theme</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Theme</strong></p></td>
+<td><p>A type of style that’s <strong>applied to the entire diagram</strong> - not just an individual icon.</p>
+<blockquote>
+<div><p>A collection of coordinated styles that determine the color, background attributes, and the fonts used on a layout.</p>
+<p>Themes also enhance the appearance of a layout and give all your layouts a consistent look.</p>
+<p>A theme does not control the placement or behavior of fields or objects on a layout.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Layout</strong></p></td>
+<td><p>An arrangement of fields, objects, pictures, and layout parts that represents the way information is organized and presented.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -223,10 +340,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../DocumentationAsCode/JourneyDocumentationASCode.html" class="btn btn-neutral float-right" title="2. Journey to Documentation as Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" class="btn btn-neutral float-right" title="6. Create A Sprite library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../GenerateDiagrams/GenerateDiagramsLambda.html" class="btn btn-neutral float-left" title="2. Generate diagrams from PlantUML source files using AWS Lambda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="StandardisingStdLib.html" class="btn btn-neutral float-left" title="4. Standardising Standard Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
