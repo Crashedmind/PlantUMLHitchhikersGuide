@@ -104,17 +104,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Standardising Standard Library 2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-file-layout">5.1. Plantuml Stdlib File Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-themes-styles-layouts">5.2. Plantuml Stdlib Themes, Styles, Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-terminology">5.1. Plantuml Stdlib Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-file-layout">5.2. Plantuml Stdlib File Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standardising-sprites">5.3. Standardising Sprites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standardising-icon-macro-api">5.4. Standardising Icon Macro API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-example">5.5. Mode Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-demo">5.6. Mode Demo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-features">5.6.1. Main features</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
@@ -204,35 +210,10 @@
             
   <div class="section" id="standardising-standard-library-2">
 <h1>5. Standardising Standard Library 2<a class="headerlink" href="#standardising-standard-library-2" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>this salt diagram does not work so use png for now</p>
-<div class="figure align-center" id="id2">
-<p class="plantuml">
-<img src="../_images/plantuml-797e35274634b82d9a29e716dd8636b86ca7d142.png" alt="&#64;startsalt
-{
-{T
- + **PlantUML stdlib**
- ++ **library** e.g. awslib
- +++ **library category** e.g. awslib/ARVR
- ++++ **sprite** e.g. awslib/ARVR/Sumerian
- ++++ **all.puml** file e.g. awslib/ARVR/all.puml
- 
-}
-}
-&#64;endsalt
-"/>
-</p>
-<p class="caption"><span class="caption-text"><em>Plantuml Stdlib File Layout</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="plantuml-stdlib-file-layout">
-<h2>5.1. Plantuml Stdlib File Layout<a class="headerlink" href="#plantuml-stdlib-file-layout" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default">
-<img alt="../_images/stdlibFileLayout.png" src="../_images/stdlibFileLayout.png" />
-</div>
-<table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">Plantuml Stdlib Terminology</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<div class="section" id="plantuml-stdlib-terminology">
+<h2>5.1. Plantuml Stdlib Terminology<a class="headerlink" href="#plantuml-stdlib-terminology" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Plantuml Stdlib Terminology</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 83%" />
@@ -283,24 +264,6 @@
 <tr class="row-odd"><td><p><strong>Sprite</strong></p></td>
 <td><p>A 2D bitmap</p></td>
 </tr>
-</tbody>
-</table>
-<p><strong>Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file</strong></p>
-</div>
-<div class="section" id="plantuml-stdlib-themes-styles-layouts">
-<h2>5.2. Plantuml Stdlib Themes, Styles, Layouts<a class="headerlink" href="#plantuml-stdlib-themes-styles-layouts" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">Plantuml Stdlib Themes Terminology</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Term</p></th>
-<th class="head"><p>Meaning</p></th>
-</tr>
-</thead>
-<tbody>
 <tr class="row-even"><td><p><strong>Diagram</strong></p></td>
 <td><p>Everything you see. Everything represented by the puml file</p></td>
 </tr>
@@ -329,6 +292,780 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file</strong></p>
+</div>
+<div class="section" id="plantuml-stdlib-file-layout">
+<h2>5.2. Plantuml Stdlib File Layout<a class="headerlink" href="#plantuml-stdlib-file-layout" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="../_images/stdlibFileLayout.png" src="../_images/stdlibFileLayout.png" />
+</div>
+</div>
+<div class="section" id="standardising-sprites">
+<h2>5.3. Standardising Sprites<a class="headerlink" href="#standardising-sprites" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Sprite Property</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>XxY</strong></p></td>
+<td><p>128x128</p>
+<blockquote>
+<div><p>Sprite resolution SHOULD be this value or close to it.</p>
+<p>Current sprite libraries range from ~40 to 256.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Levels</strong></p></td>
+<td><p>16</p>
+<blockquote>
+<div><p>Sprite resolution SHOULD be this value.</p>
+<p>4, 8, 16 are the possible options.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ref: <a class="reference external" href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a> for SHOULD, MUST, MAY meaning</p>
+</div>
+</div>
+<div class="section" id="standardising-icon-macro-api">
+<h2>5.4. Standardising Icon Macro API<a class="headerlink" href="#standardising-icon-macro-api" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text">Plantuml Stdlib Macro API Modes</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Standard</strong></p></td>
+<td><p>Keyword arguments <strong>SHOULD</strong> be used for all parameters per todo ref</p>
+<blockquote>
+<div><p>This gives future proofing: as new parameters are added over time,</p>
+<blockquote>
+<div><p>user specifies only the parameter they care about</p>
+<p>for the parameter they care about, only named keyword arguments are used</p>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Legacy</strong></p></td>
+<td><p>To work with a subset of <em>existing user diagrams</em>, new macros will enforce the parameter ordering per Type 2</p>
+<blockquote>
+<div><p>e.g. <em>!define AzureBatchAI(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBatchAI, AzureBatchAI)</em></p>
+<p><strong>Existing macros in existing libraries should be kept, even when a newer keywords arguments mode is added</strong>
+This ensures backwards compatiblity of PlantUML Stdlib with existing user diagrams.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Mixed</strong></p></td>
+<td><p>This mix of ordered parameters, with keyword parameters is also possible.</p>
+<blockquote>
+<div><p>This is not as future proof as Standard mode.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mode-example">
+<h2>5.5. Mode Example<a class="headerlink" href="#mode-example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#Legacy</span>
+<span class="c1">#ordering does matter</span>
+<span class="n">ExistingMacro</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;techn&quot;</span><span class="p">,</span> <span class="s2">&quot;descr&quot;</span><span class="p">)</span>
+
+<span class="c1">#Standard</span>
+<span class="c1">#keyword arguments for all parameters</span>
+<span class="c1">#ordering does NOT matter</span>
+<span class="n">NewMacro</span><span class="p">(</span><span class="n">alias</span><span class="o">=</span><span class="s2">&quot;myalias&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mylabel&quot;</span><span class="p">,</span> <span class="n">techn</span><span class="o">=</span><span class="s2">&quot;mytechn&quot;</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="s2">&quot;mydescr&quot;</span><span class="p">,</span> <span class="n">newParam1</span><span class="o">=</span><span class="s2">&quot;whatever&quot;</span><span class="p">,</span> <span class="n">newParam2</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">NewMacro</span><span class="p">(</span><span class="n">techn</span><span class="o">=</span><span class="s2">&quot;mytechn&quot;</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;myalias&quot;</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="s2">&quot;mydescr&quot;</span><span class="p">,</span> <span class="n">newParam1</span><span class="o">=</span><span class="s2">&quot;whatever&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;mylabel&quot;</span><span class="p">,</span> <span class="n">newParam2</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#Mixed</span>
+<span class="c1">#if we don&#39;t use keyword arguments then same as ExistingMacro</span>
+<span class="c1">#ordering does matter</span>
+<span class="n">NewMacro</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;techn&quot;</span><span class="p">,</span> <span class="s2">&quot;descr&quot;</span><span class="p">)</span>
+
+<span class="c1">#ordering does matter for existing parameters only</span>
+<span class="n">NewMacro</span><span class="p">(</span><span class="s2">&quot;alias&quot;</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;techn&quot;</span><span class="p">,</span> <span class="s2">&quot;descr&quot;</span><span class="p">,</span> <span class="n">newParam1</span><span class="o">=</span><span class="s2">&quot;whatever&quot;</span><span class="p">,</span> <span class="n">newParam2</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="mode-demo">
+<h2>5.6. Mode Demo<a class="headerlink" href="#mode-demo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="main-features">
+<h3>5.6.1. Main features<a class="headerlink" href="#main-features" title="Permalink to this headline">¶</a></h3>
+<p>The demo uses most of the avaialable Preprocessor features (<a class="reference external" href="https://plantuml.com/preprocessing">https://plantuml.com/preprocessing</a>)</p>
+<ol class="arabic">
+<li><p>User specifies only the parameters they care about. Preprocessor “Keywords arguments” used.</p></li>
+<li><p>If user does not specify the parameter, then the default value is used. Preprocessor “Default argument value” used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">`rectangle</span> <span class="pre">$alias</span> <span class="pre">&lt;&lt;$alias&gt;&gt;`</span></code> is in form <code class="docutils literal notranslate"><span class="pre">`shape</span> <span class="pre">alias</span> <span class="pre">&lt;&lt;stereo&gt;&gt;`</span></code> where skinparam can be specified for a stereo per <a class="reference external" href="https://plantuml.com/skinparam">https://plantuml.com/skinparam</a> last example</p></li>
+<li><p>Dynamic invocation to somewhat decouple the sprite, parameters, and layout. <strong>Not as decoupled as I’d like</strong> as still need to pass all params for each sprite at definition time.</p></li>
+<li><p><a class="reference external" href="https://plantuml.com/preprocessing">https://plantuml.com/preprocessing</a> Conditions to show</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>technology “[ ]” only if technology specified.</p></li>
+<li><p>focus hi/lo/normal based on parameter which changes skinparams for the stereo (where alias is used as stereo)</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>‘””== $labeln”: “==” is creole syntax for “Large heading” (<a class="reference external" href="https://plantuml.com/creole">https://plantuml.com/creole</a>)</p></li>
+<li><p>icon fields are laid out line-by-line for clarity</p></li>
+<li><p>parameters supported are</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>$MySprite,</p></li>
+<li><p>$alias,</p></li>
+<li><p>$description=””,</p></li>
+<li><p>$label=””,</p></li>
+<li><p>$technology=””,</p></li>
+<li><p>$scale=1,</p></li>
+<li><p>$colour=”blue”,</p></li>
+<li><p>$shape=”cloud”,</p></li>
+<li><p>$textsize=”18”,</p></li>
+<li><p>$focus=””</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p>In the full demo, the sprite decorator is selected by user via e.g. ‘!includeurl AWSPuml/SpriteDecorators.iuml!SPRITEDECORATOR_3.
+This uses the “File List.iuml” block include Preprocessor feature</p>
+<div class="figure align-center" id="id5">
+<p class="plantuml">
+<img src="../_images/plantuml-3825420eee785972c2f3c9c39fa073880e0e711e.png" alt="&#64;startuml
+'all sprites in a category would be included in an all.puml file for that category
+'==================================================================================================
+
+
+
+
+' Colors
+' ##################################
+!define AWS_COLOR #232F3E
+!define AWS_BG_COLOR #FFFFFF
+!define AWS_BORDER_COLOR #FF9900
+!define AWS_SYMBOL_COLOR AWS_COLOR
+
+' Styling
+' ##################################
+
+!define TECHN_FONT_SIZE 12
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+!definelong AWSEntityColoring(stereo)
+skinparam rectangle&lt;&lt;stereo&gt;&gt; {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+skinparam participant&lt;&lt;stereo&gt;&gt; {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+!enddefinelong
+
+' Layout
+' ##################################
+
+!definelong LAYOUT_AS_SKETCH
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam defaultFontName &quot;Comic Sans MS&quot;
+center footer &lt;font color=red&gt;Warning:&lt;/font&gt; Created for discussion, needs to be validated
+!enddefinelong
+
+!define LAYOUT_TOP_DOWN top to bottom direction
+!define LAYOUT_LEFT_RIGHT left to right direction
+
+
+
+sprite $Analytics [64x64/16z] {
+xTK5WiGW38NXbn1WGkv_tjMwDwml__YqNrtmNRK8tISXfBj5W4UVhDpBTExBtVweRxvv5TfCz9eNnCqWrpo9bOrCwAelc_bzJYdNU0QWvlTAe0glJ14-tt7L
+w5d_h6yBJ-hR_W9wMCSTNf0OiUFtVCUj23f-smjojmbSNiR_7BwRkz-dN7l-k7pz-IyXWC9cX13ap3CuxCRWCwyGsqsWPxvaIDn9a2zilqYxnJzv_sg-UQlp
+KU_sc7b77-V1mHEFioLN-0iz0m
+}
+
+!unquoted procedure $ANALYTICS ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;693CC5&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+%invoke_procedure($SpriteDecorator, &quot;$Analytics&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+!endprocedure
+
+
+sprite $AppSync [64x64/16z] {
+xPRdrkCW34IlGAYmx_-yMr89PwtZBxzzquF6rWoupFznSN6HuVONZ_n6x5ru8DtpX-eX85tjBze5PEGyZmcevxiNXJY_SmNTTXT-NjveHVK9US_vFGsTXqJa
+h55w8GVfmuie7SbLCCPQRDp9G_F26jq066jpYBiU6pJMiK3CX5YpOSm2uRFTSNzxaBH4idBVvwuVs3ByIx4gVD_IqB6iN1URGQ_Qpsrxi2QIVuVbs43Izjcu
+vxVIYMFxEbVqvdzhU6m1R7ajn3rhmOkY5VlSTBl_z4zNVbPlJrt7JkhVGp5KY9SF7R4LrVaPG7iR0MpBhvg_5CmRbZUCvWQvp5-nVZBotaZmmfUbAMIvVXsz
+Br97sWt1vkntVRr-dNxtr-W3_9aVsf_7dMBryNlp5mtUXGQqk-lakFt8QNIHMvtxgsxzDHZ5kQifeFEOe3Zwj06K_bevEjErIPmukHTa9PUStwD8VA-EHZil
+zwqq1p-vh2RqxVv1R9udJO2czfTHtB-KKxdSFzbNkTVtRnSN5ty
+}
+
+!unquoted procedure $APPSYNC ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;CC2264&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+
+%invoke_procedure($SpriteDecorator, &quot;$AppSync&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+sprite $ApplicationIntegration [64x64/16z] {
+xTO5GiOm30NWbwIIXFlVbxL8AROrmzdxPVfDQ_YkNA67AK7AQZB0mvSRNupDtdikVtahxyHslH5eAkBJ4jcUBr0RSH6t4KNPzMG-qloJ6Erx36zLUVPOyPK0
+nBr2L2M5VQ8-5_ViST_dgdkjOMyC4KYRrPoAhNgtp4pDLu31jkP7-J7Qh295lQBsrt7Caxyu_wDtslUG5dLBRKea8kZNZpPtm3CBi7d6WvUqUMavUFsK-bEt
+kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJyKDp7-wzu_tc-_xx6FvVFjXgTV20Vvy4I2O_JKYZu
+2xa5
+}
+
+!unquoted procedure $APPLICATIONINTEGRATION ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;CC2264&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+
+%invoke_procedure($SpriteDecorator, &quot;$ApplicationIntegration&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+
+
+
+'=============================DECORATORS==================================
+' We define 1 or more sprite decorators in stdlib
+' Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+' as we want, that we don't even know about yet
+' Let's say SpriteDecorator is defined month 1, SpriteDecorator2 is defined month 2, SpriteDecorator3 is defined month 3
+'
+' https://plantuml.com/preprocessing Conditions to show technology &quot;[ ]&quot; only if technology specified
+'&quot;&quot;== $label\n&quot;: &quot;==&quot; is creole syntax for &quot;Large heading&quot; https://plantuml.com/creole
+' rectangle $alias &lt;&lt;$alias&gt;&gt; is in form &quot;shape alias &lt;&lt;stereo&gt;&gt;&quot; where skinparam can be specified for a stereo per https://plantuml.com/skinparam last example
+' https://plantuml.com/preprocessing Conditions to show technology &quot;[ ]&quot; only if technology specified
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html for all skinparams
+'---------------------------------------------------
+
+
+
+skinparam rectangle {
+backgroundColor white
+}
+skinparam cloud {
+backgroundColor white
+}
+
+'add a new shape parameter + a textsize parameter
+'---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;, $focus=&quot;&quot; )
+
+!if ($focus == &quot;hi&quot;)
+    skinparam rectangle {
+        backgroundColor&lt;&lt;$alias&gt;&gt; yellow
+        borderColor&lt;&lt;$alias&gt;&gt; yellow
+        shadowing&lt;&lt;$alias&gt;&gt; true
+        BorderThickness&lt;&lt;$alias&gt;&gt; 20
+    }
+!endif
+
+!if  ($focus == &quot;lo&quot;)
+    skinparam rectangle {
+        backgroundColor&lt;&lt;$alias&gt;&gt; gainsboro
+        borderColor&lt;&lt;$alias&gt;&gt; gainsboro
+        shadowing&lt;&lt;$alias&gt;&gt; false
+        
+    }
+!endif
+
+
+!if ($technology == &quot;&quot;)
+    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+    == $label\n
+    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+
+    $description &quot;
+!else 
+    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+    == $label\n
+    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+    //&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
+
+    $description &quot;
+!endif
+
+!endprocedure
+
+
+!$SpriteDecorator = &quot;$Sprite&quot;+ &quot;Decorator&quot;
+'=============================END DECORATORS==================================
+
+
+
+
+' User can specify what they want in order (legacy mode), or via named arugments (standard mode)
+
+'legacy mode
+$ANALYTICS(&quot;legacy1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;, 1)
+$ANALYTICS(&quot;legacy2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
+
+'mixed mode
+$ANALYTICS(&quot;no_tech&quot;, $shape=&quot;cloud&quot;)
+
+'standard mode
+
+$APPSYNC($alias=&quot;lofocus&quot;, $description=&quot;description&quot;, $label=&quot;lo focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;lo&quot;)
+$APPSYNC($alias=&quot;normalfocus&quot;, $description=&quot;description&quot;, $label=&quot;normal focus&quot;, $technology=&quot;technology&quot;)
+$APPSYNC($alias=&quot;hifocus&quot;, $description=&quot;description&quot;, $label=&quot;hi focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;hi&quot;)
+
+
+$APPSYNC($alias=&quot;myalias7&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
+
+
+footer %filename() rendered with PlantUML version %version()
+
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>&lt;API proposal demo&gt;</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Full code applied to PlantUML Stdlib is in
+<a class="reference external" href="https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec366c028fe60032dc0">https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec366c028fe60032dc0</a></p>
+<p>Below is a standalone file version of it.</p>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+&#39;all sprites in a category would be included in an all.puml file for that category
+&#39;==================================================================================================
+
+
+
+
+&#39; Colors
+&#39; ##################################
+!define AWS_COLOR #232F3E
+!define AWS_BG_COLOR #FFFFFF
+!define AWS_BORDER_COLOR #FF9900
+!define AWS_SYMBOL_COLOR AWS_COLOR
+
+&#39; Styling
+&#39; ##################################
+
+!define TECHN_FONT_SIZE 12
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+!definelong AWSEntityColoring(stereo)
+skinparam rectangle&lt;&lt;stereo&gt;&gt; {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+skinparam participant&lt;&lt;stereo&gt;&gt; {
+    BackgroundColor AWS_BG_COLOR
+    BorderColor AWS_BORDER_COLOR
+}
+!enddefinelong
+
+&#39; Layout
+&#39; ##################################
+
+!definelong LAYOUT_AS_SKETCH
+skinparam backgroundColor #EEEBDC
+skinparam handwritten true
+skinparam defaultFontName &quot;Comic Sans MS&quot;
+center footer &lt;font color=red&gt;Warning:&lt;/font&gt; Created for discussion, needs to be validated
+!enddefinelong
+
+!define LAYOUT_TOP_DOWN top to bottom direction
+!define LAYOUT_LEFT_RIGHT left to right direction
+
+
+
+sprite $Analytics [64x64/16z] {
+xTK5WiGW38NXbn1WGkv_tjMwDwml__YqNrtmNRK8tISXfBj5W4UVhDpBTExBtVweRxvv5TfCz9eNnCqWrpo9bOrCwAelc_bzJYdNU0QWvlTAe0glJ14-tt7L
+w5d_h6yBJ-hR_W9wMCSTNf0OiUFtVCUj23f-smjojmbSNiR_7BwRkz-dN7l-k7pz-IyXWC9cX13ap3CuxCRWCwyGsqsWPxvaIDn9a2zilqYxnJzv_sg-UQlp
+KU_sc7b77-V1mHEFioLN-0iz0m
+}
+
+!unquoted procedure $ANALYTICS ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;693CC5&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+%invoke_procedure($SpriteDecorator, &quot;$Analytics&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+!endprocedure
+
+
+sprite $AppSync [64x64/16z] {
+xPRdrkCW34IlGAYmx_-yMr89PwtZBxzzquF6rWoupFznSN6HuVONZ_n6x5ru8DtpX-eX85tjBze5PEGyZmcevxiNXJY_SmNTTXT-NjveHVK9US_vFGsTXqJa
+h55w8GVfmuie7SbLCCPQRDp9G_F26jq066jpYBiU6pJMiK3CX5YpOSm2uRFTSNzxaBH4idBVvwuVs3ByIx4gVD_IqB6iN1URGQ_Qpsrxi2QIVuVbs43Izjcu
+vxVIYMFxEbVqvdzhU6m1R7ajn3rhmOkY5VlSTBl_z4zNVbPlJrt7JkhVGp5KY9SF7R4LrVaPG7iR0MpBhvg_5CmRbZUCvWQvp5-nVZBotaZmmfUbAMIvVXsz
+Br97sWt1vkntVRr-dNxtr-W3_9aVsf_7dMBryNlp5mtUXGQqk-lakFt8QNIHMvtxgsxzDHZ5kQifeFEOe3Zwj06K_bevEjErIPmukHTa9PUStwD8VA-EHZil
+zwqq1p-vh2RqxVv1R9udJO2czfTHtB-KKxdSFzbNkTVtRnSN5ty
+}
+
+!unquoted procedure $APPSYNC ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;CC2264&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+
+%invoke_procedure($SpriteDecorator, &quot;$AppSync&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+sprite $ApplicationIntegration [64x64/16z] {
+xTO5GiOm30NWbwIIXFlVbxL8AROrmzdxPVfDQ_YkNA67AK7AQZB0mvSRNupDtdikVtahxyHslH5eAkBJ4jcUBr0RSH6t4KNPzMG-qloJ6Erx36zLUVPOyPK0
+nBr2L2M5VQ8-5_ViST_dgdkjOMyC4KYRrPoAhNgtp4pDLu31jkP7-J7Qh295lQBsrt7Caxyu_wDtslUG5dLBRKea8kZNZpPtm3CBi7d6WvUqUMavUFsK-bEt
+kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJyKDp7-wzu_tc-_xx6FvVFjXgTV20Vvy4I2O_JKYZu
+2xa5
+}
+
+!unquoted procedure $APPLICATIONINTEGRATION ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;CC2264&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+
+%invoke_procedure($SpriteDecorator, &quot;$ApplicationIntegration&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+
+!endprocedure
+
+
+
+
+&#39;=============================DECORATORS==================================
+&#39; We define 1 or more sprite decorators in stdlib
+&#39; Define our decorators that we know now - and can easily define new ones in future with as manty new parameters 
+&#39; as we want, that we don&#39;t even know about yet
+&#39; Let&#39;s say SpriteDecorator is defined month 1, SpriteDecorator2 is defined month 2, SpriteDecorator3 is defined month 3
+&#39;
+&#39; https://plantuml.com/preprocessing Conditions to show technology &quot;[ ]&quot; only if technology specified
+&#39;&quot;&quot;== $label\n&quot;: &quot;==&quot; is creole syntax for &quot;Large heading&quot; https://plantuml.com/creole
+&#39; rectangle $alias &lt;&lt;$alias&gt;&gt; is in form &quot;shape alias &lt;&lt;stereo&gt;&gt;&quot; where skinparam can be specified for a stereo per https://plantuml.com/skinparam last example
+&#39; https://plantuml.com/preprocessing Conditions to show technology &quot;[ ]&quot; only if technology specified
+&#39; https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html for all skinparams
+&#39;---------------------------------------------------
+
+
+
+skinparam rectangle {
+backgroundColor white
+}
+skinparam cloud {
+backgroundColor white
+}
+
+&#39;add a new shape parameter + a textsize parameter
+&#39;---------------------------------------------------
+!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;, $focus=&quot;&quot; )
+
+<span class="hll">!if ($focus == &quot;hi&quot;)
+</span>    skinparam rectangle {
+        backgroundColor&lt;&lt;$alias&gt;&gt; yellow
+        borderColor&lt;&lt;$alias&gt;&gt; yellow
+        shadowing&lt;&lt;$alias&gt;&gt; true
+        BorderThickness&lt;&lt;$alias&gt;&gt; 20
+    }
+!endif
+
+<span class="hll">!if  ($focus == &quot;lo&quot;)
+</span>    skinparam rectangle {
+        backgroundColor&lt;&lt;$alias&gt;&gt; gainsboro
+        borderColor&lt;&lt;$alias&gt;&gt; gainsboro
+        shadowing&lt;&lt;$alias&gt;&gt; false
+        
+    }
+!endif
+
+
+!if ($technology == &quot;&quot;)
+    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+    == $label\n
+    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+
+    $description &quot;
+!else 
+<span class="hll">    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+</span><span class="hll">    == $label\n
+</span><span class="hll">    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+</span><span class="hll">    //&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
+</span>
+    $description &quot;
+!endif
+
+!endprocedure
+
+
+!$SpriteDecorator = &quot;$Sprite&quot;+ &quot;Decorator&quot;
+&#39;=============================END DECORATORS==================================
+
+
+
+
+&#39; User can specify what they want in order (legacy mode), or via named arugments (standard mode)
+
+&#39;legacy mode
+$ANALYTICS(&quot;legacy1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;, 1)
+$ANALYTICS(&quot;legacy2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
+
+&#39;mixed mode
+$ANALYTICS(&quot;no_tech&quot;, $shape=&quot;cloud&quot;)
+
+&#39;standard mode
+
+$APPSYNC($alias=&quot;lofocus&quot;, $description=&quot;description&quot;, $label=&quot;lo focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;lo&quot;)
+$APPSYNC($alias=&quot;normalfocus&quot;, $description=&quot;description&quot;, $label=&quot;normal focus&quot;, $technology=&quot;technology&quot;)
+$APPSYNC($alias=&quot;hifocus&quot;, $description=&quot;description&quot;, $label=&quot;hi focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;hi&quot;)
+
+
+$APPSYNC($alias=&quot;myalias7&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
+
+
+footer %filename() rendered with PlantUML version %version()
+
+@enduml
+</pre></div>
+</td></tr></table></div>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>this salt diagram does not work so use png for now</p>
+<div class="figure align-center" id="id6">
+<p class="plantuml">
+<img src="../_images/plantuml-797e35274634b82d9a29e716dd8636b86ca7d142.png" alt="&#64;startsalt
+{
+{T
+ + **PlantUML stdlib**
+ ++ **library** e.g. awslib
+ +++ **library category** e.g. awslib/ARVR
+ ++++ **sprite** e.g. awslib/ARVR/Sumerian
+ ++++ **all.puml** file e.g. awslib/ARVR/all.puml
+ 
+}
+}
+&#64;endsalt
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Plantuml Stdlib File Layout</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 

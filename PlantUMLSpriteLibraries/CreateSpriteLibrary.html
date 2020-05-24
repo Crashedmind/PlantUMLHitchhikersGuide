@@ -104,9 +104,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
@@ -114,10 +113,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">4. Standardising Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">5. Standardising Standard Library 2</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">6. Create A Sprite library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-sprites-by-converting-osa-icon-libaries">6.1. Create Sprites by converting OSA icon libaries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-sprites-by-converting-todo-icon-libaries">6.1. Create Sprites by converting TODO icon libaries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#converting-the-icon-set-to-plantuml-sprites">6.1.1. Converting the icon set to PlantUML Sprites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">6.1.2. Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#all-icons">6.1.3. All Icons</a></li>
 </ul>
 </li>
 </ul>
@@ -208,95 +205,13 @@
             
   <div class="section" id="create-a-sprite-library">
 <h1>6. Create A Sprite library<a class="headerlink" href="#create-a-sprite-library" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="create-sprites-by-converting-osa-icon-libaries">
-<h2>6.1. Create Sprites by converting OSA icon libaries<a class="headerlink" href="#create-sprites-by-converting-osa-icon-libaries" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www.opensecurityarchitecture.org/">Open Security
-Architecture</a> (OSA) is a
-useful resource for security architects providing a catalog of
-controls, patterns, and requirements from numerous standards, governance
-frameworks, legislation and regulations. See “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/why-have-osa">why have
-OSA?</a>”.</p>
-<p>Resources include a <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture icon
-library</a>
-available under a “<a class="reference external" href="http://www.opensecurityarchitecture.org/cms/about/license-terms">Creative Commons share-alike
-license</a>”.</p>
-<p>These icons are available as png or svg images.</p>
-<p>Here we’ll convert them to sprites so we can use them with PlantUML.</p>
+<div class="section" id="create-sprites-by-converting-todo-icon-libaries">
+<h2>6.1. Create Sprites by converting TODO icon libaries<a class="headerlink" href="#create-sprites-by-converting-todo-icon-libaries" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="converting-the-icon-set-to-plantuml-sprites">
 <h3>6.1.1. Converting the icon set to PlantUML Sprites<a class="headerlink" href="#converting-the-icon-set-to-plantuml-sprites" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Download the <a class="reference external" href="http://www.opensecurityarchitecture.org/cms/library/icon-library">security architecture
-icons</a>
-and extract them into a directory e.g. “osaicons”.</p></li>
-</ol>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>add info on a standard way to create sprites</p>
-</div>
-</div>
-<div class="section" id="example">
-<h3>6.1.2. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-center">
-<p class="plantuml">
-<img src="../_images/plantuml-77a4933a093a6e4472f06798be02dddeb5e19ef6.png" alt="&#64;startuml
-
-!include &lt;osa/user/audit/audit.puml&gt;
-!include &lt;osa/user/black/hat/hat.puml&gt;
-!include &lt;osa/user/green/architect/architect.puml&gt;
-
-Auditor : &lt;$audit&gt; 
-Architect: &lt;$architect&gt; 
-BlackHat : &lt;$black_hat&gt;
-
-Auditor -&gt; Architect : blah
-Architect -&gt; BlackHat : blahblah
-
-
-&#64;enduml
-
-"/>
-</p>
-</div>
-<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
-
-!include &lt;osa/user/audit/audit.puml&gt;
-!include &lt;osa/user/black/hat/hat.puml&gt;
-!include &lt;osa/user/green/architect/architect.puml&gt;
-
-Auditor : &lt;$audit&gt; 
-Architect: &lt;$architect&gt; 
-BlackHat : &lt;$black_hat&gt;
-
-Auditor -&gt; Architect : blah
-Architect -&gt; BlackHat : blahblah
-
-
-@enduml
-
-</pre></div>
-</td></tr></table></div>
-</div>
-<div class="section" id="all-icons">
-<h3>6.1.3. All Icons<a class="headerlink" href="#all-icons" title="Permalink to this headline">¶</a></h3>
-<p>Below is what the icons look like - and the associated code.</p>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>add info on what osa icons look like</p>
 </div>
 </div>
 </div>

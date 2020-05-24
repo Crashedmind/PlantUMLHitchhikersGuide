@@ -139,7 +139,7 @@ User Stories
     
         so I can show the relevant or important parts in the context of an overall diagram
 
-        e.g. a diagram may have 10 icons/components, but I want to highlight the one that's 
+        e.g. a diagram may have 10 icons/components, but I want to highlight the ones 
         being discussed or changed in my current system
         "
     "**US_THEME**", "To use, or create, a theme, 

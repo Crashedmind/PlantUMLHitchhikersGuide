@@ -164,42 +164,18 @@ Play with StdlibProposalCode_ online.
     :emphasize-lines: 37, 50, 63, 102, 106,110, 83, 86, 89
 
 
-
 .. todo ::
-    ref https://zimtkeks.github.io/2019/03/08/plantuml-diagrams-without-redundancy.html on iuml use
-    'todo add background color option via background text e.g. highlight , or red-amber-green
-    ' add ability to add small icons
 
-
-
-Standardising Parameters API
-===============================================================================
-
-
-Given the current library macros are not consistent, it is not possible to define a new universal macro without breaking 
-some user's code.
-
-
-
-        The superset of parameters
-
-                sprite
-
-                color
-
-                scale (material library only)
-
-                shape (Type 1 (e_type), 4 (_shape))
-
-                technology
-
-                description
-
-                label
-
-        Fixed
-
-                Text Size
-
-                Text Order
+::
+    @startuml
+    usecase UC1 as "
+    = Extra-large heading
+    Some text
+    == Large heading
+    Other text
+    === Medium heading
+    Information
+    ....
+    ==== Small heading"
+    @enduml
 

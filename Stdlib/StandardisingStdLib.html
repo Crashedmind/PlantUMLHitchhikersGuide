@@ -104,9 +104,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/MixingSyntax.html">5. Mixing syntax</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
@@ -125,7 +124,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#standardising-parameters-api">4.7. Standardising Parameters API</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib2.html">5. Standardising Standard Library 2</a></li>
@@ -222,7 +220,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>!function and !procedure should be used instead of !define and !definelong</p>
-<p>Per <a href="#id7"><span class="problematic" id="id8">MigrationNotes_</span></a>:</p>
+<p>Per <a href="#id6"><span class="problematic" id="id7">MigrationNotes_</span></a>:</p>
 <blockquote>
 <div><p><em>You should not use !define and !definelong anymore. Use !function, !procedure
 or variable definition instead.</em></p>
@@ -233,12 +231,12 @@ or variable definition instead.</em></p>
 </div>
 <div class="section" id="default-values">
 <h2>4.2. Default Values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h2>
-<p>Per <a href="#id9"><span class="problematic" id="id10">DefaultArgumentValue_</span></a>, “In both procedure and return functions, you can define default values for arguments”</p>
+<p>Per <a href="#id8"><span class="problematic" id="id9">DefaultArgumentValue_</span></a>, “In both procedure and return functions, you can define default values for arguments”</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default argument</a> value can help to simplify definitions</p>
 </div>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <p class="plantuml">
 <img src="../_images/plantuml-17431f4899c291de2012c1b1aace7066ce510163.png" alt="&#64;startuml
 !function $inc($value, $step=1)
@@ -250,7 +248,7 @@ Alice -&gt; Bob : Add two to three : $inc(3, 2)
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>Using default argument</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>Using default argument</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -277,7 +275,7 @@ I think of this as like C function pointers which are very useful.</p>
 </div>
 <div class="section" id="step-by-step-towards-a-standard-macro">
 <h2>4.3. Step-by-step Towards A Standard Macro<a class="headerlink" href="#step-by-step-towards-a-standard-macro" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id3">
 <p class="plantuml">
 <img src="../_images/plantuml-8b8311b97c0cdf54ecd3fcf752eb4be4340c384c.png" alt="&#64;startuml
 'create equivalent of icons shown here https://github.com/awslabs/aws-icons-for-plantuml
@@ -368,7 +366,7 @@ $ffoo6(&quot;myaliasbatch2&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -550,7 +548,7 @@ $ffoo6(&quot;myaliasbatch2&quot;, &quot;mydescription&quot;, &quot;mylabel&quot;
 </div>
 <div class="section" id="close-but">
 <h2>4.4. Close But…<a class="headerlink" href="#close-but" title="Permalink to this headline">¶</a></h2>
-<p>We can use the <a href="#id11"><span class="problematic" id="id12">DefaultArgumentValue_</span></a> to avoid having to specify a parameter value when we call our procedure.
+<p>We can use the <a href="#id10"><span class="problematic" id="id11">DefaultArgumentValue_</span></a> to avoid having to specify a parameter value when we call our procedure.
 BUT this only works if the default parameters are at the end i.e. it is all based on the order of the procedure parameters.</p>
 <p><em>In other words, the user has to know/care about the order of parameters.</em></p>
 <div class="admonition-todo admonition" id="id1">
@@ -567,7 +565,7 @@ or
 <div class="section" id="procedure-keyword-arguments">
 <h2>4.5. Procedure Keyword Arguments<a class="headerlink" href="#procedure-keyword-arguments" title="Permalink to this headline">¶</a></h2>
 <p>To enable the StdLib standardisation, I suggested the <em>keyword arguments</em> and Arnaud produced a release to play with next day - and this became part of an official release:</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id4">
 <p class="plantuml">
 <img src="../_images/plantuml-f12946afdf65a6fa40ac72aa46e68e4aba68e0c0.png" alt="&#64;startuml
 
@@ -651,7 +649,7 @@ $SUMERIAN(SUMERIAN, &quot;other description&quot;, $label=&quot;sdsd&quot;, $sca
 &#64;enduml
 "/>
 </p>
-<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>each output is numbered to match the procedure e.g. 51 is output for ffoo51()</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -849,7 +847,7 @@ $SUMERIAN(SUMERIAN, &quot;other description&quot;, $label=&quot;sdsd&quot;, $sca
 <p>Existing code does not need to know or care that the SpriteDecorator has changed.</p>
 <p>New code can use the new decorator functionality if desired.</p>
 <p>Play with <a class="reference external" href="http://www.plantuml.com/plantuml/uml/j911YiCm34NtFiLV36ILP3ymCCnD54U93OhjiUI6thvk2hr1XK0WwIt--rMZQkqGDv08jDHeh8W914_6UwvtdBd9YeNxsajRURtklKMcqbbiKHXRhh10zkRSyFFnScxmbSaO_D_YZOIJ8M-8FYU5Xdmc1AwCO5RqUvxtQA4jay_7JASABVgSu_K_zWXZ4KgNa9SBVFsH-O07g_Ioyo1JW75ytwlm1l0TpcL9Mw052hJ0q6BC15xEC2q71XYCzwunCT5lP-BcMJpBVtv_aOHD4dvOQV_hd_vssEo7d3Orvi4vs_KTpXfaQstqMhCFvFgDnIIwMDgJD7eidlhZk_MNEs1PMDnt_qAv-ygQTPQU3NN6NOTJZzpQxmqtr0WdUeA23HKHlJvK16aV2IHugerhaIER7bu9MD8Nxrgw8Px1xUxOT7kfYFUMIAo6g-_g9m-vIoi0NghUDUZDB3YNmqLIGIde3r2vAoqtlsuDD_ciBAkIPVxYxTKuzVEYdV67OxSjQ4qFECASKTR0H0mu8pf8jDHjD0tfnZkBYdGupsYiaSwUOsTC61O4lLCjSEGiuvV2ivjzJzJl-eLfpcpimoLtUGdfQmf2rH-CmG2FlZ1BZzE-4Y2YmXGs_EvLbJaj5mNvfHyuLr9L6nq8b2t3SrokemahbplRt-iB2x7kN9NRoNPoVbFv0SYvCzqfYhANvg-Xq3nnbcajeuV4qvjchkf1rGmOxiUn6_1aiPzgVdTjj_Jo4ZsBDW5DwDo2C0lsSjFfRcy7vjPMw9tXzuWeC0v__oUr_ndHJzfzqn-SJ7C-_cJrDF-eJ_Zyr_ov_qzawhYCVpGM67nKNu4eEDUTp1wQA_bvROi9VxHCOw_nFPvk7u0kneKGECNc-hb3an7bUIF46YTF21OMDntlh08_nDsN5MJeAfj7SagE3Tln3POXC6PFZ_8Z2gszj_bn_pq4hj21CjPsKfodIyQCd-hhSBirM_OtQfcqlGuCioJf20BQQnH5zQhXNyMITJLGCrJ0o-h6jCn2H3GTzTWkmxkArdFLGjPFblElO6Sl1-OS_hz6zGdEnphv_7VOVxz_ZEkvuj3Mc3zU7LuFqKOqJi7tZRccSodCNycunHk4PZKljdrZNgd5FSolDC550QRA-pSScaz8rEQKNxhZhW63qoYa0fSTPSTmiM601Lu9aUjd5Cz2bfp2A8gavd1SqUwGWbmrNx7AhRUQKVnAP-j1Av4OjQYSWa8ZJzQuBbej_HBWS5Ea7QTKKHh0ypAm1VRSZjHGz4SbZK5Hk6QdHOQzCx_f8Zg2DrH77XPYSBKb-QGomwkRDO8Et2iQvt7lzZWiLd8wPmr5VDqP-Hju9Mw0uufvDQViKYc_mAsc1A97aQ3A2dShlDmcb9ibbJ6zwvfdx_LdpVYF_m1ZlxwVgAqZh9OGvpj-4yitaIB0sBoefoGxK47xgF0terHuVQKhaai6S7xEVc-m7--3zKBlB5AGgitDdC7EgMaBiUg3eCaGcsz1TrnztYJY84uqCyZ6AC9bfi9cp4LELIrV3K5_d9S5B0yAqkE-aDf1sdizg5SAFkGOvanvDqVzv9PDO8seVnVqN7M9srmgd51fQS2MH0lLjynoQVtkObz_64PyW_VK7wia4QJ8BPWC_xe-c_3OQte5wyDGoB8UCx8PCszP2X_BFwgl_jwsRI3wlpx5HSZWU7NiMDg08N2CPKs15LXI83ys3CDWqEBP9YAH7ab5qpxzZfGYEv7Lf5jTe4KAYzJnlVlnU29_dTrXwXGTlF3XepxxuVhyziFrpIk-Rptu3O7ZGaY4CIWDcT88jRev9aepgxJ_OXlBKp6d5HULkShrjeN_DXS8zr8LuFuV0vCS4YO1cH5f-KWZiG0bqMCkSfiJNq5x4vY1Z4bRUeCrqon3YmHCZCmuv8BU3XeUhcJF0ZwWh2ZPNEKMIhHa_mlQdW73IhZnaLmykWd2r6vmYbGIwtZmt2Pg6qKjexXj50Uzuq__5npaygzSMO9PQvKWT_auVCPsT7XPLbC3E6IfO8P-EPf4YxKLIfw58KsaR8vfzMWnMKcLgcLPZKt2KZmRqrD2ixa-2pNoi1y46XFBv3B56XVeBmmcaseqdGOLQZ1nw_HflNmwQHpwjiAUJaRUOXgCHXCZ_i7JSJJzOykFFoSZDpqTZO80dZWV1WSeUHCyoPjn3ipBmApO6ZTYs5-6epsaUAaHfN_beZWBfUBeSkx7NqV2uGtDM_pR4jGNgKEyXphCqnotof3GB7VZEYwQ6l-mnxeqFAyi3xJh0nQDXPlRyzltRu5OKb2BxTxh-wTX6VgBoN-hJgldXDNLX38L6ikiI6R4E0xxBSjejsdKbdwhshjNnX-lLdGIzfkaNFn-TNwvlwpqxCerUeK6fB9GA7qFNBYkcPR0J4k_S0n6LPyd4BAoT7PhrB1GQQeA8PUG2ed1mI4l9Pn1M6E4Ro1iSCBW6o4Vr3tE6XqSEVi1R6MCnYohw-B76n6veHUiUzYeZX9NyKPTn54NSzH57JMWSHTet0KQTu76OV_5WywxgmlufCEEGuJR5S8SMMxBwkOkwgFBGcbWi1GFABrU1b2WFxqaAoQNsBpBMA8LvEk2QMxWQ9vRhmok2kcd-iI1m-LmU-rFvxTlVvwHLA7AWk-0lEg02wqog4fhbN-8cgSOq2R3uH30oT0xO4w12Efp4w6e1Gdg57A3kcSW8LGmbfKkAFJY7u1pqUJhjT9LbCtvodWVvmYCapC4o-OY5ROa-lhCLWVWmJWkM9xQUeVvJhMxfJVH7dtMiyhB6s8NtIFN4w97beQZ_wpbxWxCtGDzN7i-8NHlG7-H_r-HFfAzBkARkyjtr-_FhtpKN-np7Bi6tzqmcaltPqd4XhcTaw07TmQrtoPcZObOb52uPc5NMFhx20W9IdCaEANXGJ2GB4CEJEVB3AKrmTPs2ETEg3CAOzRqwrQZfjznlsDLzB5LJXzphGePTYsFDmNvZjhhbfv3Hhgg7UjllTZCDzI6B-YlxK1_DrxyN1HPMPi7mLDvXQOkQ-t7otpTorzsTm0dm-zfi1RodWRLrXj0VE8S2tv4oVCi_HS0">StdlibProposalCode</a> online.</p>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id5">
 <p class="plantuml">
 <img src="../_images/plantuml-5ce55fbcd62f498992a92207a51eed2004bbd11f.png" alt="&#64;startuml
 'all sprites in a category would be included in an all.puml file for that category
@@ -981,7 +979,7 @@ $SUMERIAN_DYN(&quot;sumerian_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&qu
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text"><em>decorators separated from sprite</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>decorators separated from sprite</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
@@ -1242,36 +1240,22 @@ $SUMERIAN_DYN(&quot;sumerian_dyn_2&quot;, &quot;descsdfsdf&quot;, &quot;label&qu
 @enduml
 </pre></div>
 </td></tr></table></div>
-<div class="admonition-todo admonition" id="id2">
-<p class="admonition-title">Todo</p>
-<p>ref <a class="reference external" href="https://zimtkeks.github.io/2019/03/08/plantuml-diagrams-without-redundancy.html">https://zimtkeks.github.io/2019/03/08/plantuml-diagrams-without-redundancy.html</a> on iuml use
-‘todo add background color option via background text e.g. highlight , or red-amber-green
-‘ add ability to add small icons</p>
+<dl class="simple">
+<dt>::</dt><dd><p>&#64;startuml
+usecase UC1 as ”
+= Extra-large heading
+Some text
+== Large heading
+Other text
+=== Medium heading
+Information
+….
+==== Small heading”
+&#64;enduml</p>
+</dd>
+</dl>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="standardising-parameters-api">
-<h2>4.7. Standardising Parameters API<a class="headerlink" href="#standardising-parameters-api" title="Permalink to this headline">¶</a></h2>
-<p>Given the current library macros are not consistent, it is not possible to define a new universal macro without breaking
-some user’s code.</p>
-<blockquote>
-<div><p>The superset of parameters</p>
-<blockquote>
-<div><p>sprite</p>
-<p>color</p>
-<p>scale (material library only)</p>
-<p>shape (Type 1 (e_type), 4 (_shape))</p>
-<p>technology</p>
-<p>description</p>
-<p>label</p>
-</div></blockquote>
-<p>Fixed</p>
-<blockquote>
-<div><p>Text Size</p>
-<p>Text Order</p>
-</div></blockquote>
-</div></blockquote>
 </div>
 </div>
 

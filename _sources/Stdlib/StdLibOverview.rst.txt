@@ -256,3 +256,25 @@ Icons are grouped into a file based on resolutions and labels
 [https://github.com/awslabs/aws-icons-for-plantuml]
 
 
+
+
+Superset Of Parameters
+===============================================================================
+
+The superset of parameters in macros:
+
+    * sprite
+    * color
+    * scale (material library only)
+    * shape (Type 1 (e_type), 4 (_shape))
+    * technology
+    * description
+    * label
+
+These Text attributes are not parameters:
+
+    * Text Size: where text size does vary in some libraries
+    * Number of Individual Text fields
+    * Order of Individual Text fields
+
+

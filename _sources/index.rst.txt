@@ -197,15 +197,14 @@ Imagine
  
    PassSpriteAsParameter/PassSpriteAsParameter
    NamedArguments/NamedArguments
-   NamedArguments/MixingSyntax
-   
+    
 
 
 
 .. toctree::
    :maxdepth: 2
    :numbered:   
-   :caption: Understanding Standard Library 
+   :caption: Standardising Standard Library 
 
    Stdlib/StdLibOverview
    StdlibUnderTheHood/StdlibUnderstanding
