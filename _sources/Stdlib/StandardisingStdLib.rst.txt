@@ -165,8 +165,6 @@ Play with StdlibProposalCode_ online.
 
 
 .. todo ::
-
-::
     @startuml
     usecase UC1 as "
     = Extra-large heading

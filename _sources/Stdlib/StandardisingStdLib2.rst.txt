@@ -163,7 +163,7 @@ This uses the "File List.iuml" block include Preprocessor feature
 
 
 
-.. uml:: dynamic3.0.puml
+.. uml:: dynamic3.1.puml
     :align: center
     :caption: *<API proposal demo>* 
 
@@ -172,9 +172,9 @@ https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec
 
 Below is a standalone file version of it.
 
-.. literalinclude:: dynamic3.0.puml
+.. literalinclude:: dynamic3.1.puml
     :linenos: 
-    :emphasize-lines: 128, 137, 154, 154-157
+    :emphasize-lines: 40, 92, 113, 136
 
     
 

@@ -460,19 +460,10 @@ This ensures backwards compatiblity of PlantUML Stdlib with existing user diagra
 This uses the “File List.iuml” block include Preprocessor feature</p>
 <div class="figure align-center" id="id5">
 <p class="plantuml">
-<img src="../_images/plantuml-3825420eee785972c2f3c9c39fa073880e0e711e.png" alt="&#64;startuml
+<img src="../_images/plantuml-0735f8e634ecfd0ebc70b8e7ed01cafba5449a91.png" alt="&#64;startuml
 'all sprites in a category would be included in an all.puml file for that category
 '==================================================================================================
 
-
-
-
-' Colors
-' ##################################
-!define AWS_COLOR #232F3E
-!define AWS_BG_COLOR #FFFFFF
-!define AWS_BORDER_COLOR #FF9900
-!define AWS_SYMBOL_COLOR AWS_COLOR
 
 ' Styling
 ' ##################################
@@ -488,32 +479,14 @@ skinparam rectangle {
     StereotypeFontSize 12
 }
 
-skinparam Arrow {
-    Color #666666
-    FontColor #666666
-    FontSize 12
+
+skinparam rectangle {
+backgroundColor white
+}
+skinparam cloud {
+backgroundColor white
 }
 
-!definelong AWSEntityColoring(stereo)
-skinparam rectangle&lt;&lt;stereo&gt;&gt; {
-    BackgroundColor AWS_BG_COLOR
-    BorderColor AWS_BORDER_COLOR
-}
-skinparam participant&lt;&lt;stereo&gt;&gt; {
-    BackgroundColor AWS_BG_COLOR
-    BorderColor AWS_BORDER_COLOR
-}
-!enddefinelong
-
-' Layout
-' ##################################
-
-!definelong LAYOUT_AS_SKETCH
-skinparam backgroundColor #EEEBDC
-skinparam handwritten true
-skinparam defaultFontName &quot;Comic Sans MS&quot;
-center footer &lt;font color=red&gt;Warning:&lt;/font&gt; Created for discussion, needs to be validated
-!enddefinelong
 
 !define LAYOUT_TOP_DOWN top to bottom direction
 !define LAYOUT_LEFT_RIGHT left to right direction
@@ -576,13 +549,6 @@ kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJy
 
 
 
-skinparam rectangle {
-backgroundColor white
-}
-skinparam cloud {
-backgroundColor white
-}
-
 'add a new shape parameter + a textsize parameter
 '---------------------------------------------------
 !unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;, $focus=&quot;&quot; )
@@ -627,26 +593,40 @@ backgroundColor white
 !$SpriteDecorator = &quot;$Sprite&quot;+ &quot;Decorator&quot;
 '=============================END DECORATORS==================================
 
-
-
+LAYOUT_LEFT_RIGHT
 
 ' User can specify what they want in order (legacy mode), or via named arugments (standard mode)
-
+package modes {
 'legacy mode
 $ANALYTICS(&quot;legacy1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;, 1)
 $ANALYTICS(&quot;legacy2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
 
 'mixed mode
-$ANALYTICS(&quot;no_tech&quot;, $shape=&quot;cloud&quot;)
+$ANALYTICS(&quot;mixed&quot;, $shape=&quot;cloud&quot;)
+'standard mode
+$APPSYNC($alias=&quot;standard&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
+}
+
+package scale {
+$ANALYTICS($alias=&quot;x0.5&quot;, $scale=&quot;0.5&quot;)
+$ANALYTICS($alias=&quot;x1&quot; )
+$ANALYTICS($alias=&quot;x1.5&quot;, $scale=&quot;1.5&quot;)
+'NOTE: if we use 1.5 instead of &quot;1.5&quot; then it's interpreted as .5 i.e. wrong
+
+x0.5 --&gt;x1
+x1--&gt; x1.5
+}
 
 'standard mode
-
+package focus {
 $APPSYNC($alias=&quot;lofocus&quot;, $description=&quot;description&quot;, $label=&quot;lo focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;lo&quot;)
-$APPSYNC($alias=&quot;normalfocus&quot;, $description=&quot;description&quot;, $label=&quot;normal focus&quot;, $technology=&quot;technology&quot;)
+$APPSYNC($alias=&quot;normal&quot;, $description=&quot;description&quot;, $label=&quot;normal&quot;, $technology=&quot;technology&quot;)
 $APPSYNC($alias=&quot;hifocus&quot;, $description=&quot;description&quot;, $label=&quot;hi focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;hi&quot;)
 
+lofocus --&gt;normal
+normal--&gt; hifocus
+}
 
-$APPSYNC($alias=&quot;myalias7&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
 
 
 footer %filename() rendered with PlantUML version %version()
@@ -829,39 +809,10 @@ footer %filename() rendered with PlantUML version %version()
 169
 170
 171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+172</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
 &#39;all sprites in a category would be included in an all.puml file for that category
 &#39;==================================================================================================
 
-
-
-
-&#39; Colors
-&#39; ##################################
-!define AWS_COLOR #232F3E
-!define AWS_BG_COLOR #FFFFFF
-!define AWS_BORDER_COLOR #FF9900
-!define AWS_SYMBOL_COLOR AWS_COLOR
 
 &#39; Styling
 &#39; ##################################
@@ -877,32 +828,14 @@ skinparam rectangle {
     StereotypeFontSize 12
 }
 
-skinparam Arrow {
-    Color #666666
-    FontColor #666666
-    FontSize 12
+
+skinparam rectangle {
+backgroundColor white
+}
+skinparam cloud {
+backgroundColor white
 }
 
-!definelong AWSEntityColoring(stereo)
-skinparam rectangle&lt;&lt;stereo&gt;&gt; {
-    BackgroundColor AWS_BG_COLOR
-    BorderColor AWS_BORDER_COLOR
-}
-skinparam participant&lt;&lt;stereo&gt;&gt; {
-    BackgroundColor AWS_BG_COLOR
-    BorderColor AWS_BORDER_COLOR
-}
-!enddefinelong
-
-&#39; Layout
-&#39; ##################################
-
-!definelong LAYOUT_AS_SKETCH
-skinparam backgroundColor #EEEBDC
-skinparam handwritten true
-skinparam defaultFontName &quot;Comic Sans MS&quot;
-center footer &lt;font color=red&gt;Warning:&lt;/font&gt; Created for discussion, needs to be validated
-!enddefinelong
 
 !define LAYOUT_TOP_DOWN top to bottom direction
 !define LAYOUT_LEFT_RIGHT left to right direction
@@ -915,8 +848,8 @@ w5d_h6yBJ-hR_W9wMCSTNf0OiUFtVCUj23f-smjojmbSNiR_7BwRkz-dN7l-k7pz-IyXWC9cX13ap3Cu
 KU_sc7b77-V1mHEFioLN-0iz0m
 }
 
-!unquoted procedure $ANALYTICS ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;693CC5&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
-%invoke_procedure($SpriteDecorator, &quot;$Analytics&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
+<span class="hll">!unquoted procedure $ANALYTICS ($alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;693CC5&quot;, $shape=&quot;rectangle&quot;, $textsize=&quot;12&quot;, $focus=&quot;&quot;)
+</span>%invoke_procedure($SpriteDecorator, &quot;$Analytics&quot;, $alias, $description, $label, $technology, $scale, $colour, $shape, $textsize, $focus)
 !endprocedure
 
 
@@ -965,19 +898,12 @@ kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJy
 
 
 
-skinparam rectangle {
-backgroundColor white
-}
-skinparam cloud {
-backgroundColor white
-}
-
 &#39;add a new shape parameter + a textsize parameter
 &#39;---------------------------------------------------
-!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;, $focus=&quot;&quot; )
-
-<span class="hll">!if ($focus == &quot;hi&quot;)
-</span>    skinparam rectangle {
+<span class="hll">!unquoted procedure $SpriteDecorator($MySprite, $alias, $description=&quot;&quot;, $label=&quot;&quot;, $technology=&quot;&quot;, $scale=1, $colour=&quot;blue&quot;, $shape=&quot;cloud&quot;, $textsize=&quot;18&quot;, $focus=&quot;&quot; )
+</span>
+!if ($focus == &quot;hi&quot;)
+    skinparam rectangle {
         backgroundColor&lt;&lt;$alias&gt;&gt; yellow
         borderColor&lt;&lt;$alias&gt;&gt; yellow
         shadowing&lt;&lt;$alias&gt;&gt; true
@@ -985,8 +911,8 @@ backgroundColor white
     }
 !endif
 
-<span class="hll">!if  ($focus == &quot;lo&quot;)
-</span>    skinparam rectangle {
+!if  ($focus == &quot;lo&quot;)
+    skinparam rectangle {
         backgroundColor&lt;&lt;$alias&gt;&gt; gainsboro
         borderColor&lt;&lt;$alias&gt;&gt; gainsboro
         shadowing&lt;&lt;$alias&gt;&gt; false
@@ -995,18 +921,18 @@ backgroundColor white
 !endif
 
 
-!if ($technology == &quot;&quot;)
-    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+<span class="hll">!if ($technology == &quot;&quot;)
+</span>    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
     == $label\n
     &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
 
     $description &quot;
 !else 
-<span class="hll">    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
-</span><span class="hll">    == $label\n
-</span><span class="hll">    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
-</span><span class="hll">    //&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
-</span>
+    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+    == $label\n
+    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+    //&lt;size:$textsize&gt;[$technology]&lt;/size&gt;//
+
     $description &quot;
 !endif
 
@@ -1016,26 +942,40 @@ backgroundColor white
 !$SpriteDecorator = &quot;$Sprite&quot;+ &quot;Decorator&quot;
 &#39;=============================END DECORATORS==================================
 
+LAYOUT_LEFT_RIGHT
 
-
-
-&#39; User can specify what they want in order (legacy mode), or via named arugments (standard mode)
-
+<span class="hll">&#39; User can specify what they want in order (legacy mode), or via named arugments (standard mode)
+</span>package modes {
 &#39;legacy mode
 $ANALYTICS(&quot;legacy1&quot;, &quot;description&quot;, &quot;label&quot;, &quot;technology&quot;, 1)
 $ANALYTICS(&quot;legacy2&quot;, &quot;desc&quot;, &quot;label&quot;, &quot;tech&quot;, 2, &quot;brown&quot;)
 
 &#39;mixed mode
-$ANALYTICS(&quot;no_tech&quot;, $shape=&quot;cloud&quot;)
+$ANALYTICS(&quot;mixed&quot;, $shape=&quot;cloud&quot;)
+&#39;standard mode
+$APPSYNC($alias=&quot;standard&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
+}
+
+package scale {
+$ANALYTICS($alias=&quot;x0.5&quot;, $scale=&quot;0.5&quot;)
+$ANALYTICS($alias=&quot;x1&quot; )
+$ANALYTICS($alias=&quot;x1.5&quot;, $scale=&quot;1.5&quot;)
+&#39;NOTE: if we use 1.5 instead of &quot;1.5&quot; then it&#39;s interpreted as .5 i.e. wrong
+
+x0.5 --&gt;x1
+x1--&gt; x1.5
+}
 
 &#39;standard mode
-
+package focus {
 $APPSYNC($alias=&quot;lofocus&quot;, $description=&quot;description&quot;, $label=&quot;lo focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;lo&quot;)
-$APPSYNC($alias=&quot;normalfocus&quot;, $description=&quot;description&quot;, $label=&quot;normal focus&quot;, $technology=&quot;technology&quot;)
+$APPSYNC($alias=&quot;normal&quot;, $description=&quot;description&quot;, $label=&quot;normal&quot;, $technology=&quot;technology&quot;)
 $APPSYNC($alias=&quot;hifocus&quot;, $description=&quot;description&quot;, $label=&quot;hi focus&quot;, $technology=&quot;technology&quot;, $focus=&quot;hi&quot;)
 
+lofocus --&gt;normal
+normal--&gt; hifocus
+}
 
-$APPSYNC($alias=&quot;myalias7&quot;, $description=&quot;description&quot;, $label=&quot;label&quot;)
 
 
 footer %filename() rendered with PlantUML version %version()
