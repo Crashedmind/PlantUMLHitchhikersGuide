@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5. Standardising Standard Library 2 &mdash; Playing with PlantUML  documentation</title>
+  <title>2. Standardising Standard Library &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Create A Sprite library" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" />
-    <link rel="prev" title="4. Standardising Standard Library" href="StandardisingStdLib.html" /> 
+    <link rel="next" title="1. C4 Lightweight Software Architecture Description Method" href="../C4/c4.html" />
+    <link rel="prev" title="1. Standard Library - What We Have And What We Want" href="stdlibRequirements.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+            <a href="../index.html" class="icon icon-home"> The Hitchhiker's Guide to PlantUML
           
 
           
@@ -91,50 +91,49 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/future.html">3. Thoughts For The Future</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Using C4 To Architect ACME Global Widget Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kubernetes/kubernetes.html">3. Kubernetes and Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">3. PlantUML Stdlib Under The Hood 2</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">3. Standard Library - What We Have And What We Want</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Standardising Standard Library 2</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-terminology">5.1. Plantuml Stdlib Terminology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-file-layout">5.2. Plantuml Stdlib File Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#standardising-sprites">5.3. Standardising Sprites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#standardising-icon-macro-api">5.4. Standardising Icon Macro API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mode-example">5.5. Mode Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mode-demo">5.6. Mode Demo</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#main-features">5.6.1. Main features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stdlibRequirements.html">1. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Standardising Standard Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-terminology">2.1. Plantuml Stdlib Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-stdlib-file-layout">2.2. Plantuml Stdlib File Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standardising-sprites">2.3. Standardising Sprites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standardising-icon-macro-api">2.4. Standardising Icon Macro API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-example">2.5. Mode Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mode-demo">2.6. Mode Demo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-features">2.6.1. Main features</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-</ul>
-<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
@@ -158,7 +157,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Playing with PlantUML</a>
+          <a href="../index.html">The Hitchhiker's Guide to PlantUML</a>
         
       </nav>
 
@@ -189,7 +188,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>5. Standardising Standard Library 2</li>
+      <li>2. Standardising Standard Library</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,12 +207,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="standardising-standard-library-2">
-<h1>5. Standardising Standard Library 2<a class="headerlink" href="#standardising-standard-library-2" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="standardising-standard-library">
+<h1>2. Standardising Standard Library<a class="headerlink" href="#standardising-standard-library" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="plantuml-stdlib-terminology">
-<h2>5.1. Plantuml Stdlib Terminology<a class="headerlink" href="#plantuml-stdlib-terminology" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id2">
-<caption><span class="caption-text">Plantuml Stdlib Terminology</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<h2>2.1. Plantuml Stdlib Terminology<a class="headerlink" href="#plantuml-stdlib-terminology" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Plantuml Stdlib Terminology</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 83%" />
@@ -295,15 +294,15 @@
 <p><strong>Do we need individual sprite files? e.g. awslib/ARVR/Sumerian.puml and associated png (or svg), as all info is in puml file</strong></p>
 </div>
 <div class="section" id="plantuml-stdlib-file-layout">
-<h2>5.2. Plantuml Stdlib File Layout<a class="headerlink" href="#plantuml-stdlib-file-layout" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Plantuml Stdlib File Layout<a class="headerlink" href="#plantuml-stdlib-file-layout" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default">
 <img alt="../_images/stdlibFileLayout.png" src="../_images/stdlibFileLayout.png" />
 </div>
 </div>
 <div class="section" id="standardising-sprites">
-<h2>5.3. Standardising Sprites<a class="headerlink" href="#standardising-sprites" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">Sprite Property</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<h2>2.3. Standardising Sprites<a class="headerlink" href="#standardising-sprites" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">Sprite Property</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 83%" />
@@ -338,9 +337,9 @@
 </div>
 </div>
 <div class="section" id="standardising-icon-macro-api">
-<h2>5.4. Standardising Icon Macro API<a class="headerlink" href="#standardising-icon-macro-api" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">Plantuml Stdlib Macro API Modes</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<h2>2.4. Standardising Icon Macro API<a class="headerlink" href="#standardising-icon-macro-api" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Plantuml Stdlib Macro API Modes</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 83%" />
@@ -382,7 +381,7 @@ This ensures backwards compatiblity of PlantUML Stdlib with existing user diagra
 </table>
 </div>
 <div class="section" id="mode-example">
-<h2>5.5. Mode Example<a class="headerlink" href="#mode-example" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Mode Example<a class="headerlink" href="#mode-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -420,9 +419,9 @@ This ensures backwards compatiblity of PlantUML Stdlib with existing user diagra
 </td></tr></table></div>
 </div>
 <div class="section" id="mode-demo">
-<h2>5.6. Mode Demo<a class="headerlink" href="#mode-demo" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Mode Demo<a class="headerlink" href="#mode-demo" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="main-features">
-<h3>5.6.1. Main features<a class="headerlink" href="#main-features" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.1. Main features<a class="headerlink" href="#main-features" title="Permalink to this headline">¶</a></h3>
 <p>The demo uses most of the avaialable Preprocessor features (<a class="reference external" href="https://plantuml.com/preprocessing">https://plantuml.com/preprocessing</a>)</p>
 <ol class="arabic">
 <li><p>User specifies only the parameters they care about. Preprocessor “Keywords arguments” used.</p></li>
@@ -458,9 +457,9 @@ This ensures backwards compatiblity of PlantUML Stdlib with existing user diagra
 </ol>
 <p>In the full demo, the sprite decorator is selected by user via e.g. ‘!includeurl AWSPuml/SpriteDecorators.iuml!SPRITEDECORATOR_3.
 This uses the “File List.iuml” block include Preprocessor feature</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id4">
 <p class="plantuml">
-<img src="../_images/plantuml-0735f8e634ecfd0ebc70b8e7ed01cafba5449a91.png" alt="&#64;startuml
+<img src="../_images/plantuml-abb2c3c8c4b2f353058eabbc9c7f5eab7a37db6f.png" alt="&#64;startuml
 'all sprites in a category would be included in an all.puml file for that category
 '==================================================================================================
 
@@ -629,11 +628,11 @@ normal--&gt; hifocus
 
 
 
-footer %filename() rendered with PlantUML version %version()
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text"><em>&lt;API proposal demo&gt;</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>&lt;API proposal demo&gt;</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Full code applied to PlantUML Stdlib is in
 <a class="reference external" href="https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec366c028fe60032dc0">https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec366c028fe60032dc0</a></p>
@@ -922,12 +921,12 @@ kVuTl7vxzDfyfFoaVlsqpGddL9UzSTlOdBIjQTMxbPIrB-QsggxwEPI-pPTidazSlm24x77FEQj7VQJy
 
 
 <span class="hll">!if ($technology == &quot;&quot;)
-</span>    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
-    == $label\n
-    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
-
-    $description &quot;
-!else 
+</span><span class="hll">    $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
+</span><span class="hll">    == $label\n
+</span><span class="hll">    &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
+</span><span class="hll">
+</span><span class="hll">    $description &quot;
+</span>!else 
     $shape $alias &lt;&lt;$alias&gt;&gt; as &quot;
     == $label\n
     &lt;color:$colour&gt;&lt;$MySprite*$scale&gt;&lt;/color&gt;
@@ -978,33 +977,11 @@ normal--&gt; hifocus
 
 
 
-footer %filename() rendered with PlantUML version %version()
+footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML
 
 @enduml
 </pre></div>
 </td></tr></table></div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>this salt diagram does not work so use png for now</p>
-<div class="figure align-center" id="id6">
-<p class="plantuml">
-<img src="../_images/plantuml-797e35274634b82d9a29e716dd8636b86ca7d142.png" alt="&#64;startsalt
-{
-{T
- + **PlantUML stdlib**
- ++ **library** e.g. awslib
- +++ **library category** e.g. awslib/ARVR
- ++++ **sprite** e.g. awslib/ARVR/Sumerian
- ++++ **all.puml** file e.g. awslib/ARVR/all.puml
- 
-}
-}
-&#64;endsalt
-"/>
-</p>
-<p class="caption"><span class="caption-text"><em>Plantuml Stdlib File Layout</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1017,10 +994,10 @@ footer %filename() rendered with PlantUML version %version()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html" class="btn btn-neutral float-right" title="6. Create A Sprite library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../C4/c4.html" class="btn btn-neutral float-right" title="1. C4 Lightweight Software Architecture Description Method" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="StandardisingStdLib.html" class="btn btn-neutral float-left" title="4. Standardising Standard Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="stdlibRequirements.html" class="btn btn-neutral float-left" title="1. Standard Library - What We Have And What We Want" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

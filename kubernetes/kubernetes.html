@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. Kubernetes and Azure &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Google Cloud Platform‎" href="../gcp/gcp.html" />
+    <link rel="prev" title="2. Create Real Life AWS Diagrams" href="../aws/aws.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Hitchhiker's Guide to PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/future.html">3. Thoughts For The Future</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Kubernetes and Azure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#original">3.1. Original</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plantuml-equivalent">3.2. PlantUML Equivalent</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">3. PlantUML Stdlib Under The Hood 2</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">1. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">2. Standardising Standard Library</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Hitchhiker's Guide to PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>3. Kubernetes and Azure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/kubernetes/kubernetes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kubernetes-and-azure">
+<h1>3. Kubernetes and Azure<a class="headerlink" href="#kubernetes-and-azure" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this section we’ll look at a Kubernetes and Azure icon sets <a class="reference external" href="https://github.com/dcasati/kubernetes-PlantUML">https://github.com/dcasati/kubernetes-PlantUML</a>.</p>
+<p>PlantUML will access icon files directly from this repository (it is not part of PlantUML Stdlib.)</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="original">
+<h2>3.1. Original<a class="headerlink" href="#original" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="../_images/aks.png" src="../_images/aks.png" />
+</div>
+</div>
+<div class="section" id="plantuml-equivalent">
+<h2>3.2. PlantUML Equivalent<a class="headerlink" href="#plantuml-equivalent" title="Permalink to this headline">¶</a></h2>
+<p>I made 1 minor change to the source</p>
+<ol class="arabic simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">`skinparam</span> <span class="pre">linetype</span> <span class="pre">polyline`</span></code> as the “RBAC” text overlapped the “Kubernetes Cluster” and polyline generally improves layout.</p></li>
+</ol>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-66b6d9919b201f789079b6213fa3392c4411ec4f.png" alt="&#64;startuml
+footer Kubernetes Plant-UML
+scale max 1024 width
+skinparam linetype polyline
+skinparam nodesep 10
+skinparam ranksep 10
+
+
+
+' Azure
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
+
+!includeurl AzurePuml/AzureCommon.puml
+!includeurl AzurePuml/AzureSimplified.puml
+
+!includeurl AzurePuml/Compute/AzureAppService.puml
+!includeurl AzurePuml/Compute/AzureBatch.puml
+!includeurl AzurePuml/Containers/AzureContainerRegistry.puml
+!includeurl AzurePuml/Containers/AzureKubernetesService.puml
+!includeurl AzurePuml/Databases/AzureDatabaseForPostgreSQL.puml
+!includeurl AzurePuml/Databases/AzureCosmosDb.puml
+!includeurl AzurePuml/Databases/AzureSqlDatabase.puml
+!includeurl AzurePuml/DevOps/AzurePipelines.puml
+!includeurl AzurePuml/Identity/AzureActiveDirectory.puml
+!includeurl AzurePuml/Networking/AzureLoadBalancer.puml
+!includeurl AzurePuml/Security/AzureKeyVault.puml
+!includeurl AzurePuml/Storage/AzureBlobStorage.puml
+!includeurl AzurePuml/Storage/AzureStorage.puml
+
+' Kubernetes
+!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+
+!includeurl KubernetesPuml/kubernetes_Context.puml
+!includeurl KubernetesPuml/kubernetes_Simplified.puml
+
+!includeurl KubernetesPuml/OSS/KubernetesApi.puml
+!includeurl KubernetesPuml/OSS/KubernetesIng.puml
+!includeurl KubernetesPuml/OSS/KubernetesPod.puml
+
+actor &quot;DevOps&quot; as devopsAlias
+collections &quot;Client Apps&quot; as clientalias
+collections &quot;Helm Charts&quot; as helmalias
+
+left to right direction
+
+' Azure Components
+AzureActiveDirectory(aad, &quot;\nAzure\nActive Directory&quot;, &quot;Global&quot;)
+AzureContainerRegistry(acr, &quot;ACR&quot;, &quot;Canada Central&quot;)
+AzureCosmosDb(cosmos, &quot;\nCosmos DB&quot;, &quot;Global&quot;)
+AzureKeyVault(keyvault, &quot;\nAzure\nKey Vault&quot;, &quot;Global&quot;)
+AzureLoadBalancer(alb, &quot;\nLoad\nBalancer&quot;, &quot;Canada Central&quot;)
+AzureSqlDatabase(sql, &quot;\nExternal\ndata stores&quot;, &quot;Canada Central&quot;)
+AzurePipelines(ado, &quot;CI/CD\nAzure Pipelines&quot;, &quot;Global&quot;)
+
+' Kubernetes Components
+Cluster_Boundary(cluster, &quot;Kubernetes Cluster&quot;) {
+    KubernetesApi(KubernetesApi, &quot;Kubernetes API&quot;, &quot;&quot;)
+    
+    Namespace_Boundary(nsFrontEnd, &quot;Front End&quot;) {
+        KubernetesIng(ingress, &quot;API Gateway&quot;, &quot;&quot;)
+    }
+
+    Namespace_Boundary(nsBackEnd, &quot;Back End&quot;) {
+        KubernetesPod(KubernetesBE1, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesBE2, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesBE3, &quot;&quot;, &quot;&quot;)
+    }
+
+    Namespace_Boundary(nsUtil, &quot;Utiliy Services&quot;) {
+        KubernetesPod(KubernetesUtil1, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesUtil2, &quot;&quot;,&quot;&quot;)
+    }
+}
+
+Rel(devopsAlias, aad, &quot;AUTH&quot;)
+Rel(helmalias, KubernetesApi, &quot;helm upgrade&quot;)
+
+Rel(aad, keyvault, &quot; &quot;)
+Rel(KubernetesApi, aad, &quot;RBAC&quot;, &quot;ASYNC&quot;)
+
+Rel(clientalias, alb, &quot;HTTP&quot;, &quot;ASYNC&quot;)
+Rel(alb, ingress, &quot;HTTP&quot;, &quot;ASYNC&quot;)
+
+Rel(ingress, KubernetesBE1, &quot; &quot;)
+Rel(KubernetesBE1, KubernetesBE2, &quot; &quot;)
+Rel(KubernetesBE1, KubernetesBE3, &quot; &quot;)
+
+Rel(KubernetesBE2, sql, &quot; &quot;)
+Rel(KubernetesBE3, keyvault, &quot;Pod Identity&quot;)
+Rel(KubernetesBE3, cosmos, &quot; &quot;)
+
+Rel(ado, acr, &quot;docker push&quot;)
+Rel_U(KubernetesApi, acr, &quot;docker pull&quot;)
+&#64;enduml"/>
+</p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+footer Kubernetes Plant-UML
+scale max 1024 width
+<span class="hll">skinparam linetype polyline
+</span>skinparam nodesep 10
+skinparam ranksep 10
+
+
+
+&#39; Azure
+<span class="hll">!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/release/2-1/dist
+</span>
+!includeurl AzurePuml/AzureCommon.puml
+!includeurl AzurePuml/AzureSimplified.puml
+
+!includeurl AzurePuml/Compute/AzureAppService.puml
+!includeurl AzurePuml/Compute/AzureBatch.puml
+!includeurl AzurePuml/Containers/AzureContainerRegistry.puml
+!includeurl AzurePuml/Containers/AzureKubernetesService.puml
+!includeurl AzurePuml/Databases/AzureDatabaseForPostgreSQL.puml
+!includeurl AzurePuml/Databases/AzureCosmosDb.puml
+!includeurl AzurePuml/Databases/AzureSqlDatabase.puml
+!includeurl AzurePuml/DevOps/AzurePipelines.puml
+!includeurl AzurePuml/Identity/AzureActiveDirectory.puml
+!includeurl AzurePuml/Networking/AzureLoadBalancer.puml
+!includeurl AzurePuml/Security/AzureKeyVault.puml
+!includeurl AzurePuml/Storage/AzureBlobStorage.puml
+!includeurl AzurePuml/Storage/AzureStorage.puml
+
+&#39; Kubernetes
+<span class="hll">!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+</span>
+!includeurl KubernetesPuml/kubernetes_Context.puml
+!includeurl KubernetesPuml/kubernetes_Simplified.puml
+
+!includeurl KubernetesPuml/OSS/KubernetesApi.puml
+!includeurl KubernetesPuml/OSS/KubernetesIng.puml
+!includeurl KubernetesPuml/OSS/KubernetesPod.puml
+
+actor &quot;DevOps&quot; as devopsAlias
+collections &quot;Client Apps&quot; as clientalias
+collections &quot;Helm Charts&quot; as helmalias
+
+left to right direction
+
+&#39; Azure Components
+AzureActiveDirectory(aad, &quot;\nAzure\nActive Directory&quot;, &quot;Global&quot;)
+AzureContainerRegistry(acr, &quot;ACR&quot;, &quot;Canada Central&quot;)
+AzureCosmosDb(cosmos, &quot;\nCosmos DB&quot;, &quot;Global&quot;)
+AzureKeyVault(keyvault, &quot;\nAzure\nKey Vault&quot;, &quot;Global&quot;)
+AzureLoadBalancer(alb, &quot;\nLoad\nBalancer&quot;, &quot;Canada Central&quot;)
+AzureSqlDatabase(sql, &quot;\nExternal\ndata stores&quot;, &quot;Canada Central&quot;)
+AzurePipelines(ado, &quot;CI/CD\nAzure Pipelines&quot;, &quot;Global&quot;)
+
+&#39; Kubernetes Components
+Cluster_Boundary(cluster, &quot;Kubernetes Cluster&quot;) {
+    KubernetesApi(KubernetesApi, &quot;Kubernetes API&quot;, &quot;&quot;)
+    
+    Namespace_Boundary(nsFrontEnd, &quot;Front End&quot;) {
+        KubernetesIng(ingress, &quot;API Gateway&quot;, &quot;&quot;)
+    }
+
+    Namespace_Boundary(nsBackEnd, &quot;Back End&quot;) {
+        KubernetesPod(KubernetesBE1, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesBE2, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesBE3, &quot;&quot;, &quot;&quot;)
+    }
+
+    Namespace_Boundary(nsUtil, &quot;Utiliy Services&quot;) {
+        KubernetesPod(KubernetesUtil1, &quot;&quot;, &quot;&quot;)
+        KubernetesPod(KubernetesUtil2, &quot;&quot;,&quot;&quot;)
+    }
+}
+
+Rel(devopsAlias, aad, &quot;AUTH&quot;)
+Rel(helmalias, KubernetesApi, &quot;helm upgrade&quot;)
+
+Rel(aad, keyvault, &quot; &quot;)
+Rel(KubernetesApi, aad, &quot;RBAC&quot;, &quot;ASYNC&quot;)
+
+Rel(clientalias, alb, &quot;HTTP&quot;, &quot;ASYNC&quot;)
+Rel(alb, ingress, &quot;HTTP&quot;, &quot;ASYNC&quot;)
+
+Rel(ingress, KubernetesBE1, &quot; &quot;)
+Rel(KubernetesBE1, KubernetesBE2, &quot; &quot;)
+Rel(KubernetesBE1, KubernetesBE3, &quot; &quot;)
+
+Rel(KubernetesBE2, sql, &quot; &quot;)
+Rel(KubernetesBE3, keyvault, &quot;Pod Identity&quot;)
+Rel(KubernetesBE3, cosmos, &quot; &quot;)
+
+Rel(ado, acr, &quot;docker push&quot;)
+Rel_U(KubernetesApi, acr, &quot;docker pull&quot;)
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gcp/gcp.html" class="btn btn-neutral float-right" title="4. Google Cloud Platform‎" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../aws/aws.html" class="btn btn-neutral float-left" title="2. Create Real Life AWS Diagrams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

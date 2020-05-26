@@ -305,12 +305,13 @@ This uses the image tag which is part of PlantUML creole_ Legacy HTML support pe
 
 .. literalinclude:: ./image.puml
     :linenos:
-    :emphasize-lines: 9
+    :emphasize-lines: 9, 11
 
 .. EndPlayingExample
 
-.. todo ::
-    can scale an image also - need to try    
+.. tip ::
+    
+    You can scale an image. In the diagram above, we made the image 0.5, and 1.5 times bigger using the ```scale``` keyword.
 
 Connect Images In A Diagram
 -------------------------------------------------------------------------------

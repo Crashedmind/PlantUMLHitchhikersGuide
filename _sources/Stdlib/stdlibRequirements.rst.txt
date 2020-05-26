@@ -92,8 +92,6 @@ Macros define the following
         #. Text Size 
         #. Text Order
 
-.. todo ::
-    get material scaling macro
 
 
 What a User Wants In A Standard Library

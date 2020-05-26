@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Standard Library - What We Have And What We Want &mdash; Playing with PlantUML  documentation</title>
+  <title>1. Standard Library - What We Have And What We Want &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Standardising Standard Library" href="StandardisingStdLib.html" />
-    <link rel="prev" title="2. PlantUML Stdlib Under The Hood" href="../StdlibUnderTheHood/StdlibUnderstanding.html" /> 
+    <link rel="next" title="2. Standardising Standard Library" href="StandardisingStdLib2.html" />
+    <link rel="prev" title="3. PlantUML Stdlib Under The Hood 2" href="StandardisingStdLib.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -54,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> Playing with PlantUML
+            <a href="../index.html" class="icon icon-home"> The Hitchhiker's Guide to PlantUML
           
 
           
@@ -91,45 +91,44 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/future.html">3. Thoughts For The Future</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">3. Using C4 To Architect ACME Global Widget Production</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kubernetes/kubernetes.html">3. Kubernetes and Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">3. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NamedArguments/NamedArguments.html">4. Keywords Arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">3. PlantUML Stdlib Under The Hood 2</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Standard Library - What We Have And What We Want</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#observations-on-standard-library">3.1. Observations on Standard Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#macro-definitions">3.2. Macro Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-a-user-wants-in-a-standard-library">3.3. What a User Wants In A Standard Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#user-stories">3.4. User Stories</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Standard Library - What We Have And What We Want</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#observations-on-standard-library">1.1. Observations on Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macro-definitions">1.2. Macro Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-a-user-wants-in-a-standard-library">1.3. What a User Wants In A Standard Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-stories">1.4. User Stories</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib.html">4. Standardising Standard Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib2.html">5. Standardising Standard Library 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/CreateSpriteLibrary.html">6. Create A Sprite library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ContributingToStdlib.html">7. ContributingToStdlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="StandardisingStdLib2.html">2. Standardising Standard Library</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Standard Library C4</span></p>
+<p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
-</ul>
-<p class="caption"><span class="caption-text">New ways to Run PlantUML</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagrams.html">1. Generate diagrams from PlantUML source files using GithubActions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../GenerateDiagrams/GenerateDiagramsLambda.html">2. Generate diagrams from PlantUML source files using AWS Lambda</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Annex</span></p>
 <ul>
@@ -153,7 +152,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Playing with PlantUML</a>
+          <a href="../index.html">The Hitchhiker's Guide to PlantUML</a>
         
       </nav>
 
@@ -184,7 +183,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>3. Standard Library - What We Have And What We Want</li>
+      <li>1. Standard Library - What We Have And What We Want</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -204,16 +203,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="standard-library-what-we-have-and-what-we-want">
-<span id="stdlibreqs-label"></span><h1>3. Standard Library - What We Have And What We Want<a class="headerlink" href="#standard-library-what-we-have-and-what-we-want" title="Permalink to this headline">¶</a></h1>
+<span id="stdlibreqs-label"></span><h1>1. Standard Library - What We Have And What We Want<a class="headerlink" href="#standard-library-what-we-have-and-what-we-want" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="observations-on-standard-library">
-<h2>3.1. Observations on Standard Library<a class="headerlink" href="#observations-on-standard-library" title="Permalink to this headline">¶</a></h2>
+<h2>1.1. Observations on Standard Library<a class="headerlink" href="#observations-on-standard-library" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The Observations, Requirements, and User Stories here allow us to create a new
 PlantUML Stdlib to empower the user per todoref</p>
 </div>
-<table class="colwidths-given docutils align-default" id="id2">
-<caption><span class="caption-text">Observations on Standard Library</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Observations on Standard Library</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -300,7 +299,7 @@ some have an <code class="docutils literal notranslate"><span class="pre">`all.p
 </div>
 </div>
 <div class="section" id="macro-definitions">
-<h2>3.2. Macro Definitions<a class="headerlink" href="#macro-definitions" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Macro Definitions<a class="headerlink" href="#macro-definitions" title="Permalink to this headline">¶</a></h2>
 <p>Macros define the following</p>
 <blockquote>
 <div><ol class="arabic">
@@ -327,15 +326,11 @@ some have an <code class="docutils literal notranslate"><span class="pre">`all.p
 </li>
 </ol>
 </div></blockquote>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>get material scaling macro</p>
-</div>
 </div>
 <div class="section" id="what-a-user-wants-in-a-standard-library">
-<h2>3.3. What a User Wants In A Standard Library<a class="headerlink" href="#what-a-user-wants-in-a-standard-library" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id3">
-<caption><span class="caption-text">What a User Wants In A Standard Library</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<h2>1.3. What a User Wants In A Standard Library<a class="headerlink" href="#what-a-user-wants-in-a-standard-library" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text">What a User Wants In A Standard Library</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -383,9 +378,9 @@ some have an <code class="docutils literal notranslate"><span class="pre">`all.p
 </table>
 </div>
 <div class="section" id="user-stories">
-<h2>3.4. User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given docutils align-default" id="id4">
-<caption><span class="caption-text">User Stories</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<h2>1.4. User Stories<a class="headerlink" href="#user-stories" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">User Stories</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 9%" />
 <col style="width: 91%" />
@@ -432,10 +427,10 @@ being discussed or changed in my current system</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="StandardisingStdLib.html" class="btn btn-neutral float-right" title="4. Standardising Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="StandardisingStdLib2.html" class="btn btn-neutral float-right" title="2. Standardising Standard Library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../StdlibUnderTheHood/StdlibUnderstanding.html" class="btn btn-neutral float-left" title="2. PlantUML Stdlib Under The Hood" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="StandardisingStdLib.html" class="btn btn-neutral float-left" title="3. PlantUML Stdlib Under The Hood 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
