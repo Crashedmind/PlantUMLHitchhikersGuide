@@ -17,7 +17,7 @@ Observations on Standard Library
    :header: "#", "Observation"
    :widths: 5, 50
 
-    "**OBV_DEFINE_DEPRECATED**", "Marcos use define and definelong which are deprecated per below"
+    "**OBV_DEFINE_DEPRECATED**", "Macros use define and definelong which are deprecated per below"
     "**OBV_DRY**", "DRY (Don't Repeat Yourself). The macros are repeated 
         
         within a file -repeat the macro to add each new parameter
@@ -52,7 +52,7 @@ Observations on Standard Library
     
         ```!define Batch(e\_alias, e\_label, e\_techn)```.
         
-        In other words, the marcos force a user to specify things they may not care about e.g. to specify color in this macro, the user needs to specify the preceeding parameters also
+        In other words, the macros force a user to specify things they may not care about e.g. to specify color in this macro, the user needs to specify the preceeding parameters also
 
         *!define WHATEVER(_alias, _label, _shape, _color) ENTITY(_shape,_color,whatever,_label, _alias,WHATEVER)*
     

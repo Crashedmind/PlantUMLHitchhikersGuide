@@ -95,7 +95,7 @@ Play
 Gather the icons we need
 --------------------------------------------------------------------------------
 
-* For the EC2 icon on right of diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
+* For the EC2 icon on right of the diagram; for AWS icons, Orange is AWS Compute so we look at the compute icons. 
 * Use our github trick to find "users"; they are in General.
 * The green box isn't an AWS service - it's showing a mobile/laptop client.
 * We need "Traditional Server" for "Ad Exchange"

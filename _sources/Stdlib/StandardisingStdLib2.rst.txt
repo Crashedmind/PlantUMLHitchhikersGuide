@@ -20,7 +20,7 @@ Plantuml Stdlib Terminology
     "**Library**", "Plantuml stdlib consists of several icon  **libraries**       
 
         e.g. awslib, elastic, azure…"
-    "**Category**", "Each icon libary consists one or more icons **categories** 
+    "**Category**", "Each icon library consists one or more icons **categories** 
 
         Category is a subdir / grouping of icons within an icon library
 
@@ -112,7 +112,7 @@ Standardising Icon Macro API
         e.g. *!define AzureBatchAI(e_alias, e_label, e_techn, e_descr) AzureEntity(e_alias, e_label, e_techn, e_descr, AZURE_SYMBOL_COLOR, AzureBatchAI, AzureBatchAI)*
     
         **Existing macros in existing libraries should be kept, even when a newer keywords arguments mode is added** 
-        This ensures backwards compatiblity of PlantUML Stdlib with existing user diagrams.
+        This ensures backwards compatibility of PlantUML Stdlib with existing user diagrams.
     " 
     "**Mixed**", "This mix of ordered parameters, with keyword parameters is also possible.
 
@@ -132,7 +132,7 @@ Mode Demo
 Main features
 ----------------
 
-The demo uses most of the avaialable Preprocessor features (https://plantuml.com/preprocessing)
+The demo uses most of the available Preprocessor features (https://plantuml.com/preprocessing)
 
 #. User specifies only the parameters they care about. Preprocessor "Keywords arguments" used.
 #. If user does not specify the parameter, then the default value is used. Preprocessor "Default argument value" used. 

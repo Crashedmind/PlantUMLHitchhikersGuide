@@ -100,7 +100,7 @@ Standard Library Sprites
 PlantUML includes a Standard Library. Contents of the library come from third party contributors.
 
 #. See http://plantuml.com/stdlib for what is supported in official release of PlantUML
-#. "-stdlib" option lists the builtin icon libaries
+#. "-stdlib" option lists the builtin icon libraries
 
 
 .. code-block:: 

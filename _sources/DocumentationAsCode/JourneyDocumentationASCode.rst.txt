@@ -4,7 +4,7 @@
 Journey to Documentation as Code
 *******************************************************************************
 
-My journey to Documentation as Code began over a decago ago when either no documentation, or MS Word Documents were common. In more orgainised companies, these documents were maintained in MS Sharepoint.
+My journey to Documentation as Code began over a decade ago when either no documentation, or MS Word Documents were common. In more organised companies, these documents were maintained in MS Sharepoint.
 
 Working as part of a large multi-national, I championed the use of Living Documents (Confluence was the tool used as we were using Atlassian tool suite). 
 
@@ -19,7 +19,7 @@ Documentation in this case
 #. is useful to guide the software architecture, implementation, development, and maintainance
 
 
-My View On Documenation From 2013
+My View On Documentation From 2013
 ===============================================================================
 
 Below is what I wrote at the time and I still believe it - even more so now.

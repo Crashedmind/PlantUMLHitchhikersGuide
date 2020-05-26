@@ -36,7 +36,7 @@ Example Network Diagram
 Here we have a typical network diagram:
 
 #. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
-#. Bob is an Accountant in the Accounts team. He has Mac and an iPhone.
+#. Bob is an Accountant in the Accounts team. He has a Mac and an iPhone.
 #. They connect to the office server, and via a firewall to the Internet.
 
 There are 3 types of element with different properties:
@@ -170,7 +170,7 @@ Create the diagram by connecting things together
 Now for the fun bit...
 
 #. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
-#. Bob is an Accountant in the Accounts team. He has Mac and an iPhone.
+#. Bob is an Accountant in the Accounts team. He has a Mac and an iPhone.
 #. They connect to the office server, and via a firewall to the Internet.
 
 

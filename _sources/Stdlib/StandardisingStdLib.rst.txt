@@ -100,7 +100,7 @@ Let's define 3 SpriteDecorator Procedures that change the sprite parameters per 
 
 When we define the procedure for the user to call e.g. $BATCH_DYN, we specify which SpriteDecorator to be used via $dynN dynamic invocation.
 
-If at some point later, a new SpriteDecorator becomes available with same parameters but differnt processing, or with new parameters, then we can change this dynN to the new procedure.
+If at some point later, a new SpriteDecorator becomes available with same parameters but different processing, or with new parameters, then we can change this dynN to the new procedure.
 
 User code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

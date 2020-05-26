@@ -6,7 +6,7 @@ Using C4 To Architect ACME Global Widget Production
 
 .. tip ::
     
-    See :ref:`c4plantuml-label` for explantion of C4 and PlantUML Stdlib support for it. 
+    See :ref:`c4plantuml-label` for explanation of C4 and PlantUML Stdlib support for it. 
 
 C4 ACME Global Widget Production
 ===============================================================================
