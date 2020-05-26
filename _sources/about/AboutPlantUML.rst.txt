@@ -19,3 +19,13 @@ About PlantUML
      
 
 
+.. tip ::
+    See https://crashedmind.github.io/plantuml.github.io/ for some useful PlantUML links. 
+
+
+.. figure :: plantuml.github.io.png
+    :target: https://crashedmind.github.io/plantuml.github.io/
+
+
+
+

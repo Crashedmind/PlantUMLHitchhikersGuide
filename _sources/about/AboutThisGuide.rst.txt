@@ -18,6 +18,8 @@ The scope of the guide is the PlantUML Standard Library; the Library
 that allows creation of icon diagrams like those shown in :ref:`PlantUML Diagram Examples` .
 
 The scope is NOT the various UML type diagrams that PlantUML is better known for.
+https://real-world-plantuml.com/ is a good resource to learn these by example.
+
 
 
 Goals

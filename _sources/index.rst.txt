@@ -61,7 +61,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 | **Diagram of a Typical Network**                                            |
 +-----------------------------------------------------------------------------+ 
 | .. uml:: NetworkUsersMachines/NetworkUsersMachines6.puml                    | 
-|    :scale: 100%                                                             | 
+|    :scale: 100%                                                             |
 +-----------------------------------------------------------------------------+ 
 | This uses the Plantuml Stdlib Open Security Architecture icon set.          | 
 | See :ref:`Create a Diagram of a Typical Network`                            | 
