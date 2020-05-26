@@ -252,12 +252,6 @@ Icons are grouped into a file based on resolutions and labels
 
 
 
-|image0| Example image from icons from AWSlabs icon files
-[https://github.com/awslabs/aws-icons-for-plantuml]
-
-
-
-
 Superset Of Parameters
 ===============================================================================
 

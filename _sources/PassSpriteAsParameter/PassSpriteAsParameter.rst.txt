@@ -4,6 +4,8 @@ PassSpriteAsParameter
 
 
 
+.. _MigrationNotes: https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
+.. _DefaultArgumentValue: https://plantuml.com/preprocessing#ae1b47605326b65f
 
 
 
@@ -18,24 +20,24 @@ Understand How To Pass A Sprite To A Procedure
     :caption: *blah* 
 
 Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 
 .. literalinclude:: ./option1.puml
     :emphasize-lines: 12, 16
     :linenos: 
 
 Play
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 
-|playbutton1| Press to play around with this diagram source online.
+|playbuttoncpass1| Press to play around with this diagram source online.
 
-.. |playbutton1| image:: ../play.png
+.. |playbuttoncpass1| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 
 Explore
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 #. Take a look at some other stdlib libraries
 
 
@@ -55,24 +57,24 @@ to add quotes when calling the procedure.
     :caption: *blah* 
 
 Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 
 .. literalinclude:: ./option2.puml
     :emphasize-lines: 12, 16
     :linenos: 
 
 Play
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 
-|playbutton1| Press to play around with this diagram source online.
+|playbuttoncpass3| Press to play around with this diagram source online.
 
-.. |playbutton1| image:: ../play.png
+.. |playbuttoncpass3| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
 
 Explore
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 #. Take a look at some other stdlib libraries
 
 
@@ -89,7 +91,7 @@ And Tidy Up The Procedure So It's Easier To Read
     :caption: *blah* 
 
 Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------------
 
 .. literalinclude:: ./option3.puml
     :emphasize-lines: 12, 22

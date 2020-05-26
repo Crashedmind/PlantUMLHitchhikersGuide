@@ -1,4 +1,5 @@
 .. _c4acme-label:
+
 *******************************************************************************
 Using C4 To Architect ACME Global Widget Production 
 *******************************************************************************
@@ -33,9 +34,9 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|playbutton1| Press to play around with this diagram source online.
+|playbuttonc4acme1| Press to play around with this diagram source online.
 
-.. |playbutton1| image:: ../play.png
+.. |playbuttonc4acme1| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
@@ -70,9 +71,9 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|playbutton1| Press to play around with this diagram source online.
+|playbuttonc4acme2| Press to play around with this diagram source online.
 
-.. |playbutton1| image:: ../play.png
+.. |playbuttonc4acme2| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 
@@ -113,9 +114,9 @@ Source
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|playbutton1| Press to play around with this diagram source online.
+|playbuttonc4acme3| Press to play around with this diagram source online.
 
-.. |playbutton1| image:: ../play.png
+.. |playbuttonc4acme3| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
                 :width: 40 px
 

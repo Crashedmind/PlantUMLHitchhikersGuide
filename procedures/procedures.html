@@ -209,7 +209,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>!function and !procedure should be used instead of !define and !definelong</p>
-<p>Per <a href="#id1"><span class="problematic" id="id2">MigrationNotes_</span></a>:</p>
+<p>Per <a class="reference external" href="https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng">MigrationNotes</a>:</p>
 <blockquote>
 <div><p><em>You should not use !define and !definelong anymore. Use !function, !procedure
 or variable definition instead.</em></p>
@@ -220,11 +220,42 @@ or variable definition instead.</em></p>
 </div>
 <div class="section" id="default-values">
 <h2>3.2. Default Values<a class="headerlink" href="#default-values" title="Permalink to this headline">¶</a></h2>
-<p>Per <a href="#id3"><span class="problematic" id="id4">DefaultArgumentValue_</span></a>, “In both procedure and return functions, you can define default values for arguments”</p>
+<p>Per <a class="reference external" href="https://plantuml.com/preprocessing#ae1b47605326b65f">DefaultArgumentValue</a>, “In both procedure and return functions, you can define default values for arguments”</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <a class="reference external" href="https://plantuml.com/en/preprocessing#ajlk3nchu0zkka0ybjng">default argument</a> value can help to simplify definitions</p>
 </div>
+<div class="figure align-center" id="id1">
+<p class="plantuml">
+<img src="../_images/plantuml-f7d9395bf0bbfcbfe09c1c73261313583e1facca.png" alt="&#64;startuml
+!function $inc($value, $step=1)
+!return $value + $step
+!endfunction
+
+Alice -&gt; Bob : Just one more $inc(3)
+Alice -&gt; Bob : Add two to three : $inc(3, 2)
+&#64;enduml
+"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Using default argument</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+<span class="hll">!function $inc($value, $step=1)
+</span>!return $value + $step
+!endfunction
+
+<span class="hll">Alice -&gt; Bob : Just one more $inc(3)
+</span><span class="hll">Alice -&gt; Bob : Add two to three : $inc(3, 2)
+</span>@enduml
+</pre></div>
+</td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is also <a class="reference external" href="https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov">dynamic invocation</a> which may be useful.
