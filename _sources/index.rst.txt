@@ -16,9 +16,9 @@ Welcome to The Hitchhiker's Guide to PlantUML!
 .. logo-begin-content
 
 .. figure:: plantumllogo.png
-    :width: 300px
+    :width: 120px
     :align: center
-    :height: 300px
+    :height: 120px
     :alt: alternate text
     :figclass: align-center
 
