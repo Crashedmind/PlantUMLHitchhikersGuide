@@ -70,7 +70,7 @@ Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ./NetworkUsersMachines1.puml
-    :emphasize-lines: 10
+    :emphasize-lines: 11
     :linenos: 
 
 Play
@@ -186,7 +186,7 @@ Source
 
 .. literalinclude:: ./NetworkUsersMachines4.puml
     :linenos: 
-    :emphasize-lines: 34-52
+    :emphasize-lines: 35-53
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -237,7 +237,7 @@ Source
 
 .. literalinclude:: ./NetworkUsersMachines5.puml
     :linenos: 
-    :emphasize-lines: 36-56
+    :emphasize-lines: 37-57
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +276,7 @@ Source
 
 .. literalinclude:: ./NetworkUsersMachines6.puml
     :linenos: 
-    :emphasize-lines: 17, 24, 33
+    :emphasize-lines: 18, 24, 34
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
