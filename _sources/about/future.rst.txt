@@ -24,7 +24,7 @@ The documentation should start in the source code using e.g. javadoc.
 
 It would then be relatively easy to extract and render to rst/md/html or anywhere else.
 
-This would be pre-requisite to a user-centric guide.
+This would be a prerequisite to a user-centric guide.
 
 
 Hyperlinked Interactive Diagrams
@@ -33,7 +33,7 @@ Per *Overview first, zoom and filter, then details-on-demand* :ref:`C4 Lightweig
 
 Hyperlinked connected diagrams would be powerful and in theory are supported already (though I have seen png produce better diagrams that svg.)
 
-Svg images can also use CSS characteristics like dynamically change on hover per https://plantuml.com/svg.
+Svg images can also use CSS characteristics like dynamically changing on hover per https://plantuml.com/svg.
 
 
 Machine Processing Of Text Files

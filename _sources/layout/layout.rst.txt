@@ -11,12 +11,12 @@ Layout
 
 
 .. tip ::
-    *It's true that when diagram is big (or very big) manual placement could be useful. However and unfortunatly, this is against PlantUML concept*
+    *It's true that when diagram is big (or very big) manual placement could be useful. However and unfortunately, this is against PlantUML concept*
     https://forum.plantuml.net/977
 
     Wrangling diagram elements to an exact position or layout is not what PlantUML is for. 
 
-    However, there are **some layout tweak mechanims that should be used sparingly**. These are described here.
+    However, there are **some layout tweak mechanisms that should be used sparingly**. These are described here.
 
 
 Arrows for Layout

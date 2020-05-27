@@ -222,19 +222,19 @@ The main purpose here was to show how this can be done with a procedure.</p>
 </div>
 <div class="figure align-center" id="id1">
 <p class="plantuml">
-<img src="../_images/plantuml-6c92815bff046449fed0a23deb9366b5a4471cd3.png" alt="&#64;startuml
+<img src="../_images/plantuml-8532bc61b4845c251f7ec18aadc72ec0cfa94d0f.png" alt="&#64;startuml
 
 
 !unquoted procedure $DrawColor($colour)
 
-skinparam rectangle {
-        backgroundColor&lt;&lt;$colour&gt;&gt; $colour
-        borderColor&lt;&lt;$colour&gt;&gt; $colour
-        shadowing&lt;&lt;$colour&gt;&gt; true
-        BorderThickness&lt;&lt;$colour&gt;&gt; 1
-    }
+    skinparam rectangle {
+            backgroundColor&lt;&lt;$colour&gt;&gt; $colour
+            borderColor&lt;&lt;$colour&gt;&gt; $colour
+            shadowing&lt;&lt;$colour&gt;&gt; true
+            BorderThickness&lt;&lt;$colour&gt;&gt; 1
+        }
 
-rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
+    rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
 
 !endprocedure
 
@@ -602,14 +602,14 @@ $DrawColor(&quot;YellowGreen&quot;)
 
 !unquoted procedure $DrawColor($colour)
 
-skinparam rectangle {
-        backgroundColor&lt;&lt;$colour&gt;&gt; $colour
-        borderColor&lt;&lt;$colour&gt;&gt; $colour
-        shadowing&lt;&lt;$colour&gt;&gt; true
-        BorderThickness&lt;&lt;$colour&gt;&gt; 1
-    }
+    skinparam rectangle {
+            backgroundColor&lt;&lt;$colour&gt;&gt; $colour
+            borderColor&lt;&lt;$colour&gt;&gt; $colour
+            shadowing&lt;&lt;$colour&gt;&gt; true
+            BorderThickness&lt;&lt;$colour&gt;&gt; 1
+        }
 
-rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
+    rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
 
 !endprocedure
 
