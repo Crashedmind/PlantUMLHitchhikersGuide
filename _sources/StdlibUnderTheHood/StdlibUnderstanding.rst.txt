@@ -14,11 +14,10 @@ PlantUML Stdlib Under The Hood
     * **You should not, and don't have to, follow these steps.** 
     * Based on the understanding gained, there's a better way to go.
 
-    **So you can skip this chapter and go straight to todo**
-    
+    See :ref:`Standard Library - What We Have And What We Want`
 
-.. todo ::
-    add ref to new way
+    
+    
 
 
 Goal
@@ -235,8 +234,6 @@ Replacing the last lines from the previous example to add scale.
     !define BatchParticipant(p_alias, p_label, p_techn) AWSParticipant(p_alias, p_label, p_techn, #D86613, Batch, Batch)
     !define BatchParticipant(p_alias, p_label, p_techn, p_descr) AWSParticipant(p_alias, p_label, p_techn, p_descr, #D86613, Batch, Batch)
 
-.. todo ::
-    refine the scale, raw macros
 
 Updating the puml files to support minimal macro
 -------------------------------------------------------

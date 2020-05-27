@@ -172,6 +172,18 @@ https://github.com/Crashedmind/plantuml-stdlib2.0/commit/2a9b1f2621bc81c1f0dd0ec
 
 Below is a standalone file version of it.
 
+
+.. |playbuttonstd1| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/LSf12i90343HVKuHkbVm0862k10K5yK312Us0yaCP3BGuwkB2ltRzySMxD5DeJTvSHDyda_83GSWlApXV53sMN0HJhdCC5KJ35a3YF2seqSiufiHtYNbRd-zbdTruyYrmF7Rxo6SZ5MtPu1HIkgc7m00
+                :width: 40 px
+.. tip ::
+
+    The ```== $label``` took me a while to figure out. This is creole syntax per https://plantuml.com/creole.
+
+    |playbuttonstd1| Press play to understand this better.
+
+
+
 .. literalinclude:: dynamic3.1.puml
     :linenos: 
     :emphasize-lines: 40, 92, 113, 114-118, 136

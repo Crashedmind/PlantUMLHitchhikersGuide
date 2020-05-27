@@ -35,8 +35,8 @@ BUT this only works if the default parameters are at the end i.e. it is all base
 
 *In other words, the user has to know/care about the order of parameters.*
 
-.. todo ::
-    add ref to reqs
+See :ref:`Standard Library - What We Have And What We Want`.
+
 
 To specify color blue I need to do
 
@@ -124,18 +124,4 @@ Play with StdlibProposalCode_ online.
 .. literalinclude:: dynamic1.0.puml
     :linenos: 
     :emphasize-lines: 37, 50, 63, 102, 106,110, 83, 86, 89
-
-
-.. todo ::
-    @startuml
-    usecase UC1 as "
-    = Extra-large heading
-    Some text
-    == Large heading
-    Other text
-    === Medium heading
-    Information
-    ....
-    ==== Small heading"
-    @enduml
 

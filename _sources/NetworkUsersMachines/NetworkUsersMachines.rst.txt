@@ -208,21 +208,9 @@ Change the Layout to Vertical
 We want the diagram to be vertical, with the cloud at the bottom and the users at the top.
 
 .. tip ::
-    We use ``-->`` to connect the icons so they are arranged vertically
-
-We can specify a connection direction as follows:
-
-.. csv-table:: Tools Used
-    :header: "Text", "Direction"
-    :widths: 10, 50
-
-    ``->``, "horizontal left to right"
-    ``-->``, "vertical top to bottom"
-    ``-up->``, "vertical bottom to top"
-    ``-down->``, "vertical top to bottom" 
-    ``-left->``, "horizontal right to left"
-    ``-right->``, "horizontal left to right"
-
+    We use ``-->`` to connect the icons so they are arranged vertically.
+    
+    See :ref:`Layout` for more info on arrows and layout.
 
 
 .. uml:: NetworkUsersMachines5.puml
