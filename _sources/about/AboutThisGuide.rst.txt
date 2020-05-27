@@ -165,6 +165,7 @@ Feedback
 
 This is an initial version; fixes and features will be added over time.
 
-To submit a suggestion, create an issue on github. 
+To submit a suggestion, create an issue on https://github.com/Crashedmind/PlantUMLHitchhikersGuide.
+These will be reviewed and ranked periodically, and then resolved.
  
 
