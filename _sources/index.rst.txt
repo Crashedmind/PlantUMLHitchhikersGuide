@@ -146,6 +146,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
    scale/scale
    procedures/procedures
    PassSpriteAsParameter/PassSpriteAsParameter
+   layout/layout
     
 
 .. toctree::

@@ -123,8 +123,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#images">1.4. Images</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#add-images-to-a-diagram">1.4.1. Add Images To A Diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#connect-images-in-a-diagram">1.4.2. Connect Images In A Diagram</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#so-why-do-i-need-sprites">1.4.3. So Why Do I Need Sprites?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#so-why-do-i-need-sprites">1.4.2. So Why Do I Need Sprites?</a></li>
 </ul>
 </li>
 </ul>
@@ -132,6 +131,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../layout/layout.html">5. Layout</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
 <ul>
@@ -228,8 +228,8 @@
 <p>Given we want diagrams that communicate quickly and clearly, using images (rather than just shapes) is very effective.</p>
 <p>The following table lists the options to add an image to a PlantUML diagram.</p>
 </div>
-<table class="colwidths-given docutils align-default" id="id2">
-<caption><span class="caption-text">Options to add images to PlantUML diagrams</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Options to add images to PlantUML diagrams</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -354,7 +354,7 @@ usecase usecase
 <div class="section" id="use-the-deployment-diagram-elements-in-a-sequence-diagram">
 <h3>1.1.2. Use The Deployment Diagram Elements In A Sequence Diagram<a class="headerlink" href="#use-the-deployment-diagram-elements-in-a-sequence-diagram" title="Permalink to this headline">¶</a></h3>
 <p>Below is an example using some of these - in a sequence diagram.</p>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <p class="plantuml">
 <img src="../_images/plantuml-9d36b03f76ad27c13db65a9473b187d3602bd52d.png" alt="&#64;startuml
 
@@ -393,7 +393,7 @@ end
 
 &#64;enduml"/>
 </p>
-<p class="caption"><span class="caption-text">Using database, control, boundary Deployment Diagram Elements</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Using database, control, boundary Deployment Diagram Elements</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1369,17 +1369,14 @@ scale option to increase or decrease its size.</p>
 <p>You can scale an image. In the diagram above, we made the image 0.5, and 1.5 times bigger using the <code class="docutils literal notranslate"><span class="pre">`scale`</span></code> keyword.</p>
 </div>
 </div>
-<div class="section" id="connect-images-in-a-diagram">
-<h3>1.4.2. Connect Images In A Diagram<a class="headerlink" href="#connect-images-in-a-diagram" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>Connect Images In A Diagram</p>
-</div>
-</div>
 <div class="section" id="so-why-do-i-need-sprites">
-<h3>1.4.3. So Why Do I Need Sprites?<a class="headerlink" href="#so-why-do-i-need-sprites" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.2. So Why Do I Need Sprites?<a class="headerlink" href="#so-why-do-i-need-sprites" title="Permalink to this headline">¶</a></h3>
 <p>Sprites are monochrome (16 shades/levels max), versus image files which can be infinite color at high resolution.</p>
-<p>But we can easily change a sprite’s characteristics via PlantUML e.g. color and scale.</p>
+<ol class="arabic simple">
+<li><p>But we can easily change a sprite’s characteristics via PlantUML e.g. color.</p></li>
+<li><p>Many large companies are moving towards simple monochrome icons e.g. the AWS went from <a class="reference external" href="https://github.com/plantuml/plantuml-stdlib/tree/master/aws">https://github.com/plantuml/plantuml-stdlib/tree/master/aws</a> to <a class="reference external" href="https://github.com/awslabs/aws-icons-for-plantuml">https://github.com/awslabs/aws-icons-for-plantuml</a>. Similarly, kubernetes, GCP, Azure architecture icons are simple.</p></li>
+<li><p>They are also smaller in size.</p></li>
+</ol>
 </div>
 </div>
 </div>

@@ -313,11 +313,7 @@ This uses the image tag which is part of PlantUML creole_ Legacy HTML support pe
     
     You can scale an image. In the diagram above, we made the image 0.5, and 1.5 times bigger using the ```scale``` keyword.
 
-Connect Images In A Diagram
--------------------------------------------------------------------------------
 
-.. todo ::
-    Connect Images In A Diagram
 
 
 So Why Do I Need Sprites?
@@ -325,4 +321,6 @@ So Why Do I Need Sprites?
 
 Sprites are monochrome (16 shades/levels max), versus image files which can be infinite color at high resolution.
 
-But we can easily change a sprite's characteristics via PlantUML e.g. color and scale.
+#. But we can easily change a sprite's characteristics via PlantUML e.g. color.
+#. Many large companies are moving towards simple monochrome icons e.g. the AWS went from https://github.com/plantuml/plantuml-stdlib/tree/master/aws to https://github.com/awslabs/aws-icons-for-plantuml. Similarly, kubernetes, GCP, Azure architecture icons are simple.
+#. They are also smaller in size.

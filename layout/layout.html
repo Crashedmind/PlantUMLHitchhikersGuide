@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Google Cloud Platform‎ &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
+  <title>5. Layout &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Using C4 To Architect ACME Global Widget Production" href="../C4/c4acme.html" />
-    <link rel="prev" title="3. Kubernetes and Azure" href="../kubernetes/kubernetes.html" /> 
+    <link rel="next" title="1. PlantUML Stdlib Overview" href="../Stdlib/StdLibOverview.html" />
+    <link rel="prev" title="4. PassSpriteAsParameter" href="../PassSpriteAsParameter/PassSpriteAsParameter.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,24 +94,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/future.html">3. Thoughts For The Future</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kubernetes/kubernetes.html">3. Kubernetes and Azure</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Google Cloud Platform‎</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#original">4.1. Original</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plantuml-equivalent">4.2. PlantUML Equivalent</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
 </ul>
 <p class="caption"><span class="caption-text">PlantUML Features</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../layout/layout.html">5. Layout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arrows">5.1. arrows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nodesep-and-ranksep">5.2. nodesep and ranksep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">5.3. together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linetype">5.4. linetype</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
 <ul>
@@ -182,13 +184,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>4. Google Cloud Platform‎</li>
+      <li>5. Layout</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/gcp/gcp.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/layout/layout.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -201,25 +203,86 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="google-cloud-platform">
-<h1>4. Google Cloud Platform‎<a class="headerlink" href="#google-cloud-platform" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In this section we’ll look at a Google Cloud Platform‎ icon set todo</p>
-<p>PlantUML will access it directly from this repository (It is not part of PlantUML Stdlib.)</p>
-<p>This is type todo per xxx</p>
-<p>The original icon set is from <a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a>.</p>
+  <div class="section" id="layout">
+<h1>5. Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>It’s true that when diagram is big (or very big) manual placement could be useful. However and unfortunatly, this is againt PlantUML concept</em>
+<a class="reference external" href="https://forum.plantuml.net/977">https://forum.plantuml.net/977</a></p>
+<p>Wrangling diagram elements to an exact position or layout is not what PlantUML is for.</p>
+<p>However, there are a minimal set of layout tweak options that should be used sparingly.</p>
 </div>
-<hr class="docutils" />
-<div class="section" id="original">
-<h2>4.1. Original<a class="headerlink" href="#original" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="plantuml-equivalent">
-<h2>4.2. PlantUML Equivalent<a class="headerlink" href="#plantuml-equivalent" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
-<p>add GCP diagrams</p>
+<p>this chapter is WIP</p>
 </div>
+<p><a class="reference external" href="https://mrhaki.blogspot.com/2016/12/plantuml-pleasantness-customize.html">https://mrhaki.blogspot.com/2016/12/plantuml-pleasantness-customize.html</a></p>
+<p>listsprites</p>
+<p>allow_mixing
+skinparam pathHoverColor green</p>
+<div class="section" id="arrows">
+<h2>5.1. arrows<a class="headerlink" href="#arrows" title="Permalink to this headline">¶</a></h2>
+<p>hidden
+hide unlinked</p>
+<p>dashed arrows and boxes</p>
+<p><a class="reference external" href="https://forum.plantuml.net/4949">https://forum.plantuml.net/4949</a>
+skinparam arrowThickness 4</p>
+<p>a-[thickness=20]&gt;b: some text
+b-[dashed,thickness=20]&gt;d: some other text
+nodesep and ranksep</p>
+<p><a class="reference external" href="https://forum.plantuml.net/4181">https://forum.plantuml.net/4181</a>
+class foo
+foo –&gt; bar
+foo -[bold]-&gt; bar1
+foo -[dashed]-&gt; bar2
+foo -[dotted]-&gt; bar3</p>
+<p>top down left right</p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/49945174/plantuml-component-diagram-layout-control">https://stackoverflow.com/questions/49945174/plantuml-component-diagram-layout-control</a></p>
+<p>arrows first letter only
+<a class="reference external" href="https://mrhaki.blogspot.com/2018/06/plantuml-pleasantness-setting-arrow.html">https://mrhaki.blogspot.com/2018/06/plantuml-pleasantness-setting-arrow.html</a></p>
+<p>line length
+<a class="reference external" href="https://mrhaki.blogspot.com/2016/12/plantuml-pleasantness-align-elements.html">https://mrhaki.blogspot.com/2016/12/plantuml-pleasantness-align-elements.html</a></p>
+<p>hidden lines
+<a class="reference external" href="https://dzone.com/articles/plantuml-pleasantness-layout-elements-with-hidden">https://dzone.com/articles/plantuml-pleasantness-layout-elements-with-hidden</a></p>
+</div>
+<div class="section" id="nodesep-and-ranksep">
+<h2>5.2. nodesep and ranksep<a class="headerlink" href="#nodesep-and-ranksep" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id3">
+<p class="plantuml">
+<img src="../_images/plantuml-30081b3387801cc5910f5331330ca07bca1462ae.png" alt="&#64;startuml
+skinparam nodesep 10
+skinparam ranksep 20
+class Foo1
+class Foo2
+Foo3 *-- Foo1
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text">Nodesep and Ranksep</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+<span class="hll"><span class="n">skinparam</span> <span class="n">nodesep</span> <span class="mi">10</span>
+</span><span class="hll"><span class="n">skinparam</span> <span class="n">ranksep</span> <span class="mi">20</span>
+</span><span class="k">class</span> <span class="nc">Foo1</span>
+<span class="k">class</span> <span class="nc">Foo2</span>
+<span class="n">Foo3</span> <span class="o">*--</span> <span class="n">Foo1</span>
+<span class="nd">@enduml</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id2">
+<h2>5.3. together<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="linetype">
+<h2>5.4. linetype<a class="headerlink" href="#linetype" title="Permalink to this headline">¶</a></h2>
+<p>skinparam linetype polyline
+skinparam linetype ortho</p>
+<p>ortho line style. labels removed <a class="reference external" href="https://forum.plantuml.net/1608/is-it-possible-to-only-use-straight-lines-in-a-class-diagram">https://forum.plantuml.net/1608/is-it-possible-to-only-use-straight-lines-in-a-class-diagram</a></p>
 </div>
 </div>
 
@@ -231,10 +294,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../C4/c4acme.html" class="btn btn-neutral float-right" title="5. Using C4 To Architect ACME Global Widget Production" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Stdlib/StdLibOverview.html" class="btn btn-neutral float-right" title="1. PlantUML Stdlib Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../kubernetes/kubernetes.html" class="btn btn-neutral float-left" title="3. Kubernetes and Azure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../PassSpriteAsParameter/PassSpriteAsParameter.html" class="btn btn-neutral float-left" title="4. PassSpriteAsParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
