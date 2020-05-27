@@ -7,6 +7,10 @@ Standard Library - What We Have And What We Want
 Observations on Standard Library
 ===============================================================================
 
+
+.. note :: 
+    This page is superseded by an RFC: https://github.com/plantuml/rfc-for-standard-plantuml-stdlib to solicit user input, but I'll leave it here for reference/context.
+
 .. tip ::
 
     The Observations, Requirements, and User Stories here allow us to create a new 
