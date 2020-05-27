@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Colors &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Layout" href="../layout/layout.html" />
+    <link rel="prev" title="4. PassSpriteAsParameter" href="../PassSpriteAsParameter/PassSpriteAsParameter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Hitchhiker's Guide to PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/future.html">3. Thoughts For The Future</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kubernetes/kubernetes.html">3. Kubernetes and Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Colors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hex-codes-and-pre-defined-colours">5.1. Hex Codes and Pre-defined Colours</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../layout/layout.html">6. Layout</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">3. PlantUML Stdlib Under The Hood 2</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">1. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">2. Standardising Standard Library</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ToDo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Hitchhiker's Guide to PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>5. Colors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/color/color.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="colors">
+<h1>5. Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hex-codes-and-pre-defined-colours">
+<h2>5.1. Hex Codes and Pre-defined Colours<a class="headerlink" href="#hex-codes-and-pre-defined-colours" title="Permalink to this headline">¶</a></h2>
+<p>Any Color hex code can be used e.g. “123456”</p>
+<p>See <a class="reference external" href="https://www.google.com/search?q=color+picker">https://www.google.com/search?q=color+picker</a></p>
+<p>Alternatively, a color name can be used e.g. “blue”</p>
+<p>Below is a procedure to show the colours/colors (depending on which part of the world you’re in)
+This uses the the colour parameter</p>
+<ul class="simple">
+<li><p>as an alias (so we can draw different versions)</p></li>
+<li><p>as a &lt;&lt;stereo&gt;&gt; (so we can apply skinparams to that colour only)</p></li>
+</ul>
+<div class="figure align-center" id="id1">
+<p class="plantuml">
+<img src="../_images/plantuml-6c92815bff046449fed0a23deb9366b5a4471cd3.png" alt="&#64;startuml
+
+
+!unquoted procedure $DrawColor($colour)
+
+skinparam rectangle {
+        backgroundColor&lt;&lt;$colour&gt;&gt; $colour
+        borderColor&lt;&lt;$colour&gt;&gt; $colour
+        shadowing&lt;&lt;$colour&gt;&gt; true
+        BorderThickness&lt;&lt;$colour&gt;&gt; 1
+    }
+
+rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
+
+!endprocedure
+
+package HexCodes {
+$DrawColor(&quot;00ff00&quot;)
+$DrawColor(&quot;ff0000&quot;)
+$DrawColor(&quot;0000ff&quot;)
+$DrawColor(&quot;123456&quot;)
+$DrawColor(&quot;654321&quot;)
+$DrawColor(&quot;165432&quot;)
+$DrawColor(&quot;ff22ff&quot;)
+}
+
+package Colours {
+$DrawColor(&quot;APPLICATION&quot;)
+$DrawColor(&quot;AliceBlue&quot;)
+$DrawColor(&quot;AntiqueWhite&quot;)
+$DrawColor(&quot;Aqua&quot;)
+$DrawColor(&quot;Aquamarine&quot;)
+$DrawColor(&quot;Azure&quot;)
+$DrawColor(&quot;BUSINESS&quot;)
+$DrawColor(&quot;Beige&quot;)
+$DrawColor(&quot;Bisque&quot;)
+$DrawColor(&quot;Black&quot;)
+$DrawColor(&quot;BlanchedAlmond&quot;)
+$DrawColor(&quot;Blue&quot;)
+$DrawColor(&quot;BlueViolet&quot;)
+$DrawColor(&quot;Brown&quot;)
+$DrawColor(&quot;BurlyWood&quot;)
+$DrawColor(&quot;CadetBlue&quot;)
+$DrawColor(&quot;Chartreuse&quot;)
+$DrawColor(&quot;Chocolate&quot;)
+$DrawColor(&quot;Coral&quot;)
+$DrawColor(&quot;CornflowerBlue&quot;)
+$DrawColor(&quot;Cornsilk&quot;)
+$DrawColor(&quot;Crimson&quot;)
+$DrawColor(&quot;Cyan&quot;)
+$DrawColor(&quot;DarkBlue&quot;)
+$DrawColor(&quot;DarkCyan&quot;)
+$DrawColor(&quot;DarkGoldenRod&quot;)
+$DrawColor(&quot;DarkGray&quot;)
+$DrawColor(&quot;DarkGreen&quot;)
+$DrawColor(&quot;DarkGrey&quot;)
+$DrawColor(&quot;DarkKhaki&quot;)
+$DrawColor(&quot;DarkMagenta&quot;)
+$DrawColor(&quot;DarkOliveGreen&quot;)
+$DrawColor(&quot;DarkOrchid&quot;)
+$DrawColor(&quot;DarkRed&quot;)
+$DrawColor(&quot;DarkSalmon&quot;)
+$DrawColor(&quot;DarkSeaGreen&quot;)
+$DrawColor(&quot;DarkSlateBlue&quot;)
+$DrawColor(&quot;DarkSlateGray&quot;)
+$DrawColor(&quot;DarkSlateGrey&quot;)
+$DrawColor(&quot;DarkTurquoise&quot;)
+$DrawColor(&quot;DarkViolet&quot;)
+$DrawColor(&quot;Darkorange&quot;)
+$DrawColor(&quot;DeepPink&quot;)
+$DrawColor(&quot;DeepSkyBlue&quot;)
+$DrawColor(&quot;DimGray&quot;)
+$DrawColor(&quot;DimGrey&quot;)
+$DrawColor(&quot;DodgerBlue&quot;)
+$DrawColor(&quot;FireBrick&quot;)
+$DrawColor(&quot;FloralWhite&quot;)
+$DrawColor(&quot;ForestGreen&quot;)
+$DrawColor(&quot;Fuchsia&quot;)
+$DrawColor(&quot;Gainsboro&quot;)
+$DrawColor(&quot;GhostWhite&quot;)
+$DrawColor(&quot;Gold&quot;)
+$DrawColor(&quot;GoldenRod&quot;)
+$DrawColor(&quot;Gray&quot;)
+$DrawColor(&quot;Green&quot;)
+$DrawColor(&quot;GreenYellow&quot;)
+$DrawColor(&quot;Grey&quot;)
+$DrawColor(&quot;HoneyDew&quot;)
+$DrawColor(&quot;HotPink&quot;)
+$DrawColor(&quot;IMPLEMENTATION&quot;)
+$DrawColor(&quot;IndianRed&quot;)
+$DrawColor(&quot;Indigo&quot;)
+$DrawColor(&quot;Ivory&quot;)
+$DrawColor(&quot;Khaki&quot;)
+$DrawColor(&quot;Lavender&quot;)
+$DrawColor(&quot;LavenderBlush&quot;)
+$DrawColor(&quot;LawnGreen&quot;)
+$DrawColor(&quot;LemonChiffon&quot;)
+$DrawColor(&quot;LightBlue&quot;)
+$DrawColor(&quot;LightCoral&quot;)
+$DrawColor(&quot;LightCyan&quot;)
+$DrawColor(&quot;LightGoldenRodYellow&quot;)
+$DrawColor(&quot;LightGray&quot;)
+$DrawColor(&quot;LightGreen&quot;)
+$DrawColor(&quot;LightGrey&quot;)
+$DrawColor(&quot;LightPink&quot;)
+$DrawColor(&quot;LightSalmon&quot;)
+$DrawColor(&quot;LightSeaGreen&quot;)
+$DrawColor(&quot;LightSkyBlue&quot;)
+$DrawColor(&quot;LightSlateGray&quot;)
+$DrawColor(&quot;LightSlateGrey&quot;)
+$DrawColor(&quot;LightSteelBlue&quot;)
+$DrawColor(&quot;LightYellow&quot;)
+$DrawColor(&quot;Lime&quot;)
+$DrawColor(&quot;LimeGreen&quot;)
+$DrawColor(&quot;Linen&quot;)
+$DrawColor(&quot;MOTIVATION&quot;)
+$DrawColor(&quot;Magenta&quot;)
+$DrawColor(&quot;Maroon&quot;)
+$DrawColor(&quot;MediumAquaMarine&quot;)
+$DrawColor(&quot;MediumBlue&quot;)
+$DrawColor(&quot;MediumOrchid&quot;)
+$DrawColor(&quot;MediumPurple&quot;)
+$DrawColor(&quot;MediumSeaGreen&quot;)
+$DrawColor(&quot;MediumSlateBlue&quot;)
+$DrawColor(&quot;MediumSpringGreen&quot;)
+$DrawColor(&quot;MediumTurquoise&quot;)
+$DrawColor(&quot;MediumVioletRed&quot;)
+$DrawColor(&quot;MidnightBlue&quot;)
+$DrawColor(&quot;MintCream&quot;)
+$DrawColor(&quot;MistyRose&quot;)
+$DrawColor(&quot;Moccasin&quot;)
+$DrawColor(&quot;NavajoWhite&quot;)
+$DrawColor(&quot;Navy&quot;)
+$DrawColor(&quot;OldLace&quot;)
+$DrawColor(&quot;Olive&quot;)
+$DrawColor(&quot;OliveDrab&quot;)
+$DrawColor(&quot;Orange&quot;)
+$DrawColor(&quot;OrangeRed&quot;)
+$DrawColor(&quot;Orchid&quot;)
+$DrawColor(&quot;PHYSICAL&quot;)
+$DrawColor(&quot;PaleGoldenRod&quot;)
+$DrawColor(&quot;PaleGreen&quot;)
+$DrawColor(&quot;PaleTurquoise&quot;)
+$DrawColor(&quot;PaleVioletRed&quot;)
+$DrawColor(&quot;PapayaWhip&quot;)
+$DrawColor(&quot;PeachPuff&quot;)
+$DrawColor(&quot;Peru&quot;)
+$DrawColor(&quot;Pink&quot;)
+$DrawColor(&quot;Plum&quot;)
+$DrawColor(&quot;PowderBlue&quot;)
+$DrawColor(&quot;Purple&quot;)
+$DrawColor(&quot;Red&quot;)
+$DrawColor(&quot;RosyBrown&quot;)
+$DrawColor(&quot;RoyalBlue&quot;)
+$DrawColor(&quot;STRATEGY&quot;)
+$DrawColor(&quot;SaddleBrown&quot;)
+$DrawColor(&quot;Salmon&quot;)
+$DrawColor(&quot;SandyBrown&quot;)
+$DrawColor(&quot;SeaGreen&quot;)
+$DrawColor(&quot;SeaShell&quot;)
+$DrawColor(&quot;Sienna&quot;)
+$DrawColor(&quot;Silver&quot;)
+$DrawColor(&quot;SkyBlue&quot;)
+$DrawColor(&quot;SlateBlue&quot;)
+$DrawColor(&quot;SlateGray&quot;)
+$DrawColor(&quot;SlateGrey&quot;)
+$DrawColor(&quot;Snow&quot;)
+$DrawColor(&quot;SpringGreen&quot;)
+$DrawColor(&quot;SteelBlue&quot;)
+$DrawColor(&quot;TECHNOLOGY&quot;)
+$DrawColor(&quot;Tan&quot;)
+$DrawColor(&quot;Teal&quot;)
+$DrawColor(&quot;Thistle&quot;)
+$DrawColor(&quot;Tomato&quot;)
+$DrawColor(&quot;Turquoise&quot;)
+$DrawColor(&quot;Violet&quot;)
+$DrawColor(&quot;Wheat&quot;)
+$DrawColor(&quot;White&quot;)
+$DrawColor(&quot;WhiteSmoke&quot;)
+$DrawColor(&quot;Yellow&quot;)
+$DrawColor(&quot;YellowGreen&quot;)
+
+}
+&#64;enduml
+
+
+"/>
+</p>
+<p class="caption"><span class="caption-text">Using a procedure to show colours</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+
+
+!unquoted procedure $DrawColor($colour)
+
+skinparam rectangle {
+        backgroundColor&lt;&lt;$colour&gt;&gt; $colour
+        borderColor&lt;&lt;$colour&gt;&gt; $colour
+        shadowing&lt;&lt;$colour&gt;&gt; true
+        BorderThickness&lt;&lt;$colour&gt;&gt; 1
+    }
+
+rectangle $colour &lt;&lt;$colour&gt;&gt; as &quot;&lt;color:$colour&gt;&lt;/color&gt;&quot;
+
+!endprocedure
+
+<span class="hll">package HexCodes {
+</span>$DrawColor(&quot;00ff00&quot;)
+$DrawColor(&quot;ff0000&quot;)
+$DrawColor(&quot;0000ff&quot;)
+$DrawColor(&quot;123456&quot;)
+$DrawColor(&quot;654321&quot;)
+$DrawColor(&quot;165432&quot;)
+$DrawColor(&quot;ff22ff&quot;)
+}
+
+<span class="hll">package Colours {
+</span>$DrawColor(&quot;APPLICATION&quot;)
+$DrawColor(&quot;AliceBlue&quot;)
+$DrawColor(&quot;AntiqueWhite&quot;)
+$DrawColor(&quot;Aqua&quot;)
+$DrawColor(&quot;Aquamarine&quot;)
+$DrawColor(&quot;Azure&quot;)
+$DrawColor(&quot;BUSINESS&quot;)
+$DrawColor(&quot;Beige&quot;)
+$DrawColor(&quot;Bisque&quot;)
+$DrawColor(&quot;Black&quot;)
+$DrawColor(&quot;BlanchedAlmond&quot;)
+$DrawColor(&quot;Blue&quot;)
+$DrawColor(&quot;BlueViolet&quot;)
+$DrawColor(&quot;Brown&quot;)
+$DrawColor(&quot;BurlyWood&quot;)
+$DrawColor(&quot;CadetBlue&quot;)
+$DrawColor(&quot;Chartreuse&quot;)
+$DrawColor(&quot;Chocolate&quot;)
+$DrawColor(&quot;Coral&quot;)
+$DrawColor(&quot;CornflowerBlue&quot;)
+$DrawColor(&quot;Cornsilk&quot;)
+$DrawColor(&quot;Crimson&quot;)
+$DrawColor(&quot;Cyan&quot;)
+$DrawColor(&quot;DarkBlue&quot;)
+$DrawColor(&quot;DarkCyan&quot;)
+$DrawColor(&quot;DarkGoldenRod&quot;)
+$DrawColor(&quot;DarkGray&quot;)
+$DrawColor(&quot;DarkGreen&quot;)
+$DrawColor(&quot;DarkGrey&quot;)
+$DrawColor(&quot;DarkKhaki&quot;)
+$DrawColor(&quot;DarkMagenta&quot;)
+$DrawColor(&quot;DarkOliveGreen&quot;)
+$DrawColor(&quot;DarkOrchid&quot;)
+$DrawColor(&quot;DarkRed&quot;)
+$DrawColor(&quot;DarkSalmon&quot;)
+$DrawColor(&quot;DarkSeaGreen&quot;)
+$DrawColor(&quot;DarkSlateBlue&quot;)
+$DrawColor(&quot;DarkSlateGray&quot;)
+$DrawColor(&quot;DarkSlateGrey&quot;)
+$DrawColor(&quot;DarkTurquoise&quot;)
+$DrawColor(&quot;DarkViolet&quot;)
+$DrawColor(&quot;Darkorange&quot;)
+$DrawColor(&quot;DeepPink&quot;)
+$DrawColor(&quot;DeepSkyBlue&quot;)
+$DrawColor(&quot;DimGray&quot;)
+$DrawColor(&quot;DimGrey&quot;)
+$DrawColor(&quot;DodgerBlue&quot;)
+$DrawColor(&quot;FireBrick&quot;)
+$DrawColor(&quot;FloralWhite&quot;)
+$DrawColor(&quot;ForestGreen&quot;)
+$DrawColor(&quot;Fuchsia&quot;)
+$DrawColor(&quot;Gainsboro&quot;)
+$DrawColor(&quot;GhostWhite&quot;)
+$DrawColor(&quot;Gold&quot;)
+$DrawColor(&quot;GoldenRod&quot;)
+$DrawColor(&quot;Gray&quot;)
+$DrawColor(&quot;Green&quot;)
+$DrawColor(&quot;GreenYellow&quot;)
+$DrawColor(&quot;Grey&quot;)
+$DrawColor(&quot;HoneyDew&quot;)
+$DrawColor(&quot;HotPink&quot;)
+$DrawColor(&quot;IMPLEMENTATION&quot;)
+$DrawColor(&quot;IndianRed&quot;)
+$DrawColor(&quot;Indigo&quot;)
+$DrawColor(&quot;Ivory&quot;)
+$DrawColor(&quot;Khaki&quot;)
+$DrawColor(&quot;Lavender&quot;)
+$DrawColor(&quot;LavenderBlush&quot;)
+$DrawColor(&quot;LawnGreen&quot;)
+$DrawColor(&quot;LemonChiffon&quot;)
+$DrawColor(&quot;LightBlue&quot;)
+$DrawColor(&quot;LightCoral&quot;)
+$DrawColor(&quot;LightCyan&quot;)
+$DrawColor(&quot;LightGoldenRodYellow&quot;)
+$DrawColor(&quot;LightGray&quot;)
+$DrawColor(&quot;LightGreen&quot;)
+$DrawColor(&quot;LightGrey&quot;)
+$DrawColor(&quot;LightPink&quot;)
+$DrawColor(&quot;LightSalmon&quot;)
+$DrawColor(&quot;LightSeaGreen&quot;)
+$DrawColor(&quot;LightSkyBlue&quot;)
+$DrawColor(&quot;LightSlateGray&quot;)
+$DrawColor(&quot;LightSlateGrey&quot;)
+$DrawColor(&quot;LightSteelBlue&quot;)
+$DrawColor(&quot;LightYellow&quot;)
+$DrawColor(&quot;Lime&quot;)
+$DrawColor(&quot;LimeGreen&quot;)
+$DrawColor(&quot;Linen&quot;)
+$DrawColor(&quot;MOTIVATION&quot;)
+$DrawColor(&quot;Magenta&quot;)
+$DrawColor(&quot;Maroon&quot;)
+$DrawColor(&quot;MediumAquaMarine&quot;)
+$DrawColor(&quot;MediumBlue&quot;)
+$DrawColor(&quot;MediumOrchid&quot;)
+$DrawColor(&quot;MediumPurple&quot;)
+$DrawColor(&quot;MediumSeaGreen&quot;)
+$DrawColor(&quot;MediumSlateBlue&quot;)
+$DrawColor(&quot;MediumSpringGreen&quot;)
+$DrawColor(&quot;MediumTurquoise&quot;)
+$DrawColor(&quot;MediumVioletRed&quot;)
+$DrawColor(&quot;MidnightBlue&quot;)
+$DrawColor(&quot;MintCream&quot;)
+$DrawColor(&quot;MistyRose&quot;)
+$DrawColor(&quot;Moccasin&quot;)
+$DrawColor(&quot;NavajoWhite&quot;)
+$DrawColor(&quot;Navy&quot;)
+$DrawColor(&quot;OldLace&quot;)
+$DrawColor(&quot;Olive&quot;)
+$DrawColor(&quot;OliveDrab&quot;)
+$DrawColor(&quot;Orange&quot;)
+$DrawColor(&quot;OrangeRed&quot;)
+$DrawColor(&quot;Orchid&quot;)
+$DrawColor(&quot;PHYSICAL&quot;)
+$DrawColor(&quot;PaleGoldenRod&quot;)
+$DrawColor(&quot;PaleGreen&quot;)
+$DrawColor(&quot;PaleTurquoise&quot;)
+$DrawColor(&quot;PaleVioletRed&quot;)
+$DrawColor(&quot;PapayaWhip&quot;)
+$DrawColor(&quot;PeachPuff&quot;)
+$DrawColor(&quot;Peru&quot;)
+$DrawColor(&quot;Pink&quot;)
+$DrawColor(&quot;Plum&quot;)
+$DrawColor(&quot;PowderBlue&quot;)
+$DrawColor(&quot;Purple&quot;)
+$DrawColor(&quot;Red&quot;)
+$DrawColor(&quot;RosyBrown&quot;)
+$DrawColor(&quot;RoyalBlue&quot;)
+$DrawColor(&quot;STRATEGY&quot;)
+$DrawColor(&quot;SaddleBrown&quot;)
+$DrawColor(&quot;Salmon&quot;)
+$DrawColor(&quot;SandyBrown&quot;)
+$DrawColor(&quot;SeaGreen&quot;)
+$DrawColor(&quot;SeaShell&quot;)
+$DrawColor(&quot;Sienna&quot;)
+$DrawColor(&quot;Silver&quot;)
+$DrawColor(&quot;SkyBlue&quot;)
+$DrawColor(&quot;SlateBlue&quot;)
+$DrawColor(&quot;SlateGray&quot;)
+$DrawColor(&quot;SlateGrey&quot;)
+$DrawColor(&quot;Snow&quot;)
+$DrawColor(&quot;SpringGreen&quot;)
+$DrawColor(&quot;SteelBlue&quot;)
+$DrawColor(&quot;TECHNOLOGY&quot;)
+$DrawColor(&quot;Tan&quot;)
+$DrawColor(&quot;Teal&quot;)
+$DrawColor(&quot;Thistle&quot;)
+$DrawColor(&quot;Tomato&quot;)
+$DrawColor(&quot;Turquoise&quot;)
+$DrawColor(&quot;Violet&quot;)
+$DrawColor(&quot;Wheat&quot;)
+$DrawColor(&quot;White&quot;)
+$DrawColor(&quot;WhiteSmoke&quot;)
+$DrawColor(&quot;Yellow&quot;)
+$DrawColor(&quot;YellowGreen&quot;)
+
+}
+@enduml
+
+
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This was inspired by <a class="reference external" href="https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html">https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html</a> which is a whole lot prettier than the version here.
+The main purpose here was to show how this can be done with a procedure.</p>
+<p>If you’re feeling playful, go make a pretty version with a procedure and let me know so I can update this guide and give you credit.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../layout/layout.html" class="btn btn-neutral float-right" title="6. Layout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../PassSpriteAsParameter/PassSpriteAsParameter.html" class="btn btn-neutral float-left" title="4. PassSpriteAsParameter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
