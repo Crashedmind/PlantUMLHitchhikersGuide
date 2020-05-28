@@ -54,6 +54,13 @@ Original
 PlantUML Equivalent
 -------------------------------------------------------------------------------
 
+|playbutton_aws0| Press to play around with this diagram source online.
+
+.. |playbutton_aws0| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/VP3BRnD13CRlyrUOlH0aiX45BX6g6g8AzO24j3pEpewRjU9vC8-cLTN_7IVBAfK8lUnuxD_tVPwzoWLJgKxCA_QzL4lm2VTPUBDO_UhMmRdWBy_EEdPH-9R9jb7rPo1LnrfeWIB_GrpOiBn8RCbJGda9-P92ZJTzyFaPPI3ls4TCw43OKtc81378m-5YNf-RXbI6O4p4VeTRWaOV2Mi9rJRmQAxN5xFEeQNxjz2C1NIKxhYdHZlGl35Fnlp8bFBi-DNcyPoctnDQBXmyoa57QRQor_VzW7vBYgmiJBT9yVNuSsRZeRrlTIES1qg0CK98iAVDn8x9CBTXx-UNC6gMyAw5dvovvBzcC4-y7OeIf_0bNBJG5Km5iFQ73SrfU1ACRrx2-nO-iuL4lolb0WkjSWm-ana9c0lTbcSxV53t8UmrSLpoNykFBToug3vPmzMn5-vtUhBF1KMqeZlo1HwdKBPFvegyhKx-0000_
+                :width: 40 px
+
+
 .. uml:: 1.7.puml
     :align: center
 
@@ -267,6 +274,13 @@ Original
 PlantUML Equivalent
 -------------------------------------------------------------------------------
 
+|playbutton_aws2_0| Press to play around with this diagram source online.
+
+.. |playbutton_aws2_0| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/hLPTRkCs47xdAQO15bQ0UXSRlmQBTPsV6aZI3RH5NWeKj3IMYL2aG54nqiK2lKQlrvDq98gKR4lgmoQ08l6RRsR8RuOqFvUM6rlbalqaL2Ah5E6IxqifDX-MJ_5AvxbMdmPjiSWBARO2q_S5-G-GoBkeB7xWKevHShqHSfAHeKB3vHJbrkYgM2TQbLEis6h3iybSzrmH8qTbbogzrIze55V9fCkgAgtEqLohh7MTJf3iXC8xv4O9bKrH7z3kjNac5irbfPMbq5Se1KtgTShlYbk-uUNaf9S5LIxXLcYrfi2PQJvx7itVpDVlrfM0pRo4JUcn7SLeNaI2yU9zeJ8s6uaTFyRExeFUyNoJyaFiUdN1PcD5M4bTfK_S9ZldDA1yV1rVvrn8HpWMEoRQFNz6uyopUzTxoo_hMsvnpryTFYbyHxvmx23tiZ8an_zfy5XXXGs9iP9o5Dpm72HDqxuM28MMh_M0pM30getTQQgBrGL8t5eeCQa30vlDV-IF5Jnv9d60zFzphKfRwmtVM5ltQAqoBEj4jAwVuImCWSPd1C3PUU2kTfMgjNDKFuBVJB8Z9yEF_RupDjnDKRo8BS_8cPZBdFz5Vl42MWn-gP9dj3uAAHlHusRMyGa2Xq4ZlASprtoHUtqr8ilGr6vFCJWCMX1kAjLeVEJgpVEgc7-2la2iFsZjOMeiVC4yrNj5jfvWB2mPBhsvNvAsz9HwztQrjpf3kqC3txoATznaU2CaDfeTgjdOe3OUAEfTuvnBEUBQs2PSQTboBAqp3ZWpqYSA4-vfIJXHUjFrDY0ZK5WY-207tH2Mu1s8r617OHpxACGwvnckj7f1Kr9n7EfRYAYD7Jf26-MaoxxNbKurfBpSOTgS0B3HbKgvUGsxzUhkqHMjKIIYuKTofvUFqZTTZ9iMtXHsP4z7c3VjHfruqXcZD2VXDEsqueoTPEZe8oLc8xZRNOEp2SXfaf46O2EuIpAybW0Df9bi4dPQ-LDTGkQwvc55W-QBRYg3zWMZZ1jjhSxVzc2PEDSR0Sg3Ozr1XwTwixVfeLdUS25BlaNtgq80UEHaEuS3nIbiCQrZ3nqgWU2oGqCPF1FMQei6LO9hzQ8JxZUpHw659pQqknr4xjLDmuq3ALmk8cVlWCw5C6Z1se_SmhsczGhZpYb0SAtIGWjbMrzMTr3eXnEnQ_F5j7anOMOdKBSBV1imDhaVGlJ0zn_1CbnhDWp3NEAspZzQMJPg2HbTsIQ8bpxBSHtPCN1C3PNgzkNRtlLOTu-Eki-kLHfiNsDXFpt44JqVEmwDVE-rD-x8Vn3SlE51Mx5jBy6Et4_TzG7rHn_tQjG9MVql83u3OrkjBHfujnKI5SynEWSgG8e6KzWBkuClaYlx-_qT-9_PT-r7TFw7-hf3-5LGhfqWcV_z-vyIRYkH8bWT7DbdYbVbyZy0_
+                :width: 40 px
+
+
 .. uml:: 2.8.puml
     :align: center
     
@@ -355,8 +369,16 @@ Add Text and Simplify The Icons
     :linenos: 
 
 
-Connect The Icons
+Draw Boxes
 -------------------------------------------------------------------------------
+
+
+.. uml:: 3.4.puml
+    :align: center
+    
+.. literalinclude:: ./3.4.puml
+    :linenos: 
+
 
 
 .. todo ::

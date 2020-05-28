@@ -76,7 +76,7 @@ Companies like AWS, Google, Microsoft publish architecture icon sets for buildin
 
 These establish a shared lexicon of understanding and allow users to focus on the things they're trying to do.
 
-**Do you (personal, organisation, company) have an icon sets for building your (architecture or other) diagrams?**
+**Do you (personal, organisation, company) have an icon set for building your (architecture or other) diagrams?**
 
 These icon sets are easily imported to PlantUML.
 

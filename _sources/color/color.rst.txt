@@ -47,3 +47,13 @@ This uses the colour parameter
 .. literalinclude:: ./1.2.puml
     :linenos:
     :emphasize-lines: 17, 27
+
+
+
+Colors keyword
+-------------------------------------------------------------------------------
+
+
+.. literalinclude:: ./0.puml
+    :linenos:
+    

@@ -20,6 +20,7 @@ that allows creation of icon diagrams like those shown in :ref:`PlantUML Diagram
 The scope is NOT the various UML type diagrams that PlantUML is better known for.
 https://real-world-plantuml.com/ is a good resource to learn these by example.
 
+Skinparam has not been detailed as it is likely to change per https://plantuml.com/style-evolution.
 
 
 Goals

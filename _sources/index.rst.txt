@@ -27,13 +27,6 @@ Welcome to The Hitchhiker's Guide to PlantUML!
 .. logo-end-content
 
 
-.. todo ::
-    skinparam pathHoverColor green
-
-
-
-
-
 .. showcase-begin-content
 
 .. |playbutton_index| image:: ./play.png
