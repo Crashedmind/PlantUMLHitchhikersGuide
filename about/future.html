@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Thoughts For The Future &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
+  <title>1. Thoughts For The Future &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Create a Diagram of a Typical Network" href="../NetworkUsersMachines/NetworkUsersMachines.html" />
-    <link rel="prev" title="2. About this Guide" href="AboutThisGuide.html" /> 
+    <link rel="next" title="2. To Do List" href="../todo.html" />
+    <link rel="prev" title="2. Standardising Standard Library" href="../Stdlib/StandardisingStdLib2.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,18 +88,9 @@
             
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="AboutPlantUML.html">1. About PlantUML</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Thoughts For The Future</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#guide-for-plantuml-diagrams">3.1. Guide for PlantUML Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hyperlinked-interactive-diagrams">3.2. Hyperlinked Interactive Diagrams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#machine-processing-of-text-files">3.3. Machine Processing Of Text Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#github-actions-and-workflows">3.4. Github Actions and Workflows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#architecture-icon-sets">3.5. Architecture Icon Sets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#security-modeling">3.6. Security Modeling</a></li>
-</ul>
-</li>
 </ul>
 <p class="caption"><span class="caption-text">Using Standard Library</span></p>
 <ul>
@@ -129,6 +120,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">1. Standard Library - What We Have And What We Want</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">2. Standardising Standard Library</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Future</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Thoughts For The Future</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-showcase-template-site">1.1. A Showcase Template Site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hyperlinked-interactive-diagrams">1.2. Hyperlinked Interactive Diagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#machine-processing-of-text-files">1.3. Machine Processing Of Text Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-icon-sets">1.4. Architecture Icon Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security-modeling">1.5. Security Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github-actions-and-workflows">1.6. Github Actions and Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guide-for-plantuml-diagrams">1.7. Guide for PlantUML Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">2. To Do List</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
@@ -138,10 +143,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
-</ul>
-<p class="caption"><span class="caption-text">ToDo</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../todo.html">1. To Do List</a></li>
 </ul>
 
             
@@ -187,7 +188,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>3. Thoughts For The Future</li>
+      <li>1. Thoughts For The Future</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -207,26 +208,24 @@
            <div itemprop="articleBody">
             
   <div class="section" id="thoughts-for-the-future">
-<h1>3. Thoughts For The Future<a class="headerlink" href="#thoughts-for-the-future" title="Permalink to this headline">¶</a></h1>
+<h1>1. Thoughts For The Future<a class="headerlink" href="#thoughts-for-the-future" title="Permalink to this headline">¶</a></h1>
 <p>Some thoughts on what could be done in the future… no more than thoughts as of now for me… but you…</p>
-<div class="section" id="guide-for-plantuml-diagrams">
-<h2>3.1. Guide for <a class="reference external" href="https://www.plantuml.com/">PlantUML</a> Diagrams<a class="headerlink" href="#guide-for-plantuml-diagrams" title="Permalink to this headline">¶</a></h2>
-<p>The scope of this guide is stdlib icon diagrams only per <a class="reference internal" href="AboutThisGuide.html#scope"><span class="std std-ref">Scope</span></a> - not the traditional UML diagrams.
-It’s the guide I wish I had when using PlantUML for diagrams.</p>
-<p>Documentation of the undocumented features in PlantUML is required.
-And <strong>YOU</strong> can document them in the <a class="reference external" href="http://alphadoc.plantuml.com/toc/asciidoc/en">plantumlGuide</a></p>
-<p>The documentation should start in the source code using e.g. javadoc.</p>
-<p>It would then be relatively easy to extract and render to rst/md/html or anywhere else.</p>
-<p>This would be a prerequisite to a user-centric guide.</p>
+<div class="section" id="a-showcase-template-site">
+<h2>1.1. A Showcase Template Site<a class="headerlink" href="#a-showcase-template-site" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>As a user who wants to draw a diagram, I’d like to be able to browse to a site, select a category e.g. “AWS” and see a selection of existing “AWS” diagrams.</p></li>
+<li><p>As a user who has drawn diagrams, I’d like to be able to share and showcase my diagrams on a site, for a given category e.g. “AWS” diagrams.</p></li>
+<li><p>As a user who draws or uses diagrams, I’d like to be take part in a “best of” competition where the best entry for a given category is selected by the community.</p></li>
+</ol>
 </div>
 <div class="section" id="hyperlinked-interactive-diagrams">
-<h2>3.2. Hyperlinked Interactive Diagrams<a class="headerlink" href="#hyperlinked-interactive-diagrams" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. Hyperlinked Interactive Diagrams<a class="headerlink" href="#hyperlinked-interactive-diagrams" title="Permalink to this headline">¶</a></h2>
 <p>Per <em>Overview first, zoom and filter, then details-on-demand</em> <a class="reference internal" href="../C4/c4.html#c4-lightweight-software-architecture-description-method"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a>, <a class="reference external" href="https://www.plantuml.com/">PlantUML</a> supports the creation of svg diagrams which can contain hyperlinks.</p>
 <p>Hyperlinked connected diagrams would be powerful and in theory are supported already (though I have seen png produce better diagrams that svg.)</p>
 <p>Svg images can also use CSS characteristics like dynamically changing on hover per <a class="reference external" href="https://plantuml.com/svg">https://plantuml.com/svg</a>.</p>
 </div>
 <div class="section" id="machine-processing-of-text-files">
-<h2>3.3. Machine Processing Of Text Files<a class="headerlink" href="#machine-processing-of-text-files" title="Permalink to this headline">¶</a></h2>
+<h2>1.3. Machine Processing Of Text Files<a class="headerlink" href="#machine-processing-of-text-files" title="Permalink to this headline">¶</a></h2>
 <p>Having a diagram source as a text file is powerful because it allows for machine processing e.g.</p>
 <ol class="arabic simple">
 <li><p>If standard building blocks are used, it allows automated analysis and recognition of the diagram text source, and recommendations to the user e.g.
@@ -234,8 +233,33 @@ if an arrow text includes “TLS” to indicate the link is secured, then an ext
 <li><p>As companies move towards standard architecture icon sets (AWS, MS/Azure, Google,…), it is possible to process an existing architecture diagram image with optical recognition (and machine learning) and create the text (plantuml) equivalent.</p></li>
 </ol>
 </div>
+<div class="section" id="architecture-icon-sets">
+<h2>1.4. Architecture Icon Sets<a class="headerlink" href="#architecture-icon-sets" title="Permalink to this headline">¶</a></h2>
+<p>Companies like AWS, Google, Microsoft publish architecture icon sets for building architecture diagrams:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://aws.amazon.com/architecture/icons/">https://aws.amazon.com/architecture/icons/</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=41937">https://www.microsoft.com/en-us/download/details.aspx?id=41937</a></p></li>
+</ol>
+<p>These establish a shared lexicon of understanding and allow users to focus on the things they’re trying to do.</p>
+<p><strong>Do you (personal, organisation, company) have an icon set for building your (architecture or other) diagrams?</strong></p>
+<p>These icon sets are easily imported to PlantUML.</p>
+</div>
+<div class="section" id="security-modeling">
+<h2>1.5. Security Modeling<a class="headerlink" href="#security-modeling" title="Permalink to this headline">¶</a></h2>
+<p>A security model consists of:</p>
+<ol class="arabic simple">
+<li><p>Assets</p></li>
+<li><p>Domains</p></li>
+<li><p>Interfaces</p></li>
+<li><p>Data Flows</p></li>
+<li><p>Threats and threat actors</p></li>
+</ol>
+<p>All of these fit well with PlantUML capabilities and allow for the <strong>same tool and diagrams</strong> to be used for general and security discussion and analysis.</p>
+<p>Today, it is common to use different tools and diagrams for security modeling. They may be meaningful to the security folks, <strong>but if they’re not meaningful to the rest of the team then they’re missing the point</strong>.</p>
+</div>
 <div class="section" id="github-actions-and-workflows">
-<h2>3.4. Github Actions and Workflows<a class="headerlink" href="#github-actions-and-workflows" title="Permalink to this headline">¶</a></h2>
+<h2>1.6. Github Actions and Workflows<a class="headerlink" href="#github-actions-and-workflows" title="Permalink to this headline">¶</a></h2>
 <p>Github Actions and Workflows are relatively new and powerful.</p>
 <p>I used some to generate this guide e.g. automated link checking on commit.</p>
 <p>They could be used for various things:</p>
@@ -256,30 +280,15 @@ if an arrow text includes “TLS” to indicate the link is secured, then an ext
 </li>
 </ol>
 </div>
-<div class="section" id="architecture-icon-sets">
-<h2>3.5. Architecture Icon Sets<a class="headerlink" href="#architecture-icon-sets" title="Permalink to this headline">¶</a></h2>
-<p>Companies like AWS, Google, Microsoft publish architecture icon sets for building architecture diagrams:</p>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://aws.amazon.com/architecture/icons/">https://aws.amazon.com/architecture/icons/</a></p></li>
-<li><p><a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a></p></li>
-<li><p><a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=41937">https://www.microsoft.com/en-us/download/details.aspx?id=41937</a></p></li>
-</ol>
-<p>These establish a shared lexicon of understanding and allow users to focus on the things they’re trying to do.</p>
-<p><strong>Do you (personal, organisation, company) have an icon set for building your (architecture or other) diagrams?</strong></p>
-<p>These icon sets are easily imported to PlantUML.</p>
-</div>
-<div class="section" id="security-modeling">
-<h2>3.6. Security Modeling<a class="headerlink" href="#security-modeling" title="Permalink to this headline">¶</a></h2>
-<p>A security model consists of:</p>
-<ol class="arabic simple">
-<li><p>Assets</p></li>
-<li><p>Domains</p></li>
-<li><p>Interfaces</p></li>
-<li><p>Data Flows</p></li>
-<li><p>Threats and threat actors</p></li>
-</ol>
-<p>All of these fit well with PlantUML capabilities and allow for the <strong>same tool and diagrams</strong> to be used for general and security discussion and analysis.</p>
-<p>Today, it is common to use different tools and diagrams for security modeling. They may be meaningful to the security folks, <strong>but if they’re not meaningful to the rest of the team then they’re missing the point</strong>.</p>
+<div class="section" id="guide-for-plantuml-diagrams">
+<h2>1.7. Guide for <a class="reference external" href="https://www.plantuml.com/">PlantUML</a> Diagrams<a class="headerlink" href="#guide-for-plantuml-diagrams" title="Permalink to this headline">¶</a></h2>
+<p>The scope of this guide is stdlib icon diagrams only per <a class="reference internal" href="AboutThisGuide.html#scope"><span class="std std-ref">Scope</span></a> - not the traditional UML diagrams.
+It’s the guide I wish I had when using PlantUML for diagrams.</p>
+<p>Documentation of the undocumented features in PlantUML is required.
+And <strong>YOU</strong> can document them in the <a class="reference external" href="http://alphadoc.plantuml.com/toc/asciidoc/en">plantumlGuide</a></p>
+<p>The documentation should start in the source code using e.g. javadoc.</p>
+<p>It would then be relatively easy to extract and render to rst/md/html or anywhere else.</p>
+<p>This would be a prerequisite to a user-centric guide.</p>
 </div>
 </div>
 
@@ -291,10 +300,10 @@ if an arrow text includes “TLS” to indicate the link is secured, then an ext
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../NetworkUsersMachines/NetworkUsersMachines.html" class="btn btn-neutral float-right" title="1. Create a Diagram of a Typical Network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../todo.html" class="btn btn-neutral float-right" title="2. To Do List" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="AboutThisGuide.html" class="btn btn-neutral float-left" title="2. About this Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Stdlib/StandardisingStdLib2.html" class="btn btn-neutral float-left" title="2. Standardising Standard Library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

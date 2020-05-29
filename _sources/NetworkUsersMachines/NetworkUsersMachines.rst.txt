@@ -78,12 +78,7 @@ View all the icons with listsprites_
     :align: center
     :caption: *Using listsprites to show all icons in a library* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. literalinclude:: ./NetworkUsersMachines1.puml
-    :emphasize-lines: 11
-    :linenos: 
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -94,6 +89,12 @@ Play
                 :target: http://www.plantuml.com/plantuml/uml/VP2nQdCn38LtFuKp198XCVpZFmKoD4C3WJHR5zVMhKLj-IB9lNJhQ_Jr-YHreKs7qhiTpgV31zg9UjPMiZ6B20CIs2h-r0kRL4VvxnpxQVk8cjf34-1GIO5q6sfnU_QI81Qaw4xParwEjviw0Wc4ngWldaD2XQ2DuTy6-rPSyQB0Pe4KSejNdTlNKYfjnvv_mqitEv_p7_ZWEKwUOURaY19cy1duULPnHeKVR3AAoiYz56E6MXNOBWVCGBx0QcqPA093j1Dgij_FiTqXMCakly9gVKzt2Um1DQI4Jy3lhszYRnfsjTRhqEo0ugVu0m00
                 :width: 40 px
 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./NetworkUsersMachines1.puml
+    :emphasize-lines: 11
+    :linenos: 
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -119,14 +120,7 @@ Gather the icons we need
     :align: center
     :caption: *Select the subset of icons for our diagram* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. tip ::
-    We can't have the icon on its own e.g. "<$osa_user_green_developer>" would not work
-
-.. literalinclude:: ./NetworkUsersMachines2.puml
-    :linenos: 
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -136,6 +130,15 @@ Play
 .. |playbutton2| image:: ../play.png
                 :target: http://www.plantuml.com/plantuml/uml/VPB1Qjmm48RlVWe56feS4aEFeOH02isXAGjjRWMZIl-kXvL7PZIowQslqTVharIki0iDkmV3_FFDx_b1yv3KYkOXDCs5nvuO9YQxAmtJguxfhct5phS7qZv_pmdY8YjORrqSsaUngOSVY7sx2vRrvVdJJHp12IuBwGyhhYU5qonuTqF5czh19eKq5yGkPB-jQn_ZC4I-7Klz6huaI6j3E86VhFZP2iwCF5DoP_0No0GvDq2AVxXvQvP8gIcuowNg3W9mvp4Xn15oPzw_ESNk_tSjJQiKELNR2VZALnw462brWsLxM9UU7RbVed_0H0url4SwQXohTPDrLR3ZYghQ2EtwoAXaLPKao5IJRAek_GoTenphqhy1kfa4OGadCMirdQRrz-KArx5IrjwU1BCDOGMhhdJvN8ZPBtWJ9T8-HeMOopq5i1rmTMq4x27mPYRjpNhIPe8aYcmkQy5Nrz_uQm_pHEhwdewGtpz_9VCnauVHk1cR1x1VpkKF
                 :width: 40 px
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. tip ::
+    We can't have the icon on its own e.g. "<$osa_user_green_developer>" would not work
+
+.. literalinclude:: ./NetworkUsersMachines2.puml
+    :linenos: 
 
 Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -155,11 +158,7 @@ Decorate the Icons
     :align: center
     :caption: *Decorate the icons for our diagram* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. literalinclude:: ./NetworkUsersMachines3.puml
-    :linenos: 
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -170,6 +169,11 @@ Play
                 :target: http://www.plantuml.com/plantuml/uml/XPF1QXin54NtynMA8LI6nWDTTXL8eLaqnT1cLp2AT6qzh966fwSPkkjlzFVw9PM9uuGsSbO-ddCbtSTehhCObZA4hhjms5A4IjciwmFbHSRyiU_PpAiTYIyF9ODjYe8eAvk6_ePDzd03HTUlWuboV_VbAes86ROmoK_3rfF0Ic5ykAAwDlU3oGBkBYZQKDpfkFuc3KEAgx7o__8-WtiJGaFV6dQpOPo9t56sP_Gty0G-5o31i-wwT-hGANVLRqgbpOw1k76O4D88rYtnNYs2UK1OL11OlrZ-kySXPOHIpBfftjwblYsAo7apc6XsO7tUlzQh3la94rayZkcGzv96_O8RDO8Pdu8LspbQ-nIXdx6Ho-09h4_OAFiLCYVU7yiUYczcOeJ3b9oAW7LRDOwkrruVVnk9BJ5c4u9--QUHjI4Lfq_qsXZRb0IiBhSK4Cq0lLICwC1mQYRnwkbBKnCuKuhgyWXw-ID-zr2t9DPxseF__FgTrUT23ahIQM5tZUWUR_5V
                 :width: 40 px
 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./NetworkUsersMachines3.puml
+    :linenos: 
 
 Create the diagram by connecting things together
 -------------------------------------------------------------------------------
@@ -185,12 +189,7 @@ Now for the fun bit...
     :align: center
     :caption: *Connect the icons* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. literalinclude:: ./NetworkUsersMachines4.puml
-    :linenos: 
-    :emphasize-lines: 35-53
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -205,7 +204,12 @@ Explore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Add some text to describe the connection from firewall to cloud
 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. literalinclude:: ./NetworkUsersMachines4.puml
+    :linenos: 
+    :emphasize-lines: 35-53
 
 
 
@@ -224,12 +228,6 @@ We want the diagram to be vertical, with the cloud at the bottom and the users a
     :align: center
     :caption: *Vertical Layout* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. literalinclude:: ./NetworkUsersMachines5.puml
-    :linenos: 
-    :emphasize-lines: 37-57
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -247,6 +245,12 @@ Explore
 #. Arrange the diagram horizontally from left to right with users on left, cloud on right
 
 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./NetworkUsersMachines5.puml
+    :linenos: 
+    :emphasize-lines: 37-57
 
 
 Change the Layout by grouping icons together_
@@ -263,12 +267,7 @@ Here we use the :ref:`together` keyword.
     :align: center
     :caption: *Group our icons* 
 
-Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. literalinclude:: ./NetworkUsersMachines6.puml
-    :linenos: 
-    :emphasize-lines: 18, 24, 34
 
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -284,7 +283,12 @@ Explore
 
 #. What happens if we put a "together" around the network elements too - line 33?
  
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. literalinclude:: ./NetworkUsersMachines6.puml
+    :linenos: 
+    :emphasize-lines: 18, 24, 34
 
 
 Conclusion
