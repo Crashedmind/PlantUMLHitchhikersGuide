@@ -36,7 +36,7 @@ Example Network Diagram
                 :target: http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00
                 :width: 40 px
 
-.. uml:: NetworkUsersMachines6.puml
+.. uml:: NetworkUsersMachines7.puml
     :align: center
     :caption: *Here's one we made earlier - and you can too* 
 
@@ -289,6 +289,51 @@ Source
 .. literalinclude:: ./NetworkUsersMachines6.puml
     :linenos: 
     :emphasize-lines: 18, 24, 34
+
+
+Add a Legend Table and a Note
+-------------------------------------------------------------------------------
+We add a note ala "note left : Look at Bob" where the note instruction is on the line following Bob (the icon we want to put the note on).
+
+A diagram Legend can be useful. 
+
+This example shows
+
+* how to create a table
+* how to add https://plantuml.com/openiconic sprites
+* how to add stdlib sprites and scale (*.4 in this example) and colour them.
+* how to change the table cell colour
+
+.. tip ::
+    openiconic sprites are referenced with a "**&**" e.g. "&box"    
+    
+    stdlib sprites are referenced with a "**$**" e.g. "$osa_user_green_operations"    
+
+.. uml:: NetworkUsersMachines7.puml
+    :align: center
+    :caption: *Add a Legend* 
+
+Play
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|playbutton7| Press to play around with this diagram source online.
+
+.. |playbutton7| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/ZLRTRkCs4xtdKypc-xRh51ivpgO_DLnZqmJO14YwHkEWDmK2cXnPX2LI8AbutMQ1laPVhq_I6Kgs4mS98a3YpyoSEJmp9lmnHEbZKvL2lD6O6ulWWfpG1XGnrc7OxtkvpEOc5isi2UYLin5jp9Ih-gTUXW9rPQpkJqffuytLvO6hqGPKZJTn9RqgJ4GL6uz71uPYGx-I8Q8NRunLPQCtwVgdhggSpMgQFpNUKEQ-BCjdpEVIwwNq-8BBbGdg1VCr-ZlqBpcO-01UlClWIleLc00Ipl0EIpgt1sCX5WWJxtIZ8aIKLGRNj5D8TloTb7BB08D3c9o2j9fUEB7QEwEXBfp5Z95_SRCM-4fQET_2dYZb6Xj3XtkUOCb9hQ7CP8DnSSVhmBiNKvWtArWM3ahd5hINH_G9CQHZPy0Hqm9NG2MooCnTibkCI-SNGCL_dvBS6GaISkDnIMAitIui0P9l9kXv1roj8AAR8naz_2L8n5jkdjkvHxItUgrNZpLy3tiyxD7uK3TURuJTsz_5u5qPZREXnqSbPnuuY8uxxUBRgi89j-XJ2EfdOp64swgLkKUwKn1zENOhTWVM5ODmh8i89UOHXd19YeACN3FnbGzFd8t29yVN61RHrRrQ4TJWfwDiyFsFsI0R73BqjY-I2gSTrrBM75B9dPYZbexgXiwxBNxFr3omU2ihAwFWOi9-hHK60rwa-UCmsNRXaxYkEudQRc3RExrss3bKShwPaNuDT4KuEimEZ-5oUhqj305zJGtpQzjcebEA1RnT6eybLyUx9bAUfSdDoUHn7eRgOZjIrAWzUcd_SvuJ3D22lSvfQ3tMlTjRJyZwtI3xy4DsT4pCFpp5LALhT2zzoRRkzST-GgJhuE1W3BKQGd2Df-JAQTmQEedPgemieK9jf13KESbSIGhCZPKsMOtDtSRM5dK8QG15h0Ebv8vFvhO6GyfdSpDlsX-646rKycZL4ns5Xrljm3kibH0jrcPDh3RpUZiLWhvfjPPHYFKiRIUvoAt4ELejW9xxd-7KbSxpPBggaSSp3CgRcld2VUi5es3-nE5WC1xDf5eC__SRwd4ISVkC-cmQZ_hiEhvFMugnX-my-lzp5ywtsJ459SynPKge6gCqPSWolW9DQ6_U47LfPX1gRo8-o-nC-iKdpZ3cKhoAtpQ4M3vtfUtGJE1Rci_I-UobdUEOckPLL3ftul7olRZ3Xk1VGsRI-BfaCbzUHQPp7tqpSryUPZi1GdXG6GiaapNAqRij3rhTDPh8dOleuMrkIhIomju-U3AWHqqj7mjO_rC1QlF0VVUsc_Js_x3J0k7SH5KKPe7-tx__2V2fCHeXkasW-4Xu_2-0dly0
+                :width: 40 px
+
+Explore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Create a table for each device and color code it as static or dynamic IP.
+ 
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./NetworkUsersMachines7.puml
+    :linenos: 
+    :emphasize-lines: 23, 66-72
+
 
 
 Conclusion

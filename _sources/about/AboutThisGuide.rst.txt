@@ -75,6 +75,7 @@ The Principles on which this guide are based:
 #. Open Source - The Network Effect - anyone can and should contribute to this guide. 
 #. It must be fun to write it - and to read it.
 #. Documentation-Of-Code Documentation-As-Code: documentation of the examples, and the example source live together in the same directory in Git. 
+#. Living Document
 
 
 
@@ -148,6 +149,10 @@ PlantUML is one way to enable this.
 
 See :ref:`JourneyDOC-label` for more details. 
 
+Living Document
+-------------------------------------------------------------------------------
+
+The document will live and grow per :ref:`Journey to Documentation as Code`.
 
 
 
@@ -199,4 +204,5 @@ These will be reviewed and ranked periodically, and then resolved.
 
 .. |playbutton_kub1| image:: ../play.png
                 :target: https://github.com/Crashedmind/PlantUMLHitchhikersGuide
+                :width: 40 px
                 :width: 40 px

@@ -134,6 +134,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
 
    about/AboutPlantUML
    about/AboutThisGuide
+   about/Sections
 
 .. toctree::
    :maxdepth: 2

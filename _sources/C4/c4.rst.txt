@@ -1,5 +1,7 @@
 .. _c4-label:
 
+
+
 *******************************************************************************
 C4 Lightweight Software Architecture Description Method
 *******************************************************************************
@@ -18,7 +20,7 @@ The `C4 Model <https://c4model.com/>`__ is a lightweight software
 architecture description method. It consists of a set of 4 diagrams that
 describe the **static** structure of a software system.
 
-Overall, it strives for clarity and communication of the story, and
+Overall, C4 strives for clarity and communication of the story, and
 follows `Shneiderman's
 mantra <http://www.ifp.illinois.edu/nabhcs/abstracts/shneiderman.html>`__:
 
@@ -28,6 +30,11 @@ It is not formal UML e.g. the UML actor stickman is deliberately not
 used as it causes confusion between a person or a system.
 
 .. c4-intro-end-content
+
+.. tip ::
+    Multiple independent views of a system are better than just one view. 
+    
+    PlantUML sequence diagrams can give a good **dynamic** view of a system. Similar to C4, they can start at the top level, and zoom into the details in different diagrams.
 
 .. figure:: ./c4.png
     
@@ -69,7 +76,8 @@ There are a number of related models and templates:
 C4 is inspired by `the 4+1 model for software
 architecture <https://en.wikipedia.org/wiki/4%2B1_architectural_view_model>`__
 
-ARC42
+
+`ARC42 <https://arc42.org//>`__
 -------------------------------------------------------------------------------
 
 C4 can be combined with arc42 documentation template. The diagrams map

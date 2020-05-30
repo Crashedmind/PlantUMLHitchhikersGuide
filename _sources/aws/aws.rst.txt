@@ -379,6 +379,26 @@ AWSArchitectureBlogSample3_
     
     AWSArchitectureBlogSample3_
 
+PlantUML Equivalent
+-------------------------------------------------------------------------------
+
+|playbutton_aws30| Press to play around with this diagram source online.
+
+.. |playbutton_aws30| image:: ../play.png
+                :target: http://www.plantuml.com/plantuml/uml/VP3BRnD13CRlyrUOlH0aiX45BX6g6g8AzO24j3pEpewRjU9vC8-cLTN_7IVBAfK8lUnuxD_tVPwzoWLJgKxCA_QzL4lm2VTPUBDO_UhMmRdWBy_EEdPH-9R9jb7rPo1LnrfeWIB_GrpOiBn8RCbJGda9-P92ZJTzyFaPPI3ls4TCw43OKtc81378m-5YNf-RXbI6O4p4VeTRWaOV2Mi9rJRmQAxN5xFEeQNxjz2C1NIKxhYdHZlGl35Fnlp8bFBi-DNcyPoctnDQBXmyoa57QRQor_VzW7vBYgmiJBT9yVNuSsRZeRrlTIES1qg0CK98iAVDn8x9CBTXx-UNC6gMyAw5dvovvBzcC4-y7OeIf_0bNBJG5Km5iFQ73SrfU1ACRrx2-nO-iuL4lolb0WkjSWm-ana9c0lTbcSxV53t8UmrSLpoNykFBToug3vPmzMn5-vtUhBF1KMqeZlo1HwdKBPFvegyhKx-0000_
+                :width: 40 px
+
+
+.. uml:: 3.8.puml
+    :align: center
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: ./3.8.puml
+    :linenos: 
+
+
 Gather the icons we need
 --------------------------------------------------------------------------------
 
@@ -428,4 +448,18 @@ Source
 .. todo ::
     finish aws 3 diagram - figure out best way to do boundaries
     https://github.com/dcasati/kubernetes-PlantUML uses the c4 type boundary macros 
+
+
+Draw Boxes with Procedures
+-------------------------------------------------------------------------------
+
+
+.. uml:: 3.8.puml
+    :align: center
+
+Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+.. literalinclude:: ./3.8.puml
+    :linenos: 
 
