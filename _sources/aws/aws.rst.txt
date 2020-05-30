@@ -446,13 +446,14 @@ Source
 
 
 .. todo ::
-    finish aws 3 diagram - figure out best way to do boundaries
-    https://github.com/dcasati/kubernetes-PlantUML uses the c4 type boundary macros 
-
-
+    finish aws 3 diagram - add boundaries/containers
+    
 Draw Boxes with Procedures
 -------------------------------------------------------------------------------
 
+In this case, we create everything we need ourselves like VPC compound components. It is informative to see how to do it.
+
+In the future, this functionality could be part of stdlib so we don't have to.
 
 .. uml:: 3.8.puml
     :align: center
