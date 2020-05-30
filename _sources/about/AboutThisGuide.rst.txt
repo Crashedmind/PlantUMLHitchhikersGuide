@@ -195,14 +195,12 @@ Feedback
 
 This is an initial version; fixes and features will be added over time.
 
-To submit a suggestion, create an issue on https://github.com/Crashedmind/PlantUMLHitchhikersGuide.
-These will be reviewed and ranked periodically, and then resolved.
- 
+To submit feedback 
 
-|playbutton_kub1| **Hit the like (star) button and subscribe (watch)!**
+* create an issue on https://github.com/Crashedmind/PlantUMLHitchhikersGuide. These will be reviewed and ranked periodically, and then resolved.
+* |playbutton_kub1| **Hit the like (star) button and subscribe (watch)!**
 
 
 .. |playbutton_kub1| image:: ../play.png
                 :target: https://github.com/Crashedmind/PlantUMLHitchhikersGuide
-                :width: 40 px
                 :width: 40 px

@@ -89,7 +89,12 @@
             
               <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. About PlantUML</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. About PlantUML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shared-lexicon-of-understanding">1.1. Shared Lexicon of Understanding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interview-with-arnaud-roques-creator-of-plantuml">1.2. Interview with Arnaud Roques (creator of PlantUML)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-plantuml-links">1.3. Useful PlantUML Links</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="AboutThisGuide.html">2. About this Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sections.html">3. Sections of the Guide</a></li>
 </ul>
@@ -205,13 +210,49 @@
 <a class="reference internal image-reference" href="../_images/plantumllogo.png"><img alt="alternate text" src="../_images/plantumllogo.png" style="width: 120px; height: 120px;" /></a>
 <p class="caption"><span class="caption-text">Where system diagrams meet system reality</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+<p><a class="reference external" href="https://www.plantuml.com/">PlantUML</a> is better known for UML-type diagrams (sequence, use case, state,…) and other non-UML diagrams (wireframes, mindmaps, gantt…)</p>
+<ul class="simple">
+<li><p>It has a simple intuitive syntax that makes it quick and easy to create/share/modify such diagrams.</p></li>
+</ul>
+<p><a class="reference external" href="https://plantuml.com/stdlib">PlantUMLStdlib</a> is not so well known</p>
+<ul class="simple">
+<li><p>A simple intuitive syntax makes it quick and easy to create diagrams with icons.</p></li>
+</ul>
+<div class="section" id="shared-lexicon-of-understanding">
+<h2>1.1. Shared Lexicon of Understanding<a class="headerlink" href="#shared-lexicon-of-understanding" title="Permalink to this headline">¶</a></h2>
+<p>Such “<em>icon diagrams</em>” are increasingly popular as functionality moves up the stack and a standard set of off-the-shelf components becomes available ala Cloud, Everything-As-A-Service, Serverless…..</p>
+<p>Companies like AWS, Google, Microsoft publish architecture icon sets for these building blocks for architecture diagrams:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://aws.amazon.com/architecture/icons/">https://aws.amazon.com/architecture/icons/</a></p></li>
+<li><p><a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a></p></li>
+<li><p><a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=41937">https://www.microsoft.com/en-us/download/details.aspx?id=41937</a></p></li>
+</ol>
+<p>These are the types of diagrams used for describing architectures as we see in <a class="reference internal" href="../aws/aws.html#create-real-life-aws-diagrams"><span class="std std-ref">Create Real Life AWS Diagrams</span></a> where we recreate diagrams from the AWS architecture blog.</p>
+<ul class="simple">
+<li><p>These establish a shared lexicon of understanding and allow users to focus on the things they’re trying to do.</p></li>
+<li><p>They can also be understood by a broad audience, especially the customer.</p></li>
+<li><p>They enable <strong>lightweight just-enough</strong> <a class="reference external" href="http://agilemodeling.com/essays/barelyGoodEnough.html">AgileModeling</a> in a way that meets <a class="reference external" href="https://tdan.com/best-practices-for-agile-documentation/18936">AgileModelingBP</a></p></li>
+</ul>
+<p>These building block icons can be used with</p>
+<ol class="arabic simple">
+<li><p>architecture diagrams to give an overview of the building blocks and how  they are connnected</p></li>
+<li><p><a class="reference internal" href="../C4/c4.html#c4-label"><span class="std std-ref">C4 Lightweight Software Architecture Description Method</span></a> to give static views at different levels</p></li>
+<li><p>sequence diagrams to give dynamic views at different levels</p></li>
+</ol>
+</div>
+<div class="section" id="interview-with-arnaud-roques-creator-of-plantuml">
+<h2>1.2. Interview with Arnaud Roques (creator of PlantUML)<a class="headerlink" href="#interview-with-arnaud-roques-creator-of-plantuml" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><a class="reference external" href="https://modeling-languages.com/interview-plantuml/">A coffee with Arnaud Roques (creator of PlantUML)</a> gives a good background to PlantUML from the man himself.</p>
 </div>
+</div>
+<div class="section" id="useful-plantuml-links">
+<h2>1.3. Useful PlantUML Links<a class="headerlink" href="#useful-plantuml-links" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>See <a class="reference external" href="https://crashedmind.github.io/plantuml.github.io/">https://crashedmind.github.io/plantuml.github.io/</a> for some useful PlantUML links.</p>
+</div>
 </div>
 </div>
 
