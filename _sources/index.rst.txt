@@ -159,6 +159,7 @@ This guide walks through creating PlantUML diagrams, including the ones shown he
    PassSpriteAsParameter/PassSpriteAsParameter
    color/color
    layout/layout
+   diagramAnnotation/diagramAnnotation
     
 
 .. toctree::

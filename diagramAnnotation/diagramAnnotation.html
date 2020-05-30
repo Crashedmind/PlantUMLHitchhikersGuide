@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Tricked Out Diagrams (aka Diagram Annotation) &mdash; The Hitchhiker&#39;s Guide to PlantUML  documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/plantumllogo.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. PlantUML Stdlib Overview" href="../Stdlib/StdLibOverview.html" />
+    <link rel="prev" title="6. Layout" href="../layout/layout.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> The Hitchhiker's Guide to PlantUML
+          
+
+          
+            
+            <img src="../_static/plantumllogo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutPlantUML.html">1. About PlantUML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/AboutThisGuide.html">2. About this Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/Sections.html">3. Sections of the Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Using Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../NetworkUsersMachines/NetworkUsersMachines.html">1. Create a Diagram of a Typical Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aws/aws.html">2. Create Real Life AWS Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kubernetes/kubernetes.html">3. Kubernetes and Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/gcp.html">4. Google Cloud Platform‎</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
+</ul>
+<p class="caption"><span class="caption-text">PlantUML Features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../PlantUMLSpriteLibraries/plantuml_sprites.html">1. Use Images in Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scale/scale.html">2. Scaling Sprites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../procedures/procedures.html">3. Procedures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PassSpriteAsParameter/PassSpriteAsParameter.html">4. PassSpriteAsParameter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../color/color.html">5. Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../layout/layout.html">6. Layout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Tricked Out Diagrams (aka Diagram Annotation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#notes">7.1. Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handwritten">7.2. Handwritten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#title">7.3. Title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footer">7.4. Footer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments">7.5. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#caption">7.6. Caption</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Understanding Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StdLibOverview.html">1. PlantUML Stdlib Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../StdlibUnderTheHood/StdlibUnderstanding.html">2. PlantUML Stdlib Under The Hood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib.html">3. PlantUML Stdlib Under The Hood 2</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Standardising Standard Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/stdlibRequirements.html">1. Standard Library - What We Have And What We Want</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Stdlib/StandardisingStdLib2.html">2. Standardising Standard Library</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Future</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/future.html">1. Thoughts For The Future</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../todo.html">2. To Do List</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex Standard Library C4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../C4/c4.html">1. C4 Lightweight Software Architecture Description Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../C4/C4Stdlib.html">2. Using PlantUML Stdlib C4 Lightweight Software Architecture Description Method</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Annex</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../github/githubFileFinder.html">1. GitHub File Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DocumentationAsCode/JourneyDocumentationASCode.html">2. Journey to Documentation as Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">The Hitchhiker's Guide to PlantUML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>7. Tricked Out Diagrams (aka Diagram Annotation)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/diagramAnnotation/diagramAnnotation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tricked-out-diagrams-aka-diagram-annotation">
+<h1>7. Tricked Out Diagrams (aka Diagram Annotation)<a class="headerlink" href="#tricked-out-diagrams-aka-diagram-annotation" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<p class="plantuml">
+<img src="../_images/plantuml-07078d3ca06a241ceef0905abb32822b2cdcaeab.png" alt="&#64;startuml
+!define osaPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-opensecurityarchitecture2-icons/master
+!include osaPuml/Common.puml
+!include osaPuml/User/all.puml
+!include osaPuml/Hardware/all.puml
+!include osaPuml/Misc/all.puml
+!include osaPuml/Server/all.puml
+!include osaPuml/Site/all.puml
+
+/'
+ comments
+. Mary is a Developer in the Product team. She has a Windows 10 PC and an Android phone.
+. Bob is a Manager in the Accounts team. He has Mac and an iPhone.
+. Ivan is an IT guy who looks after the server. 
+. They connect to the network hub, and via a firewall to the Internet.
+'/
+
+Title &lt;$osa_site_branch*.5&gt; \nNetwork Diagram  
+
+skinparam handwritten true
+header
+&lt;font color=red&gt; Warning:&lt;/font&gt;
+This is a draft! &lt;&amp;box&gt;&lt;color:Red&gt;&lt;$osa_warning*.5&gt;&lt;/color&gt;
+
+
+endheader
+
+' Users
+together {
+osa_user_green_developer(Mary, &quot;Mary&quot;, &quot;Product team&quot;, &quot;Developer&quot;)
+osa_user_green_operations(Ivan, &quot;Ivan&quot;, &quot;IT Team&quot;, &quot;Server Admin&quot;)
+osa_user_green_business_manager(Bob, &quot;Bob&quot;, &quot;Accounts team&quot;, &quot;Manager&quot;)
+note left
+  * Look at Bob
+  * Here he is
+  ** Yes he really is  
+end note
+}
+
+' Devices
+together {
+osa_desktop(pc, &quot;192.168.1.10&quot;, &quot;Windows 10&quot;, &quot;PC&quot;)
+osa_laptop(mac, &quot;192.168.1.12&quot;, &quot;Mac&quot;, &quot;Mac&quot;)
+osa_iPhone(iphone, &quot;Dynamic IP&quot;, &quot;iPhone 11&quot;, &quot;Phone&quot;)
+osa_iPhone(android, &quot;Dynamic IP&quot;, &quot;Android 10&quot;, &quot;Phone&quot;)
+osa_server(server, &quot;192.168.1.100&quot;, &quot;Ubuntu Server 20.04 LTS&quot;, &quot;Server&quot;)
+}
+
+
+' Network
+
+osa_device_wireless_router(wifiAP, &quot;192.168.1.1&quot;, &quot;Network&quot;)
+osa_hub(hub, &quot;Office hub&quot;, &quot;Hub&quot;)
+osa_firewall(firewall, &quot;51.37.24.103&quot;, &quot;Network&quot;)
+osa_cloud(cloud, &quot;Internet&quot;, &quot;Network&quot;)
+
+
+Mary --&gt; pc: source code
+Mary --&gt; android: social media
+
+Bob --&gt; mac: financial info
+Bob --&gt; iphone: phone calls
+
+
+Ivan --&gt; server: configuration
+
+iphone --&gt; wifiAP
+android --&gt; wifiAP
+wifiAP --&gt; hub
+
+server --&gt; hub
+mac --&gt; hub
+pc --&gt; hub
+
+
+hub --&gt; firewall
+
+firewall --&gt; cloud
+
+
+legend
+    |= Color |= Type |= Description |
+    | &lt;size:11&gt;&lt;back:#Red&gt;Mary           &lt;/back&gt;&lt;/size&gt;|    &lt;color:Red&gt;&lt;$osa_user_green_developer*.4&gt;&lt;/color&gt; | Mary details... This is a stdlib sprite |
+    | &lt;size:11&gt;&lt;back:#DarkGreen&gt;Ivan           &lt;/back&gt;&lt;/size&gt;|    &lt;color:DarkGreen&gt;&lt;$osa_user_green_operations*.4&gt;&lt;/color&gt; | Ivan details... |
+    | &lt;size:11&gt;&lt;back:#Orange&gt;Bob           &lt;/back&gt;&lt;/size&gt;|    &lt;color:Orange&gt;&lt;$osa_user_green_business_manager*.4&gt;&lt;/color&gt; | Bob details... |
+    | &lt;size:11&gt;&lt;back:#Purple&gt;Box           &lt;/back&gt;&lt;/size&gt;|    &lt;color:Purple&gt;&lt;&amp;box&gt;&lt;/color&gt; | A Box. This is an openiconic sprite |
+endlegend
+
+caption Acme Corp. Network Diagram as at %date(&quot;yyyy.MM.dd' at 'HH:mm&quot;)
+
+center footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s Guide to PlantUML enduml &lt;&amp;box&gt; &lt;$osa_user_large_group*.5&gt;
+&#64;enduml"/>
+</p>
+<p class="caption"><span class="caption-text"><em>Diagram with Annotation features</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/ZLRzRjis4F-VJt7DriKD6ZbEstqOhj4i0Ue0pMgiBee11GAQF5k49L8WgRZUCc2liTVRa-oEagF4GO8OaFXnTx_xyJuelmjH-bYNXNYcSM4iWWjoIcl8Owp2iD_tSfqjJSphUHtGAsSZsfWfL_PFlGmvwj9OtPyMqiRF5nyENOKseAgzYHlfLMuYgbXxF3uqP1lwfGmHlNXch2fgVUEkV-hAqjcielbzuMVot9T5yO1u8hrUIu-Fg5oOe1uHVq9_XVun1HDlmOl-lW15ZD7683Aua7u39e24Cxp2WcBWmLY8ESBKErsh215bcS4dsiabAtwXgBbrWC4HJ4z1MaqFd5ZjdT5GvSvYHi2_kdc3Uo6jN7Qe9qgvcdoti9E4IafgYsIcMuZpAru6tZoVmRBUm3ftK3Ytehr5H9y0Gmf01cGmot43b2kBJDibiSMuTdu5L0Klauih8q72mdXSKrIsQkUMy4Wt4_jz8MOc5WYZxoc6by54l9nxQLL-aBqPmrVxMmjvPkJIon90YB0ojfAyoCd7sfiOqKBqDOeSfKOlHWjd8v4hd7_hKO_XY_JMsELmr6V9MCno4vg8QK-dUmQZ7-RkstYKJ8Q_aqd3PztOCPTHFmd7GWYqkdKaze6BBeZebXXpzF2NO3lkWSkbHxINUflg7gV_9Upni4VZxPJp-gOczbxiOl2kZCRPqECyaJ8FR4IvchNsJN722NVQVGXgIsCnXCkoAP4UrGmPqPjjkq9fmTf28Xph8aA1YoW03k035GJ826INrXFq23c22RmyW3ymyD8ZfJlLEd2qW474tnmkEgLHU2zW6iCgkgfNAN8--EKu6_puSpR81aTCfck25BVJzdI5hDYab3isnyq1L3kqsasfzqp50uTxOsLf59nFMQ-Hmc30YpI_QoQRbhjdrxOYKTirR5gbrmmxXqhAd-SKyHhQj1qVPKUluSFiKvTA0gAGKSpQ7X1jf3Y0bslZiU1yUbT7yhCs2tColUk7eLhRbXGrPeyUsl-uM10Cq8Ar9ZGq6jjUxMqd97qpo5xzb1s_9kQlxcEgmjMwbzuas_RsNJqXqjrtU3Y6IWqXkDgJS-KqTe8sn2nLHXPGeZPI2Agq92ub6IwCbJP9ZLsu6rcJr26a0HIn3kIIUoI9cnmCoPzTc6NTj98GZLNIQA8dMWgtjvg1TpXMGZHODsjYTJElkgaGz4whRHY5sCxITWeNgHMuHAi5qE_wBPpo3SEJsQP27iymA6ygvWlNZHQCWlaJXuF1U3INQZNyZc-h5CJkD-gpYAuiLXrVyzQTg-sXA-eWUtrppv6dXAenIbE4BCkWkpL3r8MPGwYyYVWWipFfL-_PmvXJyIH-dGcnVEWItA6Pm3kQ3zBvwALTufYAvabKMdNYyVXDkiE6u9z2Pbhxgc0otvv4fbLlFrETjnCWX5kPiK1XiaOvUhhqeDLjeGabcsewKILIlVagWzrFh2IS2C-rZDZRsz0lkxZ8jDxdtVt9P5YMtD4AkTDXuHmFpnUcG2jBxBq0JuxGeuQrYJbi__81jKrWpy_RIU_5LplB4IOcgZmtA_J__VDlWFUrqGZHTOO4n_yqcxF3hNmKqY-HikBgYh_GubsZ-Jy0"><img alt="playbuttonAnnot" src="../_images/play9.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+<p>Various annotations can be added to the diagrams e.g. title, caption, header, footer…
+These annotations can include:</p>
+<ul class="simple">
+<li><p>Formatted text</p></li>
+<li><p>Creole Sprites or Stdlib Sprites can be added to these annotations per example diagram here.</p></li>
+<li><p><a class="reference external" href="https://plantuml.com/preprocessing">PlantUMLPreProcessor</a> like filename, date…</p></li>
+</ul>
+<div class="section" id="notes">
+<h2>7.1. Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>Notes can be added to diagrams.
+These can include <a class="reference external" href="https://plantuml.com/creole">https://plantuml.com/creole</a> syntax e.g. for bullets, text formatting.</p>
+<p>Creole Sprites can be added to Notes. But this causes bullets to stop working. So, it’s creole sprites or bullets but not both.</p>
+<p>Stdlib Sprites can not be added to notes.</p>
+</div>
+<div class="section" id="handwritten">
+<h2>7.2. Handwritten<a class="headerlink" href="#handwritten" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://plantuml.com/handwritten">https://plantuml.com/handwritten</a>.</p>
+<p>Handwritten gives a wavy effect to diagrams. This can be useful to differentiate between e.g. a raw proposal versus an approved proposal.
+It can be set to true or false ala <em>skinparam handwritten true</em>.</p>
+</div>
+<div class="section" id="title">
+<h2>7.3. Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h2>
+<p>Various formatting options are available per <a class="reference external" href="https://plantuml.com/commons">https://plantuml.com/commons</a>.</p>
+</div>
+<div class="section" id="footer">
+<h2>7.4. Footer<a class="headerlink" href="#footer" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://plantuml.com/commons">https://plantuml.com/commons</a>.</p>
+</div>
+<div class="section" id="comments">
+<h2>7.5. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://plantuml.com/commons">https://plantuml.com/commons</a>.</p>
+</div>
+<div class="section" id="caption">
+<h2>7.6. Caption<a class="headerlink" href="#caption" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://plantuml.com/commons">https://plantuml.com/commons</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Stdlib/StdLibOverview.html" class="btn btn-neutral float-right" title="1. PlantUML Stdlib Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../layout/layout.html" class="btn btn-neutral float-left" title="6. Layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
