@@ -18,7 +18,7 @@ Tricked Out Diagrams (aka Diagram Annotation)
 |playbuttonAnnot| Press to play around with this diagram source online.
 
 .. |playbuttonAnnot| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/ZLRzRjis4F-VJt7DriKD6ZbEstqOhj4i0Ue0pMgiBee11GAQF5k49L8WgRZUCc2liTVRa-oEagF4GO8OaFXnTx_xyJuelmjH-bYNXNYcSM4iWWjoIcl8Owp2iD_tSfqjJSphUHtGAsSZsfWfL_PFlGmvwj9OtPyMqiRF5nyENOKseAgzYHlfLMuYgbXxF3uqP1lwfGmHlNXch2fgVUEkV-hAqjcielbzuMVot9T5yO1u8hrUIu-Fg5oOe1uHVq9_XVun1HDlmOl-lW15ZD7683Aua7u39e24Cxp2WcBWmLY8ESBKErsh215bcS4dsiabAtwXgBbrWC4HJ4z1MaqFd5ZjdT5GvSvYHi2_kdc3Uo6jN7Qe9qgvcdoti9E4IafgYsIcMuZpAru6tZoVmRBUm3ftK3Ytehr5H9y0Gmf01cGmot43b2kBJDibiSMuTdu5L0Klauih8q72mdXSKrIsQkUMy4Wt4_jz8MOc5WYZxoc6by54l9nxQLL-aBqPmrVxMmjvPkJIon90YB0ojfAyoCd7sfiOqKBqDOeSfKOlHWjd8v4hd7_hKO_XY_JMsELmr6V9MCno4vg8QK-dUmQZ7-RkstYKJ8Q_aqd3PztOCPTHFmd7GWYqkdKaze6BBeZebXXpzF2NO3lkWSkbHxINUflg7gV_9Upni4VZxPJp-gOczbxiOl2kZCRPqECyaJ8FR4IvchNsJN722NVQVGXgIsCnXCkoAP4UrGmPqPjjkq9fmTf28Xph8aA1YoW03k035GJ826INrXFq23c22RmyW3ymyD8ZfJlLEd2qW474tnmkEgLHU2zW6iCgkgfNAN8--EKu6_puSpR81aTCfck25BVJzdI5hDYab3isnyq1L3kqsasfzqp50uTxOsLf59nFMQ-Hmc30YpI_QoQRbhjdrxOYKTirR5gbrmmxXqhAd-SKyHhQj1qVPKUluSFiKvTA0gAGKSpQ7X1jf3Y0bslZiU1yUbT7yhCs2tColUk7eLhRbXGrPeyUsl-uM10Cq8Ar9ZGq6jjUxMqd97qpo5xzb1s_9kQlxcEgmjMwbzuas_RsNJqXqjrtU3Y6IWqXkDgJS-KqTe8sn2nLHXPGeZPI2Agq92ub6IwCbJP9ZLsu6rcJr26a0HIn3kIIUoI9cnmCoPzTc6NTj98GZLNIQA8dMWgtjvg1TpXMGZHODsjYTJElkgaGz4whRHY5sCxITWeNgHMuHAi5qE_wBPpo3SEJsQP27iymA6ygvWlNZHQCWlaJXuF1U3INQZNyZc-h5CJkD-gpYAuiLXrVyzQTg-sXA-eWUtrppv6dXAenIbE4BCkWkpL3r8MPGwYyYVWWipFfL-_PmvXJyIH-dGcnVEWItA6Pm3kQ3zBvwALTufYAvabKMdNYyVXDkiE6u9z2Pbhxgc0otvv4fbLlFrETjnCWX5kPiK1XiaOvUhhqeDLjeGabcsewKILIlVagWzrFh2IS2C-rZDZRsz0lkxZ8jDxdtVt9P5YMtD4AkTDXuHmFpnUcG2jBxBq0JuxGeuQrYJbi__81jKrWpy_RIU_5LplB4IOcgZmtA_J__VDlWFUrqGZHTOO4n_yqcxF3hNmKqY-HikBgYh_GubsZ-Jy0
+                :target: http://www.plantuml.com/plantuml/uml/ZLRzQXj74Fz_dsBYDhLYufFb9FqGYeXhGsI86z4eX4B0h7P7kaLtkyVkdXMrAVGr-dfzaixSddInZ8q5qdxCp6z-DnzpUXEYzB4k2_54uy9O11VabCwGnrY5OR_lvJfRcfZNypgWLyv6j35JhkoVUnborAMnkZyjf8qVhzuTkmfjG5Lx4pVIgzn4LB7sU7fio3RqInaYUl74M5NKUkUkV-xAqjcielrTuKVot9T5SOzu8hrUIuyFg5oPe1uGVq1_W_uX1HEn4ul-eG15ZD7683Auadu39e242xp1WcBWmLY8ESBKErsh215bcS47kiabAtwYgBbrWC49JCz1MarVEBFQEwEXoft5Z81_TVE4UoMjN7QePqgvcdoti9C6bPJK5ibCjn2NDtmCV7avWsMzWNNke71kHNUBYBu134q0CY23MOuRe5nPPDgk4LkCQ-TNG5Nml75nOoH8M1YFQuhALktI4XxfPkAmByJCn09Xz3t5y3gOYDTpBwtAZx9NO_XiVsiXBunSUba2215MnbQI3pdvM7iJ8rg8laQHezJenMZXR2HoXVElFUenV9BU6hiSZlei6OjPRaAAcFRqT4zWzCFSVHcF6fFXxsII-AoJ7NCPzHlXM0Y1LhUEn25mqGKHtH9ZZXx-4cp7FN2zz8ZsMczJtUFqFuS3NWve_JRbVDxLnC6pVGo-bT4u6tgS9rBcXOqeLxFMFXKdd76dtOMWjZGMGxWkKudqg6R8Y7xPjYkK5gmj9CAnBY8Kk8W2u0ZUKK60Z41spNc27Y57C86FH_071Zvwf7HphNEiW274tnmiUaQZy4wuD8PLT5MlKkHwyCjfDlZnvsoG3KwOIjS2JTJEssShPCKcfTopEKtqLRkqsgdGUwRYXOEziR8q2Ywdh9UaC1ZmeTdVDfEfuUxOjOr8rFODKwFqqhBtK8tonpd5kuOsQQSdsSbBU3Vxq2MIW2Xa5BEs0qGRAGxWzTfuB3YRtjMH_ApDmfnDR_jXgDQs9KLjsQCltRzVB0W6wC1Q4rgInhPJUziDILyDiXS_PQSlYVcBkvYgSBNkDRyastRsRJqXcibtV3o6IWqXkDgJS-KqTe8sn2nLHXPGeZPI29viB2ub6IwCbRQH6hjmErbAwX2Q1HIn3kIIEwGHfnmCULOjpB9EZIH4iceqKlI6QGPriMsdsLYqt1wbc-Iioj4L8ddVdUavTlkgsmf1lyrf6_YjXy8iyyWpY0VFLjXeDZ7V4P5-grJW4gqMG9-lh-6SXnPlPfiAURt0eBofE0ZmDMd1A9W_SJWOZ4TpgLR3xtW0DfdfFgC-YsWAikhuAr_TcfRtJRsZxELkT9Ad1bLZbAO8MPP1DuX3r8MPGwYyYNWlimlfLs_PmvZp-oX-dGcnl6-kxj5im3kQzz9vxwLTufWgyL5KMdNYyV1mtcD3y8yXCwrzLJ2PBuyYqwgtRxxEsnaGmZUPiK1XiaOv-dRfGQlRGXDAfcewKoLIlVagW_stjYIS24-rZDWxsD0dkxhAj3xasyF9P5YMF2OKylY0XNEyF5sO0gqiiVSCF3b2ZnhM9kQm_HS9r5c1FJzjDxrdd-qiHvYOgFBShD3_zy-_0TxMHYD4rnaI7FzvJSyEt-IZa7w9b1LNL_pI5s-Ivly0
                 :width: 40 px
 
 Various annotations can be added to the diagrams e.g. title, caption, header, footer...
@@ -28,6 +28,16 @@ These annotations can include:
 * Creole Sprites or Stdlib Sprites can be added to these annotations per example diagram here.
 * PlantUMLPreProcessor_ like filename, date...
 
+.. tip ::
+    You can also add creole sprites or stdlib sprites to arrows.
+
+    Some examples are shown in the diagram here.
+
+
+.. note ::
+    The example diagram here shows all of these annotations in one diagram. 
+    
+    In general, "less is more", so use these annotations if/where they add value and clarity to the audience.
 
 Notes
 ===============================================================================
