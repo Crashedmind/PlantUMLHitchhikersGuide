@@ -25,6 +25,23 @@ PlantUMLStdlib_ is not so well known
 * A simple intuitive syntax makes it quick and easy to create diagrams with icons.
 
 
+Diagrams As Code
+===============================================================================
+
+PlantUML diagrams are "Diagrams as Code" in PlantUML syntax.
+
+There are many **presentation** and **drawing** tools out there. And these allow the user full control over the diagram so generally result in prettier diagrams, that can convey more information to the audience at that **point in time**.
+
+But that point in time passes, and pretty pictures can quickly become out-of-date and, ironically, misinforming if they don't match the reality of the system they are describing.
+This is especially so if one team is drawing the pretty pictures, and another team is writing the software/implementing the system.
+
+Having diagrams as code that can live beside the system code, that the stakeholders are equally comfortable editing and viewing, reduces the gap i.e. **"Where system diagrams meet system reality"**
+
+Diagrams-As-Code fits with the "Everything-as-Code" movement. 
+
+And once you have your diagram as code, you can start using that diagram code for other things e.g. automated analysis and feedback based on recognised patterns.
+
+
 Shared Lexicon of Understanding
 ===============================================================================
 
@@ -49,20 +66,6 @@ These building block icons can be used with
 #. architecture diagrams to give an overview of the building blocks and how  they are connnected
 #. :ref:`c4-label` to give static views at different levels
 #. sequence diagrams to give dynamic views at different levels
-
-
-Diagrams As Code
-===============================================================================
-
-PlantUML diagrams are "Diagrams as Code" in PlantUML syntax.
-
-There are many **presentation** and **drawing** tools out there. And these allow the user full control over the diagram so generally result in prettier diagrams, that can convey more information to the audience at that **point in time**.
-
-But that point in time passes, and pretty pictures can quickly become out-of-date and, ironically, misinforming if they don't match the reality of the system they are describing.
-This is especially so if one team is drawing the pretty pictures, and another team is writing the software/implementing the system.
-
-Having diagrams as code that can live beside the system code, that the stakeholders are equally comfortable editing and viewing, reduces the gap i.e. **"Where system diagrams meet system reality"**
-
 
 Interview with Arnaud Roques (creator of PlantUML)
 ===============================================================================
