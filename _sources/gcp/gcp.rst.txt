@@ -118,6 +118,26 @@ Connect The Icons
 In this case, we took an icon from a different stdlib library (material) and wrapped it in our template so it looks consistent with the other icons.
 
 
+.. tip ::
+        
+    We can take a sprite from any sprite library and apply a selected library styling.
+
+    In this case, we took a sprite from a different stdlib (material).
+
+    We used the macros from the GCP library to color and style the icon to match other GCP icons.
+
+    * EntityColoring("Backup")
+    * Entity("Backup", "Backup","Cron Task", "darkgrey", "ma_timer", "Backup")
+    
+    These macros can be found in  
+    https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml
+    
+    "ma_timer" is not a Google service so we don't colour it blue.
+
+    Alternatively, we could write the style at a lower level but that's more work e.g. 
+
+    'rectangle  "==Backup\n MA_TIMER(darkgreen)\n//<size:12>[Cron Task]</size>// " as Backup
+
 Play
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -127,9 +147,12 @@ Play
                 :target: http://www.plantuml.com/plantuml/uml/fLJHJ_is47xFNt6_l92VrDRQ7X5Ki0gcQUjMKH0FW2etlgPU7JkodLLiud_VnLQXBGumhLBjNEwx-yxVdNFXFBU-hLNsJU1AQeIV9xCPsR3sld6dZ5c-7LNIhzjbwz2MHdlKVbIQcaqiTsiKjTI2pHJN_cxwsr0ImWqf2QkvysYPaCvdtwGkLIjUipFQ9wQkZHurPBxtaxDfFRA9CgrONBUwz98Izw1_HxyrTYDrjGkG5hTSgSLDgz1znX7tnPMkI80UyDmRowjTGT72YCtOINQxHZ1-ZHQ20B2LIe565E0Da5W8AsjgY13dXP9BeB_bLg8xXIKlDsqpW4vYDu1IIHBPZR8JzbR96Tyw2c6Nz_CetJZfcykwKN8bKOJg4g3TkKcVFaXjbb9zYAXGe-Lg3xA7gRb7AybRna9JBYzhjBlG4qVDQxZbDQcYqJyt28rHpvsHGS9fh5yRYlEcwHHU6kz9NY4jXa61h255gKEG_oe5CFXZI-Ncy4y6zBlhL2x2Ee3ysfBOmkNq2Fdt09W4_Oku3Gvox60lsHl5bAegBL_v6E1sFDEWOX4tYkkbU4qGGVq4CBFcJpfYnn3IU5DXcAd8U7HTYYDxxhdjEC8ESxH_nGC56Bp2YFrBoKn3iTtsFrDT2a6Hj0A7s8t-J2zXFRoonQ4vY89DIB23GqOGH12bYvdsxtEnRntc-IdSKFTMM0HHddGZ4f-X8lLo4Ng1Tf371mlNzrIY9ndso7On46A8yxznH547UTo_pX353ajtiRYk50Bav-THZKSDqyl5xI_Jgvj2SBkfBAB-_gWPEtFoRppzuSVnmyGQ3RVSRPxEMFTop1Zam1t45DsOqoyrfp1yM4iXK3-9uHWImvSbtlK6nJ7hOuhW_kvaxpAbO_RKpZxm9QjC4_SKF3ww0aaj4gW3CvxXOEPZCwX6uh3aJB5_3A2-X2yhkTCTo8u_buJyHCei3WiCs_T7kY10Mwj_0G00
                 :width: 40 px
 
+
 Source
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ./gcp4.puml
     :linenos: 
     :emphasize-lines: 1
+
+

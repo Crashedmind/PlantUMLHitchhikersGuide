@@ -240,7 +240,7 @@
 <h2>4.2. PlantUML Equivalent<a class="headerlink" href="#plantuml-equivalent" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="../_images/plantuml-2338d7d6f3710630978268cbadfa2451174821e2.png" alt="&#64;startuml
+<img src="../_images/plantuml-ac583ab75dcc22f17717f5e5c46f2d23853c703c.png" alt="&#64;startuml
 !define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
 !include GCPPuml/GCPCommon.puml
 !include GCPPuml/Compute/Cloud_Functions.puml
@@ -270,8 +270,8 @@ package &quot;Kid / Owner&quot; {
 }
 
 package &quot;MinecraftClients&quot; {
-    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
     Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
 }
 
 package &quot;Minecraft Project&quot; {
@@ -318,7 +318,7 @@ Client -r-&gt; Cloud_FunctionsStop
 Users -r-&gt; Cloud_FunctionAdd
 
 
-MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+ClientMinecraft -r-&gt; Cloud_Firewall_Rules_Friend
 
 Backup -u-&gt; Compute_Engine
 &#64;enduml"/>
@@ -510,7 +510,7 @@ Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Minecraft Backups&quot;, 
 <h2>4.5. Connect The Icons<a class="headerlink" href="#connect-the-icons" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
 <p class="plantuml">
-<img src="../_images/plantuml-2338d7d6f3710630978268cbadfa2451174821e2.png" alt="&#64;startuml
+<img src="../_images/plantuml-ac583ab75dcc22f17717f5e5c46f2d23853c703c.png" alt="&#64;startuml
 !define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
 !include GCPPuml/GCPCommon.puml
 !include GCPPuml/Compute/Cloud_Functions.puml
@@ -540,8 +540,8 @@ package &quot;Kid / Owner&quot; {
 }
 
 package &quot;MinecraftClients&quot; {
-    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
     Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
 }
 
 package &quot;Minecraft Project&quot; {
@@ -588,13 +588,28 @@ Client -r-&gt; Cloud_FunctionsStop
 Users -r-&gt; Cloud_FunctionAdd
 
 
-MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+ClientMinecraft -r-&gt; Cloud_Firewall_Rules_Friend
 
 Backup -u-&gt; Compute_Engine
 &#64;enduml"/>
 </p>
 </div>
 <p>In this case, we took an icon from a different stdlib library (material) and wrapped it in our template so it looks consistent with the other icons.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We can take a sprite from any sprite library and apply a selected library styling.</p>
+<p>In this case, we took a sprite from a different stdlib (material).</p>
+<p>We used the macros from the GCP library to color and style the icon to match other GCP icons.</p>
+<ul class="simple">
+<li><p>EntityColoring(“Backup”)</p></li>
+<li><p>Entity(“Backup”, “Backup”,”Cron Task”, “darkgrey”, “ma_timer”, “Backup”)</p></li>
+</ul>
+<p>These macros can be found in
+<a class="reference external" href="https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml">https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml</a></p>
+<p>“ma_timer” is not a Google service so we don’t colour it blue.</p>
+<p>Alternatively, we could write the style at a lower level but that’s more work e.g.</p>
+<p>‘rectangle  “==Backupn MA_TIMER(darkgreen)n//&lt;size:12&gt;[Cron Task]&lt;/size&gt;// ” as Backup</p>
+</div>
 <div class="section" id="id3">
 <h3>4.5.1. Play<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/fLJHJ_is47xFNt6_l92VrDRQ7X5Ki0gcQUjMKH0FW2etlgPU7JkodLLiud_VnLQXBGumhLBjNEwx-yxVdNFXFBU-hLNsJU1AQeIV9xCPsR3sld6dZ5c-7LNIhzjbwz2MHdlKVbIQcaqiTsiKjTI2pHJN_cxwsr0ImWqf2QkvysYPaCvdtwGkLIjUipFQ9wQkZHurPBxtaxDfFRA9CgrONBUwz98Izw1_HxyrTYDrjGkG5hTSgSLDgz1znX7tnPMkI80UyDmRowjTGT72YCtOINQxHZ1-ZHQ20B2LIe565E0Da5W8AsjgY13dXP9BeB_bLg8xXIKlDsqpW4vYDu1IIHBPZR8JzbR96Tyw2c6Nz_CetJZfcykwKN8bKOJg4g3TkKcVFaXjbb9zYAXGe-Lg3xA7gRb7AybRna9JBYzhjBlG4qVDQxZbDQcYqJyt28rHpvsHGS9fh5yRYlEcwHHU6kz9NY4jXa61h255gKEG_oe5CFXZI-Ncy4y6zBlhL2x2Ee3ysfBOmkNq2Fdt09W4_Oku3Gvox60lsHl5bAegBL_v6E1sFDEWOX4tYkkbU4qGGVq4CBFcJpfYnn3IU5DXcAd8U7HTYYDxxhdjEC8ESxH_nGC56Bp2YFrBoKn3iTtsFrDT2a6Hj0A7s8t-J2zXFRoonQ4vY89DIB23GqOGH12bYvdsxtEnRntc-IdSKFTMM0HHddGZ4f-X8lLo4Ng1Tf371mlNzrIY9ndso7On46A8yxznH547UTo_pX353ajtiRYk50Bav-THZKSDqyl5xI_Jgvj2SBkfBAB-_gWPEtFoRppzuSVnmyGQ3RVSRPxEMFTop1Zam1t45DsOqoyrfp1yM4iXK3-9uHWImvSbtlK6nJ7hOuhW_kvaxpAbO_RKpZxm9QjC4_SKF3ww0aaj4gW3CvxXOEPZCwX6uh3aJB5_3A2-X2yhkTCTo8u_buJyHCei3WiCs_T7kY10Mwj_0G00"><img alt="playbutton_gcp4" src="../_images/play10.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
@@ -712,8 +727,8 @@ package &quot;Kid / Owner&quot; {
 }
 
 package &quot;MinecraftClients&quot; {
-    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
     Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
 }
 
 package &quot;Minecraft Project&quot; {
@@ -760,7 +775,7 @@ Client -r-&gt; Cloud_FunctionsStop
 Users -r-&gt; Cloud_FunctionAdd
 
 
-MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+ClientMinecraft -r-&gt; Cloud_Firewall_Rules_Friend
 
 Backup -u-&gt; Compute_Engine
 @enduml
