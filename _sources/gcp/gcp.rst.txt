@@ -122,7 +122,7 @@ In this case, we took an icon from a different stdlib library (material) and wra
         
     We can take a sprite from any sprite library and apply a selected library styling.
 
-    In this case, we took a sprite from a different stdlib (material).
+    In this case, we took a sprite "ma_timer" from a different stdlib (material).
 
     We used the macros from the GCP library to color and style the icon to match other GCP icons.
 
@@ -144,7 +144,7 @@ Play
 |playbutton_gcp4| Press to play around with this diagram source online.
 
 .. |playbutton_gcp4| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/fLJHJ_is47xFNt6_l92VrDRQ7X5Ki0gcQUjMKH0FW2etlgPU7JkodLLiud_VnLQXBGumhLBjNEwx-yxVdNFXFBU-hLNsJU1AQeIV9xCPsR3sld6dZ5c-7LNIhzjbwz2MHdlKVbIQcaqiTsiKjTI2pHJN_cxwsr0ImWqf2QkvysYPaCvdtwGkLIjUipFQ9wQkZHurPBxtaxDfFRA9CgrONBUwz98Izw1_HxyrTYDrjGkG5hTSgSLDgz1znX7tnPMkI80UyDmRowjTGT72YCtOINQxHZ1-ZHQ20B2LIe565E0Da5W8AsjgY13dXP9BeB_bLg8xXIKlDsqpW4vYDu1IIHBPZR8JzbR96Tyw2c6Nz_CetJZfcykwKN8bKOJg4g3TkKcVFaXjbb9zYAXGe-Lg3xA7gRb7AybRna9JBYzhjBlG4qVDQxZbDQcYqJyt28rHpvsHGS9fh5yRYlEcwHHU6kz9NY4jXa61h255gKEG_oe5CFXZI-Ncy4y6zBlhL2x2Ee3ysfBOmkNq2Fdt09W4_Oku3Gvox60lsHl5bAegBL_v6E1sFDEWOX4tYkkbU4qGGVq4CBFcJpfYnn3IU5DXcAd8U7HTYYDxxhdjEC8ESxH_nGC56Bp2YFrBoKn3iTtsFrDT2a6Hj0A7s8t-J2zXFRoonQ4vY89DIB23GqOGH12bYvdsxtEnRntc-IdSKFTMM0HHddGZ4f-X8lLo4Ng1Tf371mlNzrIY9ndso7On46A8yxznH547UTo_pX353ajtiRYk50Bav-THZKSDqyl5xI_Jgvj2SBkfBAB-_gWPEtFoRppzuSVnmyGQ3RVSRPxEMFTop1Zam1t45DsOqoyrfp1yM4iXK3-9uHWImvSbtlK6nJ7hOuhW_kvaxpAbO_RKpZxm9QjC4_SKF3ww0aaj4gW3CvxXOEPZCwX6uh3aJB5_3A2-X2yhkTCTo8u_buJyHCei3WiCs_T7kY10Mwj_0G00
+                :target: http://www.plantuml.com/plantuml/uml/fLLHRzis47xNhxZg9IfWXzWUWzHe9ZJ3i7aBwXHzQ0k35Yyo5ueKI6f6DlI_xqH6TcHJHeOPi2Zolhll-1rFVEyyjxvhLFP6u8FK23-NTtSqXwtthRjYpFBTPItzjjjq3crbj4VjBolJiD9ojqNHI2tOdUBQVrh-DfU4S7CAmXhkF5ecfFFP6wahrObzT4PZQPh6wCkMfgTsChQTHrOgqudrRQShBodm1Fftz3jZ7wMk1mTfSSULMd_i5Bhp7CEu_g1h4c02lFB6ydf8ACwUiHcxoEwt2CPlqK8G07PIAT280hm14WlXmPhc6UAyK783zBVSIdHNiE7LOzVEe9VOpQ1IaaHsbza5EsHopNUENDZDvrMKRf6qhMJJAlaWKOJi4g1XtwJF5AGn6wdE8chKQBbw0Nc1QRX7AybQnKHJ9YyRj8FhXQFYjTpoXbJHw9zQXDQeftwIGS9ehDyQylEcxHNU6Ez9NY4jXeC2MKkAKeKW_rKAOF37ZjBDuPyCwFUfLxa8pndajvR45YwdLyZV1a0Pz2_YC1l5663VimF5ahAgB7_mqS4HpscOFOW2lEHQ1gcBE4JRD07SMVCdRR5d2DxUr1ZEL6GyQfVYQBxotFRyOOGLsh_YXW8CzZ1YVrKmqv9lF_pFK3T2a2SzWKEindIax-4vRjbYF9r5mKeIRBJ92888ed0XqgYVYz5i5EUdqA7ka5W4KPna8LAVeIArk0wrG3lBdr_WzZEbwAt45sI33mGVulnl757KMHx7rpD4iSFZOhWFubtmcWjWeynck0MSwMo5Hv_z6BXlMQvhXG3vktTHvwyQbZVh-r-M7puMWjl7sYBgjryrOzTE_erNF_ou-59Qe-6UkyTlrwnVN306EN07CSGXTTghz4-bKSPANHTvjDCM3yRzuWpsR_cUe5zzpkAfVs_uEdoz3kZOh_HBDHpClsob4AY_YVa24bsK9TREEL6dJ355yFGnoquYHPypnoOxOqjccIQUI7XnrCifBHAeyJJkOTIyiHYK8t5OCgROpmEeBk6A87Ew0jdHXpq2pocPnTC2y-vqH-y9G3tnBm00
                 :width: 40 px
 
 

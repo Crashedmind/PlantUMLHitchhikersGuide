@@ -3,7 +3,7 @@
 
 
 ******************************************************
-Procedures
+Procedures and Keyword Arguments
 ******************************************************
 
 
@@ -15,9 +15,6 @@ Procedures
 .. _MigrationNotes: https://plantuml.com/preprocessing#ajlk3nchu0zkka0ybjng
 .. _DefaultArgumentValue: https://plantuml.com/preprocessing#ae1b47605326b65f
 
-
-.. todo :: 
-    add keyword arguments section
 
 Defines Are Deprecated
 ===============================================================================
@@ -57,18 +54,25 @@ Per DefaultArgumentValue_, "In both procedure and return functions, you can defi
     :linenos: 
     :emphasize-lines: 2,6,7
 
-.. note ::
-    There is also `dynamic invocation <https://plantuml.com/en/preprocessing#mr9qytp1zez3ka0ybjov>`__ which may be useful. 
-    I think of this as like C function pointers which are very useful.
-
-
 
 
 Keyword Arguments
 ===============================================================================
 
+Current macros are polymorphic e.g. macros are defined twich with a different number of arguments.
+
+However, the ordering of the arguments is hardcoded e.g. first parameter is "alias".
+
+This has a number of issues:
+
+#. if the user wants to specify the 5th parameter only, they need to specify the first 4 also.
+#. if we want to add new parameters in the future, then we need to add them at the end - adding maybe more macros to do so.
+
+Keyword Arguments allow the user to specify what they care about, and the procedure uses defaults for other parameters.
+It also gives extensibility.
 
 
+See :ref:`Step-by-step Towards A Standard Macro` for the under-the-hood work that led towards the following release.
 
 https://plantuml.com/news
 *17 May, 2020: Use keyword arguments with the preprocessor (V1.2020.10). (Thanks to Crashedmind for the suggestion !)*

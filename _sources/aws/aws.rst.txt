@@ -446,8 +446,6 @@ Source
 
 
 
-.. todo ::
-    finish aws 3 diagram - add boundaries/containers
     
 Draw Boxes with Procedures
 -------------------------------------------------------------------------------
