@@ -101,6 +101,21 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Google Cloud Platform‎</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#original">4.1. Original</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#plantuml-equivalent">4.2. PlantUML Equivalent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-icons">4.3. Find icons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#play">4.3.1. Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source">4.3.2. Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gather-the-icons-we-need">4.4. Gather the icons we need</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">4.4.1. Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">4.4.2. Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#connect-the-icons">4.5. Connect The Icons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4.5.1. Play</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">4.5.2. Source</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../C4/c4acme.html">5. Using C4 To Architect ACME Global Widget Production</a></li>
@@ -208,20 +223,549 @@
 <h1>4. Google Cloud Platform‎<a class="headerlink" href="#google-cloud-platform" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this section we’ll look at a Google Cloud Platform‎ icon set todo</p>
+<p>In this section we’ll look at a Google Cloud Platform‎ icon set <a class="reference external" href="https://github.com/Crashedmind/PlantUML-icons-GCP">https://github.com/Crashedmind/PlantUML-icons-GCP</a>.</p>
 <p>PlantUML will access it directly from this repository (It is not part of PlantUML Stdlib.)</p>
-<p>This is type todo per xxx</p>
-<p>The original icon set is from <a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a>.</p>
+<p>This a Type 2 PlantUML stdlib per <a class="reference internal" href="../Stdlib/StdLibOverview.html#plantuml-stdlib-overview"><span class="std std-ref">PlantUML Stdlib Overview</span></a>:</p>
+<p>The original icon set is from <a class="reference external" href="https://cloud.google.com/icons">https://cloud.google.com/icons</a> (which says “<em>We are currently in the process of updating our product icon set</em>.”)</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="original">
 <h2>4.1. Original<a class="headerlink" href="#original" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="../_images/Minecraft_Blog_Arch-1.png" src="../_images/Minecraft_Blog_Arch-1.png" />
+</div>
+<p>This diagram is from <a class="reference external" href="https://cloud.google.com/blog/products/gcp/brick-by-brick-learn-gcp-by-setting-up-a-minecraft-server">https://cloud.google.com/blog/products/gcp/brick-by-brick-learn-gcp-by-setting-up-a-minecraft-server</a></p>
 </div>
 <div class="section" id="plantuml-equivalent">
 <h2>4.2. PlantUML Equivalent<a class="headerlink" href="#plantuml-equivalent" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p>add GCP diagrams</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-2338d7d6f3710630978268cbadfa2451174821e2.png" alt="&#64;startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/'
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+'/
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+
+!include &lt;material/common&gt;
+!include &lt;material/timer.puml&gt;
+
+'skinparam linetype polyline
+ skinparam linetype ortho
+
+'top to bottom direction 
+package &quot;Kid / Owner&quot; {
+    Users(Users, &quot;Friends&quot;, &quot; &quot;)
+    Client(Client, &quot;Kid / Owner&quot;, &quot; &quot;)
+}
+
+package &quot;MinecraftClients&quot; {
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
+    Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+}
+
+package &quot;Minecraft Project&quot; {
+
+    together {
+    Cloud_Functions(Cloud_FunctionsStart, &quot;Start Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionsStop, &quot;Stop Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionAdd, &quot;Add a Friend&quot;, &quot;Cloud Functions&quot;)
+    }
+    Compute_Engine(Compute_Engine, &quot;MineCraft Server&quot;, &quot;Compute Engine&quot;)
+
+    Cloud_Storage(Cloud_Storage, &quot;MineCraft Backups&quot;, &quot;Cloud Storage&quot;)
+
+    together {
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,&quot;Starter FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Friend FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    }
+    
+    'https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml
+    'rectangle  &quot;==Backup\n MA_TIMER(darkgreen)\n//&lt;size:12&gt;[Cron Task]&lt;/size&gt;// &quot; as Backup
+    
+    EntityColoring(&quot;Backup&quot;)
+    Entity(&quot;Backup&quot;, &quot;Backup&quot;,&quot;Cron Task&quot;, &quot;darkgrey&quot;, &quot;ma_timer&quot;, &quot;Backup&quot;)
+}
+
+
+
+
+Cloud_FunctionsStart -[hidden]d-&gt; Cloud_FunctionsStop
+Cloud_FunctionsStop -[hidden]d-&gt; Cloud_FunctionAdd
+
+Cloud_FunctionsStart -d-&gt; Cloud_Firewall_Rules_Starter
+Cloud_FunctionAdd -d-&gt; Cloud_Firewall_Rules_Friend
+Cloud_Firewall_Rules_Friend -[hidden]d-&gt; Cloud_Firewall_Rules_Starter
+
+Cloud_FunctionsStart -&gt; Compute_Engine
+Cloud_FunctionsStop -&gt; Compute_Engine
+Compute_Engine -d-&gt; Cloud_Storage
+
+
+
+Client -r-&gt; Cloud_FunctionsStart
+Client -r-&gt; Cloud_FunctionsStop
+Users -r-&gt; Cloud_FunctionAdd
+
+
+MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+
+Backup -u-&gt; Compute_Engine
+&#64;enduml"/>
+</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The icons could be put into coloured boxes as shown in <a class="reference internal" href="../aws/aws.html#create-real-life-aws-diagrams"><span class="std std-ref">Create Real Life AWS Diagrams</span></a></p>
+</div>
+</div>
+<div class="section" id="find-icons">
+<h2>4.3. Find icons<a class="headerlink" href="#find-icons" title="Permalink to this headline">¶</a></h2>
+<p>We can see all the GCP icons here: <a class="reference external" href="https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/Symbols.md">https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/Symbols.md</a>.</p>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-dd68daa6bf8ab0468d42fc32229ba488e948cbfa.png" alt="&#64;startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+
+!include GCPPuml/AI_and_Machine_Learning/all.puml
+!include GCPPuml/API_Management/all.puml
+!include GCPPuml/Compute/all.puml
+!include GCPPuml/Databases/all.puml
+
+listsprites
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="play">
+<h3>4.3.1. Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/VO_1QWCn34Jl_eha0xAwzvIoXH98O2yzByfQNGjisLWo_VqA2iqXa9COyMQaEQjXjr5oE4RwPg73vxmihW_9hEaRGCUVQMTBupwK-bR5I6pQQe6veoQAXIN2ab7iwtOziHDwyX0eg4OT8gk58ykMH_nF1vzpBQNAr5o6P-3zigB4zOPRyg_MAs4NbXqmvp_BisEvE2wuKo6n5w0VRiFe1V61XdTKqWSJilVGrjb8mvaa-l8N"><img alt="playbutton_gcp1" src="../_images/play10.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="source">
+<h3>4.3.2. Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+
+!include GCPPuml/AI_and_Machine_Learning/all.puml
+!include GCPPuml/API_Management/all.puml
+!include GCPPuml/Compute/all.puml
+!include GCPPuml/Databases/all.puml
+
+listsprites
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="gather-the-icons-we-need">
+<h2>4.4. Gather the icons we need<a class="headerlink" href="#gather-the-icons-we-need" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the GCP icons, we need:</p>
+<ul>
+<li><p>users, clients, mobile icons; we can use the awslib for these</p></li>
+<li><p>timer: we can use material stdlib for these</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>I used <a class="reference internal" href="../github/githubFileFinder.html#github-file-finder"><span class="std std-ref">GitHub File Finder</span></a> to search for “timer”</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-09f05e8e45b384a79a6c6693c8623f7dbc5c4ca9.png" alt="&#64;startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/'
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+'/
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+
+
+Users(Users, &quot;Friends&quot;, &quot; &quot;)
+Mobile(Mobile, &quot;&quot;, &quot; &quot;)
+Client(Client, &quot;Kid / Owner&quot;, &quot; &quot;)
+Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+
+Cloud_Functions(Cloud_FunctionsStart, &quot;Start Server&quot;, &quot;Cloud Functions&quot;)
+Cloud_Functions(Cloud_FunctionsStop, &quot;Stop Server&quot;, &quot;Cloud Functions&quot;)
+Cloud_Functions(Cloud_FunctionAdd, &quot;Add a Friend&quot;, &quot;Cloud Functions&quot;)
+
+Compute_Engine(Compute_Engine, &quot;MineCraft Server&quot;, &quot;Compute Engine&quot;)
+
+Cloud_Storage(Cloud_Storage, &quot;MineCraft Backups&quot;, &quot;Cloud Storage&quot;)
+
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,&quot;Minecraft Backups&quot;, &quot;Cloud Firewall Rules&quot;)
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Minecraft Backups&quot;, &quot;Cloud Firewall Rules&quot;)
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="id1">
+<h3>4.4.1. Play<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/fPDHRnCn3CVVyocylkoGkkPzGcZZn7Y0GaMPUApIYzjQooMdnCTzVTnatTfnPI0gzLmxV__g_EMxIMmYzwrJ5nOtv14-rek5vB1ZxjArrj4Ciotnhb_t2MCJFAFdMHDQNKUJTcXRybOldF5yF_zyHQ98LmBHhKcCKLjAh2x8DwwtJtGjiGvj6_oia_JtSpdiUaPTkz3RrLtl6oO1dr5_GHv2V22_FJHGnC4uj_hMEqol_KU9gmz-InxFY9SSejaU1YhPerRfI_LzXn1uXn6o0J2GS-0HBN00CGjX4qFxA4bi7Qr1lj54mdGDQzCyzDqKzXQdAJIEq7EQgKlzFCbRCoHfqRS_biMwTwDdIsexHnj2cwSR4HtkBVwSaxHXJUwFYYrwZCOTIPIwtqzVvUSK9dUHqDiqaPymUQFc6LcL8BL3lSvthKgGsYUoeE7h8FXHoPmyDj5i-8YXNgn9zI9ViebxVOwmnFYpmBCCdcH2UXKKkZr7mdzWRgsLBdc2WUBIE4MTRcPrcahBN48jNfpSgOYWY3BbU6Mha-o4yJulONgUfOWoO-orgiQAg-mnnca6D-FWGmla5k7_FRxuzMzq-Tn8aspfBm00"><img alt="playbutton_gcp2" src="../_images/play10.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id2">
+<h3>4.4.2. Source<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="highlight"><pre><span></span>@startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/&#39;
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+&#39;/
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+
+
+Users(Users, &quot;Friends&quot;, &quot; &quot;)
+Mobile(Mobile, &quot;&quot;, &quot; &quot;)
+Client(Client, &quot;Kid / Owner&quot;, &quot; &quot;)
+Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+
+Cloud_Functions(Cloud_FunctionsStart, &quot;Start Server&quot;, &quot;Cloud Functions&quot;)
+Cloud_Functions(Cloud_FunctionsStop, &quot;Stop Server&quot;, &quot;Cloud Functions&quot;)
+Cloud_Functions(Cloud_FunctionAdd, &quot;Add a Friend&quot;, &quot;Cloud Functions&quot;)
+
+Compute_Engine(Compute_Engine, &quot;MineCraft Server&quot;, &quot;Compute Engine&quot;)
+
+Cloud_Storage(Cloud_Storage, &quot;MineCraft Backups&quot;, &quot;Cloud Storage&quot;)
+
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,&quot;Minecraft Backups&quot;, &quot;Cloud Firewall Rules&quot;)
+Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Minecraft Backups&quot;, &quot;Cloud Firewall Rules&quot;)
+@enduml
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="connect-the-icons">
+<h2>4.5. Connect The Icons<a class="headerlink" href="#connect-the-icons" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<p class="plantuml">
+<img src="../_images/plantuml-2338d7d6f3710630978268cbadfa2451174821e2.png" alt="&#64;startuml
+!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/'
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+'/
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+
+!include &lt;material/common&gt;
+!include &lt;material/timer.puml&gt;
+
+'skinparam linetype polyline
+ skinparam linetype ortho
+
+'top to bottom direction 
+package &quot;Kid / Owner&quot; {
+    Users(Users, &quot;Friends&quot;, &quot; &quot;)
+    Client(Client, &quot;Kid / Owner&quot;, &quot; &quot;)
+}
+
+package &quot;MinecraftClients&quot; {
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
+    Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+}
+
+package &quot;Minecraft Project&quot; {
+
+    together {
+    Cloud_Functions(Cloud_FunctionsStart, &quot;Start Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionsStop, &quot;Stop Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionAdd, &quot;Add a Friend&quot;, &quot;Cloud Functions&quot;)
+    }
+    Compute_Engine(Compute_Engine, &quot;MineCraft Server&quot;, &quot;Compute Engine&quot;)
+
+    Cloud_Storage(Cloud_Storage, &quot;MineCraft Backups&quot;, &quot;Cloud Storage&quot;)
+
+    together {
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,&quot;Starter FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Friend FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    }
+    
+    'https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml
+    'rectangle  &quot;==Backup\n MA_TIMER(darkgreen)\n//&lt;size:12&gt;[Cron Task]&lt;/size&gt;// &quot; as Backup
+    
+    EntityColoring(&quot;Backup&quot;)
+    Entity(&quot;Backup&quot;, &quot;Backup&quot;,&quot;Cron Task&quot;, &quot;darkgrey&quot;, &quot;ma_timer&quot;, &quot;Backup&quot;)
+}
+
+
+
+
+Cloud_FunctionsStart -[hidden]d-&gt; Cloud_FunctionsStop
+Cloud_FunctionsStop -[hidden]d-&gt; Cloud_FunctionAdd
+
+Cloud_FunctionsStart -d-&gt; Cloud_Firewall_Rules_Starter
+Cloud_FunctionAdd -d-&gt; Cloud_Firewall_Rules_Friend
+Cloud_Firewall_Rules_Friend -[hidden]d-&gt; Cloud_Firewall_Rules_Starter
+
+Cloud_FunctionsStart -&gt; Compute_Engine
+Cloud_FunctionsStop -&gt; Compute_Engine
+Compute_Engine -d-&gt; Cloud_Storage
+
+
+
+Client -r-&gt; Cloud_FunctionsStart
+Client -r-&gt; Cloud_FunctionsStop
+Users -r-&gt; Cloud_FunctionAdd
+
+
+MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+
+Backup -u-&gt; Compute_Engine
+&#64;enduml"/>
+</p>
+</div>
+<p>In this case, we took an icon from a different stdlib library (material) and wrapped it in our template so it looks consistent with the other icons.</p>
+<div class="section" id="id3">
+<h3>4.5.1. Play<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/fLJHJ_is47xFNt6_l92VrDRQ7X5Ki0gcQUjMKH0FW2etlgPU7JkodLLiud_VnLQXBGumhLBjNEwx-yxVdNFXFBU-hLNsJU1AQeIV9xCPsR3sld6dZ5c-7LNIhzjbwz2MHdlKVbIQcaqiTsiKjTI2pHJN_cxwsr0ImWqf2QkvysYPaCvdtwGkLIjUipFQ9wQkZHurPBxtaxDfFRA9CgrONBUwz98Izw1_HxyrTYDrjGkG5hTSgSLDgz1znX7tnPMkI80UyDmRowjTGT72YCtOINQxHZ1-ZHQ20B2LIe565E0Da5W8AsjgY13dXP9BeB_bLg8xXIKlDsqpW4vYDu1IIHBPZR8JzbR96Tyw2c6Nz_CetJZfcykwKN8bKOJg4g3TkKcVFaXjbb9zYAXGe-Lg3xA7gRb7AybRna9JBYzhjBlG4qVDQxZbDQcYqJyt28rHpvsHGS9fh5yRYlEcwHHU6kz9NY4jXa61h255gKEG_oe5CFXZI-Ncy4y6zBlhL2x2Ee3ysfBOmkNq2Fdt09W4_Oku3Gvox60lsHl5bAegBL_v6E1sFDEWOX4tYkkbU4qGGVq4CBFcJpfYnn3IU5DXcAd8U7HTYYDxxhdjEC8ESxH_nGC56Bp2YFrBoKn3iTtsFrDT2a6Hj0A7s8t-J2zXFRoonQ4vY89DIB23GqOGH12bYvdsxtEnRntc-IdSKFTMM0HHddGZ4f-X8lLo4Ng1Tf371mlNzrIY9ndso7On46A8yxznH547UTo_pX353ajtiRYk50Bav-THZKSDqyl5xI_Jgvj2SBkfBAB-_gWPEtFoRppzuSVnmyGQ3RVSRPxEMFTop1Zam1t45DsOqoyrfp1yM4iXK3-9uHWImvSbtlK6nJ7hOuhW_kvaxpAbO_RKpZxm9QjC4_SKF3ww0aaj4gW3CvxXOEPZCwX6uh3aJB5_3A2-X2yhkTCTo8u_buJyHCei3WiCs_T7kY10Mwj_0G00"><img alt="playbutton_gcp4" src="../_images/play10.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+</div>
+<div class="section" id="id4">
+<h3>4.5.2. Source<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll">@startuml
+</span>!define GCPPuml https://raw.githubusercontent.com/Crashedmind/PlantUML-icons-GCP/master/dist
+!include GCPPuml/GCPCommon.puml
+!include GCPPuml/Compute/Cloud_Functions.puml
+!include GCPPuml/Networking/Cloud_Firewall_Rules.puml
+!include GCPPuml/Compute/Compute_Engine.puml
+!include GCPPuml/Storage/Cloud_Storage.puml
+
+/&#39;
+The other icons will need to come from other stdlib libraries: backup, users, clients.
+&#39;/
+!include &lt;awslib/AWSCommon&gt;
+!include &lt;awslib/AWSSimplified.puml&gt;
+!include &lt;awslib/Compute/all.puml&gt;
+!include &lt;awslib/mobile/all.puml&gt;
+!include &lt;awslib/general/all.puml&gt;
+
+!include &lt;material/common&gt;
+!include &lt;material/timer.puml&gt;
+
+&#39;skinparam linetype polyline
+ skinparam linetype ortho
+
+&#39;top to bottom direction 
+package &quot;Kid / Owner&quot; {
+    Users(Users, &quot;Friends&quot;, &quot; &quot;)
+    Client(Client, &quot;Kid / Owner&quot;, &quot; &quot;)
+}
+
+package &quot;MinecraftClients&quot; {
+    Mobile(Mobile, &quot;&quot;, &quot; &quot;)
+    Client(ClientMinecraft, &quot;&quot;, &quot; &quot;)
+}
+
+package &quot;Minecraft Project&quot; {
+
+    together {
+    Cloud_Functions(Cloud_FunctionsStart, &quot;Start Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionsStop, &quot;Stop Server&quot;, &quot;Cloud Functions&quot;)
+    Cloud_Functions(Cloud_FunctionAdd, &quot;Add a Friend&quot;, &quot;Cloud Functions&quot;)
+    }
+    Compute_Engine(Compute_Engine, &quot;MineCraft Server&quot;, &quot;Compute Engine&quot;)
+
+    Cloud_Storage(Cloud_Storage, &quot;MineCraft Backups&quot;, &quot;Cloud Storage&quot;)
+
+    together {
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Starter,&quot;Starter FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    Cloud_Firewall_Rules(Cloud_Firewall_Rules_Friend,&quot;Friend FW Entries&quot;, &quot;Cloud Firewall Rules&quot;)
+    }
+    
+    &#39;https://github.com/Crashedmind/PlantUML-icons-GCP/blob/master/source/GCPCommon.puml
+    &#39;rectangle  &quot;==Backup\n MA_TIMER(darkgreen)\n//&lt;size:12&gt;[Cron Task]&lt;/size&gt;// &quot; as Backup
+    
+    EntityColoring(&quot;Backup&quot;)
+    Entity(&quot;Backup&quot;, &quot;Backup&quot;,&quot;Cron Task&quot;, &quot;darkgrey&quot;, &quot;ma_timer&quot;, &quot;Backup&quot;)
+}
+
+
+
+
+Cloud_FunctionsStart -[hidden]d-&gt; Cloud_FunctionsStop
+Cloud_FunctionsStop -[hidden]d-&gt; Cloud_FunctionAdd
+
+Cloud_FunctionsStart -d-&gt; Cloud_Firewall_Rules_Starter
+Cloud_FunctionAdd -d-&gt; Cloud_Firewall_Rules_Friend
+Cloud_Firewall_Rules_Friend -[hidden]d-&gt; Cloud_Firewall_Rules_Starter
+
+Cloud_FunctionsStart -&gt; Compute_Engine
+Cloud_FunctionsStop -&gt; Compute_Engine
+Compute_Engine -d-&gt; Cloud_Storage
+
+
+
+Client -r-&gt; Cloud_FunctionsStart
+Client -r-&gt; Cloud_FunctionsStop
+Users -r-&gt; Cloud_FunctionAdd
+
+
+MinecraftClients -r-&gt; Cloud_Firewall_Rules_Friend
+
+Backup -u-&gt; Compute_Engine
+@enduml
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
 </div>

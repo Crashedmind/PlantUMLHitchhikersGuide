@@ -36,6 +36,7 @@ We can specify a connection direction as follows and this affects the diagram la
     ``-right->`` or ``-r->``, "horizontal left to right"
     ``--norank]>``, "make a connection less important"
     ``--[hidden]>``, "hidden"
+    ``-[hidden]d->``, "hidden with direction e.g. down"
     ``--->`` or ``---->`` or ``----->`` ... , "varying arrow lengths; add dashes to make line longer"
 
 .. tip ::

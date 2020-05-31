@@ -81,7 +81,8 @@ These are recent diagrams (April, May 2020) so use the newer AWS icon set from A
 
 ref: https://github.com/awslabs/aws-icons-for-plantuml
 
- 
+We can see all the icons here: https://github.com/awslabs/aws-icons-for-plantuml/blob/master/AWSSymbols.md
+
 Find Icons
 -------------------------------------------------------------------------------
 
