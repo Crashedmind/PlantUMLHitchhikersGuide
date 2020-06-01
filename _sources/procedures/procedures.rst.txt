@@ -59,7 +59,7 @@ Per DefaultArgumentValue_, "In both procedure and return functions, you can defi
 Keyword Arguments
 ===============================================================================
 
-Current macros are polymorphic e.g. macros are defined twich with a different number of arguments.
+Current macros are polymorphic e.g. macros are defined twice with a different number of arguments.
 
 However, the ordering of the arguments is hardcoded e.g. first parameter is "alias".
 

@@ -476,7 +476,7 @@ footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s
 <h3>5.1.2. C4 ACME Container<a class="headerlink" href="#c4-acme-container" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center" id="id10">
 <p class="plantuml">
-<img src="../_images/plantuml-55cd9a67b21b7c6988b1f0092a6821be907fc5e6.png" alt="&#64;startuml
+<img src="../_images/plantuml-fb5c6b2cf48ae182a7d12859514a8750959384c8.png" alt="&#64;startuml
 !include  &lt;C4/C4_Context.puml&gt;
 !include  &lt;C4/C4_Container.puml&gt;
 !include &lt;office/Users/user.puml&gt;
@@ -490,7 +490,7 @@ title Container Diagram for ACME Widget Workstation
 
 
 System_Boundary(WorkStation, &quot;Workstation&quot;) {
-    Person(VfiOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
+    Person(AcmeOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
 
     System(WorkStationPC, &quot;WorkStation PC&quot;, &quot;Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system&quot;)    
 
@@ -501,7 +501,7 @@ System_Boundary(WorkStation, &quot;Workstation&quot;) {
     System(UnitN, &quot;UnitN&quot;, &quot;Widget N&quot;)    
 }
 
-Rel_R(VfiOperator, WorkStationPC, &quot;Checks Production status&quot;)
+Rel_R(AcmeOperator, WorkStationPC, &quot;Checks Production status&quot;)
 Rel_D(WorkStationPC, Hub, &quot;Drive Production and Info Retrieval&quot;)
 Rel(Hub, Unit1, &quot;Connect&quot;)
 Rel(Hub, Unit2, &quot;Connect&quot;)
@@ -514,7 +514,7 @@ footer %filename() rendered with PlantUML version %version()\nThe Hitchhiker’s
 </div>
 <div class="section" id="id1">
 <h4>5.1.2.1. Play<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/TL7jQY8z5FwVgpYll0M5RgNIdrBQ7QKM_12hAmi5IITdEi6OI796jomBUnjxUtibUsOStN5myqCpUJxoF2SFWQIdR6F4Vzh69bC8q8tksj7TAdAMy1lTR1czlmnBRT7N2LsN93h6zYAW3-qid1XY-FXrifYlbi_pmMhOV-gFUysM26jjjzBB3QJIghtNH6WXaIQW488q6OJJNT3JyZtd9ix3OpJgmrAhToHOEh_cAgIT1S7hvICGRbQVNMQLz1_D77yvuDVGgB0RBVWkWDUKqphR_9BeoHQz9EUluRW3rdJ_pwlSmwk5YVqKDE5VU9yws7gdiXX3cQW1BL7u7f9K0qmZjgjympHgy4dFwntBAKMO5bu5nhPi6cxuNZxTQSMK156zoNWDvC2L6N82ZybYJ24_Zz6IbwPg5OeaN9ZNMRP1ziRtysyUusGooWpfhS6oKBWWN5XDjwmf_dDn-Hgt9RT6xPJKJeNQkKmTbzHnXJekgJ-4cA5PpSxVgZxWACLu7SxwCvfnZKBTgxy8rpy-GbKahO9dcpYO8NcDEsaE1eUXbGCu3gqETVuDZSyWaJX7wE4gqGQjt62p1HwjGeyAzffIc1ffQJ4QmWvzo8DTbPjcwzNEKuI1fZXDzHhzxv-_0ZnbMY6GEmd50_jb6_C7"><img alt="playbuttonc4acme2" src="../_images/play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
+<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/TL7lQXf14F--Jp6L1XJIX4W-Xf3qb1ZmZnX52W7PtCxb5lTsPNTE6qgXhz7NwvDqxZpjUTZze7lx-pE_cNa893tbcH6Vj8rDhX3WBhgzZcvNaRE4t-bgm-ZzULXgYxv9k7D9ecEyNWJquJeFHuOOFdwRBEQhvVDyi1hsd_hZNhiZmbhRZVGoWrHQjVEQ22qaqWGKGf0cWt2i1JqjtmjkuZmyHgC-BBLwHuAbysjkXRIp8FYyV0J2RFNLvLP9_z4ky9SzVWcj6hlLWHy2-4mvhRFjnpZ3oGQz9ESluN035jrzBdgvXrSB4_ibQC9_y2vriF5EvJ66Ab8BEg8qtaUf9vX6R5VxXcdKufUUrrkMKuemBRrAZ6tPD5nnNNxTQiMK156zoNWDvC1L6Ge2pybYJA5uZz6IbwPk5Seat36Vaso3_8thysyHusWooWtfZS6geN16kB2QRbXJ_XVYQXqt5RT1xLRKRetQFKyTLzHnZJgkg3-5cA5PpHhBQauuIZ5UXvC1C9fp7wMyrrm9zt_OGbqahO9dcpYO8NcDMsds1lkfLHCuJAq9TVyFZKyWaJX7wE4YqGQjpB3T0OzMeKS5EqqfJ8sqj1WDOOi-5C4kgakxyshdAS90KvocUet-pw_V0PvohH387ONYWVtopFm5"><img alt="playbuttonc4acme2" src="../_images/play.png" style="width: 40px;" /></a> Press to play around with this diagram source online.</p>
 </div>
 <div class="section" id="id2">
 <h4>5.1.2.2. Explore<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
@@ -570,7 +570,7 @@ title Container Diagram for ACME Widget Workstation
 
 
 System_Boundary(WorkStation, &quot;Workstation&quot;) {
-    Person(VfiOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
+    Person(AcmeOperator, Operator , &quot;&lt;$user&gt; \n On-site Operator who produces Widget&quot; )
 
     System(WorkStationPC, &quot;WorkStation PC&quot;, &quot;Drives the Production process. \nProvides feedback to operator. \nConnects to central Production system&quot;)    
 
@@ -581,7 +581,7 @@ System_Boundary(WorkStation, &quot;Workstation&quot;) {
     System(UnitN, &quot;UnitN&quot;, &quot;Widget N&quot;)    
 }
 
-Rel_R(VfiOperator, WorkStationPC, &quot;Checks Production status&quot;)
+Rel_R(AcmeOperator, WorkStationPC, &quot;Checks Production status&quot;)
 Rel_D(WorkStationPC, Hub, &quot;Drive Production and Info Retrieval&quot;)
 Rel(Hub, Unit1, &quot;Connect&quot;)
 Rel(Hub, Unit2, &quot;Connect&quot;)

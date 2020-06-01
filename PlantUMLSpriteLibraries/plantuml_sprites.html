@@ -359,7 +359,7 @@ usecase usecase
 <p>Below is an example using some of these - in a sequence diagram.</p>
 <div class="figure align-center" id="id2">
 <p class="plantuml">
-<img src="../_images/plantuml-9d36b03f76ad27c13db65a9473b187d3602bd52d.png" alt="&#64;startuml
+<img src="../_images/plantuml-b80726217c1da9225dd445d605ee759d63d73a4f.png" alt="&#64;startuml
 
 
 autonumber
@@ -379,16 +379,14 @@ end box
 group In the Beginning...
     
     group RootKBPK    
-        note over KM: Unique Root KEK is pre-programmed to SOC - use this as KBPK
+        note over KM: A Unique random key is born
         KS --&gt; KS: Root KBPK exists
     end
    
-    group Class KBPK Creation and Storage in UnTrustedDomain 
+    group Storage in UnTrustedDomain 
         KM --&gt; KM: Create Class N KPBK
         KS --&gt; KM: RootKBPK 
         note over KM: Shorthand for create a KeyBlock with ClassKBPK N as key payload, and RootKBPK as KBPK
-        KM --&gt; KM: KeyBlock[ClassKBPK N]RootKBPK
-        KM --&gt; UKM: KeyBlock[ClassKBPK N]RootKBPK
         UKM --&gt; UKS: KeyBlock[ClassKBPK N]RootKBPK        
         note over UKS: Process is repeated for ClassKBPK 1,2,3...N 
     end
@@ -431,9 +429,7 @@ end
 31
 32
 33
-34
-35
-36</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
+34</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@startuml</span>
 
 
 <span class="hll"><span class="n">autonumber</span>
@@ -453,16 +449,14 @@ end
 <span class="hll"><span class="n">group</span> <span class="n">In</span> <span class="n">the</span> <span class="n">Beginning</span><span class="o">...</span>
 </span>    
 <span class="hll">    <span class="n">group</span> <span class="n">RootKBPK</span>    
-</span>        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Unique</span> <span class="n">Root</span> <span class="n">KEK</span> <span class="ow">is</span> <span class="n">pre</span><span class="o">-</span><span class="n">programmed</span> <span class="n">to</span> <span class="n">SOC</span> <span class="o">-</span> <span class="n">use</span> <span class="n">this</span> <span class="k">as</span> <span class="n">KBPK</span>
+</span>        <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">A</span> <span class="n">Unique</span> <span class="n">random</span> <span class="n">key</span> <span class="ow">is</span> <span class="n">born</span>
         <span class="n">KS</span> <span class="o">--&gt;</span> <span class="n">KS</span><span class="p">:</span> <span class="n">Root</span> <span class="n">KBPK</span> <span class="n">exists</span>
     <span class="n">end</span>
    
-    <span class="n">group</span> <span class="n">Class</span> <span class="n">KBPK</span> <span class="n">Creation</span> <span class="ow">and</span> <span class="n">Storage</span> <span class="ow">in</span> <span class="n">UnTrustedDomain</span> 
+    <span class="n">group</span> <span class="n">Storage</span> <span class="ow">in</span> <span class="n">UnTrustedDomain</span> 
         <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Create</span> <span class="n">Class</span> <span class="n">N</span> <span class="n">KPBK</span>
         <span class="n">KS</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">RootKBPK</span> 
         <span class="n">note</span> <span class="n">over</span> <span class="n">KM</span><span class="p">:</span> <span class="n">Shorthand</span> <span class="k">for</span> <span class="n">create</span> <span class="n">a</span> <span class="n">KeyBlock</span> <span class="k">with</span> <span class="n">ClassKBPK</span> <span class="n">N</span> <span class="k">as</span> <span class="n">key</span> <span class="n">payload</span><span class="p">,</span> <span class="ow">and</span> <span class="n">RootKBPK</span> <span class="k">as</span> <span class="n">KBPK</span>
-        <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">KM</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>
-        <span class="n">KM</span> <span class="o">--&gt;</span> <span class="n">UKM</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>
         <span class="n">UKM</span> <span class="o">--&gt;</span> <span class="n">UKS</span><span class="p">:</span> <span class="n">KeyBlock</span><span class="p">[</span><span class="n">ClassKBPK</span> <span class="n">N</span><span class="p">]</span><span class="n">RootKBPK</span>        
         <span class="n">note</span> <span class="n">over</span> <span class="n">UKS</span><span class="p">:</span> <span class="n">Process</span> <span class="ow">is</span> <span class="n">repeated</span> <span class="k">for</span> <span class="n">ClassKBPK</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">3.</span><span class="o">..</span><span class="n">N</span> 
     <span class="n">end</span>
