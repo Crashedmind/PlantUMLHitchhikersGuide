@@ -30,7 +30,7 @@ Diagrams As Code
 
 PlantUML diagrams are "Diagrams as Code" in PlantUML syntax.
 
-There are many **presentation** and **drawing** tools out there. And these allow the user full control over the diagram so generally result in prettier diagrams, that can convey more information to the audience at that **point in time**.
+There are many **presentation** and **drawing** tools out there. And these allow the user full control over the diagram so generally result in prettier diagrams that can convey more information to the audience at that **point in time**.
 
 But that point in time passes, and pretty pictures can quickly become out-of-date and, ironically, misinforming if they don't match the reality of the system they are describing.
 This is especially so if one team is drawing the pretty pictures, and another team is writing the software/implementing the system.
@@ -63,7 +63,7 @@ These are the types of diagrams used for describing architectures as we see in :
 
 These building block icons can be used with 
 
-#. architecture diagrams to give an overview of the building blocks and how  they are connnected
+#. architecture diagrams to give an overview of the building blocks and how they are connected
 #. :ref:`c4-label` to give static views at different levels
 #. sequence diagrams to give dynamic views at different levels
 

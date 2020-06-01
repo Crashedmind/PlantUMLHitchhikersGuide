@@ -2,20 +2,24 @@
 Thoughts For The Future
 *******************************************************************************
 
+
+
 .. _vision: https://www.scaledagileframework.com/vision/
 .. _PlantUML: https://www.plantuml.com/
 .. _PlantUMLPreProcessor: https://plantuml.com/preprocessing
 .. _plantuml.github.io: https://plantuml.github.io
 .. _plantumlGuide: http://alphadoc.plantuml.com/toc/asciidoc/en
 
-Some thoughts on what could be done in the future... no more than thoughts as of now for me... but you...
+.. uml:: mindmapfuture.puml
+    :align: center
+    :caption: *Some thoughts on what could be done in the future... no more than thoughts as of now for me... but you...*
 
 
 A Showcase Template Site
 ===============================================================================
 #. As a user who wants to draw a diagram, I'd like to be able to browse to a site, select a category e.g. "AWS" and see a selection of existing "AWS" diagrams. 
 #. As a user who has drawn diagrams, I'd like to be able to share and showcase my diagrams on a site, for a given category e.g. "AWS" diagrams. 
-#. As a user who draws or uses diagrams, I'd like to be take part in a "best of" competition where the best entry for a given category is selected by the community.
+#. As a user who draws or uses diagrams, I'd like to take part in a "best of" competition where the best entry for a given category is selected by the community.
 
 Hyperlinked Interactive Diagrams
 ===============================================================================
@@ -98,12 +102,16 @@ It's the guide I wish I had when using PlantUML for diagrams.
 Documentation of the undocumented features in PlantUML is required. 
 And **YOU** can document them in the plantumlGuide_ 
 
-The documentation should start in the source code using e.g. javadoc. 
+That said, much of the documentation should start and live in the source code using e.g. javadoc. 
 
 It would then be relatively easy to extract and render to rst/md/html or anywhere else.
 
-This would be a prerequisite to a user-centric guide.
+This would be a prerequisite to a user-centric guide that can live and grow. 
 
+Interactive Notebook Guide
+===============================================================================
+Interactive Notebooks e.g. https://jupyter.org/, are a good format to describe PlantUML features. 
 
+PlantUML support is available https://pypi.org/project/IPlantUML/
 
 

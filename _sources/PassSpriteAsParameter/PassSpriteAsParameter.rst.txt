@@ -17,7 +17,6 @@ Understand How To Pass A Sprite To A Procedure
 
 .. uml:: option1.puml
     :align: center
-    :caption: *blah* 
 
 Source
 -------------------------------------------------------------------------------
@@ -25,21 +24,6 @@ Source
 .. literalinclude:: ./option1.puml
     :emphasize-lines: 12, 16
     :linenos: 
-
-Play
--------------------------------------------------------------------------------
-
-|playbuttoncpass1| Press to play around with this diagram source online.
-
-.. |playbuttoncpass1| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
-                :width: 40 px
-
-
-Explore
--------------------------------------------------------------------------------
-#. Take a look at some other stdlib libraries
-
 
 
 
@@ -54,7 +38,7 @@ to add quotes when calling the procedure.
 
 .. uml:: option2.puml
     :align: center
-    :caption: *blah* 
+    
 
 Source
 -------------------------------------------------------------------------------
@@ -63,19 +47,7 @@ Source
     :emphasize-lines: 12, 16
     :linenos: 
 
-Play
--------------------------------------------------------------------------------
 
-|playbuttoncpass3| Press to play around with this diagram source online.
-
-.. |playbuttoncpass3| image:: ../play.png
-                :target: http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80
-                :width: 40 px
-
-
-Explore
--------------------------------------------------------------------------------
-#. Take a look at some other stdlib libraries
 
 
 
